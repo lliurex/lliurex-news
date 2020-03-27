@@ -1,0 +1,13 @@
+Source: lliurex-news
+Section: admin
+Priority: extra
+Maintainer: LliureX Team <lliurex@gva.es>
+Build-Depends: debhelper (>= 10), llxsrchelper,zero-dev,python3-poinstaller
+Standards-Version: 4.1.2
+Homepage: http://lliurex.net
+
+Package: lliurex-news
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, n4d, python3,python-bcrypt, python-llxnet
+Description: News server configuration
+ Scripts and n4d plugins to initialize news

@@ -1,0 +1,14 @@
+[Unit]
+Description=Ghost systemd service for blog: news
+Documentation=https://ghost.org/docs/
+
+[Service]
+Type=simple
+WorkingDirectory=/var/www/news
+User=998
+Environment="NODE_ENV=production"
+ExecStart=/usr/bin/node /usr/bin/ghost run
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

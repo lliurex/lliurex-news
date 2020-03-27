@@ -1,0 +1,29 @@
+{
+  "url": "http://{{ EXTERNAL_IP }}/news",
+  "server": {
+    "port": 2368,
+    "host": "127.0.0.1"
+  },
+  "database": {
+    "client": "mysql",
+    "connection": {
+      "host": "localhost",
+      "user": "{{ DB_USER }}",
+      "password": "{{ DB_PWD }}",
+      "database": "{{ DB_NAME }}"
+    }
+  },
+  "mail": {
+    "transport": "Direct"
+  },
+  "logging": {
+    "transports": [
+      "file",
+      "stdout"
+    ]
+  },
+  "process": "systemd",
+  "paths": {
+    "contentPath": "/var/www/news/content"
+  }
+}

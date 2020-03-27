@@ -1,0 +1,262 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*
+
+import os
+import xmlrpc.client as client
+import gi
+gi.require_version('Gtk','3.0')
+gi.require_version('PangoCairo','1.0')
+from gi.repository import Gtk, Gdk, GObject, GLib, Gio, PangoCairo, Pango
+import threading
+import pwd
+import ssl
+
+import signal
+signal.signal(signal.SIGINT, signal.SIG_DFL)
+
+import gettext
+gettext.textdomain('lliurex-news')
+_ = gettext.gettext
+
+RSRC_PATH="/usr/share/lliurex-news/rsrc/"
+
+class News:
+	
+	def __init__(self):
+		
+		self.executing=False
+		user=pwd.getpwuid(int(os.environ["PKEXEC_UID"])).pw_name
+		home_path="/home/"+user+"/.config"
+		os.environ["XDG_CONFIG_DIRS"]="/etc/xdg/xdg-/usr/share/xsessions/plasma:/etc/xdg:"+home_path
+
+		self.start_gui()
+		
+	#def __ini__
+	
+	def start_gui(self):
+		
+		builder=Gtk.Builder()
+		builder.set_translation_domain("lliurex-news")
+		builder.add_from_file(RSRC_PATH+"lliurex-news-setup.glade")
+		
+		self.window=builder.get_object("window1")
+		self.accept_button=builder.get_object("accept_button")
+		self.cancel_button=builder.get_object("cancel_button")
+		self.dbname_entry=builder.get_object("dbname_entry")
+		self.dbuser_entry=builder.get_object("dbuser_entry")
+		self.dbpwd_entry=builder.get_object("dbpwd_entry")
+		self.dbpwd_entry2=builder.get_object("dbpwd_entry2")
+		self.user_entry=builder.get_object("user_entry")
+		self.pwd_entry=builder.get_object("pwd_entry")
+		self.pwd_entry2=builder.get_object("pwd_entry2")
+		self.entry_list=[self.dbname_entry,self.dbuser_entry,self.dbpwd_entry,self.dbpwd_entry2,self.user_entry,self.pwd_entry,self.pwd_entry2]
+		self.msg_label=builder.get_object("msg_label")
+
+		
+		self.window.connect("destroy",self.exit)
+		self.accept_button.connect("clicked",self.accept_clicked)
+		self.cancel_button.connect("clicked",self.exit)
+		
+		self.progress_window=builder.get_object("window2")
+		self.pbar=builder.get_object("progressbar")
+		
+
+		self.window.show()
+		
+		
+		
+		database_label=builder.get_object("database_label")
+		database_separator=builder.get_object("database_separator")
+		dbname_label=builder.get_object("dbname_label")
+		dbuser_label=builder.get_object("dbuser_label")
+		dbpwd_label=builder.get_object("dbpwd_label")
+		dbpwdret_label=builder.get_object("dbpwdret_label")
+		username_label=builder.get_object("username_label")
+		username_separator=builder.get_object("username_separator")
+		user_label=builder.get_object("user_label")
+		userpwd_label=builder.get_object("userpwd_label")
+		userpwdret_label=builder.get_object("userpwdret_label")
+		self.pbar_label=builder.get_object("pbar_label")
+
+		self.blocks_list=[database_label,username_label]
+		self.separators=[database_separator,username_separator]
+		self.labels_list=[dbname_label,dbuser_label,dbpwd_label,dbpwdret_label,user_label,userpwd_label,userpwdret_label]
+		
+		self.set_defaults()
+		self.set_css_info()
+		
+		Gtk.main()
+		
+	#def start_gui
+	
+	def set_defaults(self):
+		
+		self.dbname_entry.set_text("ghost")
+		self.dbuser_entry.set_text("ghost_dbu")
+		self.user_entry.set_text("ghost_admin")
+		
+	#def set_defaults
+	
+	def set_css_info(self):
+
+		self.style_provider=Gtk.CssProvider()
+		f=Gio.File.new_for_path(RSRC_PATH+"lliurex-news.css")
+		self.style_provider.load_from_file(f)
+		Gtk.StyleContext.add_provider_for_screen(Gdk.Screen.get_default(),self.style_provider,Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
+		
+
+		self.window.set_name("WHITE_BACKGROUND")
+		self.progress_window.set_name("WHITE_BACKGROUND")
+		self.msg_label.set_name("MSG-LABEL")
+		self.pbar_label.set_name("HEADER-LABEL")
+
+		for entry in self.blocks_list:
+			entry.set_name("HEADER-LABEL")
+
+		for entry in self.separators:
+			entry.set_name("HEADER-SEPARATOR")
+
+		for entry in self.labels_list:
+			entry.set_name("INFO-ENTRY")
+
+		for entry in self.entry_list:
+			entry.set_name("CUSTOM-ENTRY")
+	
+			
+	#def set_css_info
+	
+	def exit(self,widget):
+		
+		Gtk.main_quit()
+		
+	#def exit
+	
+	def get_values(self):
+		
+		self.template={}
+		
+		self.template["DB_NAME"]=self.dbname_entry.get_text()
+		self.template["DB_USER"]=self.dbuser_entry.get_text()
+		self.template["DB_PWD"]=self.dbpwd_entry.get_text()
+		self.template["DB_PWD2"]=self.dbpwd_entry2.get_text()
+		
+		self.template["ADMIN_USER"]=self.user_entry.get_text()
+		self.template["ADMIN_PWD"]=self.pwd_entry.get_text()
+		self.template["ADMIN_PWD2"]=self.pwd_entry2.get_text()
+		self.template["ADMIN_EMAIL"]=self.user_entry.get_text()+"@llxnews.com"
+		
+		
+	#def get_values
+	
+	
+	def accept_clicked(self,widget):
+		
+		self.get_values()
+		ret,msg=self.parse_values()
+		if not ret:
+			self.msg_label.set_markup("<span foreground='red'>"+msg+"</span>")
+			return
+			
+		'''	
+		ip="server"
+		c=xmlrpclib.ServerProxy("https://%s:9779"%ip)
+		n4d_key=self.get_n4d_key()
+		
+		status,ret=c.initialize_owncloud(n4d_key,"LliurexOwncloud",self.template)
+		
+		if status:
+			os.system("zero-center set-configured lliurex-owncloud")
+			self.msg_label.set_markup("<b>"+"Initialization successful"+"</b>")
+			self.accept_button.set_sensitive(False)
+		else:
+			self.msg_label.set_markup("<span foreground='red'>"+ret+"</span>")
+			os.system("zero-center set-failed lliurex-owncloud")
+		'''
+		
+		self.executing=True
+		
+		self.progress_window.show()
+		
+		GLib.timeout_add(50,self.pulsate)
+		self.ret_msg=""
+		self.ret_status=False
+		GObject.threads_init()
+		t=threading.Thread(target=self.execute,args=())
+		t.daemon=True
+		t.start()
+		
+		
+	#def accept_clicked
+	
+	def pulsate(self):
+		
+		
+		if self.executing:	
+			print("esperando")
+			self.pbar.pulse()
+		else:
+			
+			if self.ret_status:
+				os.system("zero-center set-configured lliurex-news")
+				self.msg_label.set_markup("<b>"+_("Initialization successful")+"</b>")
+				self.accept_button.set_sensitive(False)
+			else:
+				self.msg_label.set_markup("<span foreground='red'>"+self.ret_msg+"</span>")
+				os.system("zero-center set-failed lliurex-news")		
+
+		return self.executing
+		
+		
+	#def pulsate
+	
+	def execute(self):
+		
+		context=ssl._create_unverified_context()
+		ip="server"
+		c=client.ServerProxy("https://%s:9779"%ip,context=context,allow_none=True)
+		n4d_key=self.get_n4d_key()
+		self.ret_status,self.ret_msg=c.initialize_news(n4d_key,"LliurexNews",self.template)
+		
+		
+		self.executing=False
+		self.progress_window.hide()
+		
+		return False
+		
+	#def execute
+	
+	
+	def get_n4d_key(self):
+		
+		try:
+			f=open("/etc/n4d/key")
+			key=f.readline().strip("\n")
+			f.close()
+			return key
+		except:
+			return None
+		
+	#def get_n4d_key
+	
+	def parse_values(self):
+		
+		for item in self.template:
+			if self.template[item]=="" or self.template[item]==None:
+				return [False,"There are empty fields to be completed"]
+				
+		if self.template["DB_PWD"]!=self.template["DB_PWD2"]:
+			return [False,"DB Passwords do not match"]
+			
+		if self.template["ADMIN_PWD"]!=self.template["ADMIN_PWD2"]:
+			return [False,"Administrator passwords do not match"]
+			
+		return [True,""]
+		
+	#def parse_values
+	
+#class owncloud
+
+if __name__=="__main__":
+	
+	o=News()
+	

@@ -1,0 +1,68 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-21 14:41+0100\n"
+"PO-Revision-Date: 2019-01-21 14:42+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ca@valencia\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#: ../install-files/usr/share/lliurex-nextcloud/rsrc/lliurex-nextcloud-setup.glade:7
+#, fuzzy
+#| msgid "LliureX NextCloud"
+msgid "LliureX Nextcloud"
+msgstr "LliureX Nextcloud"
+
+#: ../install-files/usr/share/lliurex-nextcloud/rsrc/lliurex-nextcloud-setup.glade:61
+msgid "Database"
+msgstr "Base de dades"
+
+#: ../install-files/usr/share/lliurex-nextcloud/rsrc/lliurex-nextcloud-setup.glade:100
+msgid "DB Name"
+msgstr "Nombre BDD"
+
+#: ../install-files/usr/share/lliurex-nextcloud/rsrc/lliurex-nextcloud-setup.glade:124
+msgid "DB User"
+msgstr "Usuari BDD"
+
+#: ../install-files/usr/share/lliurex-nextcloud/rsrc/lliurex-nextcloud-setup.glade:148
+msgid "DB Password"
+msgstr "Contrasenya BDD"
+
+#: ../install-files/usr/share/lliurex-nextcloud/rsrc/lliurex-nextcloud-setup.glade:173
+msgid "Repeat DB password"
+msgstr "Repetix la contrasenya de BDD"
+
+#: ../install-files/usr/share/lliurex-nextcloud/rsrc/lliurex-nextcloud-setup.glade:226
+msgid "Nextcloud administrator"
+msgstr "Administrador de Nextcloud"
+
+#: ../install-files/usr/share/lliurex-nextcloud/rsrc/lliurex-nextcloud-setup.glade:264
+msgid "User"
+msgstr "Usuari"
+
+#: ../install-files/usr/share/lliurex-nextcloud/rsrc/lliurex-nextcloud-setup.glade:288
+msgid "Password"
+msgstr "Contrasenya"
+
+#: ../install-files/usr/share/lliurex-nextcloud/rsrc/lliurex-nextcloud-setup.glade:313
+msgid "Repeat password"
+msgstr "Repetix la contrasenya"
+
+#: ../install-files/usr/share/lliurex-nextcloud/rsrc/lliurex-nextcloud-setup.glade:454
+msgid "Initializing..."
+msgstr "Inicialitzant..."
+
+#: /tmp/lliurex-nextcloud.py:197
+msgid "Initialization successful"
+msgstr "Inicialització satisfactòria"

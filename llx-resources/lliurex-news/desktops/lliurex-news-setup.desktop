@@ -1,0 +1,21 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=lliurex-news
+Name[en]=LliureX News
+Name[es]=LliureX News
+Name[qcv]=LliureX News
+Name[ca_ES@valencia]=LliureX News
+Name[ca_ES.UTF-8@valencia]=LliureX News
+Comment=Configures News
+Comment[es]=Configura News
+Comment[qcv]=Configura News
+Comment[ca_ES@valencia]=Configura Nexws
+Comment[ca_ES.UTF-8@valencia]=Configura News
+Terminal=false
+Exec= pkexec lliurex-news.zmd
+Icon=lliurex-news-setup
+Type=Application
+GenericName=lliurex-news
+NoDisplay=true
+Categories=LliureX-Administration;

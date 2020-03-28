@@ -247,7 +247,15 @@ class LliurexNews:
 		cmd="cp -r %s %s"%(LliurexNews.NEWS_BASE_DIR,"/var/www/news/")
 		os.system(cmd)
 		
-				
+		cmd="mkdir /var/www/news/content/data/"
+		os.system(cmd)
+		
+		cmd="mkdir /var/www/news/content/apps/"
+		os.system(cmd)
+		
+		cmd="mkdir /var/www/news/content/logs/"
+		os.system(cmd)
+		
 		#os.system("mv %s/ADMIN_USER %s/%s"%(LliurexNews.NEWS_BASE_DIR,LliurexNews.NEWS_BASE_DIR,self.template["ADMIN_USER"]))
 		
 		#cmd="cp %s %s"%(LliurexNews.HTACCESS,"/var/www/nextcloud/")

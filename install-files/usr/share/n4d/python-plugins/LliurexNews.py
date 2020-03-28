@@ -208,7 +208,7 @@ class LliurexNews:
 	def create_ghost_user(self):
 
 		try:
-			cmd="useradd -r -u 998 -g 998 -s /usr/bin/nologin ghost"
+			cmd="useradd -r -u 998 -s /usr/bin/nologin ghost"
 			os.system(cmd)
 		except Exception as e:
 			print(str(e))

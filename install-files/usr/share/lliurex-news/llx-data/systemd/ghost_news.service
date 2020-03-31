@@ -5,7 +5,7 @@ Documentation=https://ghost.org/docs/
 [Service]
 Type=simple
 WorkingDirectory=/var/www/news
-User=998
+User=33
 Environment="NODE_ENV=production"
 ExecStart=/usr/bin/node /usr/bin/ghost run
 Restart=always

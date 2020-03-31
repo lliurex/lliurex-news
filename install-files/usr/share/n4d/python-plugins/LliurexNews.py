@@ -14,9 +14,9 @@ from jinja2 import Template
 class LliurexNews:
 	
 	BASE_DIR="/usr/share/lliurex-news/llx-data/"
-	NEWS_BASE_DIR=BASE_DIR+"content/"
-	#HTACCESS=NEWS_BASE_DIR+".htaccess"
-	#ADMIN_DATA=NEWS_BASE_DIR+"data/"
+	CONTENT_BASE_DIR=BASE_DIR+"content/"
+	#HTACCESS=CONTENT_BASE_DIR+".htaccess"
+	#ADMIN_DATA=CONTENT_BASE_DIR+"data/"
 	CONFIG_DATA=BASE_DIR+"config/config.production.json"
 	CONFIG_CLI_FILE=BASE_DIR+"config/.ghost-cli"
 	CONFIG_SYSTEMD_FILE=BASE_DIR+"systemd/ghost_news.service"
@@ -25,8 +25,8 @@ class LliurexNews:
 	APACHE_CONF_FILE=BASE_DIR+"apache2/news-server.conf"
 	APACHE_EXTERNAL_CONF=BASE_DIR+"apache2/news.conf"
 
-	#EASY_SITE=NEWS_BASE_DIR+"nextcloud.json"
-	#EASY_SITE_ICON=NEWS_BASE_DIR+"nextcloud.png"
+	#EASY_SITE=CONTENT_BASE_DIR+"nextcloud.json"
+	#EASY_SITE_ICON=CONTENT_BASE_DIR+"nextcloud.png"
 	#CNAME="cname-owncloud"
 	
 	NEWS_DATA_DIR="/var/www/news/content/"
@@ -45,19 +45,31 @@ class LliurexNews:
 	
 	TEMPLATE_DIR="/home/netadmin/"
 	BASE_DIR="/home/netadmin/workspace/lliurex-owncloud/install-files"+BASE_DIR
-	NEWS_BASE_DIR=BASE_DIR+"llx-data/"
-	HTACCESS=NEWS_BASE_DIR+".htaccess"
-	EASY_SITE=NEWS_BASE_DIR+"owncloud.json"
+	CONTENT_BASE_DIR=BASE_DIR+"llx-data/"
+	HTACCESS=CONTENT_BASE_DIR+".htaccess"
+	EASY_SITE=CONTENT_BASE_DIR+"owncloud.json"
 	
 	# TESTING #
 	'''
 	
 	def __init__(self):
 	
+		self.dbg=0
 		self.template=None
 		self.template_vars=["DB_USER","DB_PWD","DB_NAME","ADMIN_USER","ADMIN_PWD","ADMIN_EMAIL"]
 		
 	#def init
+
+	def _debug(self,message):
+
+		try:
+			if self.dbg==1:
+				print("[LliurexNewsServer]:%s"%(str(message)))
+							
+		except Exception as e:
+			print ("[LliurexNewsServer] (_debug) %s" %(str(e)))
+			
+#def__debug
 	
 	def parse_template(self,template_path):
 		
@@ -81,9 +93,9 @@ class LliurexNews:
 			return [True,""]
 			
 		except Exception as e:
-			msg="[!] Error: %s"%(str(e))
-			print("[!] Error:",e)
-			return [False,e]
+			msg="Parsing template.Error: %s"%(str(e))
+			self._debug(msg)
+			return [False,""]
 		
 		
 		
@@ -95,30 +107,37 @@ class LliurexNews:
 		
 		print("* Loading template...")
 		
-		if not type({})==type(template):
-			return [False,""]
-			
-		for var in self.template_vars:
-			if var not in template:
-				return [False,""]
-			
-		self.template=template
-
 		try:
+			if not type({})==type(template):
+				return [False,""]
+				
+			for var in self.template_vars:
+				if var not in template:
+					return [False,""]
+				
+			self.template=template
 
-			self.template["EXTERNAL_IP"]=lliurex.net.get_ip(objects["VariablesManager"].get_variable("EXTERNAL_INTERFACE"))
-			
-		except:
-			import xmlrpclib as x
-			
-			c=x.ServerProxy("https://server:9779")
-			#self.template["LDAP_BASE_USER_TREE"]="ou=People,"+c.get_variable("","VariablesManager","LDAP_BASE_DN")
-			#self.template["LDAP_BASE_GROUP_TREE"]="ou=Groups,"+c.get_variable("","VariablesManager","LDAP_BASE_DN")
-			#self.template["SRV_IP"]=c.get_variable("","VariablesManager","SRV_IP")
-			#self.template["INTERNAL_DOMAIN"]=c.get_variable("","VariablesManager","INTERNAL_DOMAIN")
-			self.template["EXTERNAL_IP"]=lliurex.net.get_ip(c.get_variable("","VariablesManager","EXTERNAL_INTERFACE"))
+			try:
 
-		self.template["ADMIN_PWD"]=self.create_password_bhash(self.template["ADMIN_PWD"])
+				self.template["EXTERNAL_IP"]=lliurex.net.get_ip(objects["VariablesManager"].get_variable("EXTERNAL_INTERFACE"))
+				
+			except:
+				import xmlrpclib as x
+				
+				c=x.ServerProxy("https://server:9779")
+				#self.template["LDAP_BASE_USER_TREE"]="ou=People,"+c.get_variable("","VariablesManager","LDAP_BASE_DN")
+				#self.template["LDAP_BASE_GROUP_TREE"]="ou=Groups,"+c.get_variable("","VariablesManager","LDAP_BASE_DN")
+				#self.template["SRV_IP"]=c.get_variable("","VariablesManager","SRV_IP")
+				#self.template["INTERNAL_DOMAIN"]=c.get_variable("","VariablesManager","INTERNAL_DOMAIN")
+				self.template["EXTERNAL_IP"]=lliurex.net.get_ip(c.get_variable("","VariablesManager","EXTERNAL_INTERFACE"))
+
+			self.template["ADMIN_PWD"]=self.create_password_bhash(self.template["ADMIN_PWD"])
+
+		except Exception as e:
+			msg="Loading Template.Error: %s"%str(e)
+			self._debug(msg)
+			return [False,""]
+
 		return [True,""]
 		
 	#def load_template
@@ -127,7 +146,14 @@ class LliurexNews:
 	def mysql_service_init(self):
 		
 		print("* Initializing mysql root passwd (if needed) ...")
-		os.system("sudo mysql_root_passwd -i")
+		
+		try:
+			os.system("sudo mysql_root_passwd -i")
+		except Exception as e:
+			msg="Initializing mysql service.Error %s"%(str(e))
+			self._debug(msg)
+			return[False,""]
+
 		return [True,""]
 		
 	#def mysql_service_init
@@ -137,21 +163,32 @@ class LliurexNews:
 		
 		print("* Creating database...")
 		
+		
 		if self.template==None:
+			msg="Creating database.Error: template not exists"
+			self._debug(msg)
 			return [False,""]
+		
+		try:	
+			cmd='mysql -u%s -p%s -e "drop database IF EXISTS %s"'%(self.template["DB_USER"],self.template["DB_PWD"],self.template["DB_NAME"])
+			os.system(cmd)
 			
-		cmd='mysql -u%s -p%s -e "drop database IF EXISTS %s"'%(self.template["DB_USER"],self.template["DB_PWD"],self.template["DB_NAME"])
-		os.system(cmd)
-		
-		cmd='mysql -u%s -p%s -e "create database %s"'%(self.template["DB_USER"],self.template["DB_PWD"],self.template["DB_NAME"])
-		os.system(cmd)
-		
-		file_path=self.process_sql_template()
-		if file_path==None:
-			return [False,"Error processing sql template"]
-		cmd="mysql -u %s -p%s %s < %s"%(self.template["DB_USER"],self.template["DB_PWD"],self.template["DB_NAME"],file_path)
-		os.system(cmd)
-		os.remove(file_path)
+			cmd='mysql -u%s -p%s -e "create database %s"'%(self.template["DB_USER"],self.template["DB_PWD"],self.template["DB_NAME"])
+			os.system(cmd)
+			
+			file_path=self.process_sql_template()
+			if file_path==None:
+				msg="Creating database.Error processing sql template"
+				self._debug(msg)
+				return [False,""]
+			cmd="mysql -u %s -p%s %s < %s"%(self.template["DB_USER"],self.template["DB_PWD"],self.template["DB_NAME"],file_path)
+			os.system(cmd)
+			os.remove(file_path)
+
+		except Exception as e:
+			msg="Creating database.Error: %s"%(str(e))
+			self._debug(msg)
+			return[False,""]	
 		
 		return [True,""]
 		
@@ -161,11 +198,17 @@ class LliurexNews:
 	
 		print("* Creating mysql user ...")
 		
-		db_pass=self.template["DB_PWD"]
-		db_user=self.template["DB_USER"]
-		db_name=self.template["DB_NAME"]
-		cmd='mysql -uroot -p$(mysql_root_passwd -g) -e "GRANT ALL PRIVILEGES ON %s.* TO \'%s\'@localhost IDENTIFIED BY \'%s\'"'%(db_name, db_user,db_pass)
-		ret=os.system(cmd)
+		try:
+			db_pass=self.template["DB_PWD"]
+			db_user=self.template["DB_USER"]
+			db_name=self.template["DB_NAME"]
+			cmd='mysql -uroot -p$(mysql_root_passwd -g) -e "GRANT ALL PRIVILEGES ON %s.* TO \'%s\'@localhost IDENTIFIED BY \'%s\'"'%(db_name, db_user,db_pass)
+			ret=os.system(cmd)
+
+		except Exception as e:
+			msg="Creating mysql user.Error: %s"%(str(e))
+			self._debug(msg)
+			return [False,""]	
 		
 		return [True,ret]
 		
@@ -199,7 +242,8 @@ class LliurexNews:
 			
 			return tmp_file
 		except Exception as e:
-			print(str(e))
+			msg="Processing SQL template.Error: %s"%(str(e))
+			self._debug(msg)
 			return None
 		
 		
@@ -208,11 +252,12 @@ class LliurexNews:
 	def create_ghost_user(self):
 
 		try:
-			cmd="useradd -r -u 998 -g 998 -s /usr/bin/nologin ghost"
+			cmd="useradd -r -u 998 -s /usr/bin/nologin ghost"
 			os.system(cmd)
 		except Exception as e:
-			print(str(e))
-			return[False,"unable to create ghost user"]
+			msg="Creating ghost user.Error: %s"%(str(e))
+			self._debug(msg)
+			return[False,""]
 
 		return [True,""]	
 				
@@ -222,13 +267,19 @@ class LliurexNews:
 		print("* Cleaning old News data...")
 		
 		
-		if os.path.exists(LliurexNews.NEWS_CONFIG_FILE):
-			os.system("rm -f %s"%LliurexNews.NEWS_CONFIG_FILE)
+		try:
+			if os.path.exists(LliurexNews.NEWS_CONFIG_FILE):
+				os.system("rm -f %s"%LliurexNews.NEWS_CONFIG_FILE)
 
-		
-		for dir in [LliurexNews.NEWS_DATA_DIR]:
-			if os.path.exists(dir):
-				os.system("rm -rf %s"%dir)
+			
+			for dir in [LliurexNews.NEWS_DATA_DIR]:
+				if os.path.exists(dir):
+					os.system("rm -rf %s"%dir)
+
+		except Exception as e:
+			msg="Cleaning old News data.Error: %s"%(str(e))
+			self._debug(msg)
+			return[False,""]			
 				
 		return [True,""]
 		
@@ -236,23 +287,32 @@ class LliurexNews:
 	
 	def copy_new_files(self):
 		
-		print("* Copying new News...")
+		print("* Copying new News files...")
 
-		cmd="cp %s %s"%(LliurexNews.CONFIG_DATA,LliurexNews.NEWS_CONFIG_FILE)
-		os.system(cmd)
+		try:
+			cmd="cp %s %s"%(LliurexNews.CONFIG_DATA,LliurexNews.NEWS_CONFIG_FILE)
+			os.system(cmd)
 
-		cmd="cp %s %s"%(LliurexNews.CONFIG_CLI_FILE,LliurexNews.NEWS_CONFIG_DIR)
-		os.system(cmd)
-		
-		cmd="cp -r %s %s"%(LliurexNews.NEWS_BASE_DIR,"/var/www/news/")
-		os.system(cmd)
-		
-				
-		#os.system("mv %s/ADMIN_USER %s/%s"%(LliurexNews.NEWS_BASE_DIR,LliurexNews.NEWS_BASE_DIR,self.template["ADMIN_USER"]))
-		
-		#cmd="cp %s %s"%(LliurexNews.HTACCESS,"/var/www/nextcloud/")
-		os.system(cmd)
-		
+			cmd="cp %s %s"%(LliurexNews.CONFIG_CLI_FILE,LliurexNews.NEWS_CONFIG_DIR)
+			os.system(cmd)
+			
+			cmd="cp -r %s %s"%(LliurexNews.CONTENT_BASE_DIR,"/var/www/news/")
+			os.system(cmd)
+			
+			cmd="mkdir /var/www/news/content/data/"
+			os.system(cmd)
+			
+			cmd="mkdir /var/www/news/content/apps/"
+			os.system(cmd)
+			
+			cmd="mkdir /var/www/news/content/logs/"
+			os.system(cmd)
+			
+		except Exception as e:
+			msg="Copying new News files.Error: %s"%(str(e))
+			self._debug(msg)
+			return[False,""]
+			
 		return [True,""]
 		
 	#def copy_new_files
@@ -261,26 +321,32 @@ class LliurexNews:
 		
 		print("* Procesing config template...")
 		
-		template_dir=LliurexNews.NEWS_CONFIG_DIR
-		template_file="config.production.json"
-		
-		tpl_env = Environment(loader=FileSystemLoader(template_dir))
-		template = tpl_env.get_template(template_file)
-		content = template.render(self.template).encode('UTF-8')
-		
-		f=open(template_dir+template_file,"w")
-		f.write(content)
-		f.close()		
+		try:
+			template_dir=LliurexNews.NEWS_CONFIG_DIR
+			template_file="config.production.json"
+			
+			tpl_env = Environment(loader=FileSystemLoader(template_dir))
+			template = tpl_env.get_template(template_file)
+			content = template.render(self.template).encode('UTF-8')
+			
+			f=open(template_dir+template_file,"w")
+			f.write(content)
+			f.close()		
 
-		for dir in [LliurexNews.NEWS_DATA_DIR]:
-			if os.path.exists(dir):
-				os.system("chown -R ghost:ghost %s"%dir)
-					
-		cmd="find /var/www/news/* -type d -exec chmod 775 {} \;"
-		os.system(cmd)
+			for dir in [LliurexNews.NEWS_DATA_DIR]:
+				if os.path.exists(dir):
+					os.system("chown -R www-data:www-data %s"%dir)
+						
+			cmd="find /var/www/news/* -type d -exec chmod 775 {} \;"
+			os.system(cmd)
 
-		cmd="find /var/www/news/* -type f -exec chmod 664 {} \;"
-		os.system(cmd)
+			cmd="find /var/www/news/* -type f -exec chmod 664 {} \;"
+			os.system(cmd)
+
+		except Exception as e:
+			msg="Processing config template.Error: %s"%(str(e))
+			self._debug(msg)
+			return[False,""]	
 
 		return [True,""]
 		
@@ -291,51 +357,60 @@ class LliurexNews:
 
 		print("* Enabling apache site")
 
-		cmd="cp %s %s"%(LliurexNews.APACHE_CONF_FILE, "/etc/apache2/sites-available/")
-		os.system(cmd)
-		if not os.path.exists(LliurexNews.APACHE_EXTERNAL_DIR):
-			cmd="mkdir %s"%(LliurexNews.APACHE_EXTERNAL_DIR)
-			os.system(cmd)
-
-		if os.path.exists(LliurexNews.APACHE_EXTERNAL_DIR):	
-			cmd="cp %s %s"%(LliurexNews.APACHE_EXTERNAL_CONF,LliurexNews.APACHE_EXTERNAL_DIR)
-			os.system(cmd)
-
 		try:
-			modify=True
-			path, dirs, files = next(os.walk(LliurexNews.APACHE_EXTERNAL_DIR))
-			number_files=len(files)
-			print("modificando 000-default")
-			print(number_files)
-			if ( number_files > 0 ):
-				if os.path.isfile(LliurexNews.APACHE_FILE_SITES_CONFIGURATION):
-					with open(LliurexNews.APACHE_FILE_SITES_CONFIGURATION, "r") as in_file:
-						buf = in_file.readlines()
-					with open(LliurexNews.APACHE_FILE_SITES_CONFIGURATION, "w") as out_file:
-						for line in buf:
-							if  "lliurex-location" in line:
-								print("linea encontrada")
-								modify=False
-							else:
-								if ( "<Directory /var/www/admin-center>" in line ) & (modify):
-									print("escribiendo linea")
-									line = "include /etc/apache2/lliurex-location/*.conf\n" + line
-							out_file.write(line)
-			else:
-				if os.path.isfile(LliurexNews.APACHE_FILE_SITES_CONFIGURATION):
-					with open(LliurexNews.APACHE_FILE_SITES_CONFIGURATION, "r") as in_file:
-						buf = in_file.readlines()
-					with open(LliurexNews.APACHE_FILE_SITES_CONFIGURATION, "w") as out_file:
-						for line in buf:
-							if "lliurex-location" in line:
-								line = "\n"
-							out_file.write(line)
+			cmd="cp %s /tmp"%(LliurexNews.APACHE_FILE_SITES_CONFIGURATION)
+			os.system(cmd)
+
+			cmd="cp %s %s"%(LliurexNews.APACHE_CONF_FILE, "/etc/apache2/sites-available/")
+			os.system(cmd)
+			if not os.path.exists(LliurexNews.APACHE_EXTERNAL_DIR):
+				cmd="mkdir %s"%(LliurexNews.APACHE_EXTERNAL_DIR)
+				os.system(cmd)
+
+			if os.path.exists(LliurexNews.APACHE_EXTERNAL_DIR):	
+				cmd="cp %s %s"%(LliurexNews.APACHE_EXTERNAL_CONF,LliurexNews.APACHE_EXTERNAL_DIR)
+				os.system(cmd)
+
+			try:
+				modify=True
+				path, dirs, files = next(os.walk(LliurexNews.APACHE_EXTERNAL_DIR))
+				number_files=len(files)
+				print("* Editing apache2 000-default.conf file")
+				if ( number_files > 0 ):
+					if os.path.isfile(LliurexNews.APACHE_FILE_SITES_CONFIGURATION):
+						with open(LliurexNews.APACHE_FILE_SITES_CONFIGURATION, "r") as in_file:
+							buf = in_file.readlines()
+						with open(LliurexNews.APACHE_FILE_SITES_CONFIGURATION, "w") as out_file:
+							for line in buf:
+								if  "lliurex-location" in line:
+									modify=False
+								else:
+									if ( "<Directory /var/www/admin-center>" in line ) & (modify):
+										line = "include /etc/apache2/lliurex-location/*.conf\n" + line
+								out_file.write(line)
+				else:
+					if os.path.isfile(LliurexNews.APACHE_FILE_SITES_CONFIGURATION):
+						with open(LliurexNews.APACHE_FILE_SITES_CONFIGURATION, "r") as in_file:
+							buf = in_file.readlines()
+						with open(LliurexNews.APACHE_FILE_SITES_CONFIGURATION, "w") as out_file:
+							for line in buf:
+								if "lliurex-location" in line:
+									line = "\n"
+								out_file.write(line)
+			except Exception as e:
+				msg="Editing apache2 000-default.conf file.Error: %s"%(str(e))
+				self._debug(msg)
+				cmd="cp /tmp/000-default.conf %s"%(LliurexNews.APACHE_FILE_SITES_CONFIGURATION)
+				os.system(cmd)
+				return [False,""]					
 				
-			return [True,""]
-		
+					
 		except Exception as e:
-			print ("[ExportWebSitesServer] %s"%e)
-			return [False,str(e)]	
+			msg="Enabling apache site.Error: %s"%(str(e))
+			self._debug(msg)
+			return[False,""]
+			
+		return [True,""]	
 
 
 	#def enable_apache
@@ -345,7 +420,6 @@ class LliurexNews:
 		print("* Disabling previous systemd service")
 
 		try:
-
 			cmd="systemctl stop ghost_news.service"
 			os.system(cmd)
 
@@ -354,7 +428,7 @@ class LliurexNews:
 			os.system(cmd)
 
 		except Exception as e:
-			print(str(e))	
+			pass	
 			
 		
 		print("* Enabling systemd service...")
@@ -375,8 +449,9 @@ class LliurexNews:
 			os.system(cmd)
 			
 		except Exception as e:
-			print(str(e))	
-			return [False,"Error enabling systemd service"]
+			msg="Enabling systemd service.Error: %s"%(str(e))
+			self._debug(msg)	
+			return [False,""]
 
 		
 		return [True,""]
@@ -386,7 +461,7 @@ class LliurexNews:
 	def enable_cname(self):
 
 		'''
-		template_dir=LliurexNews.NEWS_BASE_DIR
+		template_dir=LliurexNews.CONTENT_BASE_DIR
 		tpl_env = Environment(loader=FileSystemLoader(template_dir))
 		template = tpl_env.get_template(LliurexNews.CNAME)
 		
@@ -396,6 +471,7 @@ class LliurexNews:
 		f.close()
 		
 		'''
+		print("* Enabling News cname...")
 
 		f=open("/etc/n4d/key","r")
 		magic_key=f.readline().strip("\n")
@@ -407,7 +483,9 @@ class LliurexNews:
 			os.system("systemctl restart dnsmasq.service")
 			return [True,""]
 		else:
-			return [False,result['msg']]
+			msg="Enabling News cname.Error: %s"%(str(result['msg']))
+			self._debug(msg)
+			return [False,""]
 		
 		
 	#def enable_cname
@@ -419,7 +497,6 @@ class LliurexNews:
 		os.system("a2enmod rewrite")
 		os.system("a2enmod headers")
 		os.system("a2ensite default-ssl.conf")
-		os.system("service apache2 restart")
 		os.system("a2ensite news-server.conf")
 		os.system("systemctl restart apache2.service")
 		
@@ -432,54 +509,56 @@ class LliurexNews:
 
 			status,ret=self.load_template(template)
 			if not status:
-				return [False,ret +"1"]
+				return [False,"1"]
 
 			status,ret=self.mysql_service_init()
 			if not status:
-				return [False,ret+"3"]
+				return [False,"2"]
 
 			status,ret=self.create_db_user()
 			if not status:
-				return [False,ret+"4"]
+				return [False,"3"]
 
 			status,ret=self.create_db()
 			if not status:
-				return [False,ret+"5"]
+				return [False,"4"]
 
 			status,ret=self.create_ghost_user()
 			if not status:
-				return[False,ret+"6"]	
+				return[False,"5"]
+
 			status,ret=self.clean_old_files()
 			if not status:
-				return [False,ret+"7"]
+				return [False,"6"]
 
 			status,ret=self.copy_new_files()
 			if not status:
-				return [False,ret+"8"]
+				return [False,"7"]
 
 			status,ret=self.process_config_file()
 			if not status:
-				return [False,ret+"9"]
+				return [False,"8"]
 
 			status,ret=self.enable_apache()
 			if not status:
-				return [False,ret+"10"]	
+				return [False,"9"]	
 
 			status,ret=self.enable_systemd()
 			if not status:
-				return [False,ret+"11"]
+				return [False,"10"]
 			
 			status,ret=self.enable_cname()
 			if not status:
-				return [False,ret+"12"]
+				return [False,"11"]
 				
 			self.enable_apache_conf()
 				
 			return [True,"SUCCESS"]
 			
 		except Exception as e:
-			
-			return [False,str(e)+" ?"]
+			msg="Error in News setup process: %s"%(str(e))
+			self._debug(msg)
+			return [False," ?"]
 		
 	#def initlializ_owncloud
 	

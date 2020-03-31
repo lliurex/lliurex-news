@@ -375,6 +375,7 @@
           <object class="GtkLabel" id="msg_label">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
+            <property name="valign">center</property>
             <property name="margin_left">10</property>
             <property name="margin_right">10</property>
             <property name="margin_bottom">10</property>
@@ -382,19 +383,20 @@
           <packing>
             <property name="expand">False</property>
             <property name="fill">True</property>
-            <property name="pack_type">end</property>
-            <property name="position">4</property>
+            <property name="position">3</property>
           </packing>
         </child>
         <child>
           <object class="GtkBox" id="box2">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
+            <property name="valign">center</property>
             <property name="margin_left">10</property>
             <property name="margin_right">10</property>
+            <property name="margin_bottom">10</property>
             <child>
-              <object class="GtkButton" id="cancel_button">
-                <property name="label">gtk-close</property>
+              <object class="GtkButton" id="help_button">
+                <property name="label">gtk-help</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -403,7 +405,6 @@
               <packing>
                 <property name="expand">False</property>
                 <property name="fill">True</property>
-                <property name="pack_type">end</property>
                 <property name="position">0</property>
               </packing>
             </child>
@@ -429,7 +430,7 @@
             <property name="fill">True</property>
             <property name="padding">5</property>
             <property name="pack_type">end</property>
-            <property name="position">5</property>
+            <property name="position">4</property>
           </packing>
         </child>
       </object>
@@ -476,8 +477,10 @@
           <object class="GtkLabel" id="pbar_label">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
+            <property name="halign">center</property>
             <property name="margin_bottom">5</property>
             <property name="label" translatable="yes">Initializing...</property>
+            <property name="justify">center</property>
           </object>
         </child>
       </object>

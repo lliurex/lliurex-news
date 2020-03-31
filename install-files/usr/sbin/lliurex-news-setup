@@ -41,7 +41,7 @@ class News:
 		
 		self.window=builder.get_object("window1")
 		self.accept_button=builder.get_object("accept_button")
-		self.cancel_button=builder.get_object("cancel_button")
+		self.help_button=builder.get_object("help_button")
 		self.dbname_entry=builder.get_object("dbname_entry")
 		self.dbuser_entry=builder.get_object("dbuser_entry")
 		self.dbpwd_entry=builder.get_object("dbpwd_entry")
@@ -55,7 +55,7 @@ class News:
 		
 		self.window.connect("destroy",self.exit)
 		self.accept_button.connect("clicked",self.accept_clicked)
-		self.cancel_button.connect("clicked",self.exit)
+		self.help_button.connect("clicked",self.show_help)
 		
 		self.progress_window=builder.get_object("window2")
 		self.pbar=builder.get_object("progressbar")
@@ -84,6 +84,7 @@ class News:
 		
 		self.set_defaults()
 		self.set_css_info()
+		self.init_threads()
 		
 		Gtk.main()
 		
@@ -91,9 +92,9 @@ class News:
 	
 	def set_defaults(self):
 		
-		self.dbname_entry.set_text("ghost")
-		self.dbuser_entry.set_text("ghost_dbu")
-		self.user_entry.set_text("ghost_admin")
+		self.dbname_entry.set_text("news")
+		self.dbuser_entry.set_text("news_dbu")
+		self.user_entry.set_text("news_admin")
 		
 	#def set_defaults
 	
@@ -124,6 +125,17 @@ class News:
 	
 			
 	#def set_css_info
+
+	def init_threads(self):
+
+		self.setup_t=threading.Thread(target=self.execute,args=())
+		self.setup_t.daemon=True
+		self.open_help_t=threading.Thread(target=self.open_help)
+		self.open_help_t.daemon=True
+
+		GObject.threads_init()
+
+	#def init_threads
 	
 	def exit(self,widget):
 		
@@ -150,40 +162,39 @@ class News:
 	
 	
 	def accept_clicked(self,widget):
+
+		exec_setup=True
+		message=_("The News server is already configured.\nIf you continue the current content will be removed.\nDo you want to reconfigure the News server?")
 		
+		
+		
+		self.msg_label.set_text("")
 		self.get_values()
 		ret,msg=self.parse_values()
 		if not ret:
-			self.msg_label.set_markup("<span foreground='red'>"+msg+"</span>")
+			msg_text=self.get_msg(msg)
+			self.msg_label.set_markup("<span foreground='red'>"+msg_text+"</span>")
 			return
-			
-		'''	
-		ip="server"
-		c=xmlrpclib.ServerProxy("https://%s:9779"%ip)
-		n4d_key=self.get_n4d_key()
+		if os.path.exists("/var/www/news/.ghost-cli"):
+			dialog = Gtk.MessageDialog(None,0,Gtk.MessageType.WARNING,Gtk.ButtonsType.YES_NO, "News Server Configuration")
+			dialog.format_secondary_text(message)
+			response = dialog.run()
+			if response==Gtk.ResponseType.NO:
+				exec_setup=False
+
+			dialog.destroy() 
+
+		if exec_setup:
 		
-		status,ret=c.initialize_owncloud(n4d_key,"LliurexOwncloud",self.template)
-		
-		if status:
-			os.system("zero-center set-configured lliurex-owncloud")
-			self.msg_label.set_markup("<b>"+"Initialization successful"+"</b>")
-			self.accept_button.set_sensitive(False)
-		else:
-			self.msg_label.set_markup("<span foreground='red'>"+ret+"</span>")
-			os.system("zero-center set-failed lliurex-owncloud")
-		'''
-		
-		self.executing=True
-		
-		self.progress_window.show()
-		
-		GLib.timeout_add(50,self.pulsate)
-		self.ret_msg=""
-		self.ret_status=False
-		GObject.threads_init()
-		t=threading.Thread(target=self.execute,args=())
-		t.daemon=True
-		t.start()
+			self.executing=True
+			self.progress_window.show()
+			self.ret_msg=""
+			self.ret_status=False
+			self.init_threads()
+			#t=threading.Thread(target=self.execute,args=())
+			#t.daemon=True
+			self.setup_t.start()
+			GLib.timeout_add(50,self.pulsate)
 		
 		
 	#def accept_clicked
@@ -192,16 +203,17 @@ class News:
 		
 		
 		if self.executing:	
-			print("esperando")
 			self.pbar.pulse()
 		else:
 			
 			if self.ret_status:
 				os.system("zero-center set-configured lliurex-news")
-				self.msg_label.set_markup("<b>"+_("Initialization successful")+"</b>")
+				msg_text=self.get_msg("15")
+				self.msg_label.set_markup("<b>"+msg_text+"</b>")
 				self.accept_button.set_sensitive(False)
 			else:
-				self.msg_label.set_markup("<span foreground='red'>"+self.ret_msg+"</span>")
+				msg=self.get_msg(self.ret_msg)
+				self.msg_label.set_markup("<span foreground='red'>"+msg_text+"</span>")
 				os.system("zero-center set-failed lliurex-news")		
 
 		return self.executing
@@ -242,17 +254,87 @@ class News:
 		
 		for item in self.template:
 			if self.template[item]=="" or self.template[item]==None:
-				return [False,"There are empty fields to be completed"]
+				return [False,"12"]
 				
 		if self.template["DB_PWD"]!=self.template["DB_PWD2"]:
-			return [False,"DB Passwords do not match"]
+			return [False,"13"]
 			
 		if self.template["ADMIN_PWD"]!=self.template["ADMIN_PWD2"]:
-			return [False,"Administrator passwords do not match"]
+			return [False,"14"]
 			
 		return [True,""]
 		
 	#def parse_values
+
+
+	def get_msg(self,code):
+
+		if code=="1":
+			msg=_("Error loading or processing template")
+		elif code=="2":
+			msg=_("Error initializing mysql service")
+		elif code=="3":
+			msg=_("Error creating user to database")
+		elif code=="4":
+			msg=_("Error creating database")
+		elif code=="5":
+			msg=_("Error creating news user")
+		elif code=="6":
+			msg=_("Error cleaning old files")
+		elif code=="7":
+			msg=_("Error copyng news files")
+		elif code=="8":
+			msg=_("Error processing config file")
+		elif code=="9":
+			msg=_("Error enabling apache2 config")
+		elif code=="10":
+			msg=_("Error enabling systemd service")
+		elif code=="11":
+			msg=_("Error enabling news cname")
+		elif code=="?":
+			msg=_("Error in News config process")
+		elif code=="12":
+			msg=_("There are empty fields to be completed")	
+		elif code=="13":
+			msg=_("DB Passwords do not match")	
+		elif code=="14":
+			msg=_("Administrator passwords do not match")
+		elif code=="15":
+			msg=_("Initialization successful")
+
+		return msg											
+
+	#def get_msg	
+
+	def show_help(self,widget):
+
+		lang=os.environ["LANG"]
+		run_pkexec=False
+		
+		if "PKEXEC_UID" in os.environ:
+			run_pkexec=True
+		
+		if 'ca_ES' in lang:
+			cmd='xdg-open http://wiki.lliurex.net/tiki-index.php?page=Dpkg-Unlocker_va'
+		else:
+			cmd='xdg-open http://wiki.lliurex.net/tiki-index.php?page=Dpkg-Unlocker'
+
+		if not run_pkexec:
+			self.help_cmd="su -c '%s' $USER" %cmd
+		else:
+			user=pwd.getpwuid(int(os.environ["PKEXEC_UID"])).pw_name
+			self.help_cmd="su -c '" +cmd+ "' "+ user
+
+		self.init_threads()
+		self.open_help_t.start()
+	
+	#def show_help
+
+	def open_help(self):
+
+		os.system(self.help_cmd)
+
+	#def open_help	
 	
 #class owncloud
 

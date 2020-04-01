@@ -13,7 +13,7 @@ from jinja2 import Template
 
 class LliurexNews:
 	
-	BASE_DIR="/usr/share/lliurex-news/llx-data/"
+	BASE_DIR="/usr/share/lliurex-news-setup/llx-data/"
 	CONTENT_BASE_DIR=BASE_DIR+"content/"
 	#HTACCESS=CONTENT_BASE_DIR+".htaccess"
 	#ADMIN_DATA=CONTENT_BASE_DIR+"data/"

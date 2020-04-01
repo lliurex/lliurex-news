@@ -212,7 +212,7 @@ class News:
 				self.msg_label.set_markup("<b>"+msg_text+"</b>")
 				self.accept_button.set_sensitive(False)
 			else:
-				msg=self.get_msg(self.ret_msg)
+				msg_text=self.get_msg(self.ret_msg)
 				self.msg_label.set_markup("<span foreground='red'>"+msg_text+"</span>")
 				os.system("zero-center set-failed lliurex-news")		
 

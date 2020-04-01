@@ -15,10 +15,10 @@ import signal
 signal.signal(signal.SIGINT, signal.SIG_DFL)
 
 import gettext
-gettext.textdomain('lliurex-news')
+gettext.textdomain('lliurex-news-setup')
 _ = gettext.gettext
 
-RSRC_PATH="/usr/share/lliurex-news/rsrc/"
+RSRC_PATH="/usr/share/lliurex-news-setup/rsrc/"
 
 class News:
 	
@@ -36,7 +36,7 @@ class News:
 	def start_gui(self):
 		
 		builder=Gtk.Builder()
-		builder.set_translation_domain("lliurex-news")
+		builder.set_translation_domain("lliurex-news-setup")
 		builder.add_from_file(RSRC_PATH+"lliurex-news-setup.glade")
 		
 		self.window=builder.get_object("window1")
@@ -101,7 +101,7 @@ class News:
 	def set_css_info(self):
 
 		self.style_provider=Gtk.CssProvider()
-		f=Gio.File.new_for_path(RSRC_PATH+"lliurex-news.css")
+		f=Gio.File.new_for_path(RSRC_PATH+"lliurex-news-setup.css")
 		self.style_provider.load_from_file(f)
 		Gtk.StyleContext.add_provider_for_screen(Gdk.Screen.get_default(),self.style_provider,Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
 		

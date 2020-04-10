@@ -493,6 +493,8 @@ class LliurexNews:
 	def enable_apache_conf(self):
 		
 		#os.system("a2enmod ldap")
+		os.system("a2enmod proxy")
+		os.system("a2enmod proxy_http") 
 		os.system("a2enmod ssl")
 		os.system("a2enmod rewrite")
 		os.system("a2enmod headers")

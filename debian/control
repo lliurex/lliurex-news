@@ -11,3 +11,10 @@ Architecture: all
 Depends: ${shlibs:Depends}, ${misc:Depends}, n4d, python3,python-bcrypt, python-llxnet
 Description: News server configuration
  Scripts and n4d plugins to configure news server
+ 
+ Package: lliurex-news-installer
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, zero-center,epi-gtk
+Description: News installer files
+ Contains epi and zero-center fles to install news systemr
+

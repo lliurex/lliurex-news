@@ -1,0 +1,7 @@
+#!/bin/bash
+
+epi-gtk /usr/share/zero-lliurex-news-installer/news-installer.epi
+
+exit 0
+
+

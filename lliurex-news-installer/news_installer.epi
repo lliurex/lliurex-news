@@ -1,0 +1,10 @@
+ 
+{
+	"type":"apt",
+	"pkg_list": [{"name":"lliurex-news-setup","key_store":"lliurex-news-setup"}], 
+	"script": {"name":"/usr/share/zero-lliurex-news-installer/news_installer_script"},
+	"depends": "/usr/share/zero-lliurex-docker/docker.epi",
+	"zomando":"zero-lliurex-news-installer"
+	
+	}
+ 

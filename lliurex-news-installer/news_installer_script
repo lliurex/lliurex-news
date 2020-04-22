@@ -1,0 +1,34 @@
+#!/bin/bash
+
+
+ACTION="$1"
+
+case $ACTION in
+
+		preInstall)
+
+			echo "Downloading news-server docker..."
+
+			docker pull lliurex/news-server
+
+			check_download=$(docker images lliurex/news-server -q)
+			
+			if [ -z "$check_download" ]; then
+				echo "Unable to download news-server docker"
+				exit 1
+			fi
+
+		;;	
+
+		postInstall)
+
+			echo "Now the application will be launched to finish configuring the news server..."
+
+			exec /usr/sbin/lliurex-news-setup &
+
+			echo "You can close EPI-GTK window"
+		
+		
+	;;
+
+esac

@@ -22,6 +22,7 @@ class LliurexNews:
 	CONFIG_SYSTEMD_FILE=BASE_DIR+"systemd/ghost_news.service"
 	TEMPLATE_DIR=BASE_DIR+""
 	SQL_TEMPLATE="news.sql"
+	CONFIG_THEMES_DIR=BASE_DIR+"themes"
 	APACHE_CONF_FILE=BASE_DIR+"apache2/news-server.conf"
 	APACHE_EXTERNAL_CONF=BASE_DIR+"apache2/news.conf"
 
@@ -29,10 +30,10 @@ class LliurexNews:
 	#EASY_SITE_ICON=CONTENT_BASE_DIR+"nextcloud.png"
 	#CNAME="cname-owncloud"
 	
-	NEWS_DATA_DIR="/var/www/news/content/"
-	NEWS_CONFIG_DIR="/var/www/news/"
-	NEWS_CONFIG_FILE="/var/www/news/config.production.json"
-	NEWS_SYSTEMD_FILE="/var/www/news/system/files/"
+	NEWS_BASE_DIR="/var/www/news/"
+	NEWS_CONTENT_DIR=NEWS_BASE_DIR+"content/"
+	NEWS_CONFIG_FILE=NEWS_BASE_DIR+"config.production.json"
+	NEWS_SYSTEMD_FILES=NEWS_BASE_DIR+"/system/files/"
 
 	APACHE_FILE_SITES_CONFIGURATION="/etc/apache2/sites-enabled/000-default.conf"
 	APACHE_EXTERNAL_DIR="/etc/apache2/lliurex-location"
@@ -40,21 +41,9 @@ class LliurexNews:
 	
 	
 	
-	'''
-	# TESTING #
-	
-	TEMPLATE_DIR="/home/netadmin/"
-	BASE_DIR="/home/netadmin/workspace/lliurex-owncloud/install-files"+BASE_DIR
-	CONTENT_BASE_DIR=BASE_DIR+"llx-data/"
-	HTACCESS=CONTENT_BASE_DIR+".htaccess"
-	EASY_SITE=CONTENT_BASE_DIR+"owncloud.json"
-	
-	# TESTING #
-	'''
-	
 	def __init__(self):
 	
-		self.dbg=0
+		self.dbg=1
 		self.template=None
 		self.template_vars=["DB_USER","DB_PWD","DB_NAME","ADMIN_USER","ADMIN_PWD","ADMIN_EMAIL"]
 		
@@ -125,10 +114,6 @@ class LliurexNews:
 				import xmlrpclib as x
 				
 				c=x.ServerProxy("https://server:9779")
-				#self.template["LDAP_BASE_USER_TREE"]="ou=People,"+c.get_variable("","VariablesManager","LDAP_BASE_DN")
-				#self.template["LDAP_BASE_GROUP_TREE"]="ou=Groups,"+c.get_variable("","VariablesManager","LDAP_BASE_DN")
-				#self.template["SRV_IP"]=c.get_variable("","VariablesManager","SRV_IP")
-				#self.template["INTERNAL_DOMAIN"]=c.get_variable("","VariablesManager","INTERNAL_DOMAIN")
 				self.template["EXTERNAL_IP"]=lliurex.net.get_ip(c.get_variable("","VariablesManager","EXTERNAL_INTERFACE"))
 
 			self.template["ADMIN_PWD"]=self.create_password_bhash(self.template["ADMIN_PWD"])
@@ -249,17 +234,6 @@ class LliurexNews:
 		
 	#def process_sql_template
 
-	def create_ghost_user(self):
-
-		try:
-			cmd="useradd -r -u 998 -s /usr/bin/nologin ghost"
-			os.system(cmd)
-		except Exception as e:
-			msg="Creating ghost user.Error: %s"%(str(e))
-			self._debug(msg)
-			return[False,""]
-
-		return [True,""]	
 				
 	
 	def clean_old_files(self):
@@ -272,7 +246,7 @@ class LliurexNews:
 				os.system("rm -f %s"%LliurexNews.NEWS_CONFIG_FILE)
 
 			
-			for dir in [LliurexNews.NEWS_DATA_DIR]:
+			for dir in [LliurexNews.NEWS_CONTENT_DIR]:
 				if os.path.exists(dir):
 					os.system("rm -rf %s"%dir)
 
@@ -290,23 +264,31 @@ class LliurexNews:
 		print("* Copying new News files...")
 
 		try:
+
 			cmd="cp %s %s"%(LliurexNews.CONFIG_DATA,LliurexNews.NEWS_CONFIG_FILE)
 			os.system(cmd)
 
-			cmd="cp %s %s"%(LliurexNews.CONFIG_CLI_FILE,LliurexNews.NEWS_CONFIG_DIR)
+			cmd="cp %s %s"%(LliurexNews.CONFIG_CLI_FILE,LliurexNews.NEWS_BASE_DIR)
 			os.system(cmd)
 			
-			cmd="cp -r %s %s"%(LliurexNews.CONTENT_BASE_DIR,"/var/www/news/")
+			cmd="cp -r %s %s"%(LliurexNews.CONTENT_BASE_DIR,LliurexNews.NEWS_BASE_DIR)
 			os.system(cmd)
 			
-			cmd="mkdir /var/www/news/content/data/"
-			os.system(cmd)
+			if not os.path.exists(LliurexNews.NEWS_CONTENT_DIR+"data"):
+				cmd="mkdir %s"%(LliurexNews.NEWS_CONTENT_DIR+"data")
+				os.system(cmd)
 			
-			cmd="mkdir /var/www/news/content/apps/"
-			os.system(cmd)
-			
-			cmd="mkdir /var/www/news/content/logs/"
-			os.system(cmd)
+			if not os.path.exists(LliurexNews.NEWS_CONTENT_DIR+"apps"):
+				cmd="mkdir %s"%(LliurexNews.NEWS_CONTENT_DIR+"apps")
+				os.system(cmd)
+
+			if not os.path.exists(LliurexNews.NEWS_CONTENT_DIR+"logs"):
+				cmd="mkdir %s"%(LliurexNews.NEWS_CONTENT_DIR+"logs")	
+				os.system(cmd)
+
+			if not os.path.exists(LliurexNews.NEWS_CONTENT_DIR+"themes"):
+				cmd="ln -sf %s %s"%(LliurexNews.CONFIG_THEMES_DIR,LliurexNews.NEWS_CONTENT_DIR+"themes")
+				os.system(cmd)
 			
 		except Exception as e:
 			msg="Copying new News files.Error: %s"%(str(e))
@@ -322,7 +304,7 @@ class LliurexNews:
 		print("* Procesing config template...")
 		
 		try:
-			template_dir=LliurexNews.NEWS_CONFIG_DIR
+			template_dir=LliurexNews.NEWS_BASE_DIR
 			template_file="config.production.json"
 			
 			tpl_env = Environment(loader=FileSystemLoader(template_dir))
@@ -333,7 +315,7 @@ class LliurexNews:
 			f.write(content)
 			f.close()		
 
-			for dir in [LliurexNews.NEWS_DATA_DIR]:
+			for dir in [LliurexNews.NEWS_CONTENT_DIR]:
 				if os.path.exists(dir):
 					os.system("chown -R www-data:www-data %s"%dir)
 						
@@ -434,8 +416,8 @@ class LliurexNews:
 		print("* Enabling systemd service...")
 		
 		try:
-			
-			cmd="cp %s %s"%(LliurexNews.CONFIG_SYSTEMD_FILE,LliurexNews.NEWS_SYSTEMD_FILE)
+		
+			cmd="cp %s %s"%(LliurexNews.CONFIG_SYSTEMD_FILE,LliurexNews.NEWS_SYSTEMD_FILES)
 			os.system(cmd)
 
 			cmd="ln -sf /var/www/news/system/files/ghost_news.service /lib/systemd/system/ghost_news.service"
@@ -525,10 +507,6 @@ class LliurexNews:
 			if not status:
 				return [False,"4"]
 
-			status,ret=self.create_ghost_user()
-			if not status:
-				return[False,"5"]
-
 			status,ret=self.clean_old_files()
 			if not status:
 				return [False,"6"]
@@ -574,7 +552,6 @@ if __name__=="__main__":
 	lo.mysql_service_init()
 	lo.create_db_user()
 	lo.create_db()
-	lo.create_ghost_user()
 	lo.clean_old_files()
 	lo.copy_new_files()
 	lo.process_config_file()

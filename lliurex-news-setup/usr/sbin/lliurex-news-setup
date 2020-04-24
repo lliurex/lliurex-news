@@ -37,9 +37,20 @@ class News:
 		
 		builder=Gtk.Builder()
 		builder.set_translation_domain("lliurex-news-setup")
-		builder.add_from_file(RSRC_PATH+"lliurex-news-setup.glade")
+		builder.add_from_file(RSRC_PATH+"lliurex-news-setup.ui")
 		
-		self.window=builder.get_object("window1")
+		self.stack_window=Gtk.Stack()
+		self.stack_window.set_transition_type(Gtk.StackTransitionType.SLIDE_LEFT)
+		self.stack_window.set_margin_top(0)
+		self.stack_window.set_margin_bottom(0)
+
+		self.main_window=builder.get_object("main_window")
+		self.main_window.set_title("News Server Setup")
+		self.main_window.resize(400,850)
+		self.main_box=builder.get_object("main_box")
+		self.banner_box=builder.get_object("banner_box")
+		self.options_box=builder.get_object("options_box")
+
 		self.accept_button=builder.get_object("accept_button")
 		self.help_button=builder.get_object("help_button")
 		self.dbname_entry=builder.get_object("dbname_entry")
@@ -50,21 +61,18 @@ class News:
 		self.pwd_entry=builder.get_object("pwd_entry")
 		self.pwd_entry2=builder.get_object("pwd_entry2")
 		self.entry_list=[self.dbname_entry,self.dbuser_entry,self.dbpwd_entry,self.dbpwd_entry2,self.user_entry,self.pwd_entry,self.pwd_entry2]
+		self.progressbar=builder.get_object("progressbar")
 		self.msg_label=builder.get_object("msg_label")
 
-		
-		self.window.connect("destroy",self.exit)
+		self.stack_window.add_titled(self.options_box, "optionsBox", "Options Box")
+		self.stack_window.show_all()
+		self.main_box.pack_start(self.stack_window,True,True,0)
+		self.progressbar.hide()
+		self.main_window.connect("destroy",self.exit)
 		self.accept_button.connect("clicked",self.accept_clicked)
 		self.help_button.connect("clicked",self.show_help)
-		
-		self.progress_window=builder.get_object("window2")
-		self.pbar=builder.get_object("progressbar")
-		
-
-		self.window.show()
-		
-		
-		
+			
+	
 		database_label=builder.get_object("database_label")
 		database_separator=builder.get_object("database_separator")
 		dbname_label=builder.get_object("dbname_label")
@@ -85,6 +93,9 @@ class News:
 		self.set_defaults()
 		self.set_css_info()
 		self.init_threads()
+		self.main_window.show()
+		self.stack_window.set_transition_type(Gtk.StackTransitionType.NONE)
+		self.stack_window.set_visible_child_name("optionsBox")
 		
 		Gtk.main()
 		
@@ -106,10 +117,10 @@ class News:
 		Gtk.StyleContext.add_provider_for_screen(Gdk.Screen.get_default(),self.style_provider,Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
 		
 
-		self.window.set_name("WHITE_BACKGROUND")
-		self.progress_window.set_name("WHITE_BACKGROUND")
+		self.main_window.set_name("WHITE_BACKGROUND")
+		self.banner_box.set_name("BANNER-BOX")
 		self.msg_label.set_name("MSG-LABEL")
-		self.pbar_label.set_name("HEADER-LABEL")
+		self.progressbar.set_name("HEADER-LABEL")
 
 		for entry in self.blocks_list:
 			entry.set_name("HEADER-LABEL")
@@ -187,7 +198,9 @@ class News:
 		if exec_setup:
 		
 			self.executing=True
-			self.progress_window.show()
+			self.progressbar.show()
+			self.msg_label.show()
+			self.msg_label.set_text(_("Initializing News. Wait a moment..."))
 			self.ret_msg=""
 			self.ret_status=False
 			self.init_threads()
@@ -203,18 +216,18 @@ class News:
 		
 		
 		if self.executing:	
-			self.pbar.pulse()
+			self.progressbar.pulse()
 		else:
 			
 			if self.ret_status:
-				os.system("zero-center set-configured lliurex-news")
+				os.system("zero-center set-configured lliurex-news-setup")
 				msg_text=self.get_msg("15")
-				self.msg_label.set_markup("<b>"+msg_text+"</b>")
+				self.msg_label.set_text(msg_text)
 				self.accept_button.set_sensitive(False)
 			else:
 				msg_text=self.get_msg(self.ret_msg)
 				self.msg_label.set_markup("<span foreground='red'>"+msg_text+"</span>")
-				os.system("zero-center set-failed lliurex-news")		
+				os.system("zero-center set-failed lliurex-news-setup")		
 
 		return self.executing
 		
@@ -231,7 +244,7 @@ class News:
 		
 		
 		self.executing=False
-		self.progress_window.hide()
+		self.progressbar.hide()
 		
 		return False
 		

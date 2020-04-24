@@ -22,7 +22,7 @@ class LliurexNews:
 	CONFIG_SYSTEMD_FILE=BASE_DIR+"systemd/ghost_news.service"
 	TEMPLATE_DIR=BASE_DIR+""
 	SQL_TEMPLATE="news.sql"
-	CONFIG_THEMES_DIR=BASE_DIR+"themes"
+	CONFIG_THEMES_DIR=BASE_DIR+"themes/lliurex-theme"
 	APACHE_CONF_FILE=BASE_DIR+"apache2/news-server.conf"
 	APACHE_EXTERNAL_CONF=BASE_DIR+"apache2/news.conf"
 
@@ -265,6 +265,11 @@ class LliurexNews:
 
 		try:
 
+			if not os.path.exists(LliurexNews.NEWS_BASE_DIR):
+				cmd="mkdir %s"%(LliurexNews.NEWS_BASE_DIR)
+				os.system(cmd)
+
+				
 			cmd="cp %s %s"%(LliurexNews.CONFIG_DATA,LliurexNews.NEWS_CONFIG_FILE)
 			os.system(cmd)
 
@@ -287,7 +292,11 @@ class LliurexNews:
 				os.system(cmd)
 
 			if not os.path.exists(LliurexNews.NEWS_CONTENT_DIR+"themes"):
-				cmd="ln -sf %s %s"%(LliurexNews.CONFIG_THEMES_DIR,LliurexNews.NEWS_CONTENT_DIR+"themes")
+				cmd="mkdir %s"%(LliurexNews.NEWS_CONTENT_DIR+"themes")	
+				os.system(cmd)
+
+			if not os.path.exists(LliurexNews.NEWS_CONTENT_DIR+"themes/lliurex-theme"):
+				cmd="ln -sf %s %s"%(LliurexNews.CONFIG_THEMES_DIR,LliurexNews.NEWS_CONTENT_DIR+"themes/lliurex-theme")
 				os.system(cmd)
 			
 		except Exception as e:

@@ -46,7 +46,7 @@ class News:
 
 		self.main_window=builder.get_object("main_window")
 		self.main_window.set_title("News Server Setup")
-		self.main_window.resize(400,850)
+		self.main_window.resize(400,815)
 		self.main_box=builder.get_object("main_box")
 		self.banner_box=builder.get_object("banner_box")
 		self.options_box=builder.get_object("options_box")

@@ -45,7 +45,7 @@ class LliurexNews:
 	
 		self.dbg=1
 		self.template=None
-		self.template_vars=["DB_USER","DB_PWD","DB_NAME","ADMIN_USER","ADMIN_PWD","ADMIN_EMAIL"]
+		self.template_vars=["DB_USER","DB_PWD","DB_NAME","ADMIN_USER","ADMIN_PWD","ADMIN_EMAIL","DEFAULT_LOCALE"]
 		
 	#def init
 
@@ -77,6 +77,7 @@ class LliurexNews:
 			self.template["ADMIN_USER"]=config.get("news","ADMIN_USER")
 			self.template["ADMIN_PWD"]=config.get("news","ADMIN_PWD")
 			self.template["ADMIN_EMAIL"]=config.get("news","ADMIN_EMAIL")
+			self.template["DEFAULT_LOCALE"]=config.get("news","DEFAULT_LOCALE")
 		
 			self.load_template(self.template)
 			return [True,""]

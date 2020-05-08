@@ -93,6 +93,7 @@ class News:
 		self.set_defaults()
 		self.set_css_info()
 		self.init_threads()
+		self.get_session_locale()
 		self.main_window.show()
 		self.stack_window.set_transition_type(Gtk.StackTransitionType.NONE)
 		self.stack_window.set_visible_child_name("optionsBox")
@@ -147,6 +148,19 @@ class News:
 		GObject.threads_init()
 
 	#def init_threads
+
+	def get_session_locale(self):
+
+		lang=os.environ["LANG"]
+
+		if 'ca' in lang:
+			self.default_locale="ca@valencia"
+		elif 'es' in lang:
+				self.default_locale="es"
+		else:
+			self.default_locale="en"
+
+	#def get_session_locale				
 	
 	def exit(self,widget):
 		
@@ -167,6 +181,8 @@ class News:
 		self.template["ADMIN_PWD"]=self.pwd_entry.get_text()
 		self.template["ADMIN_PWD2"]=self.pwd_entry2.get_text()
 		self.template["ADMIN_EMAIL"]=self.user_entry.get_text()+"@llxnews.com"
+
+		self.template["DEFAULT_LOCALE"]=self.default_locale
 		
 		
 	#def get_values
@@ -321,13 +337,12 @@ class News:
 
 	def show_help(self,widget):
 
-		lang=os.environ["LANG"]
 		run_pkexec=False
 		
 		if "PKEXEC_UID" in os.environ:
 			run_pkexec=True
 		
-		if 'ca_ES' in lang:
+		if 'ca_ES' in self.default_locale:
 			cmd='xdg-open http://wiki.lliurex.net/tiki-index.php?page=Dpkg-Unlocker_va'
 		else:
 			cmd='xdg-open http://wiki.lliurex.net/tiki-index.php?page=Dpkg-Unlocker'

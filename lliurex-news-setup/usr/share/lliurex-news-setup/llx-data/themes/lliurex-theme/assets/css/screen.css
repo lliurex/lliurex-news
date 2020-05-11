@@ -113,8 +113,7 @@ body {
     position: relative;
     margin-top: 64px;
     padding-bottom: 12px;
-    color: #fff;
-    background: color(var(--darkgrey) l(-5%)) no-repeat center center;
+    background: #2855a7ff;
     background-size: cover;
 }
 
@@ -284,7 +283,7 @@ body {
     right: 0;
     left: 0;
     z-index: 1000;
-    background: color(var(--darkgrey) l(-5%));
+    background: #2855a7ff;
 }
 
 .site-nav {
@@ -317,7 +316,7 @@ body {
 .site-header-background:not(.responsive-header-img) .site-nav-left-wrapper:after,
 .site-nav-main .site-nav-left-wrapper:after {
     right: 0;
-    background: linear-gradient(to right, color(var(--darkgrey) l(-5%) a(0)) 0%,color(var(--darkgrey) l(-5%)) 100%);
+    background: #2855a7ff;
 }
 
 .site-nav-left {
@@ -1862,7 +1861,7 @@ Usage (In Ghost editor):
 
 .read-next {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    background: color(var(--darkgrey) l(-5%));
+    background:#007e72;
 }
 
 .read-next-feed {
@@ -2801,7 +2800,7 @@ Usage (In Ghost editor):
     padding-top: 20px;
     padding-bottom: 60px;
     color: #fff;
-    background: color(var(--darkgrey) l(-5%));
+    background: #2855a7ff;
 }
 
 .site-footer-content {

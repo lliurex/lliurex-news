@@ -212,8 +212,9 @@ class News:
 			dialog.destroy() 
 
 		if exec_setup:
-		
+			
 			self.executing=True
+			self.options_box.set_sensitive(False)
 			self.progressbar.show()
 			self.msg_label.show()
 			self.msg_label.set_text(_("Initializing News. Wait a moment..."))
@@ -234,12 +235,11 @@ class News:
 		if self.executing:	
 			self.progressbar.pulse()
 		else:
-			
+			self.options_box.set_sensitive(True)
 			if self.ret_status:
 				os.system("zero-center set-configured lliurex-news-setup")
 				msg_text=self.get_msg("15")
 				self.msg_label.set_text(msg_text)
-				self.accept_button.set_sensitive(False)
 			else:
 				msg_text=self.get_msg(self.ret_msg)
 				self.msg_label.set_markup("<span foreground='red'>"+msg_text+"</span>")
@@ -343,9 +343,9 @@ class News:
 			run_pkexec=True
 		
 		if 'ca_ES' in self.default_locale:
-			cmd='xdg-open http://wiki.lliurex.net/tiki-index.php?page=Dpkg-Unlocker_va'
+			cmd='xdg-open https://wiki.edu.gva.es/lliurex/tiki-index.php?page=LliureX-News:-Gestiona-i-publica-les-not%C3%ADcies-del-centre'
 		else:
-			cmd='xdg-open http://wiki.lliurex.net/tiki-index.php?page=Dpkg-Unlocker'
+			cmd='xdg-open https://wiki.edu.gva.es/lliurex/tiki-index.php?page=LliureX-News:-Gestiona-y-publica-las-noticias-del-centro'
 
 		if not run_pkexec:
 			self.help_cmd="su -c '%s' $USER" %cmd

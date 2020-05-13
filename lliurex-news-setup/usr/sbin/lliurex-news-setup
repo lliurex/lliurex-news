@@ -319,6 +319,8 @@ class News:
 		elif code=="10":
 			msg=_("Error enabling systemd service")
 		elif code=="11":
+			msg=_("Error enabling easy-site")
+		elif code=="12":
 			msg=_("Error enabling news cname")
 		elif code=="?":
 			msg=_("Error in News config process")

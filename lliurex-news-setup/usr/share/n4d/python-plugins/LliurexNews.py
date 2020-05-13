@@ -25,10 +25,8 @@ class LliurexNews:
 	CONFIG_THEMES_DIR=BASE_DIR+"themes/lliurex-theme"
 	APACHE_CONF_FILE=BASE_DIR+"apache2/news-server.conf"
 	APACHE_EXTERNAL_CONF=BASE_DIR+"apache2/news.conf"
-
-	#EASY_SITE=CONTENT_BASE_DIR+"nextcloud.json"
-	#EASY_SITE_ICON=CONTENT_BASE_DIR+"nextcloud.png"
-	#CNAME="cname-owncloud"
+	EASY_SITE=BASE_DIR+"/easy-site/news-admin.json"
+	EASY_SITE_ICON=BASE_DIR+"/easy-site/news-admin.png"
 	
 	NEWS_BASE_DIR="/var/www/news/"
 	NEWS_CONTENT_DIR=NEWS_BASE_DIR+"content/"
@@ -37,8 +35,8 @@ class LliurexNews:
 
 	APACHE_FILE_SITES_CONFIGURATION="/etc/apache2/sites-enabled/000-default.conf"
 	APACHE_EXTERNAL_DIR="/etc/apache2/lliurex-location"
-	#EASY_SITES_DIR_ICON="/var/www/srv/icons/"
-	
+	EASY_SITES_DIR="/var/www/srv/links/"
+	EASY_SITES_DIR_ICON="/var/www/srv/icons/"
 	
 	
 	def __init__(self):
@@ -449,6 +447,26 @@ class LliurexNews:
 		return [True,""]
 		
 	#def enable_easy_site
+
+	def enable_easy_site(self):
+		
+		print("* Enabling easy site...")
+		
+		try:
+			if os.path.exists(LliurexNews.EASY_SITES_DIR):
+				shutil.copy(LliurexNews.EASY_SITE,LliurexNews.EASY_SITES_DIR)
+				
+			if os.path.exists(LliurexNews.EASY_SITES_DIR_ICON):
+				shutil.copy(LliurexNews.EASY_SITE_ICON,LliurexNews.EASY_SITES_DIR_ICON)	
+		except Exception as e:
+			msg="Enabling easy-site.Error: %s"%(str(e))
+			self._debug(msg)
+			return [False,""]
+
+		return [True,""]
+		
+	#def enable_easy_site
+
 	
 	def enable_cname(self):
 
@@ -536,10 +554,14 @@ class LliurexNews:
 			status,ret=self.enable_systemd()
 			if not status:
 				return [False,"10"]
+
+			status,ret=self.enable_easy_site()
+			if not status:
+				return [False,"11"]	
 			
 			status,ret=self.enable_cname()
 			if not status:
-				return [False,"11"]
+				return [False,"12"]
 				
 			self.enable_apache_conf()
 				
@@ -567,6 +589,7 @@ if __name__=="__main__":
 	lo.process_config_file()
 	lo.enable_apache()
 	lo.enable_systemd()
+	lo.enable_easy_site()
 	lo.enable_cname()
 	lo.enable_apache_conf()
 

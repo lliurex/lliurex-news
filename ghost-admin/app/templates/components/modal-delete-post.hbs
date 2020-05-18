@@ -1,0 +1,15 @@
+<header class="modal-header">
+    <h1>{{t (concat this.post.displayName ".modal.header")}}</h1>
+</header>
+<a class="close" href="" title="{{t "common.Close"}}" {{action "closeModal"}}>{{svg-jar "close"}}<span class="hidden">{{t "common.Close"}}</span></a>
+
+<div class="modal-body">
+    <p>
+        {{{t (concat this.post.displayName ".modal.body") name=this.post.title}}}
+    </p>
+</div>
+
+<div class="modal-footer">
+    <button {{action "closeModal"}} class="gh-btn"><span>{{t "common.Cancel"}}</span></button>
+    <GhTaskButton @buttonText={{t "taskButton.Delete"}} @successText={{t "taskButton.Deleted"}} @task={{this.deletePost}} @class="gh-btn gh-btn-red gh-btn-icon" />
+</div>

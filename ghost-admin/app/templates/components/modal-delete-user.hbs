@@ -1,0 +1,30 @@
+<header class="modal-header" data-test-modal="delete-user">
+    <h1>{{t "Are you sure you want to delete this user?"}}</h1>
+</header>
+<a class="close" href="" title="{{t "common.Close"}}" {{action "closeModal"}}>{{svg-jar "close"}}<span class="hidden">{{t "common.Close"}}</span></a>
+
+<div class="modal-body">
+    {{#if this.user.count.posts}}
+        <p>
+            {{{t "<strong>{user}</strong> and their <strong>{posts, plural}</strong> will be permanently deleted. If you don’t want to lose these posts, you should assign them to a different author." user=this.user.name posts=this.user.count.posts}}}
+        </p>
+        <p>
+            {{t "A backup will be automatically downloaded to your device before deletion."}}
+        </p>
+    {{else}}
+        <p>
+            {{{t "<strong>{user}</strong> will be permanently deleted. A backup will be automatically downloaded to your device before deletion." user=this.user.name}}}
+        </p>
+    {{/if}}
+</div>
+
+<div class="modal-footer">
+    <button {{action "closeModal"}} class="gh-btn" data-test-button="cancel-delete-user">
+        <span>{{t "common.Cancel"}}</span>
+    </button>
+    <GhTaskButton @buttonText={{t "taskButton.Download backup & delete user"}}
+        @successText={{t "taskButton.Deleted"}}
+        @task={{this.deleteUser}}
+        @class="gh-btn gh-btn-red gh-btn-icon"
+        data-test-button="confirm-delete-user" />
+</div>

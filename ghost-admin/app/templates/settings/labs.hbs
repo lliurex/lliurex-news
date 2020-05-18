@@ -1,0 +1,238 @@
+<section class="gh-canvas">
+    <GhCanvasHeader class="gh-canvas-header">
+        <h2 class="gh-canvas-title" data-test-screen-title>
+            {{t "Labs"}}
+        </h2>
+    </GhCanvasHeader>
+
+    <section class="view-container settings-debug">
+    {{!-- LLIUREX Hide content
+        <p class="gh-box gh-box-info">{{svg-jar "idea"}}{{t "This is a testing ground for experimental features which aren't quite ready for primetime. They may change, break or inexplicably disappear at any time."}}</p>
+        {{#if this.session.user.isOwner}}
+        <div class="gh-setting-header">{{t "Members (BETA)"}}</div>
+        <div class="flex flex-column br3 shadow-1 bg-grouped-table mt2">
+            <div class="gh-setting-first gh-setting-last">
+                <div class="gh-members-setting-content">
+                    <div class="flex">
+                        <div class="flex flex-column flex-grow-1">
+                            <div class="gh-setting-title pl5 pt5">{{t "Enable members"}}</div>
+                            <div class="gh-setting-desc pl5 pb5">{{{t "Create registered members and take subscription payments — <a href=\"{link}\" target=\"_blank\" rel=\"noopener\">Find out more</a>" link="https://ghost.org/docs/members/"}}}</div>
+                        </div>
+                        <div class="gh-setting-action">
+                            <div class="for-switch pa5"><GhFeatureFlag @flag="members" /></div>
+                        </div>
+                    </div>
+                    {{#liquid-if this.feature.labs.members}}
+                    <GhMembersLabSetting
+                        @settings={{this.settings}}
+                        @setDefaultContentVisibility={{action "setDefaultContentVisibility"}}
+                        @setMembersSubscriptionSettings={{action "setMembersSubscriptionSettings"}}
+                        @setBulkEmailSettings={{action "setBulkEmailSettings"}}
+                    />
+                    <div class="mt5 pl5 pr5 pb5">
+                        <GhTaskButton @buttonText={{t "taskButton.Save members settings"}}
+                            @task={{this.saveSettings}}
+                            @successText={{t "taskButton.Saved"}}
+                            @runningText={{t "taskButton.Saving"}}
+                            @autoReset={{true}}
+                            @class="gh-btn gh-btn-blue gh-btn-icon"
+                        />
+                    </div>
+                    {{/liquid-if}}
+                </div>
+            </div>
+        </div>
+        {{/if}}
+LLIUREX --}}
+        <div class="gh-setting-header">{{t "Migration options"}}</div>
+        <div class="flex flex-column br3 shadow-1 bg-grouped-table pa5 mt2">
+            <div class="gh-setting-first">
+                <div class="gh-setting-content">
+                    <div class="gh-setting-title">{{t "Import content"}}</div>
+                    <div class="gh-setting-desc">{{t "Import posts from another Ghost installation"}}</div>
+                </div>
+                <div class="gh-setting-action">
+                    <form id="settings-import" enctype="multipart/form-data">
+                        <GhFileUpload
+                            @id="importfile"
+                            @classNames="flex"
+                            @uploadButtonText={{this.uploadButtonText}}
+                            @onUpload={{action "onUpload"}}
+                            @acceptEncoding={{this.importMimeType}}
+                            data-test-file-input="import"
+                        />
+                    </form>
+                </div>
+            </div>
+
+            {{#if this.importErrors}}
+                <div class="gh-import-errors {{if this.importSuccessful "gh-import-errors-warning"}}" data-test-import-errors>
+                    <div class="gh-import-errors-title">
+                        {{#if this.importSuccessful}}
+                            {{t "Import successful with warnings"}}
+                        {{else}}
+                            {{t "Import failed"}}
+                        {{/if}}
+                    </div>
+
+                    {{#each this.importErrors as |error|}}
+                        <div class="gh-import-error" data-test-import-error>
+                            <p class="gh-import-error-message" data-test-import-error-message>
+                                {{#if error.help}}{{error.help}}: {{/if}}{{error.message}}
+                            </p>
+
+                            {{#if error.context}}
+                                <div class="gh-import-error-entry" data-test-import-error-context>
+                                    <pre>{{error.context}}</pre>
+                                </div>
+                            {{/if}}
+                        </div>
+                    {{/each}}
+                </div>
+            {{/if}}
+
+            <div class="gh-setting">
+                <div class="gh-setting-content">
+                    <div class="gh-setting-title">{{t "Export your content"}}</div>
+                    <div class="gh-setting-desc">{{t "Download all of your posts and settings in a single, glorious JSON file"}}</div>
+                </div>
+                <div class="gh-setting-action">
+                    <button type="button" class="gh-btn gh-btn-hover-blue" {{action "downloadFile" "db"}}><span>{{t "common.Export"}}</span></button>
+                </div>
+            </div>
+            <div class="gh-setting-last">
+                <div class="gh-setting-content">
+                    <div class="gh-setting-title">{{t "Delete all content"}}</div>
+                    <div class="gh-setting-desc">{{t "Permanently delete all posts and tags from the database, a hard reset"}}</div>
+                </div>
+                <div class="gh-setting-action">
+                    <button type="button" class="gh-btn gh-btn-hover-red js-delete" {{action "toggleDeleteAllModal"}}><span>{{t "common.Delete"}}</span></button>
+                </div>
+            </div>
+        </div>
+{{!-- LLIUREX Hide content
+        <div class="gh-setting-header">{{t "Beta features"}}</div>
+        <div class="flex flex-column br3 shadow-1 bg-grouped-table pa5 mt2">
+            <div class="gh-setting-first">
+                <div class="gh-setting-content">
+                    <div class="gh-setting-title">{{t "Night shift"}}</div>
+                    <div class="gh-setting-desc">{{t "Swap Ghost admin's colours to a dark background which is easy on the eyes"}}</div>
+                </div>
+                <div class="gh-setting-action">
+                    <div class="for-switch"><GhFeatureFlag @flag="nightShift" /></div>
+                </div>
+            </div>
+            <div class="gh-setting">
+                <GhUploader
+                    @extensions={{this.jsonExtension}}
+                    @uploadUrl="/redirects/json/"
+                    @paramName="redirects"
+                    @onUploadSuccess={{perform this.redirectUploadResult true}}
+                    @onUploadFailure={{perform this.redirectUploadResult false}}
+                    as |uploader|
+                >
+                <div class="gh-setting-content">
+                    <div class="gh-setting-title">{{t "Redirects"}}</div>
+                    <div class="gh-setting-desc">{{{t "Configure redirects for old or moved content, more info in <a href=\"{link}\">the docs</a>" link="https://ghost.org/tutorials/implementing-redirects/"}}}</div>
+                    {{#each uploader.errors as |error|}}
+                        <div class="gh-setting-error" data-test-error="redirects">{{or error.context error.message}}</div>
+                    {{/each}}
+                </div>
+                <div class="gh-setting-action" style="display: flex; flex-direction: column">
+                    {{#if uploader.isUploading}}
+                        {{uploader.progressBar}}
+                    {{else}}
+                        <button
+                            type="button"
+                            class="gh-btn gh-btn-icon {{if this.redirectSuccess "gh-btn-green"}} {{if this.redirectFailure "gh-btn-red"}}"
+                            onclick={{action "triggerFileDialog"}}
+                            data-test-button="upload-redirects"
+                        >
+                            <span>
+                                {{#if this.redirectSuccess}}
+                                    {{svg-jar "check-circle"}} {{t "taskButton.Uploaded"}}
+                                {{else if this.redirectFailure}}
+                                    {{svg-jar "retry"}} {{t "taskButton.Upload Failed"}}
+                                {{else}}
+                                    {{t "taskButton.Upload redirects JSON"}}
+                                {{/if}}
+                            </span>
+                        </button>
+                        <span><a href="#" {{action "downloadFile" "redirects/json"}} data-test-link="download-redirects">{{t "Download current redirects"}}</a></span>
+                        {{/if}}
+
+                    <div style="display:none">
+                        <GhFileInput @multiple={{false}} @action={{uploader.setFiles}} @accept={{this.jsonMimeType}} data-test-file-input="redirects" />
+                    </div>
+                </div>
+                </GhUploader>
+            </div>
+            <div class="gh-setting-last">
+                <GhUploader
+                    @extensions={{this.yamlExtension}}
+                    @uploadUrl="/settings/routes/yaml/"
+                    @paramName="routes"
+                    @onUploadSuccess={{perform this.routesUploadResult true}}
+                    @onUploadFailure={{perform this.routesUploadResult false}}
+                    as |uploader|
+                >
+                <div class="gh-setting-content">
+                    <div class="gh-setting-title">{{t "Routes"}}</div>
+                    <div class="gh-setting-desc">{{t "Configure dynamic routing by modifying the routes.yaml file"}}</div>
+                    {{#each uploader.errors as |error|}}
+                        <div class="gh-setting-error" data-test-error="routes">{{or error.context error.message}}</div>
+                    {{/each}}
+                </div>
+                <div class="gh-setting-action" style="display: flex; flex-direction: column">
+                    {{#if uploader.isUploading}}
+                        {{uploader.progressBar}}
+                    {{else}}
+                        <button
+                            type="button"
+                            class="gh-btn gh-btn-icon {{if this.routesSuccess "gh-btn-green"}} {{if this.routesFailure "gh-btn-red"}}"
+                            onclick={{action "triggerFileDialog"}}
+                            data-test-button="upload-routes"
+                        >
+                            <span>
+                                {{#if this.routesSuccess}}
+                                    {{svg-jar "check-circle"}} {{t "taskButton.Uploaded"}}
+                                {{else if this.routesFailure}}
+                                    {{svg-jar "retry"}} {{t "taskButton.Upload Failed"}}
+                                {{else}}
+                                    {{t "taskButton.Upload routes YAML"}}
+                                {{/if}}
+                            </span>
+                            </button>
+                            <span><a href="#" {{action "downloadFile" "settings/routes/yaml"}} data-test-link="download-routes">{{t "Download current routes.yaml"}}</a></span>
+                        {{/if}}
+
+                    <div style="display:none">
+                        <GhFileInput @multiple={{false}} @action={{uploader.setFiles}} @accept={{this.yamlMimeType}} data-test-file-input="routes" />
+                    </div>
+                </div>
+                </GhUploader>
+            </div>
+        </div>
+LLIUREX --}}
+{{!-- LLIUREX Hide content
+        <div class="gh-setting-header">{{t "Testing tools"}}</div>
+        <div class="flex flex-column br3 shadow-1 bg-grouped-table pa5 mt2">
+            <div class="gh-setting-first gh-setting-last">
+                <div class="gh-setting-content">
+                    <div class="gh-setting-title">{{t "Test email configuration"}}</div>
+                    <div class="gh-setting-desc">{{t "Send yourself a test email to make sure everything is working"}}</div>
+                </div>
+                <div class="gh-setting-action">
+                    <GhTaskButton @buttonText="Send" @successText="Sent" @task={{this.sendTestEmail}} @class="gh-btn gh-btn-hover-blue gh-btn-icon" />
+                </div>
+            </div>
+        </div>
+LLIUREX --}}
+    </section>
+</section>
+
+{{#if this.showDeleteAllModal}}
+    <GhFullscreenModal @modal="delete-all"
+        @close={{action "toggleDeleteAllModal"}}
+        @modifier="action wide" />
+{{/if}}

@@ -1,0 +1,12 @@
+<span class="gh-select" data-select-text="{{this.selectedLocale.label}}" tabindex="0">
+    <OneWaySelect
+        @id="defautlLocale"
+        @name="general[defaultLocale]"
+        @options={{this.selectableLocales}}
+        @optionValuePath="name"
+        @optionLabelPath="label"
+        @value={{this.selectedLocale}}
+        @update={{action "setLocale"}}
+    />
+    {{svg-jar "arrow-down-small"}}
+</span>

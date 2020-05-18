@@ -1,0 +1,35 @@
+{
+  "extends": [
+    "@tryghost:base",
+    "@tryghost:automergeSilentTestLintNonMajor",
+    "@tryghost:automergePatchBranch"
+  ],
+  "ignoreDeps": [
+    "ember-source",
+    "ember-drag-drop",
+    "normalize.css",
+    "validator",
+    "ember-in-viewport",
+    "codemirror",
+    "broccoli-concat"
+  ],
+  "ignorePaths": ["lib/koenig-editor/package.json"],
+  "packageRules": [
+    {
+      "groupName": "ember-basic-dropdown addons",
+      "packagePatterns": ["^ember-basic", "^ember-power"]
+    },
+    {
+      "groupName": "ember core",
+      "packageNames": ["ember-source", "ember-cli", "ember-data"]
+    },
+    {
+      "groupName": "ember testing",
+      "packageNames": ["ember-mocha", "ember-exam", "testem"]
+    },
+    {
+      "groupName": "css processors",
+      "packagePatterns": ["^postcss", "^css", "autoprefixer"]
+    }
+  ]
+}

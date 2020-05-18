@@ -1,0 +1,62 @@
+/* Sign in
+/* ---------------------------------------------------------- */
+
+.gh-signin {
+    position: relative;
+    margin: 30px auto;
+    padding: 40px;
+    max-width: 400px;
+    width: 100%;
+    background: #fff;
+    border-radius: 5px;
+    text-align: left;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.05), 0 20px 45px -10px rgba(0, 0, 0, 0.1);
+}
+
+.gh-signin .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.gh-signin .gh-btn {
+    margin: 0;
+}
+
+.forgotten-wrap {
+    position: relative;
+}
+
+.forgotten-wrap input {
+    padding-right: 7rem;
+}
+
+.forgotten-wrap .forgotten-link {
+    position: absolute;
+    top: 7px;
+    right: 1px;
+    bottom: 7px;
+    border-left: color-mod(var(--lightgrey) l(-5%) s(-10%)) 1px solid;
+    border-radius: 0;
+}
+
+.forgotten-link span {
+    height: 19px;
+    font-size: 1.2rem;
+    line-height: 19px;
+    padding: 0 11px 0 12px;
+    margin-top: -1px;
+    color: var(--midlightgrey);
+}
+
+.forgotten-link:hover {
+    border-left: color-mod(var(--lightgrey) l(-15%) s(-10%)) 1px solid;
+    text-decoration: none;
+}
+
+.forgotten-link:hover span {
+    color: var(--blue);
+}
+
+.forgotten-link:active {
+    box-shadow: none;
+    text-decoration: underline;
+}

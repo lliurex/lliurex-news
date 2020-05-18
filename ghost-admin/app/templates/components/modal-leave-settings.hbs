@@ -1,0 +1,17 @@
+<header class="modal-header" data-test-modal="unsaved-settings">
+    <h1>{{t "Are you sure you want to leave this page?"}}</h1>
+</header>
+<a class="close" href="" title="{{t "common.Close"}}" {{action "closeModal"}}>{{svg-jar "close"}}<span class="hidden">{{t "common.Close"}}</span></a>
+
+<div class="modal-body">
+    <p>
+        {{t "Hey there! It looks like you didn't save the changes you made."}}
+    </p>
+
+    <p>{{t "Save before you go!"}}</p>
+</div>
+
+<div class="modal-footer">
+    <button {{action "closeModal"}} class="gh-btn" data-test-stay-button><span>{{t "Stay"}}</span></button>
+    <button {{action "confirm"}} class="gh-btn gh-btn-red" data-test-leave-button><span>{{t "Leave"}}</span></button>
+</div>

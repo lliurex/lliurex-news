@@ -1,0 +1,20 @@
+{{!-- LLIUREX Changed header
+<header class="gh-publishmenu-heading">{{t "Update {displayName} status" displayName=post.displayName}}</header>
+--}}
+<header class="gh-publishmenu-heading">{{t "Update status"}}</header>
+<section class="gh-publishmenu-content gh-publishmenu-section">
+    <div class="gh-publishmenu-radio {{if (eq this.saveType "draft") "active"}}" {{action this.setSaveType "draft" on="click"}}>
+        <div class="gh-publishmenu-radio-button" data-test-publishmenu-unpublished-option></div>
+        <div class="gh-publishmenu-radio-content">
+            <div class="gh-publishmenu-radio-label">{{t "postStatus.Unpublished"}}</div>
+            <div class="gh-publishmenu-radio-desc">{{t (concat post.displayName ".publish.published.revert")}}</div>
+        </div>
+    </div>
+    <div class="gh-publishmenu-radio {{if (eq this.saveType "publish") "active"}}" {{action this.setSaveType "publish" on="click"}}>
+        <div class="gh-publishmenu-radio-button" data-test-publishmenu-published-option></div>
+        <div class="gh-publishmenu-radio-content">
+            <div class="gh-publishmenu-radio-label">{{t "postStatus.Published"}}</div>
+            <div class="gh-publishmenu-radio-desc">{{t (concat post.displayName ".publish.published.display")}}</div>
+        </div>
+    </div>
+</section>

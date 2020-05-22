@@ -1,1 +1,57 @@
-{}
+{
+    "Invited users": "Usuaris convidats",
+    "Invite People": "Convida gent",
+    "Staff users": "Membres de l'equip",
+    "The People Who Made it Possible": "Les persones que ho han fet possible",
+    "Find out how you can get involved": "Descobriu com podeu participar",
+    "Ghost is built by an incredible group of contributors from all over the world": {
+        " Here are just a few of the people who helped create the version you’re using right now": {
+            "": "Ghost ha sigut creat per un grup increïble de col·laboradors de tot el món. Ací hi ha algunes de les persones que han ajudat a crear la versió que utilitzeu en aquest moment."
+        }
+    },
+    "Update available!": "Hi ha una actualització disponible",
+    "Get Help With Ghost": "Obtín ajuda amb Ghost",
+    "User Documentation": "Documentació de l'usuari",
+    "<strong>Mail</strong> {mail}": "<strong>Correu</strong> {mail}",
+    "<strong>Environment</strong> {environment}": "<strong>Entorn</strong> {environment}",
+    "<strong>Database</strong> {database}": "<strong>Base de dades</strong> {database}",
+    "<strong>Version</strong> {version}": "<strong>Versió</strong> {version}",
+    "Skip to main content": "Ves al contingut principal",
+    "Settings": "Configuració",
+    "Stack Trace": "Traça de la pila",
+    "Reset Password": "Restabliu la contrasenya",
+    "Confirm Password": "Confirmeu la contrasenya",
+    "Forgot?": "L'heu oblidada?",
+    "Add Subscriber": "Afig un subscriptor",
+    "Export CSV": "Exporta CSV",
+    "Import CSV": "Importa CSV",
+    "Status": "Estat",
+    "Subscription Date": "Data de subscripció",
+    "Subscribers": "Subscriptors",
+    "Create Account": "Crea un conte",
+    "At least 10 characters": "Com a mínim 10 caràcters",
+    "Password": "Contrasenya",
+    "Eg": {
+        " John H": {
+            " Watson": "p. ex. Joana Pons Tur"
+        },
+        " john@example": {
+            "com": "p. ex. joana@exemple.com"
+        }
+    },
+    "Email Address": "Adreça de correu electrònic",
+    "Create your account": "Creeu el vostre compte",
+    "Show all pages": "Mostra totes les pàgines",
+    "No pages match the current filter": "No hi ha cap pàgina que coincidisca amb el filtre actual",
+    "Create a new page": "Crea una pàgina nova",
+    "You haven't created any pages yet!": "Encara no heu creat cap pàgina",
+    "New page": "Pàgina nova",
+    "Your pages": "Les vostres pàgines",
+    "Show all posts": "Mostra totes les entrades",
+    "No posts match the current filter": "No hi ha cap entrada que coincidisca amb el filtre actual",
+    "Write a new post": "Escriviu una entrada nova",
+    "You haven't written any posts yet!": "Encara no heu escrit cap entrada.",
+    "New post": "Entrada nova",
+    "Your posts": "Les vostres entrades",
+    "Manage": "Gestiona"
+}

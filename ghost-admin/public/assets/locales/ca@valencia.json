@@ -37,7 +37,8 @@
         },
         " john@example": {
             "com": "p. ex. joana@exemple.com"
-        }
+        },
+        " The Daily Awesome": "P. ex. El diari genial"
     },
     "Email Address": "Adreça de correu electrònic",
     "Create your account": "Creeu el vostre compte",
@@ -50,8 +51,1283 @@
     "Show all posts": "Mostra totes les entrades",
     "No posts match the current filter": "No hi ha cap entrada que coincidisca amb el filtre actual",
     "Write a new post": "Escriviu una entrada nova",
-    "You haven't written any posts yet!": "Encara no heu escrit cap entrada.",
+    "You haven't written any posts yet!": "Encara no heu escrit cap entrada",
     "New post": "Entrada nova",
     "Your posts": "Les vostres entrades",
-    "Manage": "Gestiona"
+    "Manage": "Gestiona",
+    "event": {
+        "page": {
+            "published": "S'ha publicat una pàgina",
+            "edited": "S'ha actualitzat una pàgina",
+            "deleted": "S'ha suprimit una pàgina",
+            "added": "S'ha creat una pàgina"
+        },
+        "post": {
+            "tag": {
+                "detached": "S'ha eliminat una etiqueta de l'entrada",
+                "attached": "S'ha afegit una etiqueta a l'entrada"
+            },
+            "published": "S'ha publicat una entrada",
+            "edited": "S'ha actualitzat una entrada",
+            "deleted": "S'ha suprimit una entrada",
+            "added": "S'ha creat una entrada"
+        }
+    },
+    "koenig": {
+        "bookmark": {
+            "Type caption for bookmark (optional)": "Escriviu una llegenda per al marcador (opcional)",
+            "Paste URL to add bookmark content": {
+                "": {
+                    "": {
+                        "": "Apega un URL per a afegir contingut de marcador…"
+                    }
+                }
+            },
+            "Paste URL as link": "Apega un URL com a enllaç",
+            "Retry": "Torna-ho a intentar"
+        },
+        "code": {
+            "Language": {
+                "": {
+                    "": {
+                        "": "Idioma…"
+                    }
+                }
+            },
+            "Type caption for code block (optional)": "Escriviu una llegenda per al bloc de codi ( opcional)"
+        },
+        "embed": {
+            "Type caption for embed (optional)": "Escriviu una llegenda per al contingut incrustat (opcional)",
+            "There was an error when parsing the URL": {
+                "": "S'ha produït un error en analitzar l'URL."
+            },
+            "Retry": "Torna-ho a intentar",
+            "Paste URL as link": "Apega un URL com a enllaç",
+            "Paste URL to add embedded content": {
+                "": {
+                    "": {
+                        "": "Apega l'URL per a afegir contingut incrustat…"
+                    }
+                }
+            }
+        },
+        "toolbar": {
+            "Link": "Enllaça",
+            "Heading Two": "Encapçalament 2",
+            "Heading One": "Encapçalament 1",
+            "Italic": "Cursiva",
+            "Bold": "Negreta"
+        },
+        "Write here": {
+            "": {
+                "": {
+                    "": "Escriviu ací…"
+                }
+            }
+        },
+        "video": {
+            "Drop it like it's hot 🔥": "Deixa'l caure com si estiguera calent 🔥",
+            "Replace video": "Reemplaça el vídeo",
+            "Click to select a video": "Feu clic per a seleccionar un vídeo",
+            "Drop to replace video": "Deixa anar per a reemplaçar el vídeo"
+        },
+        "img": {
+            "Replace image": "Reemplaça la imatge",
+            "Wide": "Gran",
+            "Full": "Completa",
+            "Regular": "Estàndard",
+            "Toggle between editing alt text and caption": "Commuta entre text alternatiu i llegenda",
+            "Type alt text for image (optional)": "Escriviu un text alternatiu per a la imatge (opcional)",
+            "Type caption for image (optional)": "Escriviu una llegenda per a la imatge (opcional)",
+            "Click to select an image": "Feu clic per a seleccionar una imatge",
+            "Drop it like it's hot 🔥": "Deixa-la caure com si estiguera calenta 🔥",
+            "Drop to replace image": "Deixeu anar per a substituir la imatge"
+        },
+        "link": {
+            "Remove": "Suprimeix",
+            "Edit": "Edita",
+            "Enter url": "Introduïu l'URL"
+        },
+        "md": {
+            "Edit": "Edita",
+            "Uploading {images, plural}": {
+                "": {
+                    "": {
+                        "": "S'està pujant {images, plural, =1{the image} other{# images}}..."
+                    }
+                }
+            },
+            "Upload failed": "No s'ha pogut pujat",
+            "Drop image(s) here to upload": "Deixeu les imatges ací per a pujar-les"
+        },
+        "gallery": {
+            "Some images failed to upload": "No s'han pogut pujar algunes imatges",
+            "{fileName} failed to upload": "{fileName} no s'ha pogut pujar",
+            "Type caption for gallery (optional)": "Escriviu un subtítol per a la galeria (opcional)",
+            "Dismiss": "Descarta",
+            "Click to select up to 9 images": "Feu clic per a seleccionar fins a 9 imatges",
+            "Drop 'em like it's hot 🔥": "Deixa-les caure com si estigueren calentes 🔥",
+            "Add images": "Afig imatges",
+            "Galleries are limited to 9 images": "Les galeries estan limitades a 9 imatges"
+        },
+        "cards": {
+            "Video": "Vídeo",
+            "Other": {
+                "": {
+                    "": {
+                        "": "Altres…"
+                    }
+                }
+            },
+            "SoundCloud": "SoundCloud",
+            "Spotify": "Spotify",
+            "CodePen": "CodePen",
+            "Vimeo": "Vimeo",
+            "Unsplash": "Unsplash",
+            "Instagram": "Instagram",
+            "Twitter": "Twitter",
+            "YouTube": "YouTube",
+            "Divider": "Separador",
+            "Gallery": "Galeria",
+            "HTML": "HTML",
+            "Markdown": "Markdown",
+            "Image": "Imatge",
+            "Embed": "Encastat",
+            "Primary": "Primari"
+        },
+        "Microsoft Edge is not currently supported": {
+            " Please switch to <a href=\"https://ghost": {
+                "org/downloads/\" target=\"_blank\" rel=\"noopener\">Ghost Desktop</a> or a recent version of Chrome/Firefox/Safari": {
+                    "": "Microsoft Edge actualment no és compatible. Canvieu a <a href=\"https://ghost.org/downloads/\" target=\"_blank\" rel=\"noopener\">Ghost Desktop</a> o a una versió recent de Chrome/Firefox/Safari."
+                }
+            }
+        }
+    },
+    "Failed to send {invitations, plural} {erroredEmails}": {
+        " Please check your email configuration, see <a href=\"{link}\" target=\"_blank\">{link}</a> for instructions": "S'ha produït un error en enviar {invitations, plural, =1{an invitation} other{# invitations}} {erroredEmails}. Comproveu la vostra configuració de correu, consulteu <a href=\"{link}\" target=\"_blank\">{link}</a> per a obtindre instruccions"
+    },
+    "ajax": {
+        "Theme is not compatible or contains errors": {
+            "": "El tema no és compatible o conté errors."
+        },
+        "Ghost is currently undergoing maintenance, please wait a moment then retry": {
+            "": "Actualment Ghost està en fase de manteniment. Espereu un moment i torneu-ho a provar."
+        },
+        "Request contains an unknown or unsupported file type": {
+            "": "La sol·licitud conté un tipus de fitxer incompatible o desconegut."
+        },
+        "Request is larger than the maximum file size the server allows": "La sol·licitud és més gran que la mida màxima de fitxers que permet el servidor",
+        "Server was unreachable": {
+            "": "No s'ha pogut accedir al servidor."
+        },
+        "API server is running a newer version of Ghost, please upgrade": {
+            "": "El servidor API està executant una versió més recent de Ghost, actualitzeu-lo."
+        }
+    },
+    "I'll do this later, take me to my site!": "Ho faré més endavant. Porta'm al meu lloc web.",
+    "Enter one email address per line, we’ll handle the rest!": "Introduïu una adreça de correu electrònic per línia, nosaltres ja en farem la resta.",
+    "Ghost works best when shared with others": {
+        " Collaborate, get feedback on your posts &amp; work together on ideas": {
+            "": "Ghost funciona millor quan es comparteix amb els altres. Col·laboreu, obteniu comentaris de les vostres publicacions i treballeu conjuntament les idees."
+        }
+    },
+    "Invite {users, plural}": "Invita {users, plural, =1{a user} other{# users}}",
+    "{invalid emails, plural}": "{invalid emails, plural, =1{an invalid email} other{# invalid emails}}",
+    "Invite staff users": "Invita els usuaris de l'equip",
+    "Last step: Invite staff users": "Últim pas: Inviteu els usuaris de l'equip",
+    "Site title": "Títol del lloc",
+    "All over the world, people have started <em>{peopleCount}</em> incredible sites with Ghost": {
+        " Today, we’re starting yours": {
+            "": "A tot el món, la gent ha començat <em>{peopleCount}</em> llocs increïbles amb Ghost. Hui comencem el vostre."
+        }
+    },
+    "Welcome to <strong>Ghost</strong>!": "Us donem la benvinguda a <strong>Ghost</strong>!",
+    "{invitations, plural} sent!": "{invitations, plural, =1{the invitation} other{# invitations}} enviades",
+    "Please fill out the form to setup your blog": {
+        "": "Empleneu el formulari per a configurar el vostre blog."
+    },
+    "Slack": "Slack",
+    "AMP": "AMP",
+    "Google Accelerated Mobile Pages": "Pàgines mòbils accelerades de Google",
+    "The name of your site": "El nom del lloc",
+    "Set the password for this site": "Establiu la contrasenya per a aquest lloc",
+    "A private RSS feed is available at <a href=\"{link}\" target=\"_blank\" rel=\"noopener\">{link}</a>": "Hi ha disponible un canal RSS privat en <a href=\"{link}\" target=\"_blank\" rel=\"noopener\">{link}</a>",
+    "Enable protection with simple shared password": {
+        " All search engine optimization and social features will be disabled": {
+            "": "Habiliteu la protecció amb una contrasenya senzilla compartida. S'inhabilitarà tota l'optimització del motor de cerca i les característiques socials."
+        }
+    },
+    "Make this site private": "Fes que aquest lloc siga privat",
+    "Include the date in your post URLs, e": {
+        "g": {
+            " <strong>blogurl": {
+                "com/2017/01/01/post-title/</strong>": "Incloeu la data en els URL de la vostra publicació, p. ex. <strong>blogurl.com/01/01/2007/post-title/</strong>"
+            }
+        }
+    },
+    "Use dated permalinks": "Utilitza enllaços permanents datats",
+    "Advanced settings": "Configuració avançada",
+    "URL of your publication's Twitter profile": "URL del perfil de Twitter de la vostra publicació",
+    "URL of your publication's Facebook Page": "URL de la Pàgina Facebook de la vostra publicació",
+    "Link your social accounts for full structured data and rich card support": "Enllaceu els vostres comptes socials per a obtindre dades estructurades completes i compatibilitat amb targetes enriquides",
+    "Social accounts": "Comptes de xarxes socials",
+    "An optional large background image for your site": "Una imatge opcional gran de fons per al vostre lloc",
+    "Publication cover": "Coberta de la publicació",
+    "The primary logo for your brand displayed across your theme, should be transparent and at least 600px x 72px": "El logotip principal de la vostra marca que es mostra en el vostre tema, ha de ser transparent i ha de tindre com a mínim 600px x 72px",
+    "Publication logo": "Logotip de la publicació",
+    "Upload Image": "Puja la imatge",
+    "A square, social icon used in the UI of your publication, at least 60x60px": "Una icona social quadrada utilitzada en la IU de la vostra publicació, com a mínim 60x60px",
+    "Publication icon": "Icona de la publicació",
+    "Publication identity": "Identitat de la publicació",
+    "Default: English (<strong>{defaultLocale}</strong>); you can add translation files to your theme for <a href=\"{link}\" target=\"_blank\" rel=\"noopener\">any language</a>": "Per defecte: anglés (<strong>{defaultLocale}</strong>); podeu afegir fitxers de traducció al vostre tema per a <a href=\"{link}\" target=\"_blank\" rel=\"noopener\">qualsevol idioma</a>",
+    "Set the language/locale which is used on your site": "Establiu l'idioma/configuració local que s'utilitza en el vostre lloc",
+    "taskButton": {
+        "Rescheduled": "S'ha reprogramat",
+        "Rescheduling": "S'està reprogramant",
+        "Reschedule": "Reprograma",
+        "Unpublished": "S'ha deixat de publicar",
+        "Unpublishing": "S'està deixant de publicar",
+        "Unpublish": "Deixa de publicar",
+        "Scheduled": "S'ha programat",
+        "Scheduling": "S'està programant",
+        "Schedule": "Programa",
+        "Published": "S'ha publicat",
+        "Publishing": "S'està publicant",
+        "Publish": "Publica",
+        "Updated": "S'ha actualitzat",
+        "Updating": "S'està actualitzant",
+        "Update": "Actualitza",
+        "Change Password": "Canvia la contrasenya",
+        "Send test notification": "Envia una notificació de prova",
+        "Creating": "S'està creant",
+        "Create Account": "Crea un conte",
+        "Reset Password": "Restableix la contrasenya",
+        "Un-suspended": "S'ha restablit",
+        "Un-suspend": "Restableix",
+        "Suspend": "Suspén",
+        "Yep - I'm sure": "Sí, n'estic segur",
+        "Suspended": "En mode d'espera",
+        "Sign in": "Inicia una sessió",
+        "Log in": "Inici de sessió",
+        "Added": "S'ha afegit",
+        "Add": "Afig",
+        "Send invitation now": "Envia una invitació ara",
+        "Delete user": "Elimina l'usuari",
+        "Download backup & delete user": "Baixa la còpia de seguretat i elimina l'usuari",
+        "Deleted": "S'ha suprimit",
+        "Delete": "Suprimeix",
+        "Sent": "S'ha enviat",
+        "Send": "Envia",
+        "Save settings": "Guarda la configuració",
+        "Saving": "S'està guardant",
+        "Save": "Guarda",
+        "Saved": "Guardat",
+        "Retry": "Torna-ho a intentar",
+        "Add user now": "Afig un usuari ara",
+        "Link copied": "S'ha copiat l'enllaç",
+        "Copy link": "Copia l'enllaç",
+        "Upload redirects JSON": "Puja les redireccions JSON",
+        "Upload routes YAML": "Puja les rutes YAML",
+        "Upload Failed": "La pujada ha fallat",
+        "Uploaded": "S'ha pujat",
+        "Delete Webhook": "Suprimeix Webhook",
+        "Delete Integration": "Suprimeix la integració",
+        "Copy": "Copia",
+        "Copied": "S'ha copiat"
+    },
+    "trigger": {
+        "Publish": "Publica",
+        "Scheduled": "Programat",
+        "Update": "Actualitza"
+    },
+    "Yearly price": "Preu anual",
+    "Monthly price": "Preu mensual",
+    "Where to find Stripe API keys": "On trobar les claus de l'API de Stripe",
+    "Stripe publishable API key": "Clau publicable de l'API de Stripe",
+    "Stripe secret API key": "Clau secreta de l'API de Stripe",
+    "Download current routes": {
+        "yaml": "Baixa les rutes actuals .yaml"
+    },
+    "Download current redirects": "Baixa les redireccions actuals",
+    "Upload redirects JSON": "Puja redireccions JSON",
+    "Configure dynamic routing by modifying the routes": {
+        "yaml file": "Configureu l'encaminament dinàmic modificant el fitxer routes.yaml"
+    },
+    "Routes": "Rutes",
+    "Configure redirects for old or moved content, more info in <a href=\"{link}\">the docs</a>": "Configureu les redireccions per a contingut vell o mogut, més informació en <a href=\"{link}\">els documents</a>",
+    "Redirects": "Redireccions",
+    "Collect email addresses from your readers, more info in <a href=\"{link}\">the docs</a>": "Recolliu adreces de correu electrònic dels lectors, més informació en <a href=\"{link}\">els documents</a>",
+    "Swap Ghost admin's colours to a dark background which is easy on the eyes": "Canvia els colors de l'administrador Ghost a un fons fosc que és grat a la vista",
+    "Night shift": "Mode nocturn",
+    "Toggle Night shift": "Activa/desactiva el mode nocturn",
+    "pageTitle": {
+        "Slack": "Slack",
+        "Billing": "Facturació",
+        "Unsplash": "Unsplash",
+        "Staff - User": "Equip - Usuari",
+        "Settings - Tags": "Configuració - Etiquetes",
+        "Subscribers": "Subscriptors",
+        "Sign Out": "Tanca la sessió",
+        "Sign In": "Inicia la sessió",
+        "Settings - Labs": "Configuració - Laboratoris",
+        "Settings - General": "Configuració - General",
+        "Posts": "Entrades",
+        "Staff": "Equip",
+        "Error": "S'ha produït un error",
+        "Editor": "Editor",
+        "Settings - Integrations": "Configuració - Integracions",
+        "Settings - Design": "Configuració - Disseny",
+        "Settings - Code injection": "Configuració - Injecció de codi",
+        "Site": "Lloc web",
+        "Pages": "Pàgines",
+        "Members": "Membres",
+        "Setup": "Configuració",
+        "AMP": "AMP",
+        "About": "Quant a"
+    },
+    "validation": {
+        "A user already exists": "L'usuari ja existeix",
+        "Username is not valid": "El nom d'usuari no és vàlid",
+        "Password must be at least 6 characters long": "La contrasenya ha de tindre un mínim de 6 caràcters",
+        "Please enter an username": {
+            "": "Introduïu un nom d'usuari."
+        },
+        "Has already been used": "Ja s'ha utilitzat",
+        "Please enter a name": {
+            "": "Introduïu un nom."
+        },
+        "Please select a role": "Seleccioneu un rol",
+        "{email} was invalid: {message}": "{email} no era vàlid: {message}",
+        "{email} is not a valid email": {
+            "": "{email} no és un correu electrònic vàlid."
+        },
+        "Incorrect password": "La contrasenya és incorrecta",
+        "Please enter a blog title": {
+            "": "Introduïu el títol del blog."
+        },
+        "Your current password is required to set a new one": "La vostra contrasenya actual és necessària per a definir-ne una de nova",
+        "Email already exists": {
+            "": "El correu electrònic ja existeix."
+        },
+        "No users to invite": "No hi ha cap usuari per a invitar",
+        "Your Username is not a valid Twitter Username": "El vostre nom d'usuari no és un usuari vàlid de Twitter",
+        "A user with that email address was already invited": {
+            "": "Ja s'ha invitat un usuari amb aquesta adreça de correu electrònic."
+        },
+        "A user with that email address already exists": {
+            "": "Ja existeix un usuari amb aquesta adreça de correu electrònic."
+        },
+        "Your new passwords do not match": "Les contrasenyes noves no coincideixen",
+        "Sorry, passwords can't be blank": "La contrasenya no pot estar en blanc",
+        "Website is not a valid url": "El lloc web no és un URL vàlid",
+        "Location is too long": "La ubicació és massa llarga",
+        "Please supply a valid email address": "Introduïu una adreça de correu electrònic vàlida",
+        "Bio is too long": "La biografia és massa llarga",
+        "Name is too long": "El nom és massa llarg",
+        "Description cannot be longer than 500 characters": {
+            "": "La descripció no pot tindre més de 500 caràcters."
+        },
+        "URL cannot be longer than 191 characters": {
+            "": "L'URL no pot tindre més de 191 caràcters."
+        },
+        "Tag names cannot be longer than 191 characters": {
+            "": "Els noms de les etiquetes no poden tindre més de 191 caràcters."
+        },
+        "Tag names can't start with commas": {
+            "": "Els noms de les etiquetes no poden començar per comes."
+        },
+        "You must specify a name for the tag": {
+            "": "Heu d'introduir un nom per a l'etiqueta."
+        },
+        "The URL must be in a format like https://www": {
+            "facebook": {
+                "com/yourPage": "L'URL ha d'estar en un format semblant a https://www.facebook.com/lavostrapàgina"
+            }
+        },
+        "The URL must be in a format like https://hooks": {
+            "slack": {
+                "com/services/<your personal key>": "L'URL ha d'estar en un format semblant a https://hooks.slack.com/services/<your personal key>"
+            }
+        },
+        "The URL must be in a format like https://twitter": {
+            "com/yourUsername": "L'URL ha d'estar en un format semblant a https://twitter.com/nomd'usuari"
+        },
+        "Email address is not valid": "L'adreça de correu electrònic no és vàlida",
+        "Password must be supplied": "Cal introduir la contrasenya",
+        "Description is too long": "La descripció és massa llarga",
+        "Title is too long": "El títol és massa llarg",
+        "The two new passwords don't match": {
+            "": "Les dues contrasenyes noves no coincideixen."
+        },
+        "Please enter a password": {
+            "": "Introduïu una contrasenya."
+        },
+        "Must be at least 2 mins in the future": "Ha de ser com a mínim 2 minuts posterior",
+        "Must be in the past": "Ha de ser anterior",
+        "Can't be blank": "No pot estar en blanc",
+        "Must be in format: \"15:00\"": "Ha d'estar en el format: «15:00»",
+        "Twitter Description cannot be longer than 500 characters": {
+            "": "La descripció de Twitter no pot tindre més de 500 caràcters."
+        },
+        "Twitter Title cannot be longer than 300 characters": {
+            "": "El títol de Twitter no pot tindre més de 300 caràcters."
+        },
+        "Facebook Description cannot be longer than 500 characters": {
+            "": "La descripció de Facebook no pot tindre més de 500 caràcters."
+        },
+        "Facebook Title cannot be longer than 300 characters": {
+            "": "El títol de Facebook no pot tindre més de 300 caràcters."
+        },
+        "Meta Description cannot be longer than 500 characters": {
+            "": "La meta descripció no pot tindre més de 500 caràcters."
+        },
+        "Meta Title cannot be longer than 300 characters": {
+            "": "El meta títol no pot tindre més de 300 caràcters."
+        },
+        "Header code cannot be longer than 65535 characters": {
+            "": "El codi de la capçalera no pot tindre més de 65535 caràcters."
+        },
+        "Footer code cannot be longer than 65535 characters": {
+            "": "El codi del peu de pàgina no pot tindre més de 65535 caràcters."
+        },
+        "Excerpt cannot be longer than 300 characters": {
+            "": "L'extracte no pot tindre més de 300 caràcters."
+        },
+        "At least one author is required": {
+            "": "Heu d'indicar almenys un autor."
+        },
+        "Title cannot be longer than 255 characters": {
+            "": "El títol no pot tindre més de 255 caràcters."
+        },
+        "You must specify a title for the post": {
+            "": "Heu d'especificar un títol per a l'entrada."
+        },
+        "Sorry, you cannot use an insecure password": "No podeu utilitzar una contrasenya insegura",
+        "Password must be at least 10 characters long": "La contrasenya ha de tindre un mínim de 10 caràcters",
+        "Target URL is too long, max 2000 chars": "L'URL de destinació és massa llarg, com a màxim pot tindre 2000 caràcters",
+        "Please enter a valid URL": "Introduïu un URL vàlid",
+        "Please enter a target URL": "Introduïu un URL de destinació",
+        "Please select an event": "Seleccioneu un esdeveniment",
+        "Name is too long, max 191 chars": "El nom és massa llarg, com a màxim pot tindre 191 caràcters",
+        "You must specify a valid URL or relative path": "Heu d'especificar un URL o un camí relatiu vàlids",
+        "You must specify a URL or relative path": "Heu d'especificar un URL o un camí relatiu",
+        "You must specify a label": "Heu d'especificar una etiqueta",
+        "Please enter an email": {
+            "": "Introduïu un correu electrònic."
+        },
+        "Email is too long": "El correu electrònic és massa llarg",
+        "Invalid Email": {
+            "": "Correu electrònic no vàlid."
+        }
+    },
+    "⚠️ Please use the Content API instead, more info in <a href=\"{link}\">the docs</a>": "⚠️ En el seu lloc, utilitzeu l'API de contingut, més informació en <a href=\"{link}\">els documents</a>",
+    "Public API (deprecated)": "API pública (obsoleta)",
+    "Beta features": "Característiques experimentals",
+    "Send yourself a test email to make sure everything is working": "Envieu-vos un correu electrònic de prova per a assegurar-vos que tot funciona",
+    "Testing tools": "Eines de comprovació",
+    "Test email configuration": "Comprova la configuració del correu electrònic",
+    "Permanently delete all posts and tags from the database, a hard reset": "Suprimeix definitivament totes les entrades i etiquetes de la base de dades; una reinicialització completa",
+    "Delete all content": "Suprimeix tot el contingut",
+    "Download all of your posts and settings in a single, glorious JSON file": "Baixeu totes les entrades i configuracions en un sol i gloriós fitxer JSON",
+    "Export your content": "Exporteu el vostre contingut",
+    "Import failed": "Ha fallat la importació",
+    "Import successful with warnings": "La importació s'ha realitzat correctament amb avisos",
+    "Import posts from another Ghost installation": "Importa entrades des d'una altra instal·lació de Ghost",
+    "Import content": "Importa contingut",
+    "Migration options": "Opcions de migració",
+    "This is a testing ground for experimental features which aren't quite ready for primetime": {
+        " They may change, break or inexplicably disappear at any time": {
+            "": "Aquest és un terreny de prova de característiques experimentals que no estan prou preparades per al lloc principal. Poden canviar, trencar-se o desaparèixer inexplicablement en qualsevol moment."
+        }
+    },
+    "Build your own custom Ghost theme from scratch using our comprehensive Handlebars": {
+        "js SDK": "Creeu el vostre propi tema Ghost personalitzat des de zero mitjançant el nostre complet SDK de Handlebars.js"
+    },
+    "Developer Docs": "Documentació per a desenvolupadors",
+    "Explore a huge range of free and premium themes for Ghost with a range of design and layout options": "Exploreu una gran varietat de temes gratuïts i prèmium per a Ghost amb una àmplia opció de disseny i maquetació",
+    "Theme Marketplace": "Botiga de temes",
+    "Theme Directory": "Directori de temes",
+    "Installed Themes": "Temes instal·lats",
+    "Navigation": "Navegació",
+    "Code here will be injected into the <code>{{ghost_foot}}</code> tag on every page of the site": "El codi ací s'injectarà en <code>\\{\\{ghost_foot\\}\\}</code> l'etiqueta en cada pàgina del lloc web",
+    "Site Footer": "Peu de pàgina del lloc web",
+    "Code here will be injected into the <code>{{ghost_head}}</code> tag on every page of the site": "El codi ací s'injectarà en <code>\\{\\{ghost_head\\}\\}</code> l'etiqueta en cada pàgina del lloc web",
+    "Site Header": "Capçalera del lloc web",
+    "Ghost allows you to inject code into the top and bottom of your theme files without editing them": {
+        " This allows for quick modifications to insert useful things like tracking codes and meta tags": {
+            "": "Ghost us permet injectar codi a la part superior i inferior dels fitxers temàtics sense editar-los. Això permet modificacions ràpides per a inserir coses útils com ara codis de seguiment i meta etiquetes."
+        }
+    },
+    "You haven't added any tags yet!": "Encara no heu afegit cap etiqueta",
+    "Explore pre-built templates for common automation tasks": "Exploreu les plantilles predissenyades per a tasques d'automatització comunes",
+    "Zapier Templates": "Plantilles Zapier",
+    "Zapier configuration": "Configuració Zapier",
+    "Enable <a href=\"{link}\" target=\"_blank\">Unsplash</a> image integration for your posts": "Activeu la integració d'imatges <a href=\"{link}\" target=\"_blank\">Unsplash</a> per a les vostres entrades",
+    "Enable Unsplash": "Activa Unsplash",
+    "Unsplash configuration": "Configuració Unsplash",
+    "Send test notification": "Envia una notificació de prova",
+    "Set up a new incoming webhook <a href=\"{link}\" target=\"_blank\">here</a>, and grab the URL": {
+        "": "Configureu un nou webhook entrant <a href=\"{link}\" target=\"_blank\">ací</a>, i agafeu l'URL."
+    },
+    "Automatically send newly published posts to a channel in Slack or any Slack-compatible service like Discord or Mattermost": {
+        "": "Envia automàticament entrades publicades recentment en un canal de Slack o en qualsevol servei compatible amb Slack com Discord o Mattermost."
+    },
+    "Webhook URL": "URL de Webhook",
+    "Slack configuration": "Configuració Slack",
+    "Automation for your favourite apps": "Automatització per a les vostres aplicacions preferides",
+    "Zapier": "Zapier",
+    "Beautiful, free photos": {
+        "<br> Gifted by the world’s most generous community of photographers": {
+            " 🎁": "Fotos boniques i gratuïtes.<br> Proporcionades per la comunitat de fotògrafs més generosa del món. 🎁"
+        }
+    },
+    "A messaging app for teams": "Una aplicació de missatgeria per a equips",
+    "Available integrations": "Integracions disponibles",
+    "Enable <a href=\"{link}\" target=\"_blank\">Google Accelerated Mobile Pages</a> for your posts": "Activeu <a href=\"{link}\" target=\"_blank\">Pàgines mòbils accelerades de Google </a> per a les vostres entrades",
+    "Enable AMP": "Activa AMP",
+    "AMP configuration": "Configuració AMP",
+    "Accelerated Mobile Pages": "Pàgines mòbils accelerades",
+    "common": {
+        "Ok": "D'acord",
+        "Download": "Baixa",
+        "More": "Més",
+        "Back": "Ves arrere",
+        "Export": "Exporta",
+        "Configure": "Configura",
+        "Active": "Activa",
+        "Expand": "Expandeix",
+        "Cancel": "Canceŀla",
+        "Close": "Tanca",
+        "Save": "Guarda",
+        "Delete": "Suprimeix",
+        "Upload": "Puja",
+        "Update": "Actualitza",
+        "Add": "Afig"
+    },
+    "postStatus": {
+        "Draft": "Esborrany",
+        "New": "Nova",
+        "Scheduled": "Programada",
+        "Unpublished": "No publicada",
+        "Published": "S'ha publicat",
+        "Saving": {
+            "": {
+                "": {
+                    "": "S'està guardant..."
+                }
+            }
+        }
+    },
+    "views": {
+        "Save as view": {
+            "": {
+                "": {
+                    "": "Guarda com a vista…"
+                }
+            }
+        },
+        "Edit current view": {
+            "": {
+                "": {
+                    "": "Edita la vista actual…"
+                }
+            }
+        },
+        "No @title provided": "Falta el @títol",
+        "Published": "Publicades",
+        "Scheduled": "Programades",
+        "Drafts": "Esborranys"
+    },
+    "tour": {
+        "Getting started with Ghost": "Primers passos amb Ghost",
+        "Using custom themes you can completely control the look and feel of your site to suit your brand": {
+            " Here's a full guide to help: <strong><a href=\"{link}\" target=\"_blank\">{link}</a></strong>": "Mitjançant temes personalitzats, podeu controlar completament l'aspecte del vostre lloc en funció del vostre sector. Ací teniu una guia completa per a ajudar-vos: <strong><a href=\"{link}\" target=\"_blank\">{link}</a></strong>"
+        },
+        "Depending on your theme, featured posts receive special styling to make them stand out as a particularly important or emphasised story": {
+            "": "Segons el vostre tema, les entrades destacades reben un estil especial per a fer-les destacar com una història especialment important o destacada."
+        },
+        "Static pages are permanent pieces of content which live outside of your usual stream of posts, for example an 'about' or 'contact' page": {
+            "": "Les pàgines estàtiques són fragments de contingut permanents que viuen fora del vostre flux d'entrades habitual, per exemple, una pàgina «quant a» o de «contactes»."
+        },
+        "Welcome to Ghost Admin! From here you can browse your site, manage your content, and edit your settings": {
+            "<br><br>You can always login to Ghost Admin by visiting <a href=\"{adminUrl}\" target=\"_blank\">{adminDisplayUrl}</a>": "Us donem la benvinguda a Ghost Admin. Des d'ací podeu navegar pel vostre lloc, gestionar el contingut i editar la vostra configuració.<br><br>Sempre podeu iniciar sessió en Ghost Admin visitant <a href=\"{adminUrl}\" target=\"_blank\">{adminDisplayUrl}</a>"
+        },
+        "Ghost uses Markdown to allow you to write and format content quickly and easily": {
+            " This toolbar also helps! Hit the <strong>?</strong> icon for more editor shortcuts": {
+                "": "Ghost utilitza Markdown per a permetre escriure i formatar contingut de forma ràpida i senzilla. Aquesta barra d'eines també ajuda. Feu clic a la <strong>?</strong> icona per a obtindre més dreceres de l'editor."
+            }
+        },
+        "Customising your publication": "Personalització de la vostra publicació",
+        "Setting a featured post": "Configuració d'una entrada destacada",
+        "Turning posts into pages": "Conversió d'entrades en pàgines",
+        "Using the Ghost editor": "Utilització de l'editor Ghost"
+    },
+    "Page not found": "No s'ha trobat la pàgina",
+    "Invitation resent! ({email})": "S'ha tornat a enviar la invitació ({email})",
+    "Something went wrong :(": "S'ha produït un error :(",
+    "Got it": "D'acord",
+    "Search free high-resolution photos": "Busca fotos d'alta resolució gratuïtes",
+    "The file you uploaded was larger than the maximum file size your server allows": {
+        "": "La fitxer que heu penjat era més gran que la mida màxima de fitxer que permet el vostre servidor."
+    },
+    "The file type you uploaded is not supported": {
+        "": "El tipus de fitxer que heu pujat no és compatible.",
+        " Please use {validExtensions}": "El tipus de fitxer que heu pujat no és compatible. Utilitzeu {validExtensions}"
+    },
+    "Select or drag-and-drop a file": "Seleccioneu o arrossegueu un fitxer",
+    "The image type you uploaded is not supported": {
+        " Please use {validExtensions}": "El tipus d’imatge que heu pujat no és compatible. Utilitzeu {validExtensions}"
+    },
+    "The image you uploaded was larger than the maximum file size your server allows": {
+        "": "La imatge que heu penjat era més gran que la mida màxima de fitxer que permet el vostre servidor."
+    },
+    "Upload image of \"{altText}\"": "Puja la imatge de \"{altText}\"",
+    "Tag settings": "Configuració de l'etiqueta",
+    "Add a tag": "Afig una etiqueta",
+    "New tag": "Etiqueta nova",
+    "Sorry, the default Casper theme cannot be overwritten": {
+        "<br>Please rename your zip file and try again": {
+            "": "El tema Casper per defecte no es pot sobreescriure. <br> Torneu a canviar el nom del fitxer zip i torneu-ho a provar."
+        }
+    },
+    "Image URI is not valid": "L'URL de la imatge no és vàlid",
+    "Invitation sent!": "S'ha enviat una invitació",
+    "postBadge": {
+        "Featured": "Destacada",
+        "Draft": "Esborrany",
+        "Scheduled": "Programada",
+        "Page": "Pàgina"
+    },
+    "order": {
+        "Recently updated": "Actualitzades recentment",
+        "Oldest": "Més antigues",
+        "Newest": "Més recents",
+        "Sort by": "Ordena per"
+    },
+    "filter": {
+        "Featured pages": "Pàgines destacades",
+        "Scheduled pages": "Pàgines programades",
+        "Published pages": "Pàgines publicades",
+        "Draft pages": "Esborranys de pàgines",
+        "All pages": "Totes les pàgines",
+        "Search authors": "Busca els autors",
+        "Search tags": "Busca les etiquetes",
+        "All tags": "Totes les etiquetes",
+        "All authors": "Tots els autors",
+        "Featured posts": "Entrades destacades",
+        "Scheduled posts": "Entrades programades",
+        "Published posts": "Entrades publicades",
+        "Draft posts": "Esborranys d'entrades",
+        "All posts": "Totes les entrades"
+    },
+    "searchInput": {
+        "Tags": "Etiquetes",
+        "Users": "Usuaris",
+        "Pages": "Pàgines",
+        "Posts": "Entrades"
+    },
+    "Add <strong>\"{term}\"": {
+        "": {
+            "": {
+                "</strong>": "Afig <strong>«{term}»...</strong>"
+            }
+        }
+    },
+    "editor": {
+        "word": "{count, plural, =0{} =1{one word} other{# words}}",
+        "(Untitled)": "(Sense títol)",
+        "notice": {
+            "Normal editing restored": {
+                "": "S'ha restaurat l'edició normal."
+            },
+            "Hemingway Mode Off": "Mode Hemingway desactivat",
+            "Write now; edit later": {
+                " Backspace disabled": {
+                    "": "Escriviu ara; editar més endavant. S'ha desactivat el retrocés."
+                }
+            },
+            "Hemingway Mode On": "Mode Hemingway activat"
+        },
+        "button": {
+            "Create Link": "Crea un enllaç",
+            "Numbered List": "Llista numerada",
+            "Generic List": "Llista genèrica",
+            "Heading": "Encapçalament",
+            "Italic": "Cursiva",
+            "Bold": "Negreta",
+            "Upload Image(s)": "Puja imatges",
+            "Spellcheck": "Correcció ortogràfica",
+            "Hemingway Mode": "Mode Hemingway",
+            "Markdown Guide": "Guia de Markdown",
+            "Add Image from Unsplash": "Afig una imatge d'Unsplash"
+        },
+        "success": {
+            "post": {
+                "scheduled": {
+                    "published": "S'ha publicat",
+                    "draft": "S'ha desprogramat.",
+                    "scheduled": "S'ha actualitzat."
+                },
+                "draft": {
+                    "scheduled": "S'ha programat.",
+                    "draft": "S'ha guardat.",
+                    "published": "S'ha publicat"
+                },
+                "published": {
+                    "scheduled": "S'ha programat.",
+                    "draft": "S'ha guardat.",
+                    "published": "S'ha actualitzat."
+                }
+            }
+        },
+        "errors": {
+            "post": {
+                "scheduled": {
+                    "published": "No s'ha pogut publicar",
+                    "draft": "No s'ha pogut desprogramar",
+                    "scheduled": "L'actualització ha fallat"
+                },
+                "draft": {
+                    "scheduled": "No s'ha pogut programar",
+                    "draft": "No s'ha pogut guardar",
+                    "published": "No s'ha pogut publicar"
+                },
+                "published": {
+                    "scheduled": "La programació ha fallat",
+                    "draft": "No s'ha pogut guardar",
+                    "published": "L'actualització ha fallat"
+                }
+            }
+        }
+    },
+    "page": {
+        "publish": {
+            "published": {
+                "display": "Mostra aquesta pàgina públicament",
+                "revert": "Reverteix aquesta pàgina a esborrany privat",
+                "title": "Actualitza l'estat de la pàgina"
+            },
+            "draft": {
+                "publish": "Publica aquesta pàgina immediatament",
+                "title": "Esteu preparat per a publicar la pàgina?"
+            }
+        },
+        "modal": {
+            "body": "Esteu a punt de suprimir «<strong>{name}</strong>». Això és permanent. Esteu avisat, d'acord?",
+            "header": "Segur que voleu suprimir aquesta pàgina?"
+        },
+        "list": {
+            "edit": "Edita aquesta pàgina"
+        },
+        "settings": {
+            "image": "Puja la imatge de la pàgina",
+            "footer": "Peu de la pàgina",
+            "header": "Capçalera de pàgina",
+            "delete": "Suprimeix la pàgina",
+            "feature": "Destaca aquesta pàgina",
+            "preview": "Previsualitza",
+            "view": "Mosta la pàgina",
+            "url": "URL de la pàgina",
+            "title": "Configuració de la pàgina"
+        },
+        "placeholder": {
+            "body": "Comenceu a escriure la vostra pàgina…",
+            "title": "Títol de la pàgina"
+        },
+        "willGoLive": "La pàgina es publicarà {countdown}",
+        "linkToList": "Pàgines",
+        "notification": {
+            "preview": "Mostra la previsualització de la pàgina",
+            "view": "Mosta la pàgina"
+        }
+    },
+    "post": {
+        "publish": {
+            "published": {
+                "display": "Mostra aquesta entrada públicament",
+                "revert": "Reverteix aquesta entrada a esborrany privat",
+                "title": "Actualitza l'estat de l'entrada"
+            },
+            "draft": {
+                "publish": "Publica aquesta entrada immediatament",
+                "title": "Esteu preparat per a publicar l'entrada?"
+            }
+        },
+        "modal": {
+            "body": "Esteu a punt de suprimir «<strong>{name}</strong>». Aquesta acció és permanent. Esteu advertit, d'acord?",
+            "header": "Segur que voleu suprimir aquesta entrada?"
+        },
+        "list": {
+            "edit": "Edita aquesta entrada"
+        },
+        "settings": {
+            "image": "Puja la imatge de l'entrada",
+            "footer": "Peu de pàgina de l'entrada",
+            "header": "Capçalera de l'entrada",
+            "delete": "Suprimeix l'entrada",
+            "feature": "Destaca aquesta entrada",
+            "preview": "Previsualitza",
+            "view": "Mostra l'entrada",
+            "url": "URL de l'entrada",
+            "title": "Configuració de l'entrada"
+        },
+        "placeholder": {
+            "body": "Comenceu a escriure la vostra entrada…",
+            "title": "Títol de l'entrada"
+        },
+        "willGoLive": "L'entrada es publicarà {countdown}",
+        "linkToList": "Entrades",
+        "notification": {
+            "preview": "Mostra la vista prèvia de l'entada",
+            "view": "Mostra l'entrada"
+        }
+    },
+    "Username": "Nom d'usuari",
+    "Add New User": "Afig usuari nou",
+    "Add a New User": "Afig un usuari nou",
+    "User created successfully": "S'ha creat un usuari correctament",
+    "User created": "S'ha creat un usuari",
+    "(Never)": "(Mai)",
+    "The user could not be deleted": {
+        " Please try again": {
+            "": "No es pot suprimir l'usuari. Torneu-ho a intentar."
+        }
+    },
+    "Ownership successfully transferred to {user}": "La propietat s'ha transferit correctament a {user}",
+    "Ghost has been upgraded, please copy any unsaved data and refresh the page to continue": {
+        "": "Ghost s'ha actualitzat, copieu les dades no guardades i actualitzeu la pàgina per a continuar."
+    },
+    "Sorry, Ghost is currently undergoing maintenance, please wait a moment then try again": {
+        "": "En aquest moment Ghost està executant tasques de manteniment. Espereu un moment i torneu-ho a intentar."
+    },
+    "Check your Slack channel for the test message": "Comproveu en el vostre canal Slack que heu rebut el missatge de prova",
+    "The invitation does not exist or is no longer valid": {
+        "": "La invitació no existeix o ja no és vàlida."
+    },
+    "Invalid token": {
+        "": "Testimoni no vàlid."
+    },
+    "You need to sign out to register as a new user": {
+        "": "Heu de tancar la sessió per a registrar-vos com a usuari nou."
+    },
+    "Please fill out the form to complete your sign-up": "Empleneu el formulari per a completar el vostre registre",
+    "There was a problem with the reset, please try again": {
+        "": "S'ha produït un problema en reinicialitzar, torneu-ho  aprovar."
+    },
+    "We need your email address to reset your password!": "Necessitem la vostra adreça de correu electrònic per a restablir la vostra contrasenya.",
+    "Please check your email for instructions": {
+        "": "Reviseu el correu electrònic per a obtindre instruccions."
+    },
+    "Please fill out the form to sign in": {
+        "": "Empleneu el formulari per a iniciar la sessió."
+    },
+    "There was a problem on the server": {
+        "": "S'ha produït un problema amb el servidor."
+    },
+    "You can't reset your password while you're signed in": {
+        "": "No podeu restablir la vostra contrasenya mentre tingueu la sessió iniciada."
+    },
+    "By <span class=\"midgrey-l2 fw5\">{authorNames}</span>": "Per <span class=\"midgrey-l2 fw5\">{authorNames}</span>",
+    "by <span class=\"gh-content-entry-author\">{authors}</span>": "per <span class=\"gh-content-entry-author\">{authors}</span>",
+    "{blog} <span class=\"gh-og-preview-footer-left-divider\">|</span> by <span class=\"gh-og-preview-footer-author\">{name}</span>": "{blog} <span class=\"gh-og-preview-footer-left-divider\">|</span> per <span class=\"gh-og-preview-footer-author\">{name}</span>",
+    "Webhooks": "Webhooks",
+    "Publication Language": "Idioma de la publicació",
+    "Set the time and date of your publication, used for all published posts": "Establiu l'hora i la data de la publicació, utilitzades per a totes les entrades publicades",
+    "Site timezone": "Zona horària del lloc web",
+    "Used in your theme, meta data and search results": "S'utilitza en el tema, meta dades i resultats de cerca",
+    "The details used to identify your publication around the web": "Els detalls que s'utilitzen per a identificar la vostra publicació al web",
+    "Title &amp; description": "Títol &amp; descripció",
+    "Publication info": "Informació de la publicació",
+    "All content deleted from database": {
+        "": "S'ha eliminat tot el contingut de la base de dades."
+    },
+    "Check your email for the test message": {
+        "": "Consulteu el correu electrònic per veure el missatge de prova."
+    },
+    "This invite has been revoked or a user has already accepted the invitation": {
+        "": "Aquesta invitació s'ha revocat o l'usuari ja l'ha acceptada."
+    },
+    "Please try resending": {
+        "": "Intenteu el reenviament."
+    },
+    "Invitation email was not sent": {
+        "": "El correu amb la invitació no s'ha enviat."
+    },
+    "Unknown Error": "S'ha produït un error desconegut",
+    "Sorry, there was an error in the application": {
+        " Please let the Ghost team know what happened": {
+            "": "S'ha produït un error a l'aplicació. Informeu'equip Ghost sobre què va passar."
+        }
+    },
+    "\"{themeName}\" uploaded successfully but some {type} were detected": {
+        "": "\"{themeName}\" s'ha pujat correctament però s'han detectat alguns {type}."
+    },
+    "You are still able to use and activate the theme": {
+        " Here's your report": {
+            "": {
+                "": {
+                    "": "Encara podeu utilitzar i activar el tema. Ací teniu el vostre informe…"
+                }
+            }
+        }
+    },
+    "Upload successful with {type}": "S'ha pujat correctament amb {type}",
+    "warnings": "avisos",
+    "errors": "errors",
+    "{title} with {type}": "{title} amb {type}",
+    "View site": "Mostra el lloc",
+    "Activate Now": "Activa-ho ara",
+    "Overwrite": "Sobreescriu",
+    "Click to select or drag-and-drop your theme zip file here": {
+        "": "Feu clic per a seleccionar o arrossegueu ací un fitxer zip amb el tema."
+    },
+    "\"{fileThemeName}\" will overwrite an existing theme of the same name": {
+        " Are you sure?": "«{fileThemeName}» sobreescriurà el tema que ja existeix amb el mateix nom. N'esteu segur?"
+    },
+    "Do you want to activate it now?": "Voleu activar-lo ara?",
+    "This theme is invalid and cannot be activated": {
+        " Fix the following errors and re-upload the theme": {
+            "": "Aquest tema no és vàlid i no es pot activar. Corregiu els errors següents i torneu a pujar el tema."
+        }
+    },
+    "\"{themeName}\" uploaded successfully": {
+        "": "«{themeName}» s'ha pujat correctament."
+    },
+    "Activation failed": "Ha fallat l'activació",
+    "Activation successful": "S'ha activat correctament",
+    "Upload successful!": "S'ha pujat correctament",
+    "Upload a theme": "Puja un tema",
+    "Invalid theme": "Tema no vàlid",
+    "<strong>WARNING:</strong> This user will be able to log in again and will have the same permissions they had previously": {
+        "": "<strong>AVÍS:</strong> Aquest usuari podrà tornar a iniciar la sessió i tindrà els mateixos permisos que tenia anteriorment."
+    },
+    "Edit webhook": "Edita el webhook",
+    "New webhook": "Webhook nou",
+    "Webhook secret": {
+        "": {
+            "": {
+                "": "Webhook secret..."
+            }
+        }
+    },
+    "Secret": "Secret",
+    "Webhook target URL": {
+        "": {
+            "": {
+                "": "URL de destinació del Webhook…"
+            }
+        }
+    },
+    "Target URL": "URL de destinació",
+    "Select an event": "Seleccioneu un esdeveniment",
+    "Webhook name": {
+        "": {
+            "": {
+                "": "Nom del Webhook…"
+            }
+        }
+    },
+    "Integration name": {
+        "": {
+            "": {
+                "": "Nom de la integració…"
+            }
+        }
+    },
+    "New custom integration": "Nova integració personalitzada",
+    "Deleting this webhook may prevent the integration from functioning": {
+        "": "La supressió d'aquest webhook pot impedir que la integració funcione."
+    },
+    "Deleting this integration will remove all webhooks and api keys associated with it": {
+        "": "Si suprimiu aquesta integració, s'eliminen tots els webhooks i les claus d'API associats."
+    },
+    "You're about to delete \"<strong>{user}</strong>\"": {
+        " This is permanent! We warned you, k?": "Esteu a punt de suprimir «<strong>{user}</strong>». Aquesta acció és permanent. Esteu avisat, d'acord?"
+    },
+    "Are you sure you want to delete this member?": "Segur que voleu suprimir aquest membre?",
+    "Are you sure you want to un-suspend this user?": "Segur que voleu restablir aquest usuari?",
+    "Yep - I'm sure": "Sí, n'estic segur",
+    "Are you sure you want to transfer the ownership of this blog? You will not be able to undo this action": {
+        "": "Segur que voleu transferir la propietat d'aquest blog? No podreu desfer aquesta acció."
+    },
+    "Transfer Ownership": "Transfereix la propietat",
+    "Warnings": "Avisos",
+    "Highly recommended to fix, functionality <strong>could</strong> be restricted": "És altament recomanable corregir, la funcionalitat <strong>es podria</strong> restringir",
+    "(Must-fix to activate theme)": "(S'ha de corregir per a activar el tema)",
+    "Errors": "Errors",
+    "Fatal Errors": "S'han produït errors fatals",
+    "Suspend": "Suspén",
+    "<strong>WARNING:</strong> This user will no longer be able to log in but their posts will be kept": {
+        "": "<strong>AVÍS:</strong> Aquest usuari ja no podrà iniciar la sessió, però es mantindran les seues publicacions."
+    },
+    "Are you sure you want to suspend this user?": "Segur que voleu suspendre aquest usuari?",
+    "Log in": "Inici de sessió",
+    "Please re-authenticate": "Torneu a autenticar-vos",
+    "Add a Subscriber": "Afig un subscriptor",
+    "Shortcut": "Drecera",
+    "Result": "Resultat",
+    "Markdown": "Markdown",
+    "For further Markdown syntax reference <a href=\"{link}\" target=\"_blank\">Markdown Documentation</a>": "Per a més referència de sintaxi de Markdown <a href=\"{link}\" target=\"_blank\">Documentació de Markdown</a>",
+    "Markdown Help": "Ajuda Markdown",
+    "Hey there! It looks like you didn't save the changes you made": {
+        "": "Sembla que no heu guardat els canvis que heu realitzat."
+    },
+    "Stay": "Roman",
+    "Leave": "Ix",
+    "Pages": "Pàgines",
+    "Posts": "Entrades",
+    "Try Again": "Torneu-ho a provar",
+    "Verify Password": "Verifiqueu la contrasenya",
+    "New Password": "Contrasenya nova",
+    "Old Password": "Contrasenya anterior",
+    "Write about you, in 200 characters or less": {
+        "": "Informació personal, en 200 caràcters o menys."
+    },
+    "Bio": "Biografia",
+    "URL of your personal Twitter profile": "URL del vostre perfil de Twitter",
+    "URL of your personal Facebook Profile": "URL del vostre perfil de Facebook",
+    "Twitter Profile": "Perfil de Twitter",
+    "Facebook Profile": "Perfil de Facebook",
+    "Have a website or blog other than this one? Link it!": "Teniu un lloc web o blog que no siga aquest? Enllaceu-lo",
+    "Website": "Lloc web",
+    "Where in the world do you live?": "On viviu?",
+    "Location": "Ubicació",
+    "What permissions should this user have?": "Quins permisos ha de tindre aquest usuari?",
+    "Role": "Rol",
+    "Used for notifications": "Utilitzat per a les notificacions",
+    "Email": "Correu electrònic",
+    "Invitation sent: {at}": "Invitació enviada el: {at}",
+    "Use your real name so people can recognise you": "Utilitzeu el vostre nom real perquè la gent us reconega",
+    "Full Name": "Nom complet",
+    "Edit Picture": "Edita la imatge",
+    "{name}\"s Picture": "{name}\"s Imatge",
+    "Change Cover": "Canvia la portada",
+    "Un-suspend User": "Restableix l'usuari",
+    "Suspend User": "Suspén l'usuari",
+    "Delete User": "Suprimeix l'usuari",
+    "Make Owner": "Converteix en propietari",
+    "User Settings": "Configuració de l'usuari",
+    "User Actions": "Accions de l'usuari",
+    "Suspended": "Suspés",
+    "Enable free or paid member registration": {
+        " Restrict content by using <span class=\"dib blue ba br2 b--blue pa1 pt0 pb0 tag-token--internal\">#members</span> hashtag on posts": "Activeu el registre de membres gratuït o de pagament. Restringiu el contingut mitjançant l'etiqueta <span class=\"dib blue ba br2 b--blue pa1 pt0 pb0 tag-token--internal\">#members</span> en les entrades"
+    },
+    "Members": "Membres",
+    "Staff": "Equip",
+    "Suspended users": "Usuaris amb la inscripció suspesa",
+    "Active users": "Usuaris actius",
+    "Resend": "Torna a enviar",
+    "Revoke": "Revoca",
+    "Sending Invite": {
+        "": {
+            "": {
+                "": "S'està enviant una invitació…"
+            }
+        }
+    },
+    "expires {at}": "expira {at}",
+    "expired": "ha expirat",
+    "Invitation not sent - please try again": "No s'ha enviat la invitació - torneu-ho a intentar",
+    "Error {status}: Uh-oh! Trouble reaching the Unsplash API": "Error {status}: S'ha produït un problema per a arribar a l'API Unsplash",
+    "Unsplash API rate limit reached, please try again later": {
+        "": "S'ha arribat al límit de velocitat de l'API Unsplash; torneu-ho a intentar més endavant."
+    },
+    "Uh-oh! Trouble reaching the Unsplash API, please check your connection": "Si teniu problemes per a accedir a l'API Unsplash, comproveu la vostra connexió",
+    "moment": {
+        "at {time}": "a les {time}",
+        "DD MMM YYYY": "DD MMM AAAA"
+    },
+    "There was a problem on the server, please try again": {
+        "": "Hi ha hagut un problema amb el servidor, torneu-ho a intentar."
+    },
+    "Password updated": "S'ha actualitzat la contrasenya",
+    "Internal Server Error": "Error intern del servidor",
+    "Save before you go!": "Guardeu-ho abans d'eixir",
+    "Hey there! It looks like you're in the middle of writing something and you haven't saved all of your content": {
+        "": "Sembla que esteu escrivint alguna cosa i no heu guardat tot el contingut."
+    },
+    "Are you sure you want to leave this page?": "Segur que voleu eixir d'aquesta pàgina?",
+    "Send invitation now": "Envia una invitació ara",
+    "Invite a New User": "Convida un usuari nou",
+    "Select or drag-and-drop a CSV file": {
+        "": "Seleccioneu o arrossegueu un fitxer CSV."
+    },
+    "Invalid": "No és vàlid",
+    "Duplicates": "Duplicats",
+    "Import failed due to an unknown error": {
+        " Check the Web Inspector console and network tabs for errors": {
+            "": "La importació ha fallat a causa d'un error desconegut. Comproveu les etiquetes de la consola de l'inspector web i de la xarxa a la recerca d'errors."
+        }
+    },
+    "Importing": "S'està important",
+    "Import": "Importa",
+    "Imported": "S'ha importat",
+    "Import Subscribers": "Importa subscriptors",
+    "Import Successful": "S'ha importat correctament",
+    "All user data will be deleted": {
+        "": "Totes les dades de l'usuari se suprimiran."
+    },
+    "User will not have access to this blog anymore": "L'usuari ja no tindrà accés a aquest blog",
+    "<strong>{posts, plural}</strong> created by this user will be deleted": "<strong>{posts, plural, other{# posts}}</strong> creades per aquest usuari se suprimiran",
+    "All other user data will be deleted": "Totes les altres dades de l'usuari se suprimiran",
+    "The user will not have access to this blog anymore": "L'usuari ja no tindrà accés a aquest bloc",
+    "<strong>WARNING:</strong> You are about to delete the user '<strong>{name}</strong>'": {
+        " There is no way to recover this": {
+            "": "<strong>AVÍS:</strong> Esteu a punt de suprimir l'usuari «<strong>{name}</strong>» És impossible recuperar això."
+        }
+    },
+    "Delete user": "Suprimeix l'usuari",
+    "Delete user and their posts": "Suprimeix l'usuari i les seues entrades",
+    "Are you sure you want to delete this user?": "Segur que voleu suprimir aquest usuari?",
+    "Download your theme before continuing": "Baixeu el vostre tema abans de continuar",
+    "Maybe": "Potser",
+    "Are you sure you want to delete this": "Segur que voleu suprimir això?",
+    "You're about to delete \"<strong>{name}</strong>\"": {
+        " This is permanent! We warned you, k?": "Esteu a punt de suprimir «<strong>{name}</strong>». Això és permanent. Esteu avisat, d'acord?"
+    },
+    "Are you sure you want to delete this tag?": "Segur que voleu suprimir aquesta etiqueta?",
+    "<strong>WARNING:</strong> All data for this subscriber will be deleted": {
+        " There is no way to recover this": {
+            "": "<strong>AVÍS:</strong> Totes les dades d'aquest subscriptor se suprimiran. Serà impossible recuperar-les."
+        }
+    },
+    "Are you sure?": "N'esteu segur?",
+    "This is permanent! No backups, no restores, no magic undo button": {
+        " We warned you, k?": "Això és permanent. Sense còpies de seguretat, ni cap botó màgic de desfer. Esteu avisats, d'acord?"
+    },
+    "Would you really like to delete all content from your blog?": "Segur que voleu suprimir tot el contingut del vostre blog?",
+    "Menu": "Menú",
+    "Locked": "Bloquejat",
+    "Last seen: {lastSeen}": "Vist per última vegada: {lastSeen}",
+    "Photo of {name}": "Foto de {name}",
+    "Insert image": "Insereix una imatge",
+    "retry": "Torneu-ho a provar",
+    "Network error": "Hi ha un error de la xarxa",
+    "No photos found": "No s'ha trobat cap foto",
+    "No photos found for '{term}'": "No s'ha trobat cap foto per a «{term}»",
+    "Unsplash": "Unsplash",
+    "Ok, got it": "D'acord",
+    "Not your first time? <em>Skip these tips</em>": "Ja havíeu entrat abans? <em>Omet aquests consells</em>",
+    "The local time here is currently {localTime}": "L'hora local ací és actualment {localTime}",
+    "Your timezone has been automatically set to {activeTimezone}": {
+        "": "La vostra zona horària s'ha establit automàticament en {activeTimezone}."
+    },
+    "Please upload a theme to continue": "Pugeu un tema per a continuar",
+    "No themes found": "No s'ha trobat cap tema",
+    "Activate": "Activa",
+    "Version {version}": "Versió {version}",
+    "Affected files": "Fitxers afectats",
+    "Delete Tag": "Suprimeix l'etiqueta",
+    "Extra content for SEO and social media": {
+        "": "Contingut addicional per a SEO i mitjans socials."
+    },
+    "Maximum: <b>{max}</b> characters": {
+        " You’ve used {charactersCount}": "Màxim: <b>{max}</b> caràcters. Heu utilitzat {charactersCount}"
+    },
+    "Description": "Descripció",
+    "URL": "URL",
+    "Name": "Nom",
+    "Upload tag image": "Puja la imatge de l'etiqueta",
+    "internal": "intern",
+    "No subscribers found": {
+        "": "No s'ha trobat cap subscriptor."
+    },
+    "Loading": "S'està carregant",
+    "Search": "Busca",
+    "Set automatic future publish date": "Estableix la data de publicació automàtica",
+    "Schedule for later": "Programa per a més endavant",
+    "Do not publish": "No publiques",
+    "Revert to draft": "Reverteix a esborrany",
+    "Will be published in {time}": "Es publicarà en {time}",
+    "Display this post publicly": "Mostra aquesta entrada públicament",
+    "Revert this post to a private draft": "Reverteix aquesta entrada a esborrany privat",
+    "Update post status": "Actualitza l'estat de l'entrada",
+    "Schedule it for later": "Programa-ho per a més endavant",
+    "Set it live now": "Publica-ho ara",
+    "Will go live {date}": "Es publicarà el {date}",
+    "Post URL matches {filename}": "Publica coincidències d'URL {filename}",
+    "Template": "Plantilla",
+    "Upload an image": "Puja una imatge",
+    "User image": "Imatge de l'usuari",
+    "Last edited {date}": "Última modificació {date}",
+    "Page": "Pàgina",
+    "Facebook Description": "Descripció de Facebook",
+    "Facebook Title": "Títol de Facebook",
+    "Add Facebook image": "Afig una imatge de Facebook",
+    "Twitter Description": "Descripció de Twitter",
+    "Twitter Title": "Títol de Twitter",
+    "Add Twitter image": "Afig una imatge de Twitter",
+    "Search Engine Result Preview": "Previsualització del resultat del motor de cerca",
+    "Meta Description": "Meta descripció",
+    "Recommended: <b>{max}</b> characters": {
+        " You’ve used {charactersCount}": "Es recomana: <b>{max}</b> caràcters. Heu utilitzat {charactersCount}"
+    },
+    "Meta Title": "Meta títol",
+    "Turn this post into a page": "Converteix aquesta entrada en una pàgina",
+    "Add styles/scripts to the header &amp; footer": "Afig estils/scripts a la capçalera &amp; peu de pàgina",
+    "Customise Open Graph data": "Personalitzeu les dades d'Open Graph",
+    "Facebook Card": "Targeta Facebook",
+    "Customise structured data for Twitter": "Personalitzeu les dades estructurades per a Twitter",
+    "Twitter Card": "Targeta Twitter",
+    "Extra content for search engines": "Contingut extra per als motors de cerca",
+    "Canonical URL": "URL canònic",
+    "Meta Data": "Metadades",
+    "Authors": "Autors",
+    "Excerpt": "Extracte",
+    "Use the publish menu to re-schedule": "Utilitzeu el menú de publicació per a tornar a programar",
+    "Scheduled Date": "Data programada",
+    "Publish Date": "Data de publicació",
+    "Preview": "Previsualització",
+    "Label": "Camp",
+    "Reorder": "Reordena",
+    "Labs": "Laboratoris",
+    "Delete Integration": "Suprimeix la integració",
+    "No webhooks configured": "No hi ha cap webhook configurat",
+    "Add webhook": "Afig webhook",
+    "Not triggered": "Sense activar",
+    "Last triggered": "Última activació",
+    "Event": "Esdeveniment",
+    "API URL": "L'URL de l'API",
+    "Admin API Key": "Clau API d'administrador",
+    "Content API Key": "Clau API de contingut",
+    "Add custom integration": "Afig una integració personalitzada",
+    "Create your own custom Ghost integrations with dedicated API keys & webhooks": "Creeu les vostres integracions personalitzades de Ghost amb claus API & webhooks dedicats",
+    "Custom integrations": "Integracions personalitzades",
+    "Built-in integrations": "Integracions integrades",
+    "Integrations": "Integracions",
+    "Code injection": "Injecció de codi",
+    "{posts, plural}": "{posts, plural, =0{no posts} =1{# post} other{# posts}}",
+    "Meta data": "Metadades",
+    "Basic settings": "Configuració bàsica",
+    "Delete tag": "Suprimeix l'etiqueta",
+    "This tag is attached to {posts, plural}": {
+        "": "Aquesta etiqueta està adjuntada a {posts, plural, =1{a post} other{# posts}}."
+    },
+    "Customise structured data of your site": "Personalitzeu les dades estructurades del vostre lloc",
+    "Facebook card": "Targeta Facebook",
+    "Customise structured data of your site for Twitter": "Personalitzeu les dades estructurades del vostre lloc per a Twitter",
+    "Twitter card": "Targeta Twitter",
+    "Site meta settings": "Configuració meta del lloc",
+    "Tag image": "Imatge de l'etiqueta",
+    "Learn more": "Més informació",
+    "Start with # to create internal tags": "Comença amb # per a crear etiquetes internes",
+    "List posts tagged with '{tag}'": "Llista les entrades etiquetades amb «{tag}»",
+    "Edit tag": "Edita l'etiqueta",
+    "You haven't created any {type} tags yet!": "Encara no heu creat cap etiqueta {type}",
+    "Create a new tag": "Crea una nova etiqueta",
+    "No": {
+        " of posts": "Nombre d'entrades"
+    },
+    "Tag": "Etiqueta",
+    "Internal tags": "Etiquetes internes",
+    "Public tags": "Etiquetes públiques",
+    "Tags": "Etiquetes",
+    "Design": "Disseny",
+    "General": "General",
+    "General Settings": "Configuració general",
+    "Sign Out": "Tanca la sessió",
+    "How to Use Ghost": "Com utilitzar Ghost",
+    "Support Center": "Centre de suport",
+    "Your Profile": "El vostre perfil",
+    "About Ghost": "Quant a Ghost"
 }

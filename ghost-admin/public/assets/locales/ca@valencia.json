@@ -60,7 +60,12 @@
             "published": "S'ha publicat una pàgina",
             "edited": "S'ha actualitzat una pàgina",
             "deleted": "S'ha suprimit una pàgina",
-            "added": "S'ha creat una pàgina"
+            "added": "S'ha creat una pàgina",
+            "tag": {
+                "detached": "S'ha eliminat una etiqueta de la pàgina",
+                "attached": "S'ha afegit una etiqueta a la pàgina"
+            },
+            "unpublished": "S'ha deixat de publicar la pàgina"
         },
         "post": {
             "tag": {
@@ -70,7 +75,17 @@
             "published": "S'ha publicat una entrada",
             "edited": "S'ha actualitzat una entrada",
             "deleted": "S'ha suprimit una entrada",
-            "added": "S'ha creat una entrada"
+            "added": "S'ha creat una entrada",
+            "unpublished": "S'ha deixat de publicar l'entrada"
+        },
+        "subscriber": {
+            "deleted": "S'ha suprimit un subscriptor",
+            "added": "S'ha afegit un subscriptor"
+        },
+        "tag": {
+            "deleted": "S'ha suprimit una etiqueta",
+            "edited": "S'ha actualitzat una etiqueta",
+            "added": "S'ha creat una etiqueta"
         }
     },
     "koenig": {
@@ -168,7 +183,8 @@
             "Click to select up to 9 images": "Feu clic per a seleccionar fins a 9 imatges",
             "Drop 'em like it's hot 🔥": "Deixa-les caure com si estigueren calentes 🔥",
             "Add images": "Afig imatges",
-            "Galleries are limited to 9 images": "Les galeries estan limitades a 9 imatges"
+            "Galleries are limited to 9 images": "Les galeries estan limitades a 9 imatges",
+            "Drop to add up to 9 images": "Deixeu anar per a afegir fins a 9 imatges"
         },
         "cards": {
             "Video": "Vídeo",
@@ -193,12 +209,20 @@
             "Markdown": "Markdown",
             "Image": "Imatge",
             "Embed": "Encastat",
-            "Primary": "Primari"
+            "Primary": "Primari",
+            "Bookmark": "Marcador"
         },
         "Microsoft Edge is not currently supported": {
             " Please switch to <a href=\"https://ghost": {
                 "org/downloads/\" target=\"_blank\" rel=\"noopener\">Ghost Desktop</a> or a recent version of Chrome/Firefox/Safari": {
                     "": "Microsoft Edge actualment no és compatible. Canvieu a <a href=\"https://ghost.org/downloads/\" target=\"_blank\" rel=\"noopener\">Ghost Desktop</a> o a una versió recent de Chrome/Firefox/Safari."
+                }
+            }
+        },
+        "Mobile editing is not currently supported": {
+            " Please use a desktop browser or <a href=\"https://ghost": {
+                "org/downloads/\" target=\"_blank\" rel=\"noopener\">Ghost Desktop</a>": {
+                    "": "L'edició de mòbils actualment no és compatible. Utilitzeu un navegador d’escriptori o <a href=\"https://ghost.org/downloads/\" target=\"_blank\" rel=\"noopener\">Ghost Desktop</a>."
                 }
             }
         }
@@ -1329,5 +1353,105 @@
     "How to Use Ghost": "Com utilitzar Ghost",
     "Support Center": "Centre de suport",
     "Your Profile": "El vostre perfil",
-    "About Ghost": "Quant a Ghost"
+    "About Ghost": "Quant a Ghost",
+    "Scheduled to be published": "S'ha programat per a publicar-se",
+    "Update status": "Actualitza l'estat",
+    "Post": "Entrada",
+    "View": "Visualitza",
+    "and sent": "i enviada",
+    "Scheduled to be published {time}": "S'ha programat per a publicar-se a les {time}",
+    "Sent by email": "S'ha enviat per correu electrònic",
+    "To be sent by emai": "Per a ser enviada per correu electrònic",
+    "Failed to send post by email": "No s'ha pogut enviar l'entrada per correu electrònic",
+    "Scheduled to be published and sent": "S'ha programat per a la seua publicació i enviament",
+    "<strong>{user}</strong> and their <strong>{posts, plural}</strong> will be permanently deleted": {
+        " If you don’t want to lose these posts, you should assign them to a different author": {
+            "": "<strong>{user}</strong> i les seues <strong>{posts, plural, =1{a post} other{# posts}}</strong> se suprimirà definitivament. Si no voleu perdre aquestes entrades, heu d'assignar-les a un autor diferent."
+        }
+    },
+    "<strong>{user}</strong> will be permanently deleted": {
+        " A backup will be automatically downloaded to your device before deletion": {
+            "": "<strong>{user}</strong> s'eliminarà definitivament. Es baixarà una còpia de seguretat en el vostre dispositiu abans de la supressió."
+        }
+    },
+    "A backup will be automatically downloaded to your device before deletion": {
+        "": "Es descarregarà automàticament una còpia de seguretat en el vostre dispositiu abans de la supressió."
+    },
+    "<span class=\"ttu\">{currency}</span>/year": "<span class=\"ttu\">{currency}</span>/any",
+    "<span class=\"ttu\">{currency}</span>/month": "<span class=\"ttu\">{currency}</span>/mes",
+    "Test notification sent": "S'ha enviat una notificació de prova",
+    "Post has been sent by email": "S'ha enviat l'entrada per correu electrònic",
+    "Invitation revoked": "S'ha revocat la invitació",
+    "members": {
+        "Unknown location": "Ubicació desconeguda",
+        "Created on {subscribeAt}": "S'ha creat el {subscribeAt}",
+        "This is an authentication link to sign into <strong>{blogTitle}</strong> as <strong>{email}</strong>, you can send it to them if they need it, or use it to sign into their account for customer support": {
+            "": "Aquest és un enllaç d'autenticació per a iniciar la sessió en <strong>{blogTitle}</strong> com a <strong>{email}</strong>, podeu enviar-los-el , si ells el necessiten o utilitzar-lo per a iniciar sessió en el seu compte d'atenció al client."
+        },
+        "This link is only valid for the next <strong>10 minutes</strong>": "Aquest enllaç només és vàlid durant els pròxims <strong>10 minuts</strong>",
+        "Unknown": "Desconegut",
+        "You've successfully added yourself as a member": {
+            "": "Us heu afegit correctament com a membre."
+        },
+        "Member added": "S'ha afegit un membre",
+        "Label name": "Nom de l'etiqueta",
+        "Edit label": "Edita l'etiqueta",
+        "New label": "Etiqueta nova",
+        "You're about to delete label \"<strong>{name}</strong>\"": {
+            " This is permanent! We warned you, k?": "Esteu a punt de suprimir aquesta etiqueta \"<strong>{name}</strong>\". Això és permanent. Esteu avisat, d'acord?"
+        },
+        "Are you sure you want to delete this label?": "Segur que voleu suprimir aquesta etiqueta?",
+        "Labels": "Etiquetes",
+        "(not visible to member)": "(no és visible per als membres)",
+        "Note": "Nota",
+        "Maximum: <b>{maximum}</b> characters": {
+            " You’ve used {countdown}": "Màxim: <b>{maximum}</b> caràcters. Heu utilitzat {countdown}"
+        },
+        "A label with the same name already exists": "Ja existeix una etiqueta amb el mateix nom",
+        "Label deleted": "S'ha suprimit una etiqueta",
+        "All labels": "Totes les etiquetes",
+        "Loading": {
+            "": {
+                "": {
+                    "": "S'està carregant…"
+                }
+            }
+        },
+        "Icon color": "Color de la icona",
+        "Saved views appear in the app sidebar": {
+            "": "Les visualitzacions guardades apareixen a la barra lateral de l'aplicació."
+        },
+        "Breaking news": "Notícies d'última hora",
+        "View name": "Nom de la vista",
+        "Edit view": "Edita la vista",
+        "New view": "Vista nova",
+        "If disabled, member will <em>not</em> receive newsletter emails": "Si està desactivat, el membre <em>no</em> rebrà correus electrònics dels butlletins",
+        "Subscribed to emails": "S'ha subscrit als correus electrònics",
+        "Member details": "Detall del membre",
+        "No members match the current filter": "Cap membre coincideix amb el filtre actual",
+        "No members yet": "Encara no hi ha cap membre",
+        "Export all members": "Exporta tots els membres",
+        "Import members": "Importa membres",
+        "Actions": "Accions",
+        "Search members": {
+            "": {
+                "": {
+                    "": "Busca membres…"
+                }
+            }
+        },
+        "Search result": "Resultat de la cerca",
+        "Created": "S'ha creat",
+        "Add Label": "Afig etiqueta",
+        "Member Labels": "Etiquetes dels membres",
+        "New member": "Membre nou",
+        "Members": "Membres",
+        "{members, plural}": "{members, plural, =1{a member} other{# members}}"
+    },
+    "New story": "Entrada nova",
+    "Preview site": "Previsualitza el lloc",
+    "Search site (Ctrl/⌘ + K)": "Busca el lloc (Ctrl/⌘ + K)",
+    "Last update": "Última actualització",
+    "Title": "Títol",
+    "Open site in new tab": "Obri el lloc en una pestanya nova"
 }

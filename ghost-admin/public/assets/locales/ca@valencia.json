@@ -14,7 +14,7 @@
     "User Documentation": "Documentació de l'usuari",
     "<strong>Mail</strong> {mail}": "<strong>Correu</strong> {mail}",
     "<strong>Environment</strong> {environment}": "<strong>Entorn</strong> {environment}",
-    "<strong>Database</strong> {database}": "<strong>Base de dades</strong> {database}",
+    "<strong>Database</strong> {database}": "<strong><strong>Base de dades</strong> {database}",
     "<strong>Version</strong> {version}": "<strong>Versió</strong> {version}",
     "Skip to main content": "Ves al contingut principal",
     "Settings": "Configuració",
@@ -1124,7 +1124,7 @@
     "Use your real name so people can recognise you": "Utilitzeu el vostre nom real perquè la gent us reconega",
     "Full Name": "Nom complet",
     "Edit Picture": "Edita la imatge",
-    "{name}\"s Picture": "{name}\"s Imatge",
+    "{name}\"s Picture": "Imatge de {name}",
     "Change Cover": "Canvia la portada",
     "Un-suspend User": "Restableix l'usuari",
     "Suspend User": "Suspén l'usuari",
@@ -1159,7 +1159,10 @@
     "Uh-oh! Trouble reaching the Unsplash API, please check your connection": "Si teniu problemes per a accedir a l'API Unsplash, comproveu la vostra connexió",
     "moment": {
         "at {time}": "a les {time}",
-        "DD MMM YYYY": "DD MMM AAAA"
+        "DD MMM YYYY": "DD MMM AAAA",
+        "": [
+            "[a] HH:mm [de demà]"
+        ]
     },
     "There was a problem on the server, please try again": {
         "": "Hi ha hagut un problema amb el servidor, torneu-ho a intentar."
@@ -1320,7 +1323,7 @@
     "Built-in integrations": "Integracions integrades",
     "Integrations": "Integracions",
     "Code injection": "Injecció de codi",
-    "{posts, plural}": "{posts, plural, =0{no posts} =1{# post} other{# posts}}",
+    "{posts, plural}": "{posts, plural, =0{sense entrades} =1{# entrada} other{# entrades}}",
     "Meta data": "Metadades",
     "Basic settings": "Configuració bàsica",
     "Delete tag": "Suprimeix l'etiqueta",

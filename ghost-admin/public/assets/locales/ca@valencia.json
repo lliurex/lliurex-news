@@ -3,18 +3,18 @@
     "Invite People": "Convida gent",
     "Staff users": "Membres de l'equip",
     "The People Who Made it Possible": "Les persones que ho han fet possible",
-    "Find out how you can get involved": "Descobriu com podeu participar",
+    "Find out how you can get involved": "Descobriu com podeu participar-hi",
     "Ghost is built by an incredible group of contributors from all over the world": {
         " Here are just a few of the people who helped create the version you’re using right now": {
-            "": "Ghost ha sigut creat per un grup increïble de col·laboradors de tot el món. Ací hi ha algunes de les persones que han ajudat a crear la versió que utilitzeu en aquest moment."
+            "": "News ha sigut creat per un grup increïble de col·laboradors de tot el món. Ací hi ha algunes de les persones que han ajudat a crear la versió que utilitzeu en aquest moment."
         }
     },
     "Update available!": "Hi ha una actualització disponible",
-    "Get Help With Ghost": "Obtín ajuda amb Ghost",
+    "Get Help With Ghost": "Obtín ajuda amb News",
     "User Documentation": "Documentació de l'usuari",
     "<strong>Mail</strong> {mail}": "<strong>Correu</strong> {mail}",
     "<strong>Environment</strong> {environment}": "<strong>Entorn</strong> {environment}",
-    "<strong>Database</strong> {database}": "<strong><strong>Base de dades</strong> {database}",
+    "<strong>Database</strong> {database}": "<strong>Base de dades</strong> {database}",
     "<strong>Version</strong> {version}": "<strong>Versió</strong> {version}",
     "Skip to main content": "Ves al contingut principal",
     "Settings": "Configuració",
@@ -33,10 +33,10 @@
     "Password": "Contrasenya",
     "Eg": {
         " John H": {
-            " Watson": "p. ex. Joana Pons Tur"
+            " Watson": "P. ex. Joana Pons Tur"
         },
         " john@example": {
-            "com": "p. ex. joana@exemple.com"
+            "com": "P. ex. joana@exemple.com"
         },
         " The Daily Awesome": "P. ex. El diari genial"
     },
@@ -86,6 +86,9 @@
             "deleted": "S'ha suprimit una etiqueta",
             "edited": "S'ha actualitzat una etiqueta",
             "added": "S'ha creat una etiqueta"
+        },
+        "site": {
+            "changed": "S'ha canviat el lloc (reconstruït)"
         }
     },
     "koenig": {
@@ -131,7 +134,8 @@
             "Heading Two": "Encapçalament 2",
             "Heading One": "Encapçalament 1",
             "Italic": "Cursiva",
-            "Bold": "Negreta"
+            "Bold": "Negreta",
+            "Quote": "Cometes"
         },
         "Write here": {
             "": {
@@ -168,7 +172,7 @@
             "Uploading {images, plural}": {
                 "": {
                     "": {
-                        "": "S'està pujant {images, plural, =1{the image} other{# images}}..."
+                        "": "S'està pujant {imatges, plural, =1{la imatge} other{# imatges}}..."
                     }
                 }
             },
@@ -215,27 +219,27 @@
         "Microsoft Edge is not currently supported": {
             " Please switch to <a href=\"https://ghost": {
                 "org/downloads/\" target=\"_blank\" rel=\"noopener\">Ghost Desktop</a> or a recent version of Chrome/Firefox/Safari": {
-                    "": "Microsoft Edge actualment no és compatible. Canvieu a <a href=\"https://ghost.org/downloads/\" target=\"_blank\" rel=\"noopener\">Ghost Desktop</a> o a una versió recent de Chrome/Firefox/Safari."
+                    "": "Microsoft Edge actualment no és compatible. Canvieu a <a href=\"https://ghost.org/downloads/\" target=\"_blank\" rel=\"noopener\">Escriptori de News</a> o a una versió recent de Chrome/Firefox/Safari."
                 }
             }
         },
         "Mobile editing is not currently supported": {
             " Please use a desktop browser or <a href=\"https://ghost": {
                 "org/downloads/\" target=\"_blank\" rel=\"noopener\">Ghost Desktop</a>": {
-                    "": "L'edició de mòbils actualment no és compatible. Utilitzeu un navegador d’escriptori o <a href=\"https://ghost.org/downloads/\" target=\"_blank\" rel=\"noopener\">Ghost Desktop</a>."
+                    "": "L'edició de mòbils actualment no és compatible. Utilitzeu un navegador d’escriptori o <a href=\"https://ghost.org/downloads/\" target=\"_blank\" rel=\"noopener\">Escriptori de News</a>."
                 }
             }
         }
     },
     "Failed to send {invitations, plural} {erroredEmails}": {
-        " Please check your email configuration, see <a href=\"{link}\" target=\"_blank\">{link}</a> for instructions": "S'ha produït un error en enviar {invitations, plural, =1{an invitation} other{# invitations}} {erroredEmails}. Comproveu la vostra configuració de correu, consulteu <a href=\"{link}\" target=\"_blank\">{link}</a> per a obtindre instruccions"
+        " Please check your email configuration, see <a href=\"{link}\" target=\"_blank\">{link}</a> for instructions": "S'ha produït un error en enviar {invitacions, plural, =1{una invitació} other{# invitacions}} {erroredEmails}. Comproveu la vostra configuració de correu, consulteu <a href=\"{link}\" target=\"_blank\">{link}</a> per a obtindre instruccions"
     },
     "ajax": {
         "Theme is not compatible or contains errors": {
             "": "El tema no és compatible o conté errors."
         },
         "Ghost is currently undergoing maintenance, please wait a moment then retry": {
-            "": "Actualment Ghost està en fase de manteniment. Espereu un moment i torneu-ho a provar."
+            "": "Actualment News està en fase de manteniment. Espereu un moment i torneu-ho a provar."
         },
         "Request contains an unknown or unsupported file type": {
             "": "La sol·licitud conté un tipus de fitxer incompatible o desconegut."
@@ -245,28 +249,28 @@
             "": "No s'ha pogut accedir al servidor."
         },
         "API server is running a newer version of Ghost, please upgrade": {
-            "": "El servidor API està executant una versió més recent de Ghost, actualitzeu-lo."
+            "": "El servidor API està executant una versió més recent de News, actualitzeu-lo."
         }
     },
     "I'll do this later, take me to my site!": "Ho faré més endavant. Porta'm al meu lloc web.",
     "Enter one email address per line, we’ll handle the rest!": "Introduïu una adreça de correu electrònic per línia, nosaltres ja en farem la resta.",
     "Ghost works best when shared with others": {
         " Collaborate, get feedback on your posts &amp; work together on ideas": {
-            "": "Ghost funciona millor quan es comparteix amb els altres. Col·laboreu, obteniu comentaris de les vostres publicacions i treballeu conjuntament les idees."
+            "": "News funciona millor quan es comparteix amb els altres. Col·laboreu, obteniu comentaris de les vostres publicacions i treballeu conjuntament les idees."
         }
     },
-    "Invite {users, plural}": "Invita {users, plural, =1{a user} other{# users}}",
-    "{invalid emails, plural}": "{invalid emails, plural, =1{an invalid email} other{# invalid emails}}",
+    "Invite {users, plural}": "Invita {usuaris, plural, =1{un usuari} other{# usuaris}}",
+    "{invalid emails, plural}": "{correus electrònics no vàlids, plural, =1{un correu electrònic no vàlid} other{# correus electrònics no vàlids}}",
     "Invite staff users": "Invita els usuaris de l'equip",
     "Last step: Invite staff users": "Últim pas: Inviteu els usuaris de l'equip",
     "Site title": "Títol del lloc",
     "All over the world, people have started <em>{peopleCount}</em> incredible sites with Ghost": {
         " Today, we’re starting yours": {
-            "": "A tot el món, la gent ha començat <em>{peopleCount}</em> llocs increïbles amb Ghost. Hui comencem el vostre."
+            "": "A tot el món, la gent ha començat <em>{peopleCount}</em> llocs increïbles amb News. Hui comencem el vostre."
         }
     },
-    "Welcome to <strong>Ghost</strong>!": "Us donem la benvinguda a <strong>Ghost</strong>!",
-    "{invitations, plural} sent!": "{invitations, plural, =1{the invitation} other{# invitations}} enviades",
+    "Welcome to <strong>Ghost</strong>!": "Us donem la benvinguda a <strong>News</strong>!",
+    "{invitations, plural} sent!": "S'ha enviat {invitacions, plural, =1{la invitació} other{# invitacions}}",
     "Please fill out the form to setup your blog": {
         "": "Empleneu el formulari per a configurar el vostre blog."
     },
@@ -275,7 +279,7 @@
     "Google Accelerated Mobile Pages": "Pàgines mòbils accelerades de Google",
     "The name of your site": "El nom del lloc",
     "Set the password for this site": "Establiu la contrasenya per a aquest lloc",
-    "A private RSS feed is available at <a href=\"{link}\" target=\"_blank\" rel=\"noopener\">{link}</a>": "Hi ha disponible un canal RSS privat en <a href=\"{link}\" target=\"_blank\" rel=\"noopener\">{link}</a>",
+    "A private RSS feed is available at <a href=\"{link}\" target=\"_blank\" rel=\"noopener\">{link}</a>": "Hi ha disponible un canal RSS privat a <a href=\"{link}\" target=\"_blank\" rel=\"noopener\">{l'enllaç}</a>",
     "Enable protection with simple shared password": {
         " All search engine optimization and social features will be disabled": {
             "": "Habiliteu la protecció amb una contrasenya senzilla compartida. S'inhabilitarà tota l'optimització del motor de cerca i les característiques socials."
@@ -285,14 +289,14 @@
     "Include the date in your post URLs, e": {
         "g": {
             " <strong>blogurl": {
-                "com/2017/01/01/post-title/</strong>": "Incloeu la data en els URL de la vostra publicació, p. ex. <strong>blogurl.com/01/01/2007/post-title/</strong>"
+                "com/2017/01/01/post-title/</strong>": "Incloeu la data en els URL de la vostra publicació, p. ex. <strong>urldelblog.com/01/01/2007/títolentrada/</strong>"
             }
         }
     },
     "Use dated permalinks": "Utilitza enllaços permanents datats",
     "Advanced settings": "Configuració avançada",
     "URL of your publication's Twitter profile": "URL del perfil de Twitter de la vostra publicació",
-    "URL of your publication's Facebook Page": "URL de la Pàgina Facebook de la vostra publicació",
+    "URL of your publication's Facebook Page": "URL de la pàgina Facebook de la vostra publicació",
     "Link your social accounts for full structured data and rich card support": "Enllaceu els vostres comptes socials per a obtindre dades estructurades completes i compatibilitat amb targetes enriquides",
     "Social accounts": "Comptes de xarxes socials",
     "An optional large background image for your site": "Una imatge opcional gran de fons per al vostre lloc",
@@ -357,7 +361,10 @@
         "Delete Webhook": "Suprimeix Webhook",
         "Delete Integration": "Suprimeix la integració",
         "Copy": "Copia",
-        "Copied": "S'ha copiat"
+        "Copied": "S'ha copiat",
+        "Unscheduled": "S'ha desprogramat",
+        "Unscheduling": "S'està desprogramant",
+        "Unschedule": "Desprograma"
     },
     "trigger": {
         "Publish": "Publica",
@@ -381,7 +388,7 @@
     "Configure redirects for old or moved content, more info in <a href=\"{link}\">the docs</a>": "Configureu les redireccions per a contingut vell o mogut, més informació en <a href=\"{link}\">els documents</a>",
     "Redirects": "Redireccions",
     "Collect email addresses from your readers, more info in <a href=\"{link}\">the docs</a>": "Recolliu adreces de correu electrònic dels lectors, més informació en <a href=\"{link}\">els documents</a>",
-    "Swap Ghost admin's colours to a dark background which is easy on the eyes": "Canvia els colors de l'administrador Ghost a un fons fosc que és grat a la vista",
+    "Swap Ghost admin's colours to a dark background which is easy on the eyes": "Canvia els colors de l'administrador News a un fons fosc que és grat a la vista",
     "Night shift": "Mode nocturn",
     "Toggle Night shift": "Activa/desactiva el mode nocturn",
     "pageTitle": {
@@ -470,7 +477,7 @@
         },
         "The URL must be in a format like https://hooks": {
             "slack": {
-                "com/services/<your personal key>": "L'URL ha d'estar en un format semblant a https://hooks.slack.com/services/<your personal key>"
+                "com/services/<your personal key>": "L'URL ha d'estar en un format semblant a https://hooks.slack.com/services/<la vostra clau personal>"
             }
         },
         "The URL must be in a format like https://twitter": {
@@ -552,11 +559,11 @@
     "Test email configuration": "Comprova la configuració del correu electrònic",
     "Permanently delete all posts and tags from the database, a hard reset": "Suprimeix definitivament totes les entrades i etiquetes de la base de dades; una reinicialització completa",
     "Delete all content": "Suprimeix tot el contingut",
-    "Download all of your posts and settings in a single, glorious JSON file": "Baixeu totes les entrades i configuracions en un sol i gloriós fitxer JSON",
+    "Download all of your posts and settings in a single, glorious JSON file": "Baixeu totes les entrades i configuracions en un sol i magnífic fitxer JSON",
     "Export your content": "Exporteu el vostre contingut",
     "Import failed": "Ha fallat la importació",
     "Import successful with warnings": "La importació s'ha realitzat correctament amb avisos",
-    "Import posts from another Ghost installation": "Importa entrades des d'una altra instal·lació de Ghost",
+    "Import posts from another Ghost installation": "Importa entrades des d'una altra instal·lació de News",
     "Import content": "Importa contingut",
     "Migration options": "Opcions de migració",
     "This is a testing ground for experimental features which aren't quite ready for primetime": {
@@ -565,10 +572,10 @@
         }
     },
     "Build your own custom Ghost theme from scratch using our comprehensive Handlebars": {
-        "js SDK": "Creeu el vostre propi tema Ghost personalitzat des de zero mitjançant el nostre complet SDK de Handlebars.js"
+        "js SDK": "Creeu el vostre propi tema de News personalitzat des de zero mitjançant el nostre complet SDK de Handlebars.js"
     },
     "Developer Docs": "Documentació per a desenvolupadors",
-    "Explore a huge range of free and premium themes for Ghost with a range of design and layout options": "Exploreu una gran varietat de temes gratuïts i prèmium per a Ghost amb una àmplia opció de disseny i maquetació",
+    "Explore a huge range of free and premium themes for Ghost with a range of design and layout options": "Exploreu una gran varietat de temes gratuïts i prèmium per a News amb una àmplia opció de disseny i maquetació",
     "Theme Marketplace": "Botiga de temes",
     "Theme Directory": "Directori de temes",
     "Installed Themes": "Temes instal·lats",
@@ -579,16 +586,16 @@
     "Site Header": "Capçalera del lloc web",
     "Ghost allows you to inject code into the top and bottom of your theme files without editing them": {
         " This allows for quick modifications to insert useful things like tracking codes and meta tags": {
-            "": "Ghost us permet injectar codi a la part superior i inferior dels fitxers temàtics sense editar-los. Això permet modificacions ràpides per a inserir coses útils com ara codis de seguiment i meta etiquetes."
+            "": "News us permet injectar codi a la part superior i inferior dels fitxers temàtics sense editar-los. Això permet modificacions ràpides per a inserir coses útils com ara codis de seguiment i meta etiquetes."
         }
     },
     "You haven't added any tags yet!": "Encara no heu afegit cap etiqueta",
     "Explore pre-built templates for common automation tasks": "Exploreu les plantilles predissenyades per a tasques d'automatització comunes",
-    "Zapier Templates": "Plantilles Zapier",
-    "Zapier configuration": "Configuració Zapier",
+    "Zapier Templates": "Plantilles de Zapier",
+    "Zapier configuration": "Configuració de Zapier",
     "Enable <a href=\"{link}\" target=\"_blank\">Unsplash</a> image integration for your posts": "Activeu la integració d'imatges <a href=\"{link}\" target=\"_blank\">Unsplash</a> per a les vostres entrades",
     "Enable Unsplash": "Activa Unsplash",
-    "Unsplash configuration": "Configuració Unsplash",
+    "Unsplash configuration": "Configuració d'Unsplash",
     "Send test notification": "Envia una notificació de prova",
     "Set up a new incoming webhook <a href=\"{link}\" target=\"_blank\">here</a>, and grab the URL": {
         "": "Configureu un nou webhook entrant <a href=\"{link}\" target=\"_blank\">ací</a>, i agafeu l'URL."
@@ -597,7 +604,7 @@
         "": "Envia automàticament entrades publicades recentment en un canal de Slack o en qualsevol servei compatible amb Slack com Discord o Mattermost."
     },
     "Webhook URL": "URL de Webhook",
-    "Slack configuration": "Configuració Slack",
+    "Slack configuration": "Configuració de Slack",
     "Automation for your favourite apps": "Automatització per a les vostres aplicacions preferides",
     "Zapier": "Zapier",
     "Beautiful, free photos": {
@@ -663,7 +670,7 @@
         "Drafts": "Esborranys"
     },
     "tour": {
-        "Getting started with Ghost": "Primers passos amb Ghost",
+        "Getting started with Ghost": "Primers passos amb News",
         "Using custom themes you can completely control the look and feel of your site to suit your brand": {
             " Here's a full guide to help: <strong><a href=\"{link}\" target=\"_blank\">{link}</a></strong>": "Mitjançant temes personalitzats, podeu controlar completament l'aspecte del vostre lloc en funció del vostre sector. Ací teniu una guia completa per a ajudar-vos: <strong><a href=\"{link}\" target=\"_blank\">{link}</a></strong>"
         },
@@ -674,17 +681,17 @@
             "": "Les pàgines estàtiques són fragments de contingut permanents que viuen fora del vostre flux d'entrades habitual, per exemple, una pàgina «quant a» o de «contactes»."
         },
         "Welcome to Ghost Admin! From here you can browse your site, manage your content, and edit your settings": {
-            "<br><br>You can always login to Ghost Admin by visiting <a href=\"{adminUrl}\" target=\"_blank\">{adminDisplayUrl}</a>": "Us donem la benvinguda a Ghost Admin. Des d'ací podeu navegar pel vostre lloc, gestionar el contingut i editar la vostra configuració.<br><br>Sempre podeu iniciar sessió en Ghost Admin visitant <a href=\"{adminUrl}\" target=\"_blank\">{adminDisplayUrl}</a>"
+            "<br><br>You can always login to Ghost Admin by visiting <a href=\"{adminUrl}\" target=\"_blank\">{adminDisplayUrl}</a>": "Us donem la benvinguda a l'Administració de News. Des d'ací podeu navegar pel vostre lloc, gestionar el contingut i editar la vostra configuració.<br><br>Sempre podeu iniciar sessió en l'Administració de News visitant <a href=\"{adminUrl}\" target=\"_blank\">{adminDisplayUrl}</a>"
         },
         "Ghost uses Markdown to allow you to write and format content quickly and easily": {
             " This toolbar also helps! Hit the <strong>?</strong> icon for more editor shortcuts": {
-                "": "Ghost utilitza Markdown per a permetre escriure i formatar contingut de forma ràpida i senzilla. Aquesta barra d'eines també ajuda. Feu clic a la <strong>?</strong> icona per a obtindre més dreceres de l'editor."
+                "": "News utilitza Markdown per a permetre escriure i formatar contingut de forma ràpida i senzilla. Aquesta barra d'eines també ajuda. Feu clic a la icona <strong>?</strong> per a obtindre més dreceres de l'editor."
             }
         },
         "Customising your publication": "Personalització de la vostra publicació",
         "Setting a featured post": "Configuració d'una entrada destacada",
         "Turning posts into pages": "Conversió d'entrades en pàgines",
-        "Using the Ghost editor": "Utilització de l'editor Ghost"
+        "Using the Ghost editor": "Utilització de l'editor News"
     },
     "Page not found": "No s'ha trobat la pàgina",
     "Invitation resent! ({email})": "S'ha tornat a enviar la invitació ({email})",
@@ -700,7 +707,7 @@
     },
     "Select or drag-and-drop a file": "Seleccioneu o arrossegueu un fitxer",
     "The image type you uploaded is not supported": {
-        " Please use {validExtensions}": "El tipus d’imatge que heu pujat no és compatible. Utilitzeu {validExtensions}"
+        " Please use {validExtensions}": "El tipus d'imatge que heu pujat no és compatible. Utilitzeu {validExtensions}"
     },
     "The image you uploaded was larger than the maximum file size your server allows": {
         "": "La imatge que heu penjat era més gran que la mida màxima de fitxer que permet el vostre servidor."
@@ -753,12 +760,12 @@
     "Add <strong>\"{term}\"": {
         "": {
             "": {
-                "</strong>": "Afig <strong>«{term}»...</strong>"
+                "</strong>": "Afig <strong>«{terme}»...</strong>"
             }
         }
     },
     "editor": {
-        "word": "{count, plural, =0{} =1{one word} other{# words}}",
+        "word": "{count, plural, =0{} =1{una paraula} other{# paraules}}",
         "(Untitled)": "(Sense títol)",
         "notice": {
             "Normal editing restored": {
@@ -767,7 +774,7 @@
             "Hemingway Mode Off": "Mode Hemingway desactivat",
             "Write now; edit later": {
                 " Backspace disabled": {
-                    "": "Escriviu ara; editar més endavant. S'ha desactivat el retrocés."
+                    "": "Escriviu ara; editeu més endavant. S'ha desactivat el retrocés."
                 }
             },
             "Hemingway Mode On": "Mode Hemingway activat"
@@ -783,7 +790,10 @@
             "Spellcheck": "Correcció ortogràfica",
             "Hemingway Mode": "Mode Hemingway",
             "Markdown Guide": "Guia de Markdown",
-            "Add Image from Unsplash": "Afig una imatge d'Unsplash"
+            "Add Image from Unsplash": "Afig una imatge d'Unsplash",
+            "Quote": "Cometes",
+            "Render Preview": "Renderitza la vista prèvia",
+            "Side-by-side Preview": "Vista prèvia costat a costat"
         },
         "success": {
             "post": {
@@ -919,10 +929,10 @@
     },
     "Ownership successfully transferred to {user}": "La propietat s'ha transferit correctament a {user}",
     "Ghost has been upgraded, please copy any unsaved data and refresh the page to continue": {
-        "": "Ghost s'ha actualitzat, copieu les dades no guardades i actualitzeu la pàgina per a continuar."
+        "": "News s'ha actualitzat, copieu les dades no guardades i actualitzeu la pàgina per a continuar."
     },
     "Sorry, Ghost is currently undergoing maintenance, please wait a moment then try again": {
-        "": "En aquest moment Ghost està executant tasques de manteniment. Espereu un moment i torneu-ho a intentar."
+        "": "En aquest moment News està executant tasques de manteniment. Espereu un moment i torneu-ho a intentar."
     },
     "Check your Slack channel for the test message": "Comproveu en el vostre canal Slack que heu rebut el missatge de prova",
     "The invitation does not exist or is no longer valid": {
@@ -936,7 +946,7 @@
     },
     "Please fill out the form to complete your sign-up": "Empleneu el formulari per a completar el vostre registre",
     "There was a problem with the reset, please try again": {
-        "": "S'ha produït un problema en reinicialitzar, torneu-ho  aprovar."
+        "": "S'ha produït un problema en reinicialitzar, torneu-ho a provar."
     },
     "We need your email address to reset your password!": "Necessitem la vostra adreça de correu electrònic per a restablir la vostra contrasenya.",
     "Please check your email for instructions": {
@@ -951,9 +961,9 @@
     "You can't reset your password while you're signed in": {
         "": "No podeu restablir la vostra contrasenya mentre tingueu la sessió iniciada."
     },
-    "By <span class=\"midgrey-l2 fw5\">{authorNames}</span>": "Per <span class=\"midgrey-l2 fw5\">{authorNames}</span>",
-    "by <span class=\"gh-content-entry-author\">{authors}</span>": "per <span class=\"gh-content-entry-author\">{authors}</span>",
-    "{blog} <span class=\"gh-og-preview-footer-left-divider\">|</span> by <span class=\"gh-og-preview-footer-author\">{name}</span>": "{blog} <span class=\"gh-og-preview-footer-left-divider\">|</span> per <span class=\"gh-og-preview-footer-author\">{name}</span>",
+    "By <span class=\"midgrey-l2 fw5\">{authorNames}</span>": "Per <span class=\"midgrey-l2 fw5\">{noms dels autors}</span>",
+    "by <span class=\"gh-content-entry-author\">{authors}</span>": "per <span class=\"gh-content-entry-author\">{autors}</span>",
+    "{blog} <span class=\"gh-og-preview-footer-left-divider\">|</span> by <span class=\"gh-og-preview-footer-author\">{name}</span>": "{blog} <span class=\"gh-og-preview-footer-left-divider\">|</span> per <span class=\"gh-og-preview-footer-author\">{nom}</span>",
     "Webhooks": "Webhooks",
     "Publication Language": "Idioma de la publicació",
     "Set the time and date of your publication, used for all published posts": "Establiu l'hora i la data de la publicació, utilitzades per a totes les entrades publicades",
@@ -980,7 +990,7 @@
     "Unknown Error": "S'ha produït un error desconegut",
     "Sorry, there was an error in the application": {
         " Please let the Ghost team know what happened": {
-            "": "S'ha produït un error a l'aplicació. Informeu'equip Ghost sobre què va passar."
+            "": "S'ha produït un error a l'aplicació. Informeu-ne l'equip de News."
         }
     },
     "\"{themeName}\" uploaded successfully but some {type} were detected": {
@@ -1076,7 +1086,7 @@
     },
     "Transfer Ownership": "Transfereix la propietat",
     "Warnings": "Avisos",
-    "Highly recommended to fix, functionality <strong>could</strong> be restricted": "És altament recomanable corregir, la funcionalitat <strong>es podria</strong> restringir",
+    "Highly recommended to fix, functionality <strong>could</strong> be restricted": "És altament recomanable corregir-ho, la funcionalitat <strong>es podria</strong> restringir",
     "(Must-fix to activate theme)": "(S'ha de corregir per a activar el tema)",
     "Errors": "Errors",
     "Fatal Errors": "S'han produït errors fatals",
@@ -1134,7 +1144,7 @@
     "User Actions": "Accions de l'usuari",
     "Suspended": "Suspés",
     "Enable free or paid member registration": {
-        " Restrict content by using <span class=\"dib blue ba br2 b--blue pa1 pt0 pb0 tag-token--internal\">#members</span> hashtag on posts": "Activeu el registre de membres gratuït o de pagament. Restringiu el contingut mitjançant l'etiqueta <span class=\"dib blue ba br2 b--blue pa1 pt0 pb0 tag-token--internal\">#members</span> en les entrades"
+        " Restrict content by using <span class=\"dib blue ba br2 b--blue pa1 pt0 pb0 tag-token--internal\">#members</span> hashtag on posts": "Activeu el registre de membres gratuït o de pagament. Restringiu el contingut mitjançant l'etiqueta <span class=\"dib blue ba br2 b--blue pa1 pt0 pb0 tag-token--internal\">#membres</span> en les entrades"
     },
     "Members": "Membres",
     "Staff": "Equip",
@@ -1149,19 +1159,25 @@
             }
         }
     },
-    "expires {at}": "expira {at}",
-    "expired": "ha expirat",
+    "expires {at}": "caduca el {at}",
+    "expired": "ha caducat",
     "Invitation not sent - please try again": "No s'ha enviat la invitació - torneu-ho a intentar",
-    "Error {status}: Uh-oh! Trouble reaching the Unsplash API": "Error {status}: S'ha produït un problema per a arribar a l'API Unsplash",
+    "Error {status}: Uh-oh! Trouble reaching the Unsplash API": "Error {status}: S'ha produït un problema per a arribar a l'API d'Unsplash",
     "Unsplash API rate limit reached, please try again later": {
-        "": "S'ha arribat al límit de velocitat de l'API Unsplash; torneu-ho a intentar més endavant."
+        "": "S'ha arribat al límit de velocitat de l'API d'Unsplash; torneu-ho a intentar més endavant."
     },
-    "Uh-oh! Trouble reaching the Unsplash API, please check your connection": "Si teniu problemes per a accedir a l'API Unsplash, comproveu la vostra connexió",
+    "Uh-oh! Trouble reaching the Unsplash API, please check your connection": "Si teniu problemes per a accedir a l'API d'Unsplash, comproveu la vostra connexió",
     "moment": {
-        "at {time}": "a les {time}",
+        "at {time}": "hora {time}",
         "DD MMM YYYY": "DD MMM AAAA",
         "": [
+            "[a] HH:mm [de demà]",
             "[a] HH:mm [de demà]"
+        ],
+        "[at] HH:mm [on] DD MMM YYYY": "[a] HH:mm [de] DD MMM AAAA",
+        "HH:mm ": [
+            "HH:mm [Ahir]",
+            "HH:mm [Hui]"
         ]
     },
     "There was a problem on the server, please try again": {
@@ -1183,7 +1199,7 @@
     "Duplicates": "Duplicats",
     "Import failed due to an unknown error": {
         " Check the Web Inspector console and network tabs for errors": {
-            "": "La importació ha fallat a causa d'un error desconegut. Comproveu les etiquetes de la consola de l'inspector web i de la xarxa a la recerca d'errors."
+            "": "La importació ha fallat a causa d'un error desconegut. Comproveu les etiquetes de la consola de l'inspector web i de la xarxa a la cerca d'errors."
         }
     },
     "Importing": "S'està important",
@@ -1195,7 +1211,7 @@
         "": "Totes les dades de l'usuari se suprimiran."
     },
     "User will not have access to this blog anymore": "L'usuari ja no tindrà accés a aquest blog",
-    "<strong>{posts, plural}</strong> created by this user will be deleted": "<strong>{posts, plural, other{# posts}}</strong> creades per aquest usuari se suprimiran",
+    "<strong>{posts, plural}</strong> created by this user will be deleted": "<strong>{entrades, plural, other{# entrades}}</strong> creades per aquest usuari se suprimiran",
     "All other user data will be deleted": "Totes les altres dades de l'usuari se suprimiran",
     "The user will not have access to this blog anymore": "L'usuari ja no tindrà accés a aquest bloc",
     "<strong>WARNING:</strong> You are about to delete the user '<strong>{name}</strong>'": {
@@ -1220,7 +1236,7 @@
     },
     "Are you sure?": "N'esteu segur?",
     "This is permanent! No backups, no restores, no magic undo button": {
-        " We warned you, k?": "Això és permanent. Sense còpies de seguretat, ni cap botó màgic de desfer. Esteu avisats, d'acord?"
+        " We warned you, k?": "Això és permanent. Sense còpies de seguretat, ni cap botó màgic de desfer. Esteu avisat, d'acord?"
     },
     "Would you really like to delete all content from your blog?": "Segur que voleu suprimir tot el contingut del vostre blog?",
     "Menu": "Menú",
@@ -1229,7 +1245,7 @@
     "Photo of {name}": "Foto de {name}",
     "Insert image": "Insereix una imatge",
     "retry": "Torneu-ho a provar",
-    "Network error": "Hi ha un error de la xarxa",
+    "Network error": "S'ha produït un error de xarxa",
     "No photos found": "No s'ha trobat cap foto",
     "No photos found for '{term}'": "No s'ha trobat cap foto per a «{term}»",
     "Unsplash": "Unsplash",
@@ -1237,7 +1253,7 @@
     "Not your first time? <em>Skip these tips</em>": "Ja havíeu entrat abans? <em>Omet aquests consells</em>",
     "The local time here is currently {localTime}": "L'hora local ací és actualment {localTime}",
     "Your timezone has been automatically set to {activeTimezone}": {
-        "": "La vostra zona horària s'ha establit automàticament en {activeTimezone}."
+        "": "La vostra zona horària s'ha establit automàticament a {activeTimezone}."
     },
     "Please upload a theme to continue": "Pugeu un tema per a continuar",
     "No themes found": "No s'ha trobat cap tema",
@@ -1261,7 +1277,7 @@
     },
     "Loading": "S'està carregant",
     "Search": "Busca",
-    "Set automatic future publish date": "Estableix la data de publicació automàtica",
+    "Set automatic future publish date": "Estableix la data de publicació de forma automàtica",
     "Schedule for later": "Programa per a més endavant",
     "Do not publish": "No publiques",
     "Revert to draft": "Reverteix a esborrany",
@@ -1271,7 +1287,7 @@
     "Update post status": "Actualitza l'estat de l'entrada",
     "Schedule it for later": "Programa-ho per a més endavant",
     "Set it live now": "Publica-ho ara",
-    "Will go live {date}": "Es publicarà el {date}",
+    "Will go live {date}": "Es publicarà {date}",
     "Post URL matches {filename}": "Publica coincidències d'URL {filename}",
     "Template": "Plantilla",
     "Upload an image": "Puja una imatge",
@@ -1318,17 +1334,17 @@
     "Admin API Key": "Clau API d'administrador",
     "Content API Key": "Clau API de contingut",
     "Add custom integration": "Afig una integració personalitzada",
-    "Create your own custom Ghost integrations with dedicated API keys & webhooks": "Creeu les vostres integracions personalitzades de Ghost amb claus API & webhooks dedicats",
+    "Create your own custom Ghost integrations with dedicated API keys & webhooks": "Creeu les vostres integracions personalitzades de News amb claus API i webhooks dedicats",
     "Custom integrations": "Integracions personalitzades",
     "Built-in integrations": "Integracions integrades",
     "Integrations": "Integracions",
     "Code injection": "Injecció de codi",
-    "{posts, plural}": "{posts, plural, =0{sense entrades} =1{# entrada} other{# entrades}}",
+    "{posts, plural}": "{entrades, plural, =0{sense entrades} =1{# entrada} other{# entrades}}",
     "Meta data": "Metadades",
     "Basic settings": "Configuració bàsica",
     "Delete tag": "Suprimeix l'etiqueta",
     "This tag is attached to {posts, plural}": {
-        "": "Aquesta etiqueta està adjuntada a {posts, plural, =1{a post} other{# posts}}."
+        "": "Aquesta etiqueta està assignada a {entrades, plural, =1{una entrada} other{# entrades}}."
     },
     "Customise structured data of your site": "Personalitzeu les dades estructurades del vostre lloc",
     "Facebook card": "Targeta Facebook",
@@ -1353,23 +1369,23 @@
     "General": "General",
     "General Settings": "Configuració general",
     "Sign Out": "Tanca la sessió",
-    "How to Use Ghost": "Com utilitzar Ghost",
+    "How to Use Ghost": "Com utilitzar News",
     "Support Center": "Centre de suport",
     "Your Profile": "El vostre perfil",
-    "About Ghost": "Quant a Ghost",
+    "About Ghost": "Quant a News",
     "Scheduled to be published": "S'ha programat per a publicar-se",
     "Update status": "Actualitza l'estat",
     "Post": "Entrada",
     "View": "Visualitza",
     "and sent": "i enviada",
-    "Scheduled to be published {time}": "S'ha programat per a publicar-se a les {time}",
+    "Scheduled to be published {time}": "S'ha programat per a publicar-se {time}",
     "Sent by email": "S'ha enviat per correu electrònic",
     "To be sent by emai": "Per a ser enviada per correu electrònic",
     "Failed to send post by email": "No s'ha pogut enviar l'entrada per correu electrònic",
     "Scheduled to be published and sent": "S'ha programat per a la seua publicació i enviament",
     "<strong>{user}</strong> and their <strong>{posts, plural}</strong> will be permanently deleted": {
         " If you don’t want to lose these posts, you should assign them to a different author": {
-            "": "<strong>{user}</strong> i les seues <strong>{posts, plural, =1{a post} other{# posts}}</strong> se suprimirà definitivament. Si no voleu perdre aquestes entrades, heu d'assignar-les a un autor diferent."
+            "": "<strong>{user}</strong> i <strong>{entrades, plural, =1{una entrada} other{# entrades}}</strong> se suprimirà definitivament. Si no voleu perdre aquestes entrades, heu d'assignar-les a un autor diferent."
         }
     },
     "<strong>{user}</strong> will be permanently deleted": {
@@ -1397,22 +1413,22 @@
             "": "Us heu afegit correctament com a membre."
         },
         "Member added": "S'ha afegit un membre",
-        "Label name": "Nom de l'etiqueta",
-        "Edit label": "Edita l'etiqueta",
-        "New label": "Etiqueta nova",
+        "Label name": "Nom del camp",
+        "Edit label": "Edita el camp",
+        "New label": "Camp nou",
         "You're about to delete label \"<strong>{name}</strong>\"": {
-            " This is permanent! We warned you, k?": "Esteu a punt de suprimir aquesta etiqueta \"<strong>{name}</strong>\". Això és permanent. Esteu avisat, d'acord?"
+            " This is permanent! We warned you, k?": "Esteu a punt de suprimir aquest camp \"<strong>{name}</strong>\". Això és permanent. Esteu avisat, d'acord?"
         },
-        "Are you sure you want to delete this label?": "Segur que voleu suprimir aquesta etiqueta?",
-        "Labels": "Etiquetes",
+        "Are you sure you want to delete this label?": "Segur que voleu suprimir aquest camp?",
+        "Labels": "Camps",
         "(not visible to member)": "(no és visible per als membres)",
         "Note": "Nota",
         "Maximum: <b>{maximum}</b> characters": {
             " You’ve used {countdown}": "Màxim: <b>{maximum}</b> caràcters. Heu utilitzat {countdown}"
         },
-        "A label with the same name already exists": "Ja existeix una etiqueta amb el mateix nom",
-        "Label deleted": "S'ha suprimit una etiqueta",
-        "All labels": "Totes les etiquetes",
+        "A label with the same name already exists": "Ja existeix un camp amb el mateix nom",
+        "Label deleted": "S'ha suprimit un camp",
+        "All labels": "Tots els camps",
         "Loading": {
             "": {
                 "": {
@@ -1445,16 +1461,20 @@
         },
         "Search result": "Resultat de la cerca",
         "Created": "S'ha creat",
-        "Add Label": "Afig etiqueta",
-        "Member Labels": "Etiquetes dels membres",
+        "Add Label": "Afig un camp",
+        "Member Labels": "Camps dels membres",
         "New member": "Membre nou",
         "Members": "Membres",
-        "{members, plural}": "{members, plural, =1{a member} other{# members}}"
+        "{members, plural}": "{membres, plural, =1{un membre} other{# membres}}",
+        "{matches, plural} current filter": "{coincidències, plural, =1{1 coincidència} other{# coincidències}} amb el filtre actual",
+        "Impersonate": "Suplanta"
     },
     "New story": "Entrada nova",
     "Preview site": "Previsualitza el lloc",
     "Search site (Ctrl/⌘ + K)": "Busca el lloc (Ctrl/⌘ + K)",
     "Last update": "Última actualització",
     "Title": "Títol",
-    "Open site in new tab": "Obri el lloc en una pestanya nova"
+    "Open site in new tab": "Obri el lloc en una pestanya nova",
+    "Tweet @TryGhost!": "Tuiteu @TryNews",
+    "Slug": "Àlies"
 }

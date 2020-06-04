@@ -35,7 +35,7 @@
     "Read More": "Més informació",
     " (Page %)": " (Pàgina %)",
     "No posts": "No hi ha entrades",
-    "<a href='{url}'>More posts</a> by {name}": "<a href='{url}'>Més entrades</a> by {name}",
+    "<a href='{url}'>More posts</a> by {name}": "<a href='{url}'>Més entrades</a> de {name}",
     "Message:": "Missatge:",
     "Latest Posts": "Últimes entrades",
     "Go to the front page": "Ves a la pàgina inicial",

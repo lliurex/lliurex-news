@@ -24,6 +24,19 @@ export default Controller.extend({
         return scratchTag;
     }),
 
+    // LLIUREX: Determine if the tag you want to edit is Slideshow
+    defaultTag:computed('tag',function(){
+        let tagName=this.tag.name;
+        
+        if (tagName==="Slideshow"){
+            return true;
+        }else{
+            return false;
+        }
+
+    }),
+    // LLIUREX
+    
     actions: {
         setProperty(propKey, value) {
             this._saveTagProperty(propKey, value);

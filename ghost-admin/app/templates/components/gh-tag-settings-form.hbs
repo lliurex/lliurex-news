@@ -1,6 +1,7 @@
 <h4 class="midlightgrey f-small fw5 ttu">{{t "Basic settings"}}</h4>
 <div class="pa5 pt4 br4 shadow-1 bg-grouped-table mt2 flex flex-column flex-row-ns items-start justify-between gh-tag-basic-settings-form">
     <div class="order-1 flex flex-column items-start mr5 w-100 w-50-m w-two-thirds-l">
+    {{!-- LLIUREX Added readonly property to form components --}}
         <GhFormGroup @errors={{this.tag.errors}} @hasValidated={{this.tag.hasValidated}} @property="name">
             <label for="tag-name">{{t "Name"}}</label>
             <GhTextInput
@@ -8,6 +9,7 @@
                 @name="name"
                 @value={{this.scratchTag.name}}
                 @tabindex="1"
+                @readonly={{this.readonly}}
                 @focus-out={{action "setProperty" "name" this.scratchTag.name}}
             />
 
@@ -27,6 +29,7 @@
                 @id="tag-slug"
                 @name="slug"
                 @tabindex="2"
+                @readonly={{this.readonly}}
                 @focus-out={{action "setProperty" "slug" this.scratchTag.slug}}
             />
             <GhUrlPreview @prefix="tag" @slug={{this.scratchTag.slug}} @tagName="p" @classNames="description" />
@@ -40,6 +43,7 @@
                 @name="description"
                 @class="gh-tag-details-textarea"
                 @tabindex="3"
+                @readonly={{this.readonly}}
                 @value={{this.scratchTag.description}}
                 @focus-out={{action "setProperty" "description" this.scratchTag.description}}
             />
@@ -47,6 +51,7 @@
             <p>{{{t "Maximum: <b>{max}</b> characters. You’ve used {charactersCount}" max=500 charactersCount=(gh-count-down-characters this.scratchTag.description 500)}}}</p>
         </GhFormGroup>
     </div>
+    {{#unless this.readonly}}
     <div class="order-0 mb6 mb0-ns order-2-ns w-100 w-50-m w-third-l">
         <label for="tag-image">{{t "Tag image"}}</label>
         <GhImageUploaderWithPreview
@@ -58,6 +63,7 @@
             @remove={{action "clearCoverImage"}}
         />
     </div>
+   {{/unless}} 
 </div>
 {{!-- LLIUREX Hide content
 <h4 class="midlightgrey f-small fw5 ttu mt15">{{t "Meta data"}}</h4>

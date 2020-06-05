@@ -6,22 +6,34 @@
                 <span>{{svg-jar "arrow-right"}}</span>
                 {{if this.tag.isNew (t "New tag") this.tag.name}}
             </h2>
+            {{!-- LLIUREX Hide save button if tag is Slideshow --}}
+            {{#unless this.defaultTag}}
             <section class="view-actions">
                 <GhTaskButton @task={{this.saveTask}} @type="button" @class="gh-btn gh-btn-blue gh-btn-icon" @autoReset={{true}} @data-test-button="save" />
             </section>
+            {{/unless}}
+            {{!-- LLIUREX --}}
         </GhCanvasHeader>
 
+        {{!-- LLIUREX added readonly property --}}
         <GhTagSettingsForm
             @tag={{this.tag}}
             @scratchTag={{this.scratchTag}}
-            @setProperty={{action "setProperty"}} />
+            @setProperty={{action "setProperty"}} 
+            @readonly={{this.defaultTag}}
+            />
     </form>
+        {{!-- LLIUREX --}}
 
-    {{#unless this.tag.isNew}}
-        <button type="button" class="gh-btn gh-btn-red gh-btn-icon mb15" {{on "click" (action "toggleDeleteTagModal")}}>
-            <span>{{t "Delete tag"}}</span>
-        </button>
-    {{/unless}}
+     {{!-- LLIUREX Hide delete button if tag is Slideshow --}}
+     {{#unless this.defaultTag}}    
+        {{#unless this.tag.isNew}}
+            <button type="button" class="gh-btn gh-btn-red gh-btn-icon mb15" {{on "click" (action "toggleDeleteTagModal")}}>
+                <span>{{t "Delete tag"}}</span>
+            </button>
+        {{/unless}}
+     {{/unless}}
+     {{!-- LLIUREX --}}   
 </section>
 
 {{#if this.showUnsavedChangesModal}}

@@ -26,7 +26,9 @@
     "Share this": "Comparte",
     "Stay up to date! Get all the latest & greatest posts delivered straight to your inbox": "¡Mantente al día! Recibe todos los últimos y mejores artículos directamente en tu buzón",
     "This post was a collaboration between": "Este artículo fue una colaboración entre",
-    "youremail@example.com": "tucorreo@ejemplo.com",
+    "youremail@example": {
+        "com": "tucorreo@ejemplo.com"
+    },
     "1 post": "1 entrada",
     "% posts": "% entrada",
     "1 min read": "1 min de lectura",
@@ -34,13 +36,15 @@
     "% post": "% entrada",
     "You've successfully subscribed to": "Se ha subscrito correctamente a",
     "Subscribe to": "Subscribase a",
-    "Great!": "¡Bien¡",
-    "Check your inbox and click the link to confirm your subscription":"Comprueba su correo electrónico y haga clic en el enlace para confirmar la subscripción",
+    "Great!": "¡Bien!",
+    "Check your inbox and click the link to confirm your subscription": "Comprueba su correo electrónico y haga clic en el enlace para confirmar la subscripción",
     "Please enter a valid email address!": "¡Por favor introduzca un correo electrónico válido!",
     "More posts": "Más entradas",
     "by": "de",
     "more posts": "mas entradas",
-    "by this author.":"de este autor",
+    "by this author": {
+        "": "de este autor."
+    },
     "More in": "Mas en",
     "A collection of": "Una colección de",
     "Page {{page}} of {{pages}}": "Página {{page}} de {{pages}}",

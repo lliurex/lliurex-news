@@ -172,7 +172,7 @@
             "Uploading {images, plural}": {
                 "": {
                     "": {
-                        "": "S'està pujant {imatges, plural, =1{la imatge} other{# imatges}}..."
+                        "": "S'està pujant {images, plural, =1{la imatge} other{# imatges}}..."
                     }
                 }
             },
@@ -232,7 +232,7 @@
         }
     },
     "Failed to send {invitations, plural} {erroredEmails}": {
-        " Please check your email configuration, see <a href=\"{link}\" target=\"_blank\">{link}</a> for instructions": "S'ha produït un error en enviar {invitacions, plural, =1{una invitació} other{# invitacions}} {erroredEmails}. Comproveu la vostra configuració de correu, consulteu <a href=\"{link}\" target=\"_blank\">{link}</a> per a obtindre instruccions"
+        " Please check your email configuration, see <a href=\"{link}\" target=\"_blank\">{link}</a> for instructions": "S'ha produït un error en enviar {invitations, plural, =1{una invitació} other{# invitacions}} {erroredEmails}. Comproveu la vostra configuració de correu, consulteu <a href=\"{link}\" target=\"_blank\">{link}</a> per a obtindre instruccions"
     },
     "ajax": {
         "Theme is not compatible or contains errors": {
@@ -259,8 +259,8 @@
             "": "News funciona millor quan es comparteix amb els altres. Col·laboreu, obteniu comentaris de les vostres publicacions i treballeu conjuntament les idees."
         }
     },
-    "Invite {users, plural}": "Invita {usuaris, plural, =1{un usuari} other{# usuaris}}",
-    "{invalid emails, plural}": "{correus electrònics no vàlids, plural, =1{un correu electrònic no vàlid} other{# correus electrònics no vàlids}}",
+    "Invite {users, plural}": "Invita {users, plural, =1{un usuari} other{# usuaris}}",
+    "{invalid emails, plural}": "{invalid emails, plural, =1{un correu electrònic no vàlid} other{# correus electrònics no vàlids}}",
     "Invite staff users": "Invita els usuaris de l'equip",
     "Last step: Invite staff users": "Últim pas: Inviteu els usuaris de l'equip",
     "Site title": "Títol del lloc",
@@ -270,7 +270,7 @@
         }
     },
     "Welcome to <strong>Ghost</strong>!": "Us donem la benvinguda a <strong>News</strong>!",
-    "{invitations, plural} sent!": "S'ha enviat {invitacions, plural, =1{la invitació} other{# invitacions}}",
+    "{invitations, plural} sent!": "S'ha enviat {invitations, plural, =1{la invitació} other{# invitacions}}",
     "Please fill out the form to setup your blog": {
         "": "Empleneu el formulari per a configurar el vostre blog."
     },
@@ -760,7 +760,7 @@
     "Add <strong>\"{term}\"": {
         "": {
             "": {
-                "</strong>": "Afig <strong>«{terme}»...</strong>"
+                "</strong>": "Afig <strong>«{term}»...</strong>"
             }
         }
     },
@@ -961,9 +961,9 @@
     "You can't reset your password while you're signed in": {
         "": "No podeu restablir la vostra contrasenya mentre tingueu la sessió iniciada."
     },
-    "By <span class=\"midgrey-l2 fw5\">{authorNames}</span>": "Per <span class=\"midgrey-l2 fw5\">{noms dels autors}</span>",
+    "By <span class=\"midgrey-l2 fw5\">{authorNames}</span>": "Per <span class=\"midgrey-l2 fw5\">{authorNames}</span>",
     "by <span class=\"gh-content-entry-author\">{authors}</span>": "per <span class=\"gh-content-entry-author\">{autors}</span>",
-    "{blog} <span class=\"gh-og-preview-footer-left-divider\">|</span> by <span class=\"gh-og-preview-footer-author\">{name}</span>": "{blog} <span class=\"gh-og-preview-footer-left-divider\">|</span> per <span class=\"gh-og-preview-footer-author\">{nom}</span>",
+    "{blog} <span class=\"gh-og-preview-footer-left-divider\">|</span> by <span class=\"gh-og-preview-footer-author\">{name}</span>": "{blog} <span class=\"gh-og-preview-footer-left-divider\">|</span> per <span class=\"gh-og-preview-footer-author\">{name}</span>",
     "Webhooks": "Webhooks",
     "Publication Language": "Idioma de la publicació",
     "Set the time and date of your publication, used for all published posts": "Establiu l'hora i la data de la publicació, utilitzades per a totes les entrades publicades",
@@ -1211,7 +1211,7 @@
         "": "Totes les dades de l'usuari se suprimiran."
     },
     "User will not have access to this blog anymore": "L'usuari ja no tindrà accés a aquest blog",
-    "<strong>{posts, plural}</strong> created by this user will be deleted": "<strong>{entrades, plural, other{# entrades}}</strong> creades per aquest usuari se suprimiran",
+    "<strong>{posts, plural}</strong> created by this user will be deleted": "<strong>{posts, plural, other{# entrades}}</strong> creades per aquest usuari se suprimiran",
     "All other user data will be deleted": "Totes les altres dades de l'usuari se suprimiran",
     "The user will not have access to this blog anymore": "L'usuari ja no tindrà accés a aquest bloc",
     "<strong>WARNING:</strong> You are about to delete the user '<strong>{name}</strong>'": {
@@ -1339,12 +1339,12 @@
     "Built-in integrations": "Integracions integrades",
     "Integrations": "Integracions",
     "Code injection": "Injecció de codi",
-    "{posts, plural}": "{entrades, plural, =0{sense entrades} =1{# entrada} other{# entrades}}",
+    "{posts, plural}": "{posts, plural, =0{sense entrades} =1{# entrada} other{# entrades}}",
     "Meta data": "Metadades",
     "Basic settings": "Configuració bàsica",
     "Delete tag": "Suprimeix l'etiqueta",
     "This tag is attached to {posts, plural}": {
-        "": "Aquesta etiqueta està assignada a {entrades, plural, =1{una entrada} other{# entrades}}."
+        "": "Aquesta etiqueta està assignada a {posts, plural, =1{una entrada} other{# entrades}}."
     },
     "Customise structured data of your site": "Personalitzeu les dades estructurades del vostre lloc",
     "Facebook card": "Targeta Facebook",
@@ -1385,7 +1385,7 @@
     "Scheduled to be published and sent": "S'ha programat per a la seua publicació i enviament",
     "<strong>{user}</strong> and their <strong>{posts, plural}</strong> will be permanently deleted": {
         " If you don’t want to lose these posts, you should assign them to a different author": {
-            "": "<strong>{user}</strong> i <strong>{entrades, plural, =1{una entrada} other{# entrades}}</strong> se suprimirà definitivament. Si no voleu perdre aquestes entrades, heu d'assignar-les a un autor diferent."
+            "": "<strong>{user}</strong> i <strong>{posts, plural, =1{una entrada} other{# entrades}}</strong> se suprimirà definitivament. Si no voleu perdre aquestes entrades, heu d'assignar-les a un autor diferent."
         }
     },
     "<strong>{user}</strong> will be permanently deleted": {
@@ -1465,8 +1465,8 @@
         "Member Labels": "Camps dels membres",
         "New member": "Membre nou",
         "Members": "Membres",
-        "{members, plural}": "{membres, plural, =1{un membre} other{# membres}}",
-        "{matches, plural} current filter": "{coincidències, plural, =1{1 coincidència} other{# coincidències}} amb el filtre actual",
+        "{members, plural}": "{members, plural, =1{un membre} other{# membres}}",
+        "{matches, plural} current filter": "{matches, plural, =1{1 coincidència} other{# coincidències}} amb el filtre actual",
         "Impersonate": "Suplanta"
     },
     "New story": "Entrada nova",

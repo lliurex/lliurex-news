@@ -1,1062 +1,1491 @@
 {
-  "Manage": "Administración",
-  "Your posts": "Sus entradas",
-  "New post": "Nueva entrada",
-  "You haven't written any posts yet!": "¡Todavia no ha escrito ninguna entrada!",
-  "Write a new post": "Escribir una nueva entrada",
-  "No posts match the current filter": "No se ha encontrado ninguna entrada para el filtro actual",
-  "Show all posts": "Mostrar todas las entradas",
-  "Your pages": "Sus páginas",
-  "New page": "Nueva página",
-  "You haven't created any pages yet!": "¡Todavia no ha creado ninguna página!",
-  "Create a new page": "Crear nueva página",
-  "No pages match the current filter": "No se ha encontrado ninguna página para el filtro actual",
-  "Show all pages": "Mostrar todas las páginas",
-  "Create your account": "Cree su cuenta",
-  "Email Address": "Correo electrónico",
-  "Eg. john@example.com": "Eg. john@example.com",
-  "Eg. John H. Watson": "Eg. John H. Watson",
-  "Password": "Contraseña",
-  "At least 10 characters": "Al menos 10 caracteres",
-  "Create Account": "Crear Cuenta",
-  "Subscribers": "Subscriptores",
-  "Subscription Date": "Fecha de subscripción",
-  "Status": "Estado",
-  "Import CSV": "Importar CSV",
-  "Export CSV": "Exportar CSV",
-  "Add Subscriber": "Añadir Subscriptor",
-  "Forgot?": "¿Olvidó?",
-  "Confirm Password": "Confirmar Contraseña",
-  "Reset Password": "Resetear Constraseña",
-  "Stack Trace": "Seguimiento de la pila",
-  "Settings": "Ajustes",
-  "Skip to main content": "Saltar al contenido principal",
-  "<strong>Version</strong> {version}": "<strong>Versión</strong> {version}",
-  "<strong>Database</strong> {database}": "<strong>Base de Datos</strong> {database}",
-  "<strong>Environment</strong> {environment}": "<strong>Entorno</strong> {environment}",
-  "<strong>Mail</strong> {mail}": "<strong>Correo Electrónico</strong> {mail}",
-  "User Documentation": "Documentación de Usuario",
-  "Get Help With Ghost": "Obtener Ayuda con Ghost",
-  "Update available!": "¡Actualización disponible!",
-  "Ghost is built by an incredible group of contributors from all over the world. Here are just a few of the people who helped create the version you’re using right now.": "Ghost is built by an incredible group of contributors from all over the world. Here are just a few of the people who helped create the version you’re using right now.",
-  "Find out how you can get involved": "Find out how you can get involved",
-  "The People Who Made it Possible": "The People Who Made it Possible",
-  "Staff users": "Miembros del equipo",
-  "Invite People": "Invitar a Gente",
-  "Invited users": "Usuarios invitados",
-  "Invitation not sent - please try again": "Invitación no enviada - por favor pruebe otra vez",
-  "Invitation sent: {at}": "Invitacion enviada el: {at}",
-  "expired": "caducada",
-  "expires {at}": "caduca {at}",
-  "Sending Invite...": "Enviando Invitación...",
-  "Revoke": "Revocar",
-  "Resend": "Reenviar",
-  "Active users": "Usuarios activos",
-  "Suspended users": "Usuarios suspendidos",
-  "Staff": "Equipo",
-  "Members": "Miembros",
-  "Enable free or paid member registration. Restrict content by using <span class=\"dib blue ba br2 b--blue pa1 pt0 pb0 tag-token--internal\">#members</span> hashtag on posts": "Enable free or paid member registration. Restrict content by using <span class=\"dib blue ba br2 b--blue pa1 pt0 pb0 tag-token--internal\">#members</span> hashtag on posts",
-  "Suspended": "Suspendido",
-  "User Actions": "Acciones de Usuario",
-  "User Settings": "Ajustes de Usuario",
-  "Make Owner": "Hacer Propietario",
-  "Delete User": "Borrar Usuario",
-  "Suspend User": "Suspender Usuario",
-  "Un-suspend User": "Restablecer Usuario",
-  "Change Cover": "Cambiar Portada",
-  "{name}\"s Picture": "{name}\"s Imagen",
-  "Edit Picture": "Editar Imagen",
-  "Full Name": "Nombre Completo",
-  "Use your real name so people can recognise you": "Use su nombre real para que la gente pueda reconocerle",
-  "Slug": "Alias",
-  "Email": "Correo electrónico",
-  "Used for notifications": "Usado para las notificaciones",
-  "Role": "Rol",
-  "What permissions should this user have?": "¿Que permisos debe de terner este usuario?",
-  "Location": "Ubicación",
-  "Where in the world do you live?": "¿En que lugar vive?",
-  "Website": "Sitio Web",
-  "Have a website or blog other than this one? Link it!": "¿Dispone de otro sitio web o blog además de este? ¡Indique su dirección!",
-  "Facebook Profile": "Perfil de Facebook",
-  "URL of your personal Facebook Profile": "URL de su perfil personal de Facebook",
-  "Twitter Profile": "Perfil de Twitter",
-  "URL of your personal Twitter profile": "URL de su perfil personal de Twitter",
-  "Bio": "Biografía",
-  "Write about you, in 200 characters or less.": "Escriba sobre usted, en 200 caracteres o menos.",
-  "Old Password": "Contraseña Anterior",
-  "New Password": "Nueva Constraseña",
-  "Verify Password": "Verificar Contraseña",
-  "Try Again": "Pruebe otra vez",
-  "Posts": "Entradas",
-  "Pages": "Páginas",
-  "About Ghost": "Sobre Ghost",
-  "Your Profile": "Su Perfil",
-  "Support Center": "Centro de Soporte",
-  "How to Use Ghost": "Como usar News",
-  "Tweet @TryGhost!": "Tweet @TryGhost!",
-  "Sign Out": "Cerrar Sesión",
-  "General Settings": "Ajustes Generales",
-  "General": "General",
-  "Design": "Diseño",
-  "Tags": "Etiquetas",
-  "Public tags": "Etiquetas públicas",
-  "Internal tags": "Etiquetas internas",
-  "Tag": "Etiqueta",
-  "No. of posts": "Núm. de entradas",
-  "Create a new tag": "Crear nueva etiqueta",
-  "You haven't created any {type} tags yet!": "¡Todavia no ha creado ninguna etiqueta {type}!",
-  "Edit tag": "Editar etiqueta",
-  "List posts tagged with '{tag}'": "Listar entradas etiquetadas con '{tag}'",
-  "Start with # to create internal tags": "Comenzar por  # para crear una etiquetas internas",
-  "Learn more": "Aprender más",
-  "Tag image": "Imagen para la etiqueta",
-  "Site meta settings": "Configuración meta del sitio",
-  "Twitter card": "Tarjeta Twitter",
-  "Customise structured data of your site for Twitter": "Datos estructurados personalizados de su sitio para Twitter",
-  "Facebook card": "Tarjeta Facebook",
-  "Customise structured data of your site": "Datos estructurados personalizados para su sitio",
-  "This tag is attached to {posts, plural}.": "Esta etiqueta esta asignada a {posts, plural, =1{a post} other{# posts}}.",
-  "Delete tag": "Borrar etiqueta",
-  "Basic settings": "Ajustes básicos",
-  "Meta data": "Metadatos",
-  "{posts, plural}": "{posts, plural, =0{no posts} =1{# post} other{# posts}}",
-  "Code injection": "Inyección de Ćódigo",
-  "Integrations": "Integraciones",
-  "Built-in integrations": "Integraciones integradas",
-  "Custom integrations": "Integraciones personalizadas",
-  "Create your own custom Ghost integrations with dedicated API keys & webhooks": "Cree sus propias integraciones de _News personalizadas con claves API y webhooks dedicados",
-  "Add custom integration": "Añadir integración personalizada",
-  "Content API Key": "Clave API de Contenido",
-  "Admin API Key": "Clace API de Administrador",
-  "API URL": "URL de la API",
-  "Webhooks": "Webhooks",
-  "Event": "Evento",
-  "Last triggered": "Último disparo",
-  "Not triggered": "No disparado",
-  "Add webhook": "Añadir webhook",
-  "No webhooks configured": "No hay webhooks configurados",
-  "Delete Integration": "Borrar Integraciones",
-  "Labs": "Laboratorios",
-  "Reorder": "Reordenar",
-  "Label": "Campo",
-  "Preview": "Previsualización",
-  "Publish Date": "Fecha de entrada",
-  "Scheduled Date": "Fecha Programada",
-  "Use the publish menu to re-schedule": "Utilice el menú de publicación para reprogramar",
-  "Excerpt": "Extracto",
-  "Authors": "Autores",
-  "Meta Data": "Metadatos",
-  "Canonical URL": "Canonical URL",
-  "Extra content for search engines": "Contenido extra para los motores de búsqueda",
-  "Twitter Card": "Tarjeta Twitter",
-  "Customise structured data for Twitter": "Datos estructurados personalizados para Twitter",
-  "Facebook Card": "Tarjeta Facebook",
-  "Customise Open Graph data": "Datos personalizados de gráfico abierto",
-  "Add styles/scripts to the header &amp; footer": "Añadir estilos/scripts al encabezados &amp; pier",
-  "Turn this post into a page": "Convertir esta entrada en una página",
-  "Meta Title": "Meta Título",
-  "Recommended: <b>{max}</b> characters. You’ve used {charactersCount}": "Recomendados: <b>{max}</b> caracteres. Usted ha utilizado {charactersCount}",
-  "Meta Description": "Meta Descripción",
-  "Search Engine Result Preview": "Previsualizar el resultado del motor de búsqueda",
-  "Add Twitter image": "Añadir imagen de Twitter",
-  "Twitter Title": "Título de Twitter",
-  "Twitter Description": "Descripción de  Twitter",
-  "Add Facebook image": "Añadir imagen de Facebook",
-  "Facebook Title": "Título de Facebook",
-  "Facebook Description": "Descripción de Facebook",
-  "{blog} <span class=\"gh-og-preview-footer-left-divider\">|</span> by <span class=\"gh-og-preview-footer-author\">{name}</span>": "{blog} <span class=\"gh-og-preview-footer-left-divider\">|</span> by <span class=\"gh-og-preview-footer-author\">{name}</span>",
-  "Page": "Página",
-  "by <span class=\"gh-content-entry-author\">{authors}</span>": "por <span class=\"gh-content-entry-author\">{authors}</span>",
-  "By <span class=\"midgrey-l2 fw5\">{authorNames}</span>": "Por <span class=\"midgrey-l2 fw5\">{authorNames}</span>",
-  "Last edited {date}": "Última edición {date}",
-  "Will go live {date}": "Estará activo {date}",
-  "moment": {
-    "at {time}": "el {time}",
-    "HH:mm [Today]": "HH:mm [Today]",
-    "HH:mm [Yesterday]": "HH:mm [Yesterday]",
-    "[at] HH:mm [Tomorrow]": "[at] HH:mm [Tomorrow]",
-    "[at] HH:mm [on] DD MMM YYYY": "[at] HH:mm [on] DD MMM YYYY",
-    "DD MMM YYYY": "DD MMM YYYY"
-  },
-  "User image": "Imagen del usuario",
-  "Upload an image": "Subir imagen",
-  "Template": "Plantilla",
-  "Post URL matches {filename}": "Publicar coincidencias de URL {filename}",
-  "Set it live now": "Activar ahora",
-  "Schedule it for later": "Programar para más tarde",
-  "Update post status": "Actualizar el estado de la entrada",
-  "Revert this post to a private draft": "Revertir esta entrada a borrador privado",
-  "Display this post publicly": "Mostrar esta entrada públicamente",
-  "Will be published in {time}": "Será publicada en {time}",
-  "Revert to draft": "Revertir a borrador",
-  "Do not publish": "No publicar",
-  "Schedule for later": "Programar para más tarde",
-  "Set automatic future publish date": "Establecer la fecha de publicación de forma automática",
-  "Search": "Buscar",
-  "Search...": "Buscar...",
-  "Loading": "Cargando",
-  "Loading...": "Cargando...",
-  "No subscribers found.": "No se han encontrado subscriptores.",
-  "internal": "interno",
-  "Upload tag image": "Subir imagen para la etiqueta",
-  "Name": "Nombre",
-  "URL": "URL",
-  "Description": "Descripción",
-  "Maximum: <b>{max}</b> characters. You’ve used {charactersCount}": "Máximo: <b>{max}</b> caracteres. Usted ha utilizado {charactersCount}",
-  "Extra content for SEO and social media.": "Contenido extra para SESO y redes sociales.",
-  "Delete Tag": "Borrar etiqueta",
-  "Affected files": "Archivos afectados",
-  "Version {version}": "Versión {version}",
-  "Activate": "Activar",
-  "No themes found": "No se han encontrado temas",
-  "Please upload a theme to continue": "Por favor suba un tema para continuar",
-  "Your timezone has been automatically set to {activeTimezone}.": "Su zona horaria ha siddo cambiada automáticamente a {activeTimezone}.",
-  "The local time here is currently {localTime}": "La hora local aquí es actualmente {localTime}",
-  "Not your first time? <em>Skip these tips</em>": "¿No es su primera vez? <em>Omitir estos conceptos</em>",
-  "Ok, got it": "Ok, lo tengo",
-  "Unsplash": "Unsplash",
-  "Beautiful, free photos.<br> Gifted by the world’s most generous community of photographers. 🎁": "Hermosas fotografías gratis.<br> Donadas por la comunidad de fotógrados más generosa del mundo. 🎁",
-  "No photos found for '{term}'": "No se han encontrado fotografías para  '{term}'",
-  "No photos found": "No se han encontrado fotografías",
-  "Network error": "Error de red",
-  "retry": "reintentar",
-  "Insert image": "Insertar imagen",
-  "Photo of {name}": "Fotografía de {name}",
-  "Last seen: {lastSeen}": "Última visualización: {lastSeen}",
-  "Locked": "Bloqueado",
-  "Menu": "Menú",
-  "Would you really like to delete all content from your blog?": "¿Esta seguro que desea borrar todo el contenido de su blog?",
-  "This is permanent! No backups, no restores, no magic undo button. We warned you, k?": "¡Esto es permanente! Sin copias de seguridad, sin restauraciones, sin botón mágico de deshacer. Le advertimos ¿de acuerdo?",
-  "Are you sure?": "¿Esta seguro?",
-  "<strong>WARNING:</strong> All data for this subscriber will be deleted. There is no way to recover this.": "<strong>AVISO:</strong> Toda la información para este subscriptor será borrado. No hay forma de deshacer esto",
-  "Are you sure you want to delete this tag?": "¿Esta seguro que desea borrar esta equiqueta?",
-  "You're about to delete \"<strong>{name}</strong>\". This is permanent! We warned you, k?": "Está a punto de borrar \"<strong>{name}</strong>\". ¡Esto es permanente! Le avisamos ¿de acuerdo?",
-  "Are you sure you want to delete this": "¿Esta seguro que desea borrar esto",
-  "Maybe": "Quizás",
-  "Download your theme before continuing": "Descarque su tema antes de continuar",
-  "Are you sure you want to delete this user?": "¿Esta seguro que desea borrar este usuario?",
-  "Delete user and their posts": "Borrar usuario y sus entradas",
-  "Delete user": "Borrar usuario",
-  "<strong>WARNING:</strong> You are about to delete the user '<strong>{name}</strong>'. There is no way to recover this.": "<strong>AVISO:</strong> Está a punto de borrar este usuario '<strong>{name}</strong>'. No hay forma de deshacer esto.",
-  "The user will not have access to this blog anymore": "El usuario no tendrá acceso a este blog nunca más",
-  "<strong>{posts, plural}</strong> created by this user will be deleted": "<strong>{posts, plural, other{# posts}}</strong> creadas por este usuario serán borrados",
-  "All other user data will be deleted": "Cualquier otra información del usuario será borrada",
-  "User will not have access to this blog anymore": "El usuario no tendrá acceso a este blog nunca más",
-  "All user data will be deleted.": "Toda la información del usuario será borrada.",
-  "Import Successful": "Importación realizada correctamente",
-  "Import Subscribers": "Importar Subscriptores",
-  "Imported": "Importado",
-  "Import": "Importar",
-  "Importing": "Importando",
-  "Import failed due to an unknown error. Check the Web Inspector console and network tabs for errors.": "La importación ha fallado debido a un error desconocidor. Compruebe las etiquetas para errores de la consola de Web Inspector y de red.",
-  "Duplicates": "Duplicados",
-  "Invalid": "Inválido",
-  "Select or drag-and-drop a CSV file.": "Seleccione o arrastre un archivo CSV.",
-  "Invite a New User": "Invitar a un Nuevo Usuario",
-  "Send invitation now": "Enviar invitación ahora",
-  "Are you sure you want to leave this page?": "¿Está seguro que desea abandonar esta página?",
-  "Hey there! It looks like you're in the middle of writing something and you haven't saved all of your content.": "¡Hola! Parece que está escribiendo algo y no ha guardado todo su contenido..",
-  "Save before you go!": "¡Guárdelo antes de salir!",
-  "Leave": "Salir",
-  "Stay": "Permanecer",
-  "Hey there! It looks like you didn't save the changes you made.": "¡Hola! Parece que no guardó los cambios que realizó.",
-  "Markdown Help": "Markdown Help",
-  "For further Markdown syntax reference <a href=\"{link}\" target=\"_blank\">Markdown Documentation</a>": "Para más referencia de sintaxis de Markdown <a href=\"{link}\" target=\"_blank\">Documentación sobre Markdown</a>",
-  "Markdown": "Markdown",
-  "Result": "Resultado",
-  "Shortcut": "Atajo",
-  "Add a Subscriber": "Añadir Subscriptor",
-  "Please re-authenticate": "Por favor vuelva a identificarse",
-  "Log in": "Iniciar sesión",
-  "Are you sure you want to suspend this user?": "¿Esta seguro que desea suspender a este usuario?",
-  "<strong>WARNING:</strong> This user will no longer be able to log in but their posts will be kept.": "<strong>AVISO:</strong> Este usuario ya no podrá iniciar sesión, pero sus entradas se mantendrán.",
-  "Suspend": "Suspender",
-  "Fatal Errors": "Errores Fatales",
-  "(Must-fix to activate theme)": "(Debe solucionarse para activar el tema)",
-  "Errors": "Errores",
-  "Highly recommended to fix, functionality <strong>could</strong> be restricted": "Muy recomendable solucionarlo, la funcionalidad <strong> podría </strong> estar restringida ",
-  "Warnings": "Avisos",
-  "Transfer Ownership": "Transferir Propiedad",
-  "Are you sure you want to transfer the ownership of this blog? You will not be able to undo this action.": "¿Esta seguro que desea transferir la propiedad de este blog? Esta acción no podrá deshacerse.",
-  "Yep - I'm sure": "Si - Estoy seguro",
-  "Are you sure you want to un-suspend this user?": "¿Está seguro que desea restablecer a este usuario?",
-  "Are you sure you want to delete this member?": "¿Está seguro que desea borrar a este miembro?",
-  "You're about to delete \"<strong>{user}</strong>\". This is permanent! We warned you, k?": "Está a punto de borrar \"<strong>{user}</strong>\". ¡Esta acción es parmanente! Se lo advertimos ¿de acuerdo?",
-  "Deleting this integration will remove all webhooks and api keys associated with it.": "Borrando esta integración se eliminaran todos los webhooks y claves de API asociadas a ella.",
-  "Deleting this webhook may prevent the integration from functioning.": "Eliminar este webhook puede evitar que la integración funcione.",
-  "New custom integration": "Nueva integración personalizada",
-  "Integration name...": "Nombre de la Integración...",
-  "Webhook name...": "Nombre del Webhook ..",
-  "Select an event": "Selecccione un evento",
-  "Target URL": "URL objetivo",
-  "Webhook target URL...": "Webhook de la URL objetivo...",
-  "Secret": "Secreto",
-  "Webhook secret...": "Secreto del Webhook...",
-  "New webhook": "Nuevo webhook",
-  "Edit webhook": "Editar webhook",
-  "<strong>WARNING:</strong> This user will be able to log in again and will have the same permissions they had previously.": "<strong>AVISO:</strong> Este usuario podrá iniciar sesión nuevamente y tendrá los mismos permisos que tenía anteriormente..",
-  "Upload successful!": "¡Subida realizada correctamente!",
-  "Invalid theme": "Tema no válido",
-  "Upload a theme": "Subir tema",
-  "Activation successful": "Activación realizada correctamente",
-  "Activation failed": "La activación ha fallado",
-  "\"{themeName}\" uploaded successfully.": "\"{themeName}\" subido correctamente.",
-  "This theme is invalid and cannot be activated. Fix the following errors and re-upload the theme.": "Este tema no es válido y no puede ser activado. Corrija los siguientes errores y vuelva a subir el tema.",
-  "Do you want to activate it now?": "¿Desea activarlo ahora?",
-  "\"{fileThemeName}\" will overwrite an existing theme of the same name. Are you sure?": "\"{fileThemeName}\" sobrescribirá un tema existente con el mismo nombre. ¿Está seguro?",
-  "Click to select or drag-and-drop your theme zip file here.": "Haga clic o arrastre aquí un archivo zip con el tema.",
-  "Overwrite": "Sobreescribir",
-  "Activate Now": "Activar Ahora",
-  "View site": "Ver sitio",
-  "{title} with {type}": "{title} con {type}",
-  "errors": "errores",
-  "warnings": "avisos",
-  "Upload successful with {type}": "Subida realizada correctamente con {type}",
-  "You are still able to use and activate the theme. Here's your report...": "Aún puede usar y activar el tema. Aquí está su informe...",
-  "\"{themeName}\" uploaded successfully but some {type} were detected.": "\"{themeName}\" subido correctamente pero se han detectado algunos {type}.",
-  "Sorry, there was an error in the application. Please let the Ghost team know what happened.": "Lo sentimos, hubo un error en la aplicación. Por favor, comuníqueselo al equipo News",
-  "Unknown Error": "Error desconocido",
-  "Invitation email was not sent.": "El correo con la invitacion no ha sido enviado.",
-  "Please try resending.": "Por favor intente reenviar.",
-  "This invite has been revoked or a user has already accepted the invitation.": "Esta invitación ha sido revocada o el usuario ya ha aceptado la invitación.",
-  "Check your email for the test message.": "Revise su correo electrónico para ver el mensaje de prueba.",
-  "All content deleted from database.": "Todo el contenido eliminado de la base de datos.",
-  "You can't reset your password while you're signed in.": "No puede restablecer su contraseña mientras esté conectado.",
-  "There was a problem on the server.": "Hubo un problema con el servidor.",
-  "Please fill out the form to sign in.": "Complete el formulario para iniciar sesión.",
-  "Please check your email for instructions.": "Por favor compruebe su correo electrónico para las instrucciones.",
-  "We need your email address to reset your password!": "¡Necesitamos su correo electrónico para restablecer su contraseña!",
-  "There was a problem with the reset, please try again.": "Hubo un problema con el reinicio, intente nuevamente.",
-  "Please fill out the form to complete your sign-up": "Complete el formulario para completar su registro",
-  "You need to sign out to register as a new user.": "Necesita cerrar sesión para Iniciar sesión como nuevo usuario.",
-  "Invalid token.": "Token no válido.",
-  "The invitation does not exist or is no longer valid.": "La invitación no existe o ya no es válida.",
-  "Check your Slack channel for the test message": "Revise su canal de Slack para ver el mensaje de prueba",
-  "Sorry, Ghost is currently undergoing maintenance, please wait a moment then try again.": "Lo sentimos, News está actualmente en mantenimiento, espere un momento y vuelva a intentarlo..",
-  "Ghost has been upgraded, please copy any unsaved data and refresh the page to continue.": "News se ha actualizado, copie los datos no guardados y actualice la página para continuar.",
-  "Ownership successfully transferred to {user}": "Propiedad transferida correctamente a {user}",
-  "The user could not be deleted. Please try again.": "El usuario no puede ser borrado. Por favor inténtelo de nuevo.",
-  "(Never)": "(Nunca)",
-  "User created": "Usuario creado",
-  "User created successfully": "Usuario creado correctamente",
-  "Add a New User": "Añadir Nuevo Usuario",
-  "Add New User": "Añadir Nuevo Usuario",
-  "Username": "Usuario",
-  "Password": "Contraseña",
-  "Verify Password": "Verificar Contraseña",
-  "post": {
-    "notification": {
-      "view": "Ver entrada",
-      "preview": "Previsualizar entrada"
-    },
-    "linkToList": "Entradas",
-    "willGoLive": "La entrada será activada {countdown}",
-    "placeholder": {
-      "title": "Título de la entrada",
-      "body": "Comience a escribir su entrada..."
-    },
-    "settings": {
-      "title": "Ajustes de la entrada",
-      "url": "URL de la entrada",
-      "view": "Ver entrada",
-      "preview": "Previsualizar",
-      "feature": "Destaca esta entrada",
-      "delete": "Borrar entrada",
-      "header": "Encabezado de la entrada",
-      "footer": "Pie de la entrada",
-      "image": "Subir una imagen para la entrada"
-    },
-    "list": {
-      "edit": "Editar esta entrada"
-    },
-    "modal": {
-      "header": "¿Está seguro que desea borrar esta entrada?",
-      "body": "Está a apunto de borrar  \"<strong>{name}</strong>\". ¡Esta acción es permanent! Se lo advertimos, ¿de acuerdo?"
-    },
-    "publish": {
-      "draft": {
-        "title": "¿Listo para publicar su entrada?",
-        "publish": "Publicar esta entrada inmediatamente"
-      },
-      "published": {
-        "title": "Actualizar el estado de la entrada",
-        "revert": "Revertir esta entrada a borrador privado",
-        "display": "Mostrar esta entrada de forma pública"
-      }
-    }
-  },
-  "page": {
-    "notification": {
-      "view": "Ver página",
-      "preview": "Previsualizar página"
-    },
-    "linkToList": "Páginas",
-    "willGoLive": "La página será activada {countdown}",
-    "placeholder": {
-      "title": "Título de la página",
-      "body": "Comience a escribir su página..."
-    },
-    "settings": {
-      "title": "Ajustes de la Pấgina",
-      "url": "URL de la página",
-      "view": "Ver página",
-      "preview": "Previsualizar",
-      "feature": "Destacar esta página",
-      "delete": "Borrar página",
-      "header": "Encabezado de la página",
-      "footer": "Pie de la página",
-      "image": "Subir imagen para la página"
-    },
-    "list": {
-      "edit": "Editar esta página"
-    },
-    "modal": {
-      "header": "¿Está seguro que desea borrar esta página?",
-      "body": "Está apunto de borrar \"<strong>{name}</strong>\". ¡Esta acción es permanente! Se lo advertimos ¿de acuerdo?"
-    },
-    "publish": {
-      "draft": {
-        "title": "¿Listo para publicar su página?",
-        "publish": "Publicar esta página inmediatamente"
-      },
-      "published": {
-        "title": "Actualizar el estado de la página",
-        "revert": "Revertir esta página a borrador privado",
-        "display": "Mostrar esta página públicamente"
-      }
-    }
-  },
-  "editor": {
-    "errors": {
-      "post": {
-        "published": {
-          "published": "La actualización ha fallado",
-          "draft": "El guardado ha fallado",
-          "scheduled": "La progrmación ha fallado"
+    "Manage": "Administración",
+    "Your posts": "Sus entradas",
+    "New post": "Nueva entrada",
+    "You haven't written any posts yet!": "¡Todavia no ha escrito ninguna entrada!",
+    "Write a new post": "Escribir una nueva entrada",
+    "No posts match the current filter": "No se ha encontrado ninguna entrada para el filtro actual",
+    "Show all posts": "Mostrar todas las entradas",
+    "Your pages": "Sus páginas",
+    "New page": "Nueva página",
+    "You haven't created any pages yet!": "¡Todavia no ha creado ninguna página!",
+    "Create a new page": "Crear nueva página",
+    "No pages match the current filter": "No se ha encontrado ninguna página para el filtro actual",
+    "Show all pages": "Mostrar todas las páginas",
+    "Create your account": "Cree su cuenta",
+    "Email Address": "Correo electrónico",
+    "Eg": {
+        " john@example": {
+            "com": "Eg. john@example.com"
         },
-        "draft": {
-          "published": "El publicado a fallado",
-          "draft": "El guardado ha fallado",
-          "scheduled": "La programación ha fallado"
+        " John H": {
+            " Watson": "Eg. John H. Watson"
         },
-        "scheduled": {
-          "scheduled": "La actualización ha fallado",
-          "draft": "La desprogramación ha fallado",
-          "published": "El publicado ha fallado"
-        }
-      }
+        " The Daily Awesome": "Eg. The Daily Awesome"
     },
-    "success": {
-      "post": {
-        "published": {
-          "published": "Actualizada.",
-          "draft": "Guardada.",
-          "scheduled": "Programada."
-        },
-        "draft": {
-          "published": "!Publicada!",
-          "draft": "Guardada.",
-          "scheduled": "Programada."
-        },
-        "scheduled": {
-          "scheduled": "Actualizada.",
-          "draft": "Desprogramada.",
-          "published": "¡Publicada!"
-        }
-      }
-    },
-    "button": {
-      "Add Image from Unsplash": "Añdir Imagen desde Unsplash",
-      "Markdown Guide": "Guia de Markdown",
-      "Hemingway Mode": "Modo Hemingway",
-      "Spellcheck": "Corrector ortográfico",
-      "Side-by-side Preview": "Vista previa de lado a lado",
-      "Render Preview": "Vista previa de renderizado",
-      "Upload Image(s)": "Subir Imagen(es)",
-      "Bold": "Bold",
-      "Italic": "Italic",
-      "Heading": "Heading",
-      "Quote": "Quote",
-      "Generic List": "Lista Genérica",
-      "Numbered List": "Lista Numerada",
-      "Create Link": "Crear Link"
-    },
-    "notice": {
-      "Hemingway Mode On": "Modo Hemingway activado",
-      "Write now; edit later. Backspace disabled.": "Escriba ahora; editar más tarde Retroceso deshabilitado",
-      "Hemingway Mode Off": "Modoe Hemingway Mode desactivado",
-      "Normal editing restored.": "Edición normal restaurada.."
-    },
-    "(Untitled)": "(Sin título)",
-    "word": "{count, plural, =0{} =1{one word} other{# words}}"
-  },
-  "Add <strong>\"{term}\"...</strong>": "Añadir <strong>\"{term}\"...</strong>",
-  "searchInput": {
-    "Posts": "Entradas",
-    "Pages": "Páginas",
-    "Users": "Usuarios",
-    "Tags": "Etiquetas"
-  },
-  "filter": {
-    "All posts": "Todas las entradas",
-    "Draft posts": "Entradas en borrador",
-    "Published posts": "Entradas publicadas",
-    "Scheduled posts": "Entradas programadas",
-    "Featured posts": "Entradas destacadas",
-    "All authors": "Todos los autores",
-    "All tags": "Todas las etiquetas",
-    "Search tags": "Buscar etiqueta",
-    "Search authors": "Buscar autores",
-    "All pages": "Todas las páginas",
-    "Draft pages": "Páginas en borrador",
-    "Published pages": "Páginas publicadas",
-    "Scheduled pages": "Páginas programadas",
-    "Featured pages": "Páginas destacadas"
-  },
-  "order": {
-    "Sort by": "Ordenar por",
-    "Newest": "Más recientes",
-    "Oldest": "Más antiguas",
-    "Recently updated": "Actualizadas recientemente"
-  },
-  "postBadge": {
-    "Page": "Página",
-    "Scheduled": "Programada",
-    "Draft": "Borrador",
-    "Featured": "destacadas"
-  },
-  "Invitation sent!": "¡Invitación enviada!",
-  "Image URI is not valid": "El URI de la imagen no es válido",
-  "Sorry, the default Casper theme cannot be overwritten.<br>Please rename your zip file and try again.": "Lo sentimos, el tema predeterminado Casper no se puede sobrescribir. <br> Cambie el nombre de su archivo zip y vuelva a intentarlo.",
-  "New tag": "Nueva etiqueta",
-  "Add a tag": "Añadir etiqueta",
-  "Tag settings": "Ajustes de la etiqueta",
-  "Upload image of \"{altText}\"": "Subir imagen de \"{altText}\"",
-  "The image you uploaded was larger than the maximum file size your server allows.": "La imagen que cargó era más grande que el tamaño máximo de archivo que permite su servidor.",
-  "The image type you uploaded is not supported. Please use {validExtensions}": "El tipo de imagen que cargó no es compatible. Por favor use {validExtensions}",
-  "The file type you uploaded is not supported. Please use {validExtensions}": "El tipo de archivo que cargó no es compatible. Por favor use {validExtensions}",
-  "Select or drag-and-drop a file": "Seleccione o arrastre y suelte un archivo",
-  "The file type you uploaded is not supported.": "El tipo de archivo que cargó no es compatible.",
-  "The file you uploaded was larger than the maximum file size your server allows.": "El archivo que cargó era más grande que el tamaño máximo de archivo que permite su servidor.",
-  "Search free high-resolution photos": "Buscar fotos gratuitas de alta resolución",
-  "Got it": "Entendido",
-  "Something went wrong :(": "Algo salió mal :(",
-  "Invitation resent! ({email})": "¡Invitación reenviada! ({email})",
-  "Page not found": "Página no encontrada",
-  "Internal Server Error": "Error interno del Servidor",
-  "Password updated": "Contraseña actualizada",
-  "There was a problem on the server, please try again.": "Hubo un problema en el servidor, intente nuevamente.",
-  "tour": {
-    "Getting started with Ghost": "Comenzando con News",
-    "Using the Ghost editor": "Usando el editor News",
-    "Turning posts into pages": "Converir entradas en páginas",
-    "Setting a featured post": "Establecer una entrada destacada",
-    "Customising your publication": "Personalizando su entrada",
-    "Ghost uses Markdown to allow you to write and format content quickly and easily. This toolbar also helps! Hit the <strong>?</strong> icon for more editor shortcuts.": "_News usa Markdown para permitirte escribir y formatear contenido de forma rápida y sencilla. ¡Esta barra de herramientas también ayuda! Presione el icono <strong>? </strong> para obtener más accesos directos del editor.",
-    "Welcome to Ghost Admin! From here you can browse your site, manage your content, and edit your settings.<br><br>You can always login to Ghost Admin by visiting <a href=\"{adminUrl}\" target=\"_blank\">{adminDisplayUrl}</a>":"<¡Bienvenido a Ghost Admin! Desde aquí puede navegar por su sitio, administrar su contenido y editar su configuración. <br> <br> Siempre puede iniciar sesión en Ghost Admin visitando <a href = \"{adminUrl}\" target = \"_ blank\" > {adminDisplayUrl}</a>",
-    "Static pages are permanent pieces of content which live outside of your usual stream of posts, for example an 'about' or 'contact' page.": "Las páginas estáticas son piezas permanentes de contenido que viven fuera de su flujo habitual de publicaciones, por ejemplo, una página 'acerca de' o 'contacto'.",
-    "Depending on your theme, featured posts receive special styling to make them stand out as a particularly important or emphasised story.": "Dependiendo de su tema, las entradas destacadas reciben un estilo especial para que se destaquen como una historia particularmente importante o destacada.",
-    "Using custom themes you can completely control the look and feel of your site to suit your brand. Here's a full guide to help: <strong><a href=\"{link}\" target=\"_blank\">{link}</a></strong>": "Usando temas personalizados, puede controlar completamente la apariencia de su sitio para adaptarse a su sucursal. Aquí hay una guía completa para ayudar:<strong><a href=\"{link}\" target=\"_blank\">{link}</a></strong>"
-  },
-  "Uh-oh! Trouble reaching the Unsplash API, please check your connection": "¡UH oh! Problemas para acceder a la API Unsplash, verifique su conexión",
-  "Unsplash API rate limit reached, please try again later.": "Se ha alcanzado el'límite de velociada de la API Unspash, Por favor, inténtelo de nuevo más tarde.",
-  "Error {status}: Uh-oh! Trouble reaching the Unsplash API": "Error {status}: ¡Uh-oh! Problemas para llegar a la API Unsplash",
-  "validation": {
-    "Invalid Email.": "Correo electrónico no válido.",
-    "Email is too long": "Correo electrónico demasiado largo",
-    "Please enter an email.": "Por favor introduzca un correo electrónico.",
-    "You must specify a label": "Debe especificar una etiqueta",
-    "You must specify a URL or relative path": "Debe especificar una URL o una dirección relativa",
-    "You must specify a valid URL or relative path": "Debe especifcar una URL o dirección relativa válida",
-    "Please enter a name.": "Por favor introduzca un nombre",
-    "Name is too long, max 191 chars": "El nombre es demasiado largo, máximo 191 caracteres",
-    "Please select an event": "Por favor seleccione un evento",
-    "Please enter a target URL": "Por favor introduzca una URL destino",
-    "Please enter a valid URL": "Por favor introduzca una URL válida",
-    "Target URL is too long, max 2000 chars": "La URL destino es demasiado larga, máximo 2000 caracteres",
-    "Password must be at least 10 characters long": "La contraseña debe tener una longitud de al menos 10 caracteres",
-    "Sorry, you cannot use an insecure password": "Lo sentinos, no puede utilizar una contraseña insegura",
-    "You must specify a title for the post.": "Debe especificar un título para la entrada.",
-    "Title cannot be longer than 255 characters.": "El título no puede tener más de 255 caracteres.",
-    "At least one author is required.": "Se requiere al menos un autor.",
-    "Excerpt cannot be longer than 300 characters.": "El extracto no puede tener más de 300 caracteres.",
-    "Footer code cannot be longer than 65535 characters.": "El código de pie de página no puede tener más de 65535 caracteres.",
-    "Header code cannot be longer than 65535 characters.": "El código del encabezado no puede tener más de 65535 caracteres.",
-    "Meta Title cannot be longer than 300 characters.": "Meta título no puede tener más de 300 caracteres.",
-    "Meta Description cannot be longer than 500 characters.": "Meta Descripción no puede tener más de 500 caracteres.",
-    "Facebook Title cannot be longer than 300 characters.": "Título de Facebook no puede tener más de 300 caracteres.",
-    "Facebook Description cannot be longer than 500 characters.": "Descripción de Facebook no puede tener más de 500 caracteres.",
-    "Twitter Title cannot be longer than 300 characters.": "Título Twitter no puede tener más de 300 caracteres.",
-    "Twitter Description cannot be longer than 500 characters.": "Descripcón Twitter no puede tener más de 500 caracteres.",
-    "Must be in format: \"15:00\"": "Debe estar en formato: \"15:00\"",
-    "Can't be blank": "No puede estar en blanco",
-    "Must be in the past": "Debe estar en el pasado",
-    "Must be at least 2 mins in the future": "La hora debe tener al menos 2 minutos de diferencia con la hora actual",
-    "Please enter a password.": "Por favor introduzca la contraseña.",
-    "The two new passwords don't match.": "Las 2 nuevas contraseñas no coinciden.",
-    "Title is too long": "El título es demasiado largo",
-    "Description is too long": "La descripción es demasiada larga",
-    "Password must be supplied": "La contraseña debe ser proporcionada",
-    "Email address is not valid": "El correo electrónico no es válido",
-    "The URL must be in a format like https://hooks.slack.com/services/<your personal key>": "La URL debe tener un formato similar a https://hooks.slack.com/services/<your personal key>",
-    "The URL must be in a format like https://twitter.com/yourUsername": "La URL debe tener un formato similar a https://twitter.com/yourUsername",
-    "The URL must be in a format like https://www.facebook.com/yourPage": "La URL debe tener un formato similar a https://www.facebook.com/yourPage",
-    "You must specify a name for the tag.": "Debe indicar un nombre para la etiqueta.",
-    "Tag names can't start with commas.": "Los nombres de las etiquetas no pueden comenzar con comas.",
-    "Tag names cannot be longer than 191 characters.": "Los nombres de las etiquetas no puede tener más de 191 caracteres.",
-    "URL cannot be longer than 191 characters.": "La URL no puede tener más de 191 caracteres.",
-    "Description cannot be longer than 500 characters.": "La Descripción no puede tener más de 500 caracteres.",
-    "Name is too long": "El nombre es demasiado largo",
-    "Bio is too long": "La biografia es demasiada larga",
-    "Please supply a valid email address": "Por favor proporcione un correo electrónico válido",
-    "Location is too long": "La ubicación de demasiada larga",
-    "Website is not a valid url": "El sitio web no tiene una url válida",
-    "Please select a role": "Por favor seleccione un rol",
-    "Sorry, passwords can't be blank": "Lo sentimos, las contraseñas no pueden estar en blanco",
-    "Your new passwords do not match": "Sus nuevas contraseñas no coinciden",
-    "A user with that email address already exists.": "Ya existe un usuario con esta dirección de correo electrónico.",
-    "A user with that email address was already invited.": "Un usuario con esta dirección de correo electrónico ya fue invitado.",
-    "Your Username is not a valid Twitter Username": "Su Usuario no es un usuario válido para Twitter",
-    "No users to invite": "No hay usuarios para invitar",
-    "Email already exists.": "El correo electrónico ya existe.",
-    "Your current password is required to set a new one": "Su contraseña actual es necesaria para definir una nueva",
-    "Please enter a blog title.": "Por favor introduzca un título para el blog.",
-    "Incorrect password": "Contraseña incorrecta",
-    "{email} is not a valid email.": "{email} no es un correo electrónico válido.",
-    "{email} was invalid: {message}": "{email} era inválido: {message}",
-    "Please select a role.": "Por favor seleccione un rol.",
-    "Please enter a name": "Por favor introduzca un nombre",
-    "Has already been used": "Ya ha sido utilizado",
-    "A user already exists": "El usuario ya existe",
-    "Please enter an username.": "Por favor introduzca un usuario.",
-    "Password must be at least 6 characters long": "La constraseña debet tener al menos 6 caracteres",
-    "Please enter a password.": "Por favor introduzca una contraseña",
-    "Username is not valid": "El usuario no es válido"
-  },
-  "views": {
-    "Drafts": "Borradores",
-    "Scheduled": "Programadas",
-    "Published": "Publicadas",
-    "No @title provided": "No se ha proporcionado @title",
-    "Edit current view...": "Editar vista actual ......",
-    "Save as view...": "Guardar como vista ..."
-  },
-  "pageTitle": {
-    "About": "Sobre",
-    "AMP": "AMP",
-    "Setup": "Configuración",
-    "Members": "Miembros",
-    "Pages": "Páginas",
-    "Site": "Sitio",
-    "Settings - Integrations": "Ajustes - Integraciones",
-    "Settings - Code injection": "Ajustes - Inyección de código",
-    "Settings - Design": "Ajustes - Diseño",
-    "Editor": "Editor",
-    "Error": "Error",
-    "Staff": "Equipo",
-    "Posts": "Entradas",
-    "Settings - General": "Ajustes - General",
-    "Settings - Labs": "Ajustes - Laboratorios",
-    "Sign In": "Iniciar sesión",
-    "Sign Out": "Cerrar Sesión",
-    "Slack": "Slack",
-    "Subscribers": "Subscriptores",
-    "Settings - Tags": "Ajustes - Etiquetas",
-    "Staff - User": "Equipo - Usuario",
-    "Unsplash": "Unsplash",
-    "Billing": "Billing"
-  },
-  "postStatus": {
-    "Saving...": "Guardando...",
-    "Published": "Publicada",
-    "Unpublished": "Despublicada",
-    "Scheduled": "Programada",
-    "New": "Nueva",
-    "Draft": "Borrador"
-  },
-  "common": {
-    "Add": "Añadir",
-    "Update": "Actualizar",
-    "Upload": "Subir",
-    "Delete": "Borrar",
-    "Save": "Guardar",
-    "Close": "Cerrar",
-    "Cancel": "Cancelar",
-    "Expand": "Expandir",
-    "Active": "Activar",
-    "Configure": "Configurar",
-    "Export": "Exportar",
-    "Back": "Atrás",
-    "More": "Más",
-    "Download": "Descargar",
-    "Ok": "Ok"
-  },
-  "Accelerated Mobile Pages": "Páginas móviles aceleradas",
-  "AMP configuration": "Configuración AMP",
-  "Enable AMP": "Activar AMP",
-  "Enable <a href=\"{link}\" target=\"_blank\">Google Accelerated Mobile Pages</a> for your posts": "Activar <a href=\"{link}\" target=\"_blank\">Páginas móviles aceleradas de Google</a> para sus entradas",
-  "Available integrations": "Integraciones disponibles",
-  "A messaging app for teams": "Una aplicación de mensajería para equipos",
-  "Beautiful, free photos": "Hermosas fotos gratis",
-  "Zapier": "Zapier",
-  "Automation for your favourite apps": "Automatización para tus aplicaciones favoritas",
-  "Slack configuration": "Configuración de Slack",
-  "Webhook URL": "Webhook URL",
-  "Automatically send newly published posts to a channel in Slack or any Slack-compatible service like Discord or Mattermost.": "Enviar automáticamente publicaciones recién publicadas a un canal en Slack o cualquier servicio compatible con Slack como Discord o Mattermost.",
-  "Set up a new incoming webhook <a href=\"{link}\" target=\"_blank\">here</a>, and grab the URL.": "Configure un nuevo webhook entrante <a href=\"{link}\" target=\"_blank\"> aquí </a> y tome la URL.",
-  "Send test notification": "Enviar notificación de prueba",
-  "Unsplash configuration": "Configuración de Unsplash",
-  "Enable Unsplash": "Activar Unsplash",
-  "Enable <a href=\"{link}\" target=\"_blank\">Unsplash</a> image integration for your posts": "Habilite la integración de imágenes <a href=\"{link}\" target=\"_blank\"> Unsplash </a> para sus publicaciones",
-  "Zapier configuration": "Configuración de Zapier",
-  "Zapier Templates": "Plantillas Zapier",
-  "Explore pre-built templates for common automation tasks": "Explore plantillas preconstruidas para tareas de automatización comunes",
-  "You haven't added any tags yet!": "¡Todavia no ha añadido ninguna etiqueta!",
-  "Ghost allows you to inject code into the top and bottom of your theme files without editing them. This allows for quick modifications to insert useful things like tracking codes and meta tags.": "News le permite inyectar código en la parte superior e inferior de sus archivos de tema sin editarlos. Esto permite modificaciones rápidas para insertar cosas útiles como códigos de seguimiento y metaetiquetas.",
-  "Site Header": "Site Header",
-  "Code here will be injected into the <code>{{ghost_head}}</code> tag on every page of the site": "El código aquí se inyectará en la etiqueta <code>\\{\\{ghost_head\\}\\}</code> en cada página del sitio ",
-  "Site Footer": "Site Footer",
-  "Code here will be injected into the <code>{{ghost_foot}}</code> tag on every page of the site": "El código aquí se inyectará en la etiqueta <code>\\{\\{ghost_foot\\}\\}</code> en cada página del sitio ",
-  "Navigation": "Navegación",
-  "Installed Themes": "Temas instalados",
-  "Theme Directory": "Directorio de Temas",
-  "Theme Marketplace": "Tienda de Temas",
-  "Explore a huge range of free and premium themes for Ghost with a range of design and layout options": "Explore una amplia gama de temas gratuitos y premium para News con una gama de opciones de diseño y diseño ",
-  "Developer Docs": "Documentación para Desarrolladores",
-  "Build your own custom Ghost theme from scratch using our comprehensive Handlebars.js SDK": "Cree su propio tema Ghost personalizado desde cero utilizando nuestro completo SDK Handlebars.js ",
-  "This is a testing ground for experimental features which aren't quite ready for primetime. They may change, break or inexplicably disappear at any time.": "Este es un campo de pruebas para características experimentales que no están listas para el horario estelar. Pueden cambiar, romperse o inexplicablemente desaparecer en cualquier momento.",
-  "Migration options": "Opciones de migración",
-  "Import content": "Importar contenido",
-  "Import posts from another Ghost installation": "Importar entradas desde otra instalación de News",
-  "Import successful with warnings": "Importación realizada correctamente con avisos",
-  "Import failed": "La importación ha fallado",
-  "Export your content": "Exportar su contenido",
-  "Download all of your posts and settings in a single, glorious JSON file": "Descargue todas sus entradas y configuraciones en un único y glorioso archivo JSON ",
-  "Delete all content": "Borrar todo el contenido",
-  "Permanently delete all posts and tags from the database, a hard reset": "Eliminar permanentemente todas las entradas y etiquetas de la base de datos, un restablecimiento completo",
-  "Testing tools": "Herramientas de testeo",
-  "Test email configuration": "Testear configuración de correo electrónico",
-  "Send yourself a test email to make sure everything is working": "Envíe un correo electrónico de prueba para asegurarse de que todo esté funcionando",
-  "Beta features": "Características Experimentales",
-  "Public API (deprecated)": "API pública (obsoleta)",
-  "⚠️ Please use the Content API instead, more info in <a href=\"{link}\">the docs</a>": "⚠️ En su lugar, use la API de contenido, más información en <a href=\"{link}\"> los documentos</a>",
-  "Toggle Night shift": "Interruptor modo Nocturno",
-  "Night shift": "Modoe Nocturno",
-  "Swap Ghost admin's colours to a dark background which is easy on the eyes": "Cambie los colores del administrador de News a un fondo oscuro que es fácil para la vista",
-  "Collect email addresses from your readers, more info in <a href=\"{link}\">the docs</a>": "Recopile direcciones de correo electrónico de sus lectores, más información en <a href =\"{link}\">los documentos</a>",
-  "Redirects": "Redirecciones",
-  "Configure redirects for old or moved content, more info in <a href=\"{link}\">the docs</a>": "Configure redirecciones para contenido antiguo o movido, más información en <a href=\"{link}\">los documentos</a>",
-  "Routes": "Rutas",
-  "Configure dynamic routing by modifying the routes.yaml file": "Configure el enrutamiento dinámico modificando el archivo routes.yaml",
-  "Upload redirects JSON": "Subir redirecciones JSON",
-  "Download current redirects": "Descargar redirecciones actuales",
-  "Download current routes.yaml": "Descargar rutas actuales.yaml",
-  "Stripe secret API key": "Clave secreta API de Stripe",
-  "Stripe publishable API key": "Clave pública API de Stripe",
-  "Where to find Stripe API keys": "Donde encontrar claves de la API de Stripe",
-  "Monthly price": "Precio mensual",
-  "Yearly price": "Precio anual",
-  "trigger": {
-    "Update": "Actualizar",
-    "Scheduled": "Programar",
-    "Publish": "Publicar"
-  },
-  "taskButton": {
-    "Retry": "Reintentar",
-    "Saved": "Guardado",
-    "Save": "Guardar",
-    "Saving": "Guardando",
-    "Save settings": "Guardar ajustes",
-    "Send": "Enviar",
-    "Sent": "Enviado",
-    "Delete": "Borrar",
-    "Deleted": "Borrado",
-    "Download backup & delete user": "Descargar copia de seguridad y eliminar usuario",
-    "Delete user": "Borrar usuario",
-    "Send invitation now": "Enviar invitación ahora",
-    "Add": "Añadir",
-    "Added": "Añadido",
-    "Log in": "Iniciar sesión",
-    "Sign in": "Iniciar sesión",
-    "Suspend": "Suspender",
-    "Suspended": "Suspendido",
-    "Yep - I'm sure": "Si - Estoy seguro",
-    "Un-suspend": "Restablecer",
-    "Un-suspended": "Restablecido",
-    "Reset Password": "Restablecer Contraseña",
+    "Password": "Contraseña",
+    "At least 10 characters": "Al menos 10 caracteres",
     "Create Account": "Crear Cuenta",
-    "Creating": "Creando",
-    "Send test notification": "Enviar notificación de prueba",
-    "Change Password": "Cambiar contraseña",
-    "Update": "Actualizar",
-    "Updating": "Actualizando",
-    "Updated": "Actualizado",
-    "Publish": "Publicar",
-    "Publishing": "Publicando",
-    "Published": "Publicada",
-    "Schedule": "Programar",
-    "Scheduling": "Programando",
-    "Scheduled": "Programada",
-    "Unpublish": "Despublicar",
-    "Unpublishing": "Despublicando",
-    "Unpublished": "Despublicada",
-    "Reschedule": "Reprogramar",
-    "Rescheduling": "Reprogramando",
-    "Rescheduled": "Reprogramada",
-    "Unschedule": "Desprogramar",
-    "Unscheduling": "Desprogramando",
-    "Unscheduled": "Desprogramada",
-    "Copied": "Copiado",
-    "Copy": "Copiar",
-    "Delete Integration": "Borrar Integración",
-    "Delete Webhook": "Borrar Webhook",
-    "Uploaded": "Subir",
-    "Upload Failed": "La subida ha fallado",
-    "Upload routes YAML": "Subir rutas YAML",
-    "Upload redirects JSON": "Subir redirecciones JSON",
-    "Copy link": "Copiar link",
-    "Link copied": "Link copiad",
-    "Add user now": "Añadir usuario ahora"
-  },
-  "Publication info": "Información de la publicación",
-  "Title &amp; description": "Título y descripción",
-  "The details used to identify your publication around the web": "Los detalles utilizados para identificar su publicación en la web",
-  "Used in your theme, meta data and search results": "Usado en su tema, metadatos y resultados de búsqueda",
-  "Site timezone": "Zona horaria del sitio",
-  "Set the time and date of your publication, used for all published posts": "Establezca la hora y la fecha de su publicación, utilizada para todas las entradas publicadas",
-  "Publication Language": "Idioma de la publicación",
-  "Set the language/locale which is used on your site": "Establezca el idioma/configuración regional que se usa en su sitio",
-  "Default: English (<strong>{defaultLocale}</strong>); you can add translation files to your theme for <a href=\"{link}\" target=\"_blank\" rel=\"noopener\">any language</a>": "Valor por defecto: Inglés (<strong>{defaultLocale}</strong>); puede agregar archivos de traducción a su tema para <a href=\"{link}\" target=\"_blank\" rel=\"noopener\">cualquier idioma</a>",
-  "Publication identity": "Identidad de publicación",
-  "Publication icon": "Icono de la publicación",
-  "A square, social icon used in the UI of your publication, at least 60x60px": "Un icono cuadrado y social utilizado en la interfaz de usuario de su publicación, al menos 60x60px",
-  "Upload Image": "Subir Imagen",
-  "Publication logo": "Logo de la publicación",
-  "The primary logo for your brand displayed across your theme, should be transparent and at least 600px x 72px": "El logotipo principal de su marca que se muestra en su tema debe ser transparente y tener al menos 600 px x 72 px ",
-  "Publication cover": "Cubierta de la publicación",
-  "An optional large background image for your site": "Una imagen de fondo grande opcional para su sitio",
-  "Social accounts": "Cuentas de redes sociales",
-  "Link your social accounts for full structured data and rich card support": "Vincula tus cuentas sociales para obtener datos estructurados completos y compatibilidad con tarjetas enriquecidas",
-  "URL of your publication's Facebook Page": "URL de la página de Facebook de su publicación",
-  "URL of your publication's Twitter profile": "URL del perfil de Twitter de su publicación",
-  "Advanced settings": "Ajuestes avanzados",
-  "Use dated permalinks": "Use enlaces permanentes con fecha",
-  "Include the date in your post URLs, e.g. <strong>blogurl.com/2017/01/01/post-title/</strong>": "Incluya la fecha en las URL de su publicación, e.g. <strong>blogurl.com/2017/01/01/post-title/</strong>",
-  "Make this site private": "Convertir este sitio en privado",
-  "Enable protection with simple shared password. All search engine optimization and social features will be disabled.": "Habilite la protección con una contraseña compartida simple. Toda la optimización del motor de búsqueda y las características sociales se desactivarán.",
-  "A private RSS feed is available at <a href=\"{link}\" target=\"_blank\" rel=\"noopener\">{link}</a>": "Un RSS privado estará disponible en <a href=\"{link}\" target=\"_blank\" rel=\"noopener\">{link}</a>",
-  "Set the password for this site": "Establecer la contraseña para este sitio",
-  "The name of your site": "El nombre para su sitio",
-  "Google Accelerated Mobile Pages": "Google Accelerated Mobile Pages",
-  "AMP": "AMP",
-  "Slack": "Slack",
-  "Please fill out the form to setup your blog.": "Complete el formulario para configurar su blog.",
-  "{invitations, plural} sent!": "{invitations, plural, =1{the invitation} other{# invitations}} enviada!",
-  "Welcome to <strong>Ghost</strong>!": "Bienvenido a <strong>News</strong>!",
-  "All over the world, people have started <em>{peopleCount}</em> incredible sites with Ghost. Today, we’re starting yours.": "En todo el mundo, la gente ha comenzado <em> {peopleCount} </em> sitios increíbles con Ghost. Hoy comenzamos el tuyo.",
-  "Site title": "Título del sitio",
-  "Eg. The Daily Awesome": "Eg. The Daily Awesome",
-  "Last step: Invite staff users": "Último paso: Invitar usuarios al equipo",
-  "Invite staff users": "Invitar usuarios al equipo",
-  "{invalid emails, plural}": "{invalid emails, plural, =1{an invalid email} other{# invalid emails}}",
-  "Invite {users, plural}": "Invitación {users, plural, =1{a user} other{# users}}",
-  "Ghost works best when shared with others. Collaborate, get feedback on your posts &amp; work together on ideas.": "Ghost works best when shared with others. Collaborate, get feedback on your posts &amp; work together on ideas.",
-  "Enter one email address per line, we’ll handle the rest!": "Enter one email address per line, we’ll handle the rest!",
-  "I'll do this later, take me to my site!": "I'll do this later, take me to my site!",
-  "ajax": {
-    "API server is running a newer version of Ghost, please upgrade.": "El servidor API está ejecutando una versión más nueva de Ghost, actualice.",
-    "Server was unreachable.": "Server was unreachable.",
-    "Request is larger than the maximum file size the server allows": "La solicitud es mayor que el tamaño máximo de archivo que permite el servidor",
-    "Request contains an unknown or unsupported file type.": "La solicitud contiene un tipo de archivo desconocido o no admitido.",
-    "Ghost is currently undergoing maintenance, please wait a moment then retry.": "News está actualmente en mantenimiento, espere un momento y vuelva a intentarlo.",
-    "Theme is not compatible or contains errors.": "El tema no es compatible o contiene errores."
-  },
-  "Failed to send {invitations, plural} {erroredEmails}. Please check your email configuration, see <a href=\"{link}\" target=\"_blank\">{link}</a> for instructions": "Failed to send {invitations, plural, =1{an invitation} other{# invitations}} {erroredEmails}. Please check your email configuration, see <a href=\"{link}\" target=\"_blank\">{link}</a> for instructions",
-  "koenig": {
-    "Microsoft Edge is not currently supported. Please switch to <a href=\"https://ghost.org/downloads/\" target=\"_blank\" rel=\"noopener\">Ghost Desktop</a> or a recent version of Chrome/Firefox/Safari.": "Microsoft Edge is not currently supported. Please switch to <a href=\"https://ghost.org/downloads/\" target=\"_blank\" rel=\"noopener\">Ghost Desktop</a> or a recent version of Chrome/Firefox/Safari.",
-    "Mobile editing is not currently supported. Please use a desktop browser or <a href=\"https://ghost.org/downloads/\" target=\"_blank\" rel=\"noopener\">Ghost Desktop</a>.": "Mobile editing is not currently supported. Please use a desktop browser or <a href=\"https://ghost.org/downloads/\" target=\"_blank\" rel=\"noopener\">Ghost Desktop</a>.",
-    "cards": {
-      "Primary": "Primario",
-      "Embed": "Embebido",
-      "Image": "Imagen",
-      "Markdown": "Markdown",
-      "HTML": "HTML",
-      "Gallery": "Galeria",
-      "Divider": "Separador",
-      "Bookmark": "Bookmark",
-      "YouTube": "YouTube",
-      "Twitter": "Twitter",
-      "Instagram": "Instagram",
-      "Unsplash": "Unsplash",
-      "Vimeo": "Vimeo",
-      "CodePen": "CodePen",
-      "Spotify": "Spotify",
-      "SoundCloud": "SoundCloud",
-      "Other...": "Other...",
-      "Video": "Video"
+    "Subscribers": "Subscriptores",
+    "Subscription Date": "Fecha de subscripción",
+    "Status": "Estado",
+    "Import CSV": "Importar CSV",
+    "Export CSV": "Exportar CSV",
+    "Add Subscriber": "Añadir Subscriptor",
+    "Forgot?": "¿Olvidó?",
+    "Confirm Password": "Confirmar Contraseña",
+    "Reset Password": "Resetear Constraseña",
+    "Stack Trace": "Seguimiento de la pila",
+    "Settings": "Ajustes",
+    "Skip to main content": "Saltar al contenido principal",
+    "<strong>Version</strong> {version}": "<strong>Versión</strong> {version}",
+    "<strong>Database</strong> {database}": "<strong>Base de Datos</strong> {database}",
+    "<strong>Environment</strong> {environment}": "<strong>Entorno</strong> {environment}",
+    "<strong>Mail</strong> {mail}": "<strong>Correo Electrónico</strong> {mail}",
+    "User Documentation": "Documentación de Usuario",
+    "Get Help With Ghost": "Obtener Ayuda con Ghost",
+    "Update available!": "¡Actualización disponible!",
+    "Ghost is built by an incredible group of contributors from all over the world": {
+        " Here are just a few of the people who helped create the version you’re using right now": {
+            "": "News ha sido creado por un grupo increíble de colaboradores de todo el mundo. Aquí hay algunas de las personas que han ayudado a crear la versión que estas utilizando en este momento."
+        }
     },
-    "gallery": {
-      "Galleries are limited to 9 images": "Las galerias están limitadas a 9 imágenes",
-      "Add images": "Añadir imágenes",
-      "Drop 'em like it's hot \uD83D\uDD25": "Suéltalas como si estuvieran calientes \uD83D\uDD25",
-      "Click to select up to 9 images": "Haga clic para seleccionar hasta 9 imágenes",
-      "Drop to add up to 9 images": "Suelte para agregar hasta 9 imágenes",
-      "Dismiss": "Descartar",
-      "Type caption for gallery (optional)": "Escriba el subtítulo para la galería (opcional)",
-      "{fileName} failed to upload": "{fileName} no se pudo cargar",
-      "Some images failed to upload": "Algunas imágenes no se pudieron cargar"
+    "Find out how you can get involved": "Descubre como puedes participar",
+    "The People Who Made it Possible": "Las personas que lo han hecho posible",
+    "Staff users": "Miembros del equipo",
+    "Invite People": "Invitar a Gente",
+    "Invited users": "Usuarios invitados",
+    "Invitation not sent - please try again": "Invitación no enviada - por favor pruebe otra vez",
+    "Invitation sent: {at}": "Invitacion enviada el: {at}",
+    "expired": "caducada",
+    "expires {at}": "caduca {at}",
+    "Sending Invite": {
+        "": {
+            "": {
+                "": "Enviando Invitación..."
+            }
+        }
     },
-    "md": {
-      "Drop image(s) here to upload": "Suelte las imágenes aquí para cargar",
-      "Upload failed": "Subida fallida",
-      "Uploading {images, plural}...": "Subiendo {imágenes, plural, =1{la imagen} other{# imágenes}}...",
-      "Edit": "Editar"
-    },
-    "link": {
-      "Enter url": "Introducie url",
-      "Edit": "Editar",
-      "Remove": "Eliminar"
-    },
-    "img": {
-      "Drop to replace image": "Suelte para reemplazar la imagen",
-      "Drop it like it's hot \uD83D\uDD25": "Suéltala como si estuviera caliente \uD83D\uDD25",
-      "Click to select an image": "Haga click para seleccionar una imagen",
-      "Type caption for image (optional)": "Escriba el subtítulo para la imagen (opcional)",
-      "Type alt text for image (optional)": "Escriba texto alternativo para la imagen (opcional)",
-      "Toggle between editing alt text and caption": "Alternar entre editar texto alternativo y subtítulos",
-      "Regular": "Regular",
-      "Wide": "Amplia",
-      "Full": "Completa",
-      "Replace image": "Reemplazar imagen"
-    },
-    "video": {
-      "Drop to replace video": "Suelte para reemplazar el video",
-      "Click to select a video": "Haga clic para seleccionar un video",
-      "Replace video": "Reemplazar video",
-      "Drop it like it's hot 🔥": "Suéltelo como si estuviera caliente 🔥"
-    },
-    "Write here...": "Escriba aqui...",
-    "toolbar": {
-      "Bold": "Bold",
-      "Italic": "Italic",
-      "Heading One": "Heading One",
-      "Heading Two": "Heading Two",
-      "Quote": "Quote",
-      "Link": "Link"
-    },
-    "embed": {
-      "Paste URL to add embedded content...": "Pegar URL para agregar contenido embebido ...",
-      "Paste URL as link": "Pegar URL como enlace",
-      "Retry": "Reintentar",
-      "There was an error when parsing the URL.": "Se produjo un error al analizar la URL.",
-      "Type caption for embed (optional)": "Escriba el título para el contenido embebido (opcional)"
-    },
-    "code": {
-      "Type caption for code block (optional)": "Escriba el título para el bloque de código (opcional)",
-      "Language...": "Language..."
-    },
-    "bookmark": {
-      "Retry": "Reintentar",
-      "Paste URL as link": "Pegar URL como enlace",
-      "Paste URL to add bookmark content...": "Pegar URL para agregar contenido de marcador...",
-      "Type caption for bookmark (optional)": "Escriba el'título para el marcador (opcional)"
-    }
-  },
-  "event": {
-    "site.changed": "Sitio cambiado (reconstruir)",
-    "post.added": "Entrada creada",
-    "post.deleted": "Entrada borrada",
-    "post.edited": "Entrada actualizada",
-    "post.published": "Entrada publicada",
-    "post.published.edited": "Entrada publicada actualizada",
-    "post.unpublished": "Entrada despublicada",
-    "post.tag.attached": "Etiqueta añadida a la entrada",
-    "post.tag.detached": "Etiqueta eliminada de la entrada",
-    "page.added": "Página creada",
-    "page.deleted": "Página borrada",
-    "page.edited": "Página actualizada",
-    "page.published": "Página publicada",
-    "page.published.edited": "Página publicada actualizada",
-    "page.unpublished": "Página despublicada unpublished",
-    "page.tag.attached": "Etiqueta añadida a la página",
-    "page.tag.detached": "Etiqueta eliminada de la página",
-    "tag.added": "Etiqueta creada",
-    "tag.edited": "Etiqueta actualizada",
-    "tag.deleted": "Etiqueta borrada",
-    "subscriber.added": "Subscriptor añadido",
-    "subscriber.deleted": "Subscriptor borrado"
-  },
-  "Open site in new tab": "Abrir sitio en una nueva pestaña",
-  "Title": "Título",
-  "Last update": "Última actualización",
-  "Search site (Ctrl/⌘ + K)": "Buscar sitio (Ctrl/⌘ + K)",
-  "Preview site": "Previsualizar sitio",
-  "New story": "Nueva entrada",
-  "members": {
-    "{members, plural}": "{miembros, plural, =1{miembro} other{# miembros}}",
+    "Revoke": "Revocar",
+    "Resend": "Reenviar",
+    "Active users": "Usuarios activos",
+    "Suspended users": "Usuarios suspendidos",
+    "Staff": "Equipo",
     "Members": "Miembros",
-    "New member": "Nuevo miembro",
-    "Member Labels": "Etiquetas de miembros",
-    "Add Label": "Añadir Etiqueta",
-    "Created": "Creado",
-    "Search result": "Resultado de la búsqueda",
-    "Search members...": "Buscar miembros...",
-    "Actions": "Acciones",
-    "Import members": "Importar miembros",
-    "Export all members": "Exportar todos los miembros",
-    "No members yet": "Aún no hay miembros",
-    "No members match the current filter": "Ningún miembro coincide con el filtro actual",
-    "Member details": "Detalles del miembro",
-    "Subscribed to emails": "Suscrito a correos electrónicos",
-    "If disabled, member will <em>not</em> receive newsletter emails": "Si está deshabilitado, el miembro <em> no </em> recibirá correos electrónicos de boletines",
-    "New view": "Nueva vista",
-    "Edit view": "Editar vista",
-    "View name": "Nombre de la vista",
-    "Breaking news": "Noticias de última hora",
-    "Saved views appear in the app sidebar.": "Las vistas guardadas aparecen en la barra lateral de la aplicación.",
-    "Icon color": "Color de icono",
-    "Loading...": "Cargango...",
-    "{matches, plural} current filter": "{coincidencias, plural, =1{1 coincidencia} other{#coinciddencia }} con el filtro actual",
-    "All labels": "Todas las etiquetas",
-    "Label deleted": "Etiqueta borrada",
-    "A label with the same name already exists": "Ya existe una etiqueta con el mismo nombre",
-    "Maximum: <b>{maximum}</b> characters. You’ve used {countdown}": "Máximo: <b>{maximum}</b> caracteres. Usted ha usado {countdown}",
-    "Note": "Nota",
-    "(not visible to member)": "no visible para los miembros)",
-    "Labels": "Etiquetas",
-    "Are you sure you want to delete this label?": "¿Está seguro de que desea eliminar esta etiqueta?",
-    "You're about to delete label \"<strong>{name}</strong>\". This is permanent! We warned you, k?": "Está a punto de eliminar la etiqueta \"<strong>{nombre}</strong>\". ¡Esta acción es permantente! Se lo avisamos ¿entendido?",
-    "New label": "Nueva etiqueta",
-    "Edit label": "Editar etiqueta",
-    "Label name": "Nombre de la etiqueta",
-    "Member added": "Miembro añadido",
-    "You've successfully added yourself as a member.": "Se ha agregado exitosamente como miembro..",
-    "Unknown": "Desconocido",
-    "Impersonate": "Personificar",
-    "This link is only valid for the next <strong>10 minutes</strong>": "Este enlace solo es válido durante los próximos <strong> 10 minutos</strong>",
-    "This is an authentication link to sign into <strong>{blogTitle}</strong> as <strong>{email}</strong>, you can send it to them if they need it, or use it to sign into their account for customer support.": "Este es un enlace de autenticación para iniciar sesión en <strong> {blogTitle} </strong> como <strong>{email}</strong>, puede enviárselos si lo necesitan o usarlo para iniciar sesión en su cuenta Atención al cliente.",
-    "Created on {subscribeAt}": "Creado el {subscribeAt}",
-    "Unknown location": "Ubicación desconocida"
-  },
-  "Invitation revoked": "Invitación revocada",
-  "Post has been sent by email": "La entrada ya ha sido envidad por correo electrónico",
-  "Test notification sent": "Notificación de prueba enviada",
-  "<span class=\"ttu\">{currency}</span>/month": "<span class=\"ttu\">{currency}</span>/mes",
-  "<span class=\"ttu\">{currency}</span>/year": "<span class=\"ttu\">{currency}</span>/año",
-  "A backup will be automatically downloaded to your device before deletion.": "Una copia de seguridad se descargará automáticamente a su dispositivo antes de eliminarla.",
-  "<strong>{user}</strong> will be permanently deleted. A backup will be automatically downloaded to your device before deletion.": "<strong>{user}</strong> será eliminado permanentemente Una copia de seguridad se descargará automáticamente a su dispositivo antes de eliminarla.",
-  "<strong>{user}</strong> and their <strong>{posts, plural}</strong> will be permanently deleted. If you don’t want to lose these posts, you should assign them to a different author.": "<strong>{user}</strong> y sus <strong>{entradas, plural, =1{entrada} other{# entradas}}</strong> será eliminado permanentemente Si no desea perder estas publicaciones, debe asignarlas a un autor diferente",
-  "Scheduled to be published and sent": "Programada para ser publicada y enviada",
-  "Failed to send post by email": "Error al enviar la entrada por correo electrónico",
-  "To be sent by emai":"Para ser enviado por correo electrónico",
-  "Sent by email":"Enviado por correo electrónico",
-  "Scheduled to be published {time}":"Programada para ser publicada {time}",
-  "and sent":"y enviada",
-  "View": "Ver",
-  "Preview": "Vista previa",
-  "Post": "Entrada",
-  "Update status": "Actualizar estado",
-  "Scheduled to be published":"Programada para ser publicada"
-
-
+    "Enable free or paid member registration": {
+        " Restrict content by using <span class=\"dib blue ba br2 b--blue pa1 pt0 pb0 tag-token--internal\">#members</span> hashtag on posts": "Enable free or paid member registration. Restrict content by using <span class=\"dib blue ba br2 b--blue pa1 pt0 pb0 tag-token--internal\">#members</span> hashtag on posts"
+    },
+    "Suspended": "Suspendido",
+    "User Actions": "Acciones de Usuario",
+    "User Settings": "Ajustes de Usuario",
+    "Make Owner": "Hacer Propietario",
+    "Delete User": "Borrar Usuario",
+    "Suspend User": "Suspender Usuario",
+    "Un-suspend User": "Restablecer Usuario",
+    "Change Cover": "Cambiar Portada",
+    "{name}\"s Picture": "{name}\"s Imagen",
+    "Edit Picture": "Editar Imagen",
+    "Full Name": "Nombre Completo",
+    "Use your real name so people can recognise you": "Use su nombre real para que la gente pueda reconocerle",
+    "Slug": "Alias",
+    "Email": "Correo electrónico",
+    "Used for notifications": "Usado para las notificaciones",
+    "Role": "Rol",
+    "What permissions should this user have?": "¿Que permisos debe de terner este usuario?",
+    "Location": "Ubicación",
+    "Where in the world do you live?": "¿En que lugar vive?",
+    "Website": "Sitio Web",
+    "Have a website or blog other than this one? Link it!": "¿Dispone de otro sitio web o blog además de este? ¡Indique su dirección!",
+    "Facebook Profile": "Perfil de Facebook",
+    "URL of your personal Facebook Profile": "URL de su perfil personal de Facebook",
+    "Twitter Profile": "Perfil de Twitter",
+    "URL of your personal Twitter profile": "URL de su perfil personal de Twitter",
+    "Bio": "Biografía",
+    "Write about you, in 200 characters or less": {
+        "": "Escriba sobre usted, en 200 caracteres o menos."
+    },
+    "Old Password": "Contraseña Anterior",
+    "New Password": "Nueva Constraseña",
+    "Verify Password": "Verificar Contraseña",
+    "Try Again": "Pruebe otra vez",
+    "Posts": "Entradas",
+    "Pages": "Páginas",
+    "About Ghost": "Sobre Ghost",
+    "Your Profile": "Su Perfil",
+    "Support Center": "Centro de Soporte",
+    "How to Use Ghost": "Como usar News",
+    "Tweet @TryGhost!": "Tweet @TryGhost!",
+    "Sign Out": "Cerrar Sesión",
+    "General Settings": "Ajustes Generales",
+    "General": "General",
+    "Design": "Diseño",
+    "Tags": "Etiquetas",
+    "Public tags": "Etiquetas públicas",
+    "Internal tags": "Etiquetas internas",
+    "Tag": "Etiqueta",
+    "No": {
+        " of posts": "Núm. de entradas"
+    },
+    "Create a new tag": "Crear nueva etiqueta",
+    "You haven't created any {type} tags yet!": "¡Todavia no ha creado ninguna etiqueta {type}!",
+    "Edit tag": "Editar etiqueta",
+    "List posts tagged with '{tag}'": "Listar entradas etiquetadas con '{tag}'",
+    "Start with # to create internal tags": "Comenzar por # para crear una etiquetas internas",
+    "Learn more": "Aprender más",
+    "Tag image": "Imagen para la etiqueta",
+    "Site meta settings": "Configuración meta del sitio",
+    "Twitter card": "Tarjeta Twitter",
+    "Customise structured data of your site for Twitter": "Datos estructurados personalizados de su sitio para Twitter",
+    "Facebook card": "Tarjeta Facebook",
+    "Customise structured data of your site": "Datos estructurados personalizados para su sitio",
+    "This tag is attached to {posts, plural}": {
+        "": "Esta etiqueta esta asignada a {posts, plural, =1{a post} other{# posts}}."
+    },
+    "Delete tag": "Borrar etiqueta",
+    "Basic settings": "Ajustes básicos",
+    "Meta data": "Metadatos",
+    "{posts, plural}": "{posts, plural, =0{no posts} =1{# post} other{# posts}}",
+    "Code injection": "Inyección de Ćódigo",
+    "Integrations": "Integraciones",
+    "Built-in integrations": "Integraciones integradas",
+    "Custom integrations": "Integraciones personalizadas",
+    "Create your own custom Ghost integrations with dedicated API keys & webhooks": "Cree sus propias integraciones de _News personalizadas con claves API y webhooks dedicados",
+    "Add custom integration": "Añadir integración personalizada",
+    "Content API Key": "Clave API de Contenido",
+    "Admin API Key": "Clace API de Administrador",
+    "API URL": "URL de la API",
+    "Webhooks": "Webhooks",
+    "Event": "Evento",
+    "Last triggered": "Último disparo",
+    "Not triggered": "No disparado",
+    "Add webhook": "Añadir webhook",
+    "No webhooks configured": "No hay webhooks configurados",
+    "Delete Integration": "Borrar Integraciones",
+    "Labs": "Laboratorios",
+    "Reorder": "Reordenar",
+    "Label": "Campo",
+    "Preview": "Vista previa",
+    "Publish Date": "Fecha de entrada",
+    "Scheduled Date": "Fecha Programada",
+    "Use the publish menu to re-schedule": "Utilice el menú de publicación para reprogramar",
+    "Excerpt": "Extracto",
+    "Authors": "Autores",
+    "Meta Data": "Metadatos",
+    "Canonical URL": "Canonical URL",
+    "Extra content for search engines": "Contenido extra para los motores de búsqueda",
+    "Twitter Card": "Tarjeta Twitter",
+    "Customise structured data for Twitter": "Datos estructurados personalizados para Twitter",
+    "Facebook Card": "Tarjeta Facebook",
+    "Customise Open Graph data": "Datos personalizados de gráfico abierto",
+    "Add styles/scripts to the header &amp; footer": "Añadir estilos/scripts al encabezados &amp; pier",
+    "Turn this post into a page": "Convertir esta entrada en una página",
+    "Meta Title": "Meta Título",
+    "Recommended: <b>{max}</b> characters": {
+        " You’ve used {charactersCount}": "Recomendados: <b>{max}</b> caracteres. Usted ha utilizado {charactersCount}"
+    },
+    "Meta Description": "Meta Descripción",
+    "Search Engine Result Preview": "Previsualizar el resultado del motor de búsqueda",
+    "Add Twitter image": "Añadir imagen de Twitter",
+    "Twitter Title": "Título de Twitter",
+    "Twitter Description": "Descripción de Twitter",
+    "Add Facebook image": "Añadir imagen de Facebook",
+    "Facebook Title": "Título de Facebook",
+    "Facebook Description": "Descripción de Facebook",
+    "{blog} <span class=\"gh-og-preview-footer-left-divider\">|</span> by <span class=\"gh-og-preview-footer-author\">{name}</span>": "{blog} <span class=\"gh-og-preview-footer-left-divider\">|</span> by <span class=\"gh-og-preview-footer-author\">{name}</span>",
+    "Page": "Página",
+    "by <span class=\"gh-content-entry-author\">{authors}</span>": "por <span class=\"gh-content-entry-author\">{authors}</span>",
+    "By <span class=\"midgrey-l2 fw5\">{authorNames}</span>": "Por <span class=\"midgrey-l2 fw5\">{authorNames}</span>",
+    "Last edited {date}": "Última edición {date}",
+    "Will go live {date}": "Estará activo {date}",
+    "moment": {
+        "at {time}": "el {time}",
+        "HH:mm ": [
+            "HH:mm [Today]",
+            "HH:mm [Yesterday]"
+        ],
+        "": [
+            "[at] HH:mm [Tomorrow]"
+        ],
+        "[at] HH:mm [on] DD MMM YYYY": "[at] HH:mm [on] DD MMM YYYY",
+        "DD MMM YYYY": "DD MMM YYYY"
+    },
+    "User image": "Imagen del usuario",
+    "Upload an image": "Subir imagen",
+    "Template": "Plantilla",
+    "Post URL matches {filename}": "Publicar coincidencias de URL {filename}",
+    "Set it live now": "Activar ahora",
+    "Schedule it for later": "Programar para más tarde",
+    "Update post status": "Actualizar el estado de la entrada",
+    "Revert this post to a private draft": "Revertir esta entrada a borrador privado",
+    "Display this post publicly": "Mostrar esta entrada públicamente",
+    "Will be published in {time}": "Será publicada en {time}",
+    "Revert to draft": "Revertir a borrador",
+    "Do not publish": "No publicar",
+    "Schedule for later": "Programar para más tarde",
+    "Set automatic future publish date": "Establecer la fecha de publicación de forma automática",
+    "Search": {
+        "": {
+            "": {
+                "": "Buscar..."
+            }
+        }
+    },
+    "Loading": {
+        "": {
+            "": {
+                "": "Cargando..."
+            }
+        }
+    },
+    "No subscribers found": {
+        "": "No se han encontrado subscriptores."
+    },
+    "internal": "interno",
+    "Upload tag image": "Subir imagen para la etiqueta",
+    "Name": "Nombre",
+    "URL": "URL",
+    "Description": "Descripción",
+    "Maximum: <b>{max}</b> characters": {
+        " You’ve used {charactersCount}": "Máximo: <b>{max}</b> caracteres. Usted ha utilizado {charactersCount}"
+    },
+    "Extra content for SEO and social media": {
+        "": "Contenido extra para SESO y redes sociales."
+    },
+    "Delete Tag": "Borrar etiqueta",
+    "Affected files": "Archivos afectados",
+    "Version {version}": "Versión {version}",
+    "Activate": "Activar",
+    "No themes found": "No se han encontrado temas",
+    "Please upload a theme to continue": "Por favor suba un tema para continuar",
+    "Your timezone has been automatically set to {activeTimezone}": {
+        "": "Su zona horaria ha siddo cambiada automáticamente a {activeTimezone}."
+    },
+    "The local time here is currently {localTime}": "La hora local aquí es actualmente {localTime}",
+    "Not your first time? <em>Skip these tips</em>": "¿No es su primera vez? <em>Omitir estos conceptos</em>",
+    "Ok, got it": "Ok, lo tengo",
+    "Unsplash": "Unsplash",
+    "Beautiful, free photos": "Hermosas fotos gratis",
+    "No photos found for '{term}'": "No se han encontrado fotografías para '{term}'",
+    "No photos found": "No se han encontrado fotografías",
+    "Network error": "Error de red",
+    "retry": "reintentar",
+    "Insert image": "Insertar imagen",
+    "Photo of {name}": "Fotografía de {name}",
+    "Last seen: {lastSeen}": "Última visualización: {lastSeen}",
+    "Locked": "Bloqueado",
+    "Menu": "Menú",
+    "Would you really like to delete all content from your blog?": "¿Esta seguro que desea borrar todo el contenido de su blog?",
+    "This is permanent! No backups, no restores, no magic undo button": {
+        " We warned you, k?": "¡Esto es permanente! Sin copias de seguridad, sin restauraciones, sin botón mágico de deshacer. Le advertimos ¿de acuerdo?"
+    },
+    "Are you sure?": "¿Esta seguro?",
+    "<strong>WARNING:</strong> All data for this subscriber will be deleted": {
+        " There is no way to recover this": {
+            "": "<strong>AVISO:</strong> Toda la información para este subscriptor será borrado. No hay forma de deshacer esto."
+        }
+    },
+    "Are you sure you want to delete this tag?": "¿Esta seguro que desea borrar esta equiqueta?",
+    "You're about to delete \"<strong>{name}</strong>\"": {
+        " This is permanent! We warned you, k?": "Está a punto de borrar \"<strong>{name}</strong>\". ¡Esto es permanente! Le avisamos ¿de acuerdo?"
+    },
+    "Are you sure you want to delete this": "¿Esta seguro que desea borrar esto",
+    "Maybe": "Quizás",
+    "Download your theme before continuing": "Descarque su tema antes de continuar",
+    "Are you sure you want to delete this user?": "¿Esta seguro que desea borrar este usuario?",
+    "Delete user and their posts": "Borrar usuario y sus entradas",
+    "Delete user": "Borrar usuario",
+    "<strong>WARNING:</strong> You are about to delete the user '<strong>{name}</strong>'": {
+        " There is no way to recover this": {
+            "": "<strong>AVISO:</strong> Está a punto de borrar este usuario '<strong>{name}</strong>'. No hay forma de deshacer esto."
+        }
+    },
+    "The user will not have access to this blog anymore": "El usuario no tendrá acceso a este blog nunca más",
+    "<strong>{posts, plural}</strong> created by this user will be deleted": "<strong>{posts, plural, other{# posts}}</strong> creadas por este usuario serán borrados",
+    "All other user data will be deleted": "Cualquier otra información del usuario será borrada",
+    "User will not have access to this blog anymore": "El usuario no tendrá acceso a este blog nunca más",
+    "All user data will be deleted": {
+        "": "Toda la información del usuario será borrada."
+    },
+    "Import Successful": "Importación realizada correctamente",
+    "Import Subscribers": "Importar Subscriptores",
+    "Imported": "Importado",
+    "Import": "Importar",
+    "Importing": "Importando",
+    "Import failed due to an unknown error": {
+        " Check the Web Inspector console and network tabs for errors": {
+            "": "La importación ha fallado debido a un error desconocidor. Compruebe las etiquetas para errores de la consola de Web Inspector y de red."
+        }
+    },
+    "Duplicates": "Duplicados",
+    "Invalid": "Inválido",
+    "Select or drag-and-drop a CSV file": {
+        "": "Seleccione o arrastre un archivo CSV."
+    },
+    "Invite a New User": "Invitar a un Nuevo Usuario",
+    "Send invitation now": "Enviar invitación ahora",
+    "Are you sure you want to leave this page?": "¿Está seguro que desea abandonar esta página?",
+    "Hey there! It looks like you're in the middle of writing something and you haven't saved all of your content": {
+        "": "¡Hola! Parece que está escribiendo algo y no ha guardado todo su contenido.."
+    },
+    "Save before you go!": "¡Guárdelo antes de salir!",
+    "Leave": "Salir",
+    "Stay": "Permanecer",
+    "Hey there! It looks like you didn't save the changes you made": {
+        "": "¡Hola! Parece que no guardó los cambios que realizó."
+    },
+    "Markdown Help": "Markdown Help",
+    "For further Markdown syntax reference <a href=\"{link}\" target=\"_blank\">Markdown Documentation</a>": "Para más referencia de sintaxis de Markdown <a href=\"{link}\" target=\"_blank\">Documentación sobre Markdown</a>",
+    "Markdown": "Markdown",
+    "Result": "Resultado",
+    "Shortcut": "Atajo",
+    "Add a Subscriber": "Añadir Subscriptor",
+    "Please re-authenticate": "Por favor vuelva a identificarse",
+    "Log in": "Iniciar sesión",
+    "Are you sure you want to suspend this user?": "¿Esta seguro que desea suspender a este usuario?",
+    "<strong>WARNING:</strong> This user will no longer be able to log in but their posts will be kept": {
+        "": "<strong>AVISO:</strong> Este usuario ya no podrá iniciar sesión, pero sus entradas se mantendrán."
+    },
+    "Suspend": "Suspender",
+    "Fatal Errors": "Errores Fatales",
+    "(Must-fix to activate theme)": "(Debe solucionarse para activar el tema)",
+    "Errors": "Errores",
+    "Highly recommended to fix, functionality <strong>could</strong> be restricted": "Muy recomendable solucionarlo, la funcionalidad <strong> podría </strong> estar restringida",
+    "Warnings": "Avisos",
+    "Transfer Ownership": "Transferir Propiedad",
+    "Are you sure you want to transfer the ownership of this blog? You will not be able to undo this action": {
+        "": "¿Esta seguro que desea transferir la propiedad de este blog? Esta acción no podrá deshacerse."
+    },
+    "Yep - I'm sure": "Si - Estoy seguro",
+    "Are you sure you want to un-suspend this user?": "¿Está seguro que desea restablecer a este usuario?",
+    "Are you sure you want to delete this member?": "¿Está seguro que desea borrar a este miembro?",
+    "You're about to delete \"<strong>{user}</strong>\"": {
+        " This is permanent! We warned you, k?": "Está a punto de borrar \"<strong>{user}</strong>\". ¡Esta acción es parmanente! Se lo advertimos ¿de acuerdo?"
+    },
+    "Deleting this integration will remove all webhooks and api keys associated with it": {
+        "": "Borrando esta integración se eliminaran todos los webhooks y claves de API asociadas a ella."
+    },
+    "Deleting this webhook may prevent the integration from functioning": {
+        "": "Eliminar este webhook puede evitar que la integración funcione."
+    },
+    "New custom integration": "Nueva integración personalizada",
+    "Integration name": {
+        "": {
+            "": {
+                "": "Nombre de la Integración..."
+            }
+        }
+    },
+    "Webhook name": {
+        "": {
+            "": {
+                "": "Nombre del Webhook .."
+            }
+        }
+    },
+    "Select an event": "Selecccione un evento",
+    "Target URL": "URL objetivo",
+    "Webhook target URL": {
+        "": {
+            "": {
+                "": "Webhook de la URL objetivo..."
+            }
+        }
+    },
+    "Secret": "Secreto",
+    "Webhook secret": {
+        "": {
+            "": {
+                "": "Secreto del Webhook..."
+            }
+        }
+    },
+    "New webhook": "Nuevo webhook",
+    "Edit webhook": "Editar webhook",
+    "<strong>WARNING:</strong> This user will be able to log in again and will have the same permissions they had previously": {
+        "": "<strong>AVISO:</strong> Este usuario podrá iniciar sesión nuevamente y tendrá los mismos permisos que tenía anteriormente.."
+    },
+    "Upload successful!": "¡Subida realizada correctamente!",
+    "Invalid theme": "Tema no válido",
+    "Upload a theme": "Subir tema",
+    "Activation successful": "Activación realizada correctamente",
+    "Activation failed": "La activación ha fallado",
+    "\"{themeName}\" uploaded successfully": {
+        "": "\"{themeName}\" subido correctamente."
+    },
+    "This theme is invalid and cannot be activated": {
+        " Fix the following errors and re-upload the theme": {
+            "": "Este tema no es válido y no puede ser activado. Corrija los siguientes errores y vuelva a subir el tema."
+        }
+    },
+    "Do you want to activate it now?": "¿Desea activarlo ahora?",
+    "\"{fileThemeName}\" will overwrite an existing theme of the same name": {
+        " Are you sure?": "\"{fileThemeName}\" sobrescribirá un tema existente con el mismo nombre. ¿Está seguro?"
+    },
+    "Click to select or drag-and-drop your theme zip file here": {
+        "": "Haga clic o arrastre aquí un archivo zip con el tema."
+    },
+    "Overwrite": "Sobreescribir",
+    "Activate Now": "Activar Ahora",
+    "View site": "Ver sitio",
+    "{title} with {type}": "{title} con {type}",
+    "errors": "errores",
+    "warnings": "avisos",
+    "Upload successful with {type}": "Subida realizada correctamente con {type}",
+    "You are still able to use and activate the theme": {
+        " Here's your report": {
+            "": {
+                "": {
+                    "": "Aún puede usar y activar el tema. Aquí está su informe..."
+                }
+            }
+        }
+    },
+    "\"{themeName}\" uploaded successfully but some {type} were detected": {
+        "": "\"{themeName}\" subido correctamente pero se han detectado algunos {type}."
+    },
+    "Sorry, there was an error in the application": {
+        " Please let the Ghost team know what happened": {
+            "": "Lo sentimos, hubo un error en la aplicación. Por favor, comuníqueselo al equipo de News."
+        }
+    },
+    "Unknown Error": "Error desconocido",
+    "Invitation email was not sent": {
+        "": "El correo con la invitacion no ha sido enviado."
+    },
+    "Please try resending": {
+        "": "Por favor intente reenviar."
+    },
+    "This invite has been revoked or a user has already accepted the invitation": {
+        "": "Esta invitación ha sido revocada o el usuario ya ha aceptado la invitación."
+    },
+    "Check your email for the test message": {
+        "": "Revise su correo electrónico para ver el mensaje de prueba."
+    },
+    "All content deleted from database": {
+        "": "Todo el contenido eliminado de la base de datos."
+    },
+    "You can't reset your password while you're signed in": {
+        "": "No puede restablecer su contraseña mientras esté conectado."
+    },
+    "There was a problem on the server": {
+        "": "Hubo un problema con el servidor."
+    },
+    "Please fill out the form to sign in": {
+        "": "Complete el formulario para iniciar sesión."
+    },
+    "Please check your email for instructions": {
+        "": "Por favor compruebe su correo electrónico para las instrucciones."
+    },
+    "We need your email address to reset your password!": "¡Necesitamos su correo electrónico para restablecer su contraseña!",
+    "There was a problem with the reset, please try again": {
+        "": "Hubo un problema con el reinicio, intente nuevamente."
+    },
+    "Please fill out the form to complete your sign-up": "Complete el formulario para completar su registro",
+    "You need to sign out to register as a new user": {
+        "": "Necesita cerrar sesión para Iniciar sesión como nuevo usuario."
+    },
+    "Invalid token": {
+        "": "Token no válido."
+    },
+    "The invitation does not exist or is no longer valid": {
+        "": "La invitación no existe o ya no es válida."
+    },
+    "Check your Slack channel for the test message": "Revise su canal de Slack para ver el mensaje de prueba",
+    "Sorry, Ghost is currently undergoing maintenance, please wait a moment then try again": {
+        "": "Lo sentimos, News está actualmente en mantenimiento, espere un momento y vuelva a intentarlo.."
+    },
+    "Ghost has been upgraded, please copy any unsaved data and refresh the page to continue": {
+        "": "News se ha actualizado, copie los datos no guardados y actualice la página para continuar."
+    },
+    "Ownership successfully transferred to {user}": "Propiedad transferida correctamente a {user}",
+    "The user could not be deleted": {
+        " Please try again": {
+            "": "El usuario no puede ser borrado. Por favor inténtelo de nuevo."
+        }
+    },
+    "(Never)": "(Nunca)",
+    "User created": "Usuario creado",
+    "User created successfully": "Usuario creado correctamente",
+    "Add a New User": "Añadir Nuevo Usuario",
+    "Add New User": "Añadir Nuevo Usuario",
+    "Username": "Usuario",
+    "post": {
+        "notification": {
+            "view": "Ver entrada",
+            "preview": "Previsualizar entrada"
+        },
+        "linkToList": "Entradas",
+        "willGoLive": "La entrada será activada {countdown}",
+        "placeholder": {
+            "title": "Título de la entrada",
+            "body": "Comience a escribir su entrada..."
+        },
+        "settings": {
+            "title": "Ajustes de la entrada",
+            "url": "URL de la entrada",
+            "view": "Ver entrada",
+            "preview": "Previsualizar",
+            "feature": "Destaca esta entrada",
+            "delete": "Borrar entrada",
+            "header": "Encabezado de la entrada",
+            "footer": "Pie de la entrada",
+            "image": "Subir una imagen para la entrada"
+        },
+        "list": {
+            "edit": "Editar esta entrada"
+        },
+        "modal": {
+            "header": "¿Está seguro que desea borrar esta entrada?",
+            "body": "Está a apunto de borrar \"<strong>{name}</strong>\". ¡Esta acción es permanent! Se lo advertimos, ¿de acuerdo?"
+        },
+        "publish": {
+            "draft": {
+                "title": "¿Listo para publicar su entrada?",
+                "publish": "Publicar esta entrada inmediatamente"
+            },
+            "published": {
+                "title": "Actualizar el estado de la entrada",
+                "revert": "Revertir esta entrada a borrador privado",
+                "display": "Mostrar esta entrada de forma pública"
+            }
+        }
+    },
+    "page": {
+        "notification": {
+            "view": "Ver página",
+            "preview": "Previsualizar página"
+        },
+        "linkToList": "Páginas",
+        "willGoLive": "La página será activada {countdown}",
+        "placeholder": {
+            "title": "Título de la página",
+            "body": "Comience a escribir su página..."
+        },
+        "settings": {
+            "title": "Ajustes de la Pấgina",
+            "url": "URL de la página",
+            "view": "Ver página",
+            "preview": "Previsualizar",
+            "feature": "Destacar esta página",
+            "delete": "Borrar página",
+            "header": "Encabezado de la página",
+            "footer": "Pie de la página",
+            "image": "Subir imagen para la página"
+        },
+        "list": {
+            "edit": "Editar esta página"
+        },
+        "modal": {
+            "header": "¿Está seguro que desea borrar esta página?",
+            "body": "Está apunto de borrar \"<strong>{name}</strong>\". ¡Esta acción es permanente! Se lo advertimos ¿de acuerdo?"
+        },
+        "publish": {
+            "draft": {
+                "title": "¿Listo para publicar su página?",
+                "publish": "Publicar esta página inmediatamente"
+            },
+            "published": {
+                "title": "Actualizar el estado de la página",
+                "revert": "Revertir esta página a borrador privado",
+                "display": "Mostrar esta página públicamente"
+            }
+        }
+    },
+    "editor": {
+        "errors": {
+            "post": {
+                "published": {
+                    "published": "La actualización ha fallado",
+                    "draft": "El guardado ha fallado",
+                    "scheduled": "La progrmación ha fallado"
+                },
+                "draft": {
+                    "published": "El publicado a fallado",
+                    "draft": "El guardado ha fallado",
+                    "scheduled": "La programación ha fallado"
+                },
+                "scheduled": {
+                    "scheduled": "La actualización ha fallado",
+                    "draft": "La desprogramación ha fallado",
+                    "published": "El publicado ha fallado"
+                }
+            }
+        },
+        "success": {
+            "post": {
+                "published": {
+                    "published": "Actualizada.",
+                    "draft": "Guardada.",
+                    "scheduled": "Programada."
+                },
+                "draft": {
+                    "published": "!Publicada!",
+                    "draft": "Guardada.",
+                    "scheduled": "Programada."
+                },
+                "scheduled": {
+                    "scheduled": "Actualizada.",
+                    "draft": "Desprogramada.",
+                    "published": "¡Publicada!"
+                }
+            }
+        },
+        "button": {
+            "Add Image from Unsplash": "Añdir Imagen desde Unsplash",
+            "Markdown Guide": "Guia de Markdown",
+            "Hemingway Mode": "Modo Hemingway",
+            "Spellcheck": "Corrector ortográfico",
+            "Side-by-side Preview": "Vista previa de lado a lado",
+            "Render Preview": "Vista previa de renderizado",
+            "Upload Image(s)": "Subir Imagen(es)",
+            "Bold": "Bold",
+            "Italic": "Italic",
+            "Heading": "Heading",
+            "Quote": "Quote",
+            "Generic List": "Lista Genérica",
+            "Numbered List": "Lista Numerada",
+            "Create Link": "Crear Link"
+        },
+        "notice": {
+            "Hemingway Mode On": "Modo Hemingway activado",
+            "Write now; edit later": {
+                " Backspace disabled": {
+                    "": "Escriba ahora; editar más tarde Retroceso deshabilitado."
+                }
+            },
+            "Hemingway Mode Off": "Modoe Hemingway Mode desactivado",
+            "Normal editing restored": {
+                "": "Edición normal restaurada.."
+            }
+        },
+        "(Untitled)": "(Sin título)",
+        "word": "{count, plural, =0{} =1{one word} other{# words}}"
+    },
+    "Add <strong>\"{term}\"": {
+        "": {
+            "": {
+                "</strong>": "Añadir <strong>\"{term}\"...</strong>"
+            }
+        }
+    },
+    "searchInput": {
+        "Posts": "Entradas",
+        "Pages": "Páginas",
+        "Users": "Usuarios",
+        "Tags": "Etiquetas"
+    },
+    "filter": {
+        "All posts": "Todas las entradas",
+        "Draft posts": "Entradas en borrador",
+        "Published posts": "Entradas publicadas",
+        "Scheduled posts": "Entradas programadas",
+        "Featured posts": "Entradas destacadas",
+        "All authors": "Todos los autores",
+        "All tags": "Todas las etiquetas",
+        "Search tags": "Buscar etiqueta",
+        "Search authors": "Buscar autores",
+        "All pages": "Todas las páginas",
+        "Draft pages": "Páginas en borrador",
+        "Published pages": "Páginas publicadas",
+        "Scheduled pages": "Páginas programadas",
+        "Featured pages": "Páginas destacadas"
+    },
+    "order": {
+        "Sort by": "Ordenar por",
+        "Newest": "Más recientes",
+        "Oldest": "Más antiguas",
+        "Recently updated": "Actualizadas recientemente"
+    },
+    "postBadge": {
+        "Page": "Página",
+        "Scheduled": "Programada",
+        "Draft": "Borrador",
+        "Featured": "destacadas"
+    },
+    "Invitation sent!": "¡Invitación enviada!",
+    "Image URI is not valid": "El URI de la imagen no es válido",
+    "Sorry, the default Casper theme cannot be overwritten": {
+        "<br>Please rename your zip file and try again": {
+            "": "Lo sentimos, el tema predeterminado Casper no se puede sobrescribir. <br> Cambie el nombre de su archivo zip y vuelva a intentarlo."
+        }
+    },
+    "New tag": "Nueva etiqueta",
+    "Add a tag": "Añadir etiqueta",
+    "Tag settings": "Ajustes de la etiqueta",
+    "Upload image of \"{altText}\"": "Subir imagen de \"{altText}\"",
+    "The image you uploaded was larger than the maximum file size your server allows": {
+        "": "La imagen que cargó era más grande que el tamaño máximo de archivo que permite su servidor."
+    },
+    "The image type you uploaded is not supported": {
+        " Please use {validExtensions}": "El tipo de imagen que cargó no es compatible. Por favor use {validExtensions}"
+    },
+    "The file type you uploaded is not supported": {
+        " Please use {validExtensions}": "El tipo de archivo que cargó no es compatible. Por favor use {validExtensions}",
+        "": "El tipo de archivo que cargó no es compatible."
+    },
+    "Select or drag-and-drop a file": "Seleccione o arrastre y suelte un archivo",
+    "The file you uploaded was larger than the maximum file size your server allows": {
+        "": "El archivo que cargó era más grande que el tamaño máximo de archivo que permite su servidor."
+    },
+    "Search free high-resolution photos": "Buscar fotos gratuitas de alta resolución",
+    "Got it": "Entendido",
+    "Something went wrong :(": "Algo salió mal :(",
+    "Invitation resent! ({email})": "¡Invitación reenviada! ({email})",
+    "Page not found": "Página no encontrada",
+    "Internal Server Error": "Error interno del Servidor",
+    "Password updated": "Contraseña actualizada",
+    "There was a problem on the server, please try again": {
+        "": "Hubo un problema en el servidor, intente nuevamente."
+    },
+    "tour": {
+        "Getting started with Ghost": "Comenzando con News",
+        "Using the Ghost editor": "Usando el editor News",
+        "Turning posts into pages": "Converir entradas en páginas",
+        "Setting a featured post": "Establecer una entrada destacada",
+        "Customising your publication": "Personalizando su entrada",
+        "Ghost uses Markdown to allow you to write and format content quickly and easily": {
+            " This toolbar also helps! Hit the <strong>?</strong> icon for more editor shortcuts": {
+                "": "_News usa Markdown para permitirte escribir y formatear contenido de forma rápida y sencilla. ¡Esta barra de herramientas también ayuda! Presione el icono <strong>? </strong> para obtener más accesos directos del editor."
+            }
+        },
+        "Welcome to Ghost Admin! From here you can browse your site, manage your content, and edit your settings": {
+            "<br><br>You can always login to Ghost Admin by visiting <a href=\"{adminUrl}\" target=\"_blank\">{adminDisplayUrl}</a>": "<¡Bienvenido a Ghost Admin! Desde aquí puede navegar por su sitio, administrar su contenido y editar su configuración. <br> <br> Siempre puede iniciar sesión en Ghost Admin visitando <a href = \"{adminUrl}\" target = \"_ blank\" > {adminDisplayUrl}</a>"
+        },
+        "Static pages are permanent pieces of content which live outside of your usual stream of posts, for example an 'about' or 'contact' page": {
+            "": "Las páginas estáticas son piezas permanentes de contenido que viven fuera de su flujo habitual de publicaciones, por ejemplo, una página 'acerca de' o 'contacto'."
+        },
+        "Depending on your theme, featured posts receive special styling to make them stand out as a particularly important or emphasised story": {
+            "": "Dependiendo de su tema, las entradas destacadas reciben un estilo especial para que se destaquen como una historia particularmente importante o destacada."
+        },
+        "Using custom themes you can completely control the look and feel of your site to suit your brand": {
+            " Here's a full guide to help: <strong><a href=\"{link}\" target=\"_blank\">{link}</a></strong>": "Usando temas personalizados, puede controlar completamente la apariencia de su sitio para adaptarse a su sucursal. Aquí hay una guía completa para ayudar:<strong><a href=\"{link}\" target=\"_blank\">{link}</a></strong>"
+        }
+    },
+    "Uh-oh! Trouble reaching the Unsplash API, please check your connection": "¡UH oh! Problemas para acceder a la API Unsplash, verifique su conexión",
+    "Unsplash API rate limit reached, please try again later": {
+        "": "Se ha alcanzado el'límite de velociada de la API Unspash, Por favor, inténtelo de nuevo más tarde."
+    },
+    "Error {status}: Uh-oh! Trouble reaching the Unsplash API": "Error {status}: ¡Uh-oh! Problemas para llegar a la API Unsplash",
+    "validation": {
+        "Invalid Email": {
+            "": "Correo electrónico no válido."
+        },
+        "Email is too long": "Correo electrónico demasiado largo",
+        "Please enter an email": {
+            "": "Por favor introduzca un correo electrónico."
+        },
+        "You must specify a label": "Debe especificar una etiqueta",
+        "You must specify a URL or relative path": "Debe especificar una URL o una dirección relativa",
+        "You must specify a valid URL or relative path": "Debe especifcar una URL o dirección relativa válida",
+        "Please enter a name": "Por favor introduzca un nombre",
+        "Name is too long, max 191 chars": "El nombre es demasiado largo, máximo 191 caracteres",
+        "Please select an event": "Por favor seleccione un evento",
+        "Please enter a target URL": "Por favor introduzca una URL destino",
+        "Please enter a valid URL": "Por favor introduzca una URL válida",
+        "Target URL is too long, max 2000 chars": "La URL destino es demasiado larga, máximo 2000 caracteres",
+        "Password must be at least 10 characters long": "La contraseña debe tener una longitud de al menos 10 caracteres",
+        "Sorry, you cannot use an insecure password": "Lo sentinos, no puede utilizar una contraseña insegura",
+        "You must specify a title for the post": {
+            "": "Debe especificar un título para la entrada."
+        },
+        "Title cannot be longer than 255 characters": {
+            "": "El título no puede tener más de 255 caracteres."
+        },
+        "At least one author is required": {
+            "": "Se requiere al menos un autor."
+        },
+        "Excerpt cannot be longer than 300 characters": {
+            "": "El extracto no puede tener más de 300 caracteres."
+        },
+        "Footer code cannot be longer than 65535 characters": {
+            "": "El código de pie de página no puede tener más de 65535 caracteres."
+        },
+        "Header code cannot be longer than 65535 characters": {
+            "": "El código del encabezado no puede tener más de 65535 caracteres."
+        },
+        "Meta Title cannot be longer than 300 characters": {
+            "": "Meta título no puede tener más de 300 caracteres."
+        },
+        "Meta Description cannot be longer than 500 characters": {
+            "": "Meta Descripción no puede tener más de 500 caracteres."
+        },
+        "Facebook Title cannot be longer than 300 characters": {
+            "": "Título de Facebook no puede tener más de 300 caracteres."
+        },
+        "Facebook Description cannot be longer than 500 characters": {
+            "": "Descripción de Facebook no puede tener más de 500 caracteres."
+        },
+        "Twitter Title cannot be longer than 300 characters": {
+            "": "Título Twitter no puede tener más de 300 caracteres."
+        },
+        "Twitter Description cannot be longer than 500 characters": {
+            "": "Descripcón Twitter no puede tener más de 500 caracteres."
+        },
+        "Must be in format: \"15:00\"": "Debe estar en formato: \"15:00\"",
+        "Can't be blank": "No puede estar en blanco",
+        "Must be in the past": "Debe estar en el pasado",
+        "Must be at least 2 mins in the future": "La hora debe tener al menos 2 minutos de diferencia con la hora actual",
+        "Please enter a password": {
+            "": "Por favor introduzca una contraseña."
+        },
+        "The two new passwords don't match": {
+            "": "Las 2 nuevas contraseñas no coinciden."
+        },
+        "Title is too long": "El título es demasiado largo",
+        "Description is too long": "La descripción es demasiada larga",
+        "Password must be supplied": "La contraseña debe ser proporcionada",
+        "Email address is not valid": "El correo electrónico no es válido",
+        "The URL must be in a format like https://hooks": {
+            "slack": {
+                "com/services/<your personal key>": "La URL debe tener un formato similar a https://hooks.slack.com/services/<your personal key>"
+            }
+        },
+        "The URL must be in a format like https://twitter": {
+            "com/yourUsername": "La URL debe tener un formato similar a https://twitter.com/yourUsername"
+        },
+        "The URL must be in a format like https://www": {
+            "facebook": {
+                "com/yourPage": "La URL debe tener un formato similar a https://www.facebook.com/yourPage"
+            }
+        },
+        "You must specify a name for the tag": {
+            "": "Debe indicar un nombre para la etiqueta."
+        },
+        "Tag names can't start with commas": {
+            "": "Los nombres de las etiquetas no pueden comenzar con comas."
+        },
+        "Tag names cannot be longer than 191 characters": {
+            "": "Los nombres de las etiquetas no puede tener más de 191 caracteres."
+        },
+        "URL cannot be longer than 191 characters": {
+            "": "La URL no puede tener más de 191 caracteres."
+        },
+        "Description cannot be longer than 500 characters": {
+            "": "La Descripción no puede tener más de 500 caracteres."
+        },
+        "Name is too long": "El nombre es demasiado largo",
+        "Bio is too long": "La biografia es demasiada larga",
+        "Please supply a valid email address": "Por favor proporcione un correo electrónico válido",
+        "Location is too long": "La ubicación de demasiada larga",
+        "Website is not a valid url": "El sitio web no tiene una url válida",
+        "Please select a role": {
+            "": "Por favor seleccione un rol."
+        },
+        "Sorry, passwords can't be blank": "Lo sentimos, las contraseñas no pueden estar en blanco",
+        "Your new passwords do not match": "Sus nuevas contraseñas no coinciden",
+        "A user with that email address already exists": {
+            "": "Ya existe un usuario con esta dirección de correo electrónico."
+        },
+        "A user with that email address was already invited": {
+            "": "Un usuario con esta dirección de correo electrónico ya fue invitado."
+        },
+        "Your Username is not a valid Twitter Username": "Su Usuario no es un usuario válido para Twitter",
+        "No users to invite": "No hay usuarios para invitar",
+        "Email already exists": {
+            "": "El correo electrónico ya existe."
+        },
+        "Your current password is required to set a new one": "Su contraseña actual es necesaria para definir una nueva",
+        "Please enter a blog title": {
+            "": "Por favor introduzca un título para el blog."
+        },
+        "Incorrect password": "Contraseña incorrecta",
+        "{email} is not a valid email": {
+            "": "{email} no es un correo electrónico válido."
+        },
+        "{email} was invalid: {message}": "{email} era inválido: {message}",
+        "Has already been used": "Ya ha sido utilizado",
+        "A user already exists": "El usuario ya existe",
+        "Please enter an username": {
+            "": "Por favor introduzca un usuario."
+        },
+        "Password must be at least 6 characters long": "La constraseña debet tener al menos 6 caracteres",
+        "Username is not valid": "El usuario no es válido"
+    },
+    "views": {
+        "Drafts": "Borradores",
+        "Scheduled": "Programadas",
+        "Published": "Publicadas",
+        "No @title provided": "No se ha proporcionado @title",
+        "Edit current view": {
+            "": {
+                "": {
+                    "": "Editar vista actual ......"
+                }
+            }
+        },
+        "Save as view": {
+            "": {
+                "": {
+                    "": "Guardar como vista ..."
+                }
+            }
+        }
+    },
+    "pageTitle": {
+        "About": "Sobre",
+        "AMP": "AMP",
+        "Setup": "Configuración",
+        "Members": "Miembros",
+        "Pages": "Páginas",
+        "Site": "Sitio",
+        "Settings - Integrations": "Ajustes - Integraciones",
+        "Settings - Code injection": "Ajustes - Inyección de código",
+        "Settings - Design": "Ajustes - Diseño",
+        "Editor": "Editor",
+        "Error": "Error",
+        "Staff": "Equipo",
+        "Posts": "Entradas",
+        "Settings - General": "Ajustes - General",
+        "Settings - Labs": "Ajustes - Laboratorios",
+        "Sign In": "Iniciar sesión",
+        "Sign Out": "Cerrar Sesión",
+        "Slack": "Slack",
+        "Subscribers": "Subscriptores",
+        "Settings - Tags": "Ajustes - Etiquetas",
+        "Staff - User": "Equipo - Usuario",
+        "Unsplash": "Unsplash",
+        "Billing": "Billing"
+    },
+    "postStatus": {
+        "Saving": {
+            "": {
+                "": {
+                    "": "Guardando..."
+                }
+            }
+        },
+        "Published": "Publicada",
+        "Unpublished": "Despublicada",
+        "Scheduled": "Programada",
+        "New": "Nueva",
+        "Draft": "Borrador"
+    },
+    "common": {
+        "Add": "Añadir",
+        "Update": "Actualizar",
+        "Upload": "Subir",
+        "Delete": "Borrar",
+        "Save": "Guardar",
+        "Close": "Cerrar",
+        "Cancel": "Cancelar",
+        "Expand": "Expandir",
+        "Active": "Activar",
+        "Configure": "Configurar",
+        "Export": "Exportar",
+        "Back": "Atrás",
+        "More": "Más",
+        "Download": "Descargar",
+        "Ok": "Ok"
+    },
+    "Accelerated Mobile Pages": "Páginas móviles aceleradas",
+    "AMP configuration": "Configuración AMP",
+    "Enable AMP": "Activar AMP",
+    "Enable <a href=\"{link}\" target=\"_blank\">Google Accelerated Mobile Pages</a> for your posts": "Activar <a href=\"{link}\" target=\"_blank\">Páginas móviles aceleradas de Google</a> para sus entradas",
+    "Available integrations": "Integraciones disponibles",
+    "A messaging app for teams": "Una aplicación de mensajería para equipos",
+    "Zapier": "Zapier",
+    "Automation for your favourite apps": "Automatización para tus aplicaciones favoritas",
+    "Slack configuration": "Configuración de Slack",
+    "Webhook URL": "Webhook URL",
+    "Automatically send newly published posts to a channel in Slack or any Slack-compatible service like Discord or Mattermost": {
+        "": "Enviar automáticamente publicaciones recién publicadas a un canal en Slack o cualquier servicio compatible con Slack como Discord o Mattermost."
+    },
+    "Set up a new incoming webhook <a href=\"{link}\" target=\"_blank\">here</a>, and grab the URL": {
+        "": "Configure un nuevo webhook entrante <a href=\"{link}\" target=\"_blank\"> aquí </a> y tome la URL."
+    },
+    "Send test notification": "Enviar notificación de prueba",
+    "Unsplash configuration": "Configuración de Unsplash",
+    "Enable Unsplash": "Activar Unsplash",
+    "Enable <a href=\"{link}\" target=\"_blank\">Unsplash</a> image integration for your posts": "Habilite la integración de imágenes <a href=\"{link}\" target=\"_blank\"> Unsplash </a> para sus publicaciones",
+    "Zapier configuration": "Configuración de Zapier",
+    "Zapier Templates": "Plantillas Zapier",
+    "Explore pre-built templates for common automation tasks": "Explore plantillas preconstruidas para tareas de automatización comunes",
+    "You haven't added any tags yet!": "¡Todavia no ha añadido ninguna etiqueta!",
+    "Ghost allows you to inject code into the top and bottom of your theme files without editing them": {
+        " This allows for quick modifications to insert useful things like tracking codes and meta tags": {
+            "": "News le permite inyectar código en la parte superior e inferior de sus archivos de tema sin editarlos. Esto permite modificaciones rápidas para insertar cosas útiles como códigos de seguimiento y metaetiquetas."
+        }
+    },
+    "Site Header": "Site Header",
+    "Code here will be injected into the <code>{{ghost_head}}</code> tag on every page of the site": "El código aquí se inyectará en la etiqueta <code>\\{\\{ghost_head\\}\\}</code> en cada página del sitio",
+    "Site Footer": "Site Footer",
+    "Code here will be injected into the <code>{{ghost_foot}}</code> tag on every page of the site": "El código aquí se inyectará en la etiqueta <code>\\{\\{ghost_foot\\}\\}</code> en cada página del sitio",
+    "Navigation": "Navegación",
+    "Installed Themes": "Temas instalados",
+    "Theme Directory": "Directorio de Temas",
+    "Theme Marketplace": "Tienda de Temas",
+    "Explore a huge range of free and premium themes for Ghost with a range of design and layout options": "Explore una amplia gama de temas gratuitos y premium para News con una gama de opciones de diseño y diseño",
+    "Developer Docs": "Documentación para Desarrolladores",
+    "Build your own custom Ghost theme from scratch using our comprehensive Handlebars": {
+        "js SDK": "Cree su propio tema Ghost personalizado desde cero utilizando nuestro completo SDK Handlebars.js"
+    },
+    "This is a testing ground for experimental features which aren't quite ready for primetime": {
+        " They may change, break or inexplicably disappear at any time": {
+            "": "Este es un campo de pruebas para características experimentales que no están listas para el horario estelar. Pueden cambiar, romperse o inexplicablemente desaparecer en cualquier momento."
+        }
+    },
+    "Migration options": "Opciones de migración",
+    "Import content": "Importar contenido",
+    "Import posts from another Ghost installation": "Importar entradas desde otra instalación de News",
+    "Import successful with warnings": "Importación realizada correctamente con avisos",
+    "Import failed": "La importación ha fallado",
+    "Export your content": "Exportar su contenido",
+    "Download all of your posts and settings in a single, glorious JSON file": "Descargue todas sus entradas y configuraciones en un único y glorioso archivo JSON",
+    "Delete all content": "Borrar todo el contenido",
+    "Permanently delete all posts and tags from the database, a hard reset": "Eliminar permanentemente todas las entradas y etiquetas de la base de datos, un restablecimiento completo",
+    "Testing tools": "Herramientas de testeo",
+    "Test email configuration": "Testear configuración de correo electrónico",
+    "Send yourself a test email to make sure everything is working": "Envíe un correo electrónico de prueba para asegurarse de que todo esté funcionando",
+    "Beta features": "Características Experimentales",
+    "Public API (deprecated)": "API pública (obsoleta)",
+    "⚠️ Please use the Content API instead, more info in <a href=\"{link}\">the docs</a>": "⚠️ En su lugar, use la API de contenido, más información en <a href=\"{link}\"> los documentos</a>",
+    "Toggle Night shift": "Interruptor modo Nocturno",
+    "Night shift": "Modoe Nocturno",
+    "Swap Ghost admin's colours to a dark background which is easy on the eyes": "Cambie los colores del administrador de News a un fondo oscuro que es fácil para la vista",
+    "Collect email addresses from your readers, more info in <a href=\"{link}\">the docs</a>": "Recopile direcciones de correo electrónico de sus lectores, más información en <a href =\"{link}\">los documentos</a>",
+    "Redirects": "Redirecciones",
+    "Configure redirects for old or moved content, more info in <a href=\"{link}\">the docs</a>": "Configure redirecciones para contenido antiguo o movido, más información en <a href=\"{link}\">los documentos</a>",
+    "Routes": "Rutas",
+    "Configure dynamic routing by modifying the routes": {
+        "yaml file": "Configure el enrutamiento dinámico modificando el archivo routes.yaml"
+    },
+    "Upload redirects JSON": "Subir redirecciones JSON",
+    "Download current redirects": "Descargar redirecciones actuales",
+    "Download current routes": {
+        "yaml": "Descargar rutas actuales.yaml"
+    },
+    "Stripe secret API key": "Clave secreta API de Stripe",
+    "Stripe publishable API key": "Clave pública API de Stripe",
+    "Where to find Stripe API keys": "Donde encontrar claves de la API de Stripe",
+    "Monthly price": "Precio mensual",
+    "Yearly price": "Precio anual",
+    "trigger": {
+        "Update": "Actualizar",
+        "Scheduled": "Programar",
+        "Publish": "Publicar"
+    },
+    "taskButton": {
+        "Retry": "Reintentar",
+        "Saved": "Guardado",
+        "Save": "Guardar",
+        "Saving": "Guardando",
+        "Save settings": "Guardar ajustes",
+        "Send": "Enviar",
+        "Sent": "Enviado",
+        "Delete": "Borrar",
+        "Deleted": "Borrado",
+        "Download backup & delete user": "Descargar copia de seguridad y eliminar usuario",
+        "Delete user": "Borrar usuario",
+        "Send invitation now": "Enviar invitación ahora",
+        "Add": "Añadir",
+        "Added": "Añadido",
+        "Log in": "Iniciar sesión",
+        "Sign in": "Iniciar sesión",
+        "Suspend": "Suspender",
+        "Suspended": "Suspendido",
+        "Yep - I'm sure": "Si - Estoy seguro",
+        "Un-suspend": "Restablecer",
+        "Un-suspended": "Restablecido",
+        "Reset Password": "Restablecer Contraseña",
+        "Create Account": "Crear Cuenta",
+        "Creating": "Creando",
+        "Send test notification": "Enviar notificación de prueba",
+        "Change Password": "Cambiar contraseña",
+        "Update": "Actualizar",
+        "Updating": "Actualizando",
+        "Updated": "Actualizado",
+        "Publish": "Publicar",
+        "Publishing": "Publicando",
+        "Published": "Publicada",
+        "Schedule": "Programar",
+        "Scheduling": "Programando",
+        "Scheduled": "Programada",
+        "Unpublish": "Despublicar",
+        "Unpublishing": "Despublicando",
+        "Unpublished": "Despublicada",
+        "Reschedule": "Reprogramar",
+        "Rescheduling": "Reprogramando",
+        "Rescheduled": "Reprogramada",
+        "Unschedule": "Desprogramar",
+        "Unscheduling": "Desprogramando",
+        "Unscheduled": "Desprogramada",
+        "Copied": "Copiado",
+        "Copy": "Copiar",
+        "Delete Integration": "Borrar Integración",
+        "Delete Webhook": "Borrar Webhook",
+        "Uploaded": "Subir",
+        "Upload Failed": "La subida ha fallado",
+        "Upload routes YAML": "Subir rutas YAML",
+        "Upload redirects JSON": "Subir redirecciones JSON",
+        "Copy link": "Copiar link",
+        "Link copied": "Link copiad",
+        "Add user now": "Añadir usuario ahora"
+    },
+    "Publication info": "Información de la publicación",
+    "Title &amp; description": "Título y descripción",
+    "The details used to identify your publication around the web": "Los detalles utilizados para identificar su publicación en la web",
+    "Used in your theme, meta data and search results": "Usado en su tema, metadatos y resultados de búsqueda",
+    "Site timezone": "Zona horaria del sitio",
+    "Set the time and date of your publication, used for all published posts": "Establezca la hora y la fecha de su publicación, utilizada para todas las entradas publicadas",
+    "Publication Language": "Idioma de la publicación",
+    "Set the language/locale which is used on your site": "Establezca el idioma/configuración regional que se usa en su sitio",
+    "Default: English (<strong>{defaultLocale}</strong>); you can add translation files to your theme for <a href=\"{link}\" target=\"_blank\" rel=\"noopener\">any language</a>": "Valor por defecto: Inglés (<strong>{defaultLocale}</strong>); puede agregar archivos de traducción a su tema para <a href=\"{link}\" target=\"_blank\" rel=\"noopener\">cualquier idioma</a>",
+    "Publication identity": "Identidad de publicación",
+    "Publication icon": "Icono de la publicación",
+    "A square, social icon used in the UI of your publication, at least 60x60px": "Un icono cuadrado y social utilizado en la interfaz de usuario de su publicación, al menos 60x60px",
+    "Upload Image": "Subir Imagen",
+    "Publication logo": "Logo de la publicación",
+    "The primary logo for your brand displayed across your theme, should be transparent and at least 600px x 72px": "El logotipo principal de su marca que se muestra en su tema debe ser transparente y tener al menos 600 px x 72 px",
+    "Publication cover": "Cubierta de la publicación",
+    "An optional large background image for your site": "Una imagen de fondo grande opcional para su sitio",
+    "Social accounts": "Cuentas de redes sociales",
+    "Link your social accounts for full structured data and rich card support": "Vincula tus cuentas sociales para obtener datos estructurados completos y compatibilidad con tarjetas enriquecidas",
+    "URL of your publication's Facebook Page": "URL de la página de Facebook de su publicación",
+    "URL of your publication's Twitter profile": "URL del perfil de Twitter de su publicación",
+    "Advanced settings": "Ajuestes avanzados",
+    "Use dated permalinks": "Use enlaces permanentes con fecha",
+    "Include the date in your post URLs, e": {
+        "g": {
+            " <strong>blogurl": {
+                "com/2017/01/01/post-title/</strong>": "Incluya la fecha en las URL de su publicación, e.g. <strong>blogurl.com/2017/01/01/post-title/</strong>"
+            }
+        }
+    },
+    "Make this site private": "Convertir este sitio en privado",
+    "Enable protection with simple shared password": {
+        " All search engine optimization and social features will be disabled": {
+            "": "Habilite la protección con una contraseña compartida simple. Toda la optimización del motor de búsqueda y las características sociales se desactivarán."
+        }
+    },
+    "A private RSS feed is available at <a href=\"{link}\" target=\"_blank\" rel=\"noopener\">{link}</a>": "Un RSS privado estará disponible en <a href=\"{link}\" target=\"_blank\" rel=\"noopener\">{link}</a>",
+    "Set the password for this site": "Establecer la contraseña para este sitio",
+    "The name of your site": "El nombre para su sitio",
+    "Google Accelerated Mobile Pages": "Google Accelerated Mobile Pages",
+    "AMP": "AMP",
+    "Slack": "Slack",
+    "Please fill out the form to setup your blog": {
+        "": "Complete el formulario para configurar su blog."
+    },
+    "{invitations, plural} sent!": "{invitations, plural, =1{the invitation} other{# invitations}} enviada!",
+    "Welcome to <strong>Ghost</strong>!": "Bienvenido a <strong>News</strong>!",
+    "All over the world, people have started <em>{peopleCount}</em> incredible sites with Ghost": {
+        " Today, we’re starting yours": {
+            "": "En todo el mundo, la gente ha comenzado <em> {peopleCount} </em> sitios increíbles con Ghost. Hoy comenzamos el tuyo."
+        }
+    },
+    "Site title": "Título del sitio",
+    "Last step: Invite staff users": "Último paso: Invitar usuarios al equipo",
+    "Invite staff users": "Invitar usuarios al equipo",
+    "{invalid emails, plural}": "{invalid emails, plural, =1{an invalid email} other{# invalid emails}}",
+    "Invite {users, plural}": "Invitación {users, plural, =1{a user} other{# users}}",
+    "Ghost works best when shared with others": {
+        " Collaborate, get feedback on your posts &amp; work together on ideas": {
+            "": "Ghost works best when shared with others. Collaborate, get feedback on your posts &amp; work together on ideas."
+        }
+    },
+    "Enter one email address per line, we’ll handle the rest!": "Enter one email address per line, we’ll handle the rest!",
+    "I'll do this later, take me to my site!": "I'll do this later, take me to my site!",
+    "ajax": {
+        "API server is running a newer version of Ghost, please upgrade": {
+            "": "El servidor API está ejecutando una versión más nueva de Ghost, actualice."
+        },
+        "Server was unreachable": {
+            "": "Server was unreachable."
+        },
+        "Request is larger than the maximum file size the server allows": "La solicitud es mayor que el tamaño máximo de archivo que permite el servidor",
+        "Request contains an unknown or unsupported file type": {
+            "": "La solicitud contiene un tipo de archivo desconocido o no admitido."
+        },
+        "Ghost is currently undergoing maintenance, please wait a moment then retry": {
+            "": "News está actualmente en mantenimiento, espere un momento y vuelva a intentarlo."
+        },
+        "Theme is not compatible or contains errors": {
+            "": "El tema no es compatible o contiene errores."
+        }
+    },
+    "Failed to send {invitations, plural} {erroredEmails}": {
+        " Please check your email configuration, see <a href=\"{link}\" target=\"_blank\">{link}</a> for instructions": "Failed to send {invitations, plural, =1{an invitation} other{# invitations}} {erroredEmails}. Please check your email configuration, see <a href=\"{link}\" target=\"_blank\">{link}</a> for instructions"
+    },
+    "koenig": {
+        "Microsoft Edge is not currently supported": {
+            " Please switch to <a href=\"https://ghost": {
+                "org/downloads/\" target=\"_blank\" rel=\"noopener\">Ghost Desktop</a> or a recent version of Chrome/Firefox/Safari": {
+                    "": "Microsoft Edge is not currently supported. Please switch to <a href=\"https://ghost.org/downloads/\" target=\"_blank\" rel=\"noopener\">Ghost Desktop</a> or a recent version of Chrome/Firefox/Safari."
+                }
+            }
+        },
+        "Mobile editing is not currently supported": {
+            " Please use a desktop browser or <a href=\"https://ghost": {
+                "org/downloads/\" target=\"_blank\" rel=\"noopener\">Ghost Desktop</a>": {
+                    "": "Mobile editing is not currently supported. Please use a desktop browser or <a href=\"https://ghost.org/downloads/\" target=\"_blank\" rel=\"noopener\">Ghost Desktop</a>."
+                }
+            }
+        },
+        "cards": {
+            "Primary": "Primario",
+            "Embed": "Embebido",
+            "Image": "Imagen",
+            "Markdown": "Markdown",
+            "HTML": "HTML",
+            "Gallery": "Galeria",
+            "Divider": "Separador",
+            "Bookmark": "Bookmark",
+            "YouTube": "YouTube",
+            "Twitter": "Twitter",
+            "Instagram": "Instagram",
+            "Unsplash": "Unsplash",
+            "Vimeo": "Vimeo",
+            "CodePen": "CodePen",
+            "Spotify": "Spotify",
+            "SoundCloud": "SoundCloud",
+            "Other": {
+                "": {
+                    "": {
+                        "": "Other..."
+                    }
+                }
+            },
+            "Video": "Video"
+        },
+        "gallery": {
+            "Galleries are limited to 9 images": "Las galerias están limitadas a 9 imágenes",
+            "Add images": "Añadir imágenes",
+            "Drop 'em like it's hot 🔥": "Suéltalas como si estuvieran calientes 🔥",
+            "Click to select up to 9 images": "Haga clic para seleccionar hasta 9 imágenes",
+            "Drop to add up to 9 images": "Suelte para agregar hasta 9 imágenes",
+            "Dismiss": "Descartar",
+            "Type caption for gallery (optional)": "Escriba el subtítulo para la galería (opcional)",
+            "{fileName} failed to upload": "{fileName} no se pudo cargar",
+            "Some images failed to upload": "Algunas imágenes no se pudieron cargar"
+        },
+        "md": {
+            "Drop image(s) here to upload": "Suelte las imágenes aquí para cargar",
+            "Upload failed": "Subida fallida",
+            "Uploading {images, plural}": {
+                "": {
+                    "": {
+                        "": "Subiendo {imágenes, plural, =1{la imagen} other{# imágenes}}..."
+                    }
+                }
+            },
+            "Edit": "Editar"
+        },
+        "link": {
+            "Enter url": "Introducie url",
+            "Edit": "Editar",
+            "Remove": "Eliminar"
+        },
+        "img": {
+            "Drop to replace image": "Suelte para reemplazar la imagen",
+            "Drop it like it's hot 🔥": "Suéltala como si estuviera caliente 🔥",
+            "Click to select an image": "Haga click para seleccionar una imagen",
+            "Type caption for image (optional)": "Escriba el subtítulo para la imagen (opcional)",
+            "Type alt text for image (optional)": "Escriba texto alternativo para la imagen (opcional)",
+            "Toggle between editing alt text and caption": "Alternar entre editar texto alternativo y subtítulos",
+            "Regular": "Regular",
+            "Wide": "Amplia",
+            "Full": "Completa",
+            "Replace image": "Reemplazar imagen"
+        },
+        "video": {
+            "Drop to replace video": "Suelte para reemplazar el video",
+            "Click to select a video": "Haga clic para seleccionar un video",
+            "Replace video": "Reemplazar video",
+            "Drop it like it's hot 🔥": "Suéltelo como si estuviera caliente 🔥"
+        },
+        "Write here": {
+            "": {
+                "": {
+                    "": "Escriba aqui..."
+                }
+            }
+        },
+        "toolbar": {
+            "Bold": "Bold",
+            "Italic": "Italic",
+            "Heading One": "Heading One",
+            "Heading Two": "Heading Two",
+            "Quote": "Quote",
+            "Link": "Link"
+        },
+        "embed": {
+            "Paste URL to add embedded content": {
+                "": {
+                    "": {
+                        "": "Pegar URL para agregar contenido embebido ..."
+                    }
+                }
+            },
+            "Paste URL as link": "Pegar URL como enlace",
+            "Retry": "Reintentar",
+            "There was an error when parsing the URL": {
+                "": "Se produjo un error al analizar la URL."
+            },
+            "Type caption for embed (optional)": "Escriba el título para el contenido embebido (opcional)"
+        },
+        "code": {
+            "Type caption for code block (optional)": "Escriba el título para el bloque de código (opcional)",
+            "Language": {
+                "": {
+                    "": {
+                        "": "Language..."
+                    }
+                }
+            }
+        },
+        "bookmark": {
+            "Retry": "Reintentar",
+            "Paste URL as link": "Pegar URL como enlace",
+            "Paste URL to add bookmark content": {
+                "": {
+                    "": {
+                        "": "Pegar URL para agregar contenido de marcador..."
+                    }
+                }
+            },
+            "Type caption for bookmark (optional)": "Escriba el'título para el marcador (opcional)"
+        }
+    },
+    "event": {
+        "site": {
+            "changed": "Sitio cambiado (reconstruir)"
+        },
+        "post": {
+            "added": "Entrada creada",
+            "deleted": "Entrada borrada",
+            "edited": "Entrada actualizada",
+            "published": {
+                "edited": "Entrada publicada actualizada"
+            },
+            "unpublished": "Entrada despublicada",
+            "tag": {
+                "attached": "Etiqueta añadida a la entrada",
+                "detached": "Etiqueta eliminada de la entrada"
+            }
+        },
+        "page": {
+            "added": "Página creada",
+            "deleted": "Página borrada",
+            "edited": "Página actualizada",
+            "published": {
+                "edited": "Página publicada actualizada"
+            },
+            "unpublished": "Página despublicada unpublished",
+            "tag": {
+                "attached": "Etiqueta añadida a la página",
+                "detached": "Etiqueta eliminada de la página"
+            }
+        },
+        "tag": {
+            "added": "Etiqueta creada",
+            "edited": "Etiqueta actualizada",
+            "deleted": "Etiqueta borrada"
+        },
+        "subscriber": {
+            "added": "Subscriptor añadido",
+            "deleted": "Subscriptor borrado"
+        }
+    },
+    "Open site in new tab": "Abrir sitio en una nueva pestaña",
+    "Title": "Título",
+    "Last update": "Última actualización",
+    "Search site (Ctrl/⌘ + K)": "Buscar sitio (Ctrl/⌘ + K)",
+    "Preview site": "Previsualizar sitio",
+    "New story": "Nueva entrada",
+    "members": {
+        "{members, plural}": "{miembros, plural, =1{miembro} other{# miembros}}",
+        "Members": "Miembros",
+        "New member": "Nuevo miembro",
+        "Member Labels": "Etiquetas de miembros",
+        "Add Label": "Añadir Etiqueta",
+        "Created": "Creado",
+        "Search result": "Resultado de la búsqueda",
+        "Search members": {
+            "": {
+                "": {
+                    "": "Buscar miembros..."
+                }
+            }
+        },
+        "Actions": "Acciones",
+        "Import members": "Importar miembros",
+        "Export all members": "Exportar todos los miembros",
+        "No members yet": "Aún no hay miembros",
+        "No members match the current filter": "Ningún miembro coincide con el filtro actual",
+        "Member details": "Detalles del miembro",
+        "Subscribed to emails": "Suscrito a correos electrónicos",
+        "If disabled, member will <em>not</em> receive newsletter emails": "Si está deshabilitado, el miembro <em> no </em> recibirá correos electrónicos de boletines",
+        "New view": "Nueva vista",
+        "Edit view": "Editar vista",
+        "View name": "Nombre de la vista",
+        "Breaking news": "Noticias de última hora",
+        "Saved views appear in the app sidebar": {
+            "": "Las vistas guardadas aparecen en la barra lateral de la aplicación."
+        },
+        "Icon color": "Color de icono",
+        "Loading": {
+            "": {
+                "": {
+                    "": "Cargango..."
+                }
+            }
+        },
+        "{matches, plural} current filter": "{coincidencias, plural, =1{1 coincidencia} other{#coinciddencia }} con el filtro actual",
+        "All labels": "Todas las etiquetas",
+        "Label deleted": "Etiqueta borrada",
+        "A label with the same name already exists": "Ya existe una etiqueta con el mismo nombre",
+        "Maximum: <b>{maximum}</b> characters": {
+            " You’ve used {countdown}": "Máximo: <b>{maximum}</b> caracteres. Usted ha usado {countdown}"
+        },
+        "Note": "Nota",
+        "(not visible to member)": "no visible para los miembros)",
+        "Labels": "Etiquetas",
+        "Are you sure you want to delete this label?": "¿Está seguro de que desea eliminar esta etiqueta?",
+        "You're about to delete label \"<strong>{name}</strong>\"": {
+            " This is permanent! We warned you, k?": "Está a punto de eliminar la etiqueta \"<strong>{nombre}</strong>\". ¡Esta acción es permantente! Se lo avisamos ¿entendido?"
+        },
+        "New label": "Nueva etiqueta",
+        "Edit label": "Editar etiqueta",
+        "Label name": "Nombre de la etiqueta",
+        "Member added": "Miembro añadido",
+        "You've successfully added yourself as a member": {
+            "": "Se ha agregado exitosamente como miembro.."
+        },
+        "Unknown": "Desconocido",
+        "Impersonate": "Personificar",
+        "This link is only valid for the next <strong>10 minutes</strong>": "Este enlace solo es válido durante los próximos <strong> 10 minutos</strong>",
+        "This is an authentication link to sign into <strong>{blogTitle}</strong> as <strong>{email}</strong>, you can send it to them if they need it, or use it to sign into their account for customer support": {
+            "": "Este es un enlace de autenticación para iniciar sesión en <strong> {blogTitle} </strong> como <strong>{email}</strong>, puede enviárselos si lo necesitan o usarlo para iniciar sesión en su cuenta Atención al cliente."
+        },
+        "Created on {subscribeAt}": "Creado el {subscribeAt}",
+        "Unknown location": "Ubicación desconocida"
+    },
+    "Invitation revoked": "Invitación revocada",
+    "Post has been sent by email": "La entrada ya ha sido envidad por correo electrónico",
+    "Test notification sent": "Notificación de prueba enviada",
+    "<span class=\"ttu\">{currency}</span>/month": "<span class=\"ttu\">{currency}</span>/mes",
+    "<span class=\"ttu\">{currency}</span>/year": "<span class=\"ttu\">{currency}</span>/año",
+    "A backup will be automatically downloaded to your device before deletion": {
+        "": "Una copia de seguridad se descargará automáticamente a su dispositivo antes de eliminarla."
+    },
+    "<strong>{user}</strong> will be permanently deleted": {
+        " A backup will be automatically downloaded to your device before deletion": {
+            "": "<strong>{user}</strong> será eliminado permanentemente Una copia de seguridad se descargará automáticamente a su dispositivo antes de eliminarla."
+        }
+    },
+    "<strong>{user}</strong> and their <strong>{posts, plural}</strong> will be permanently deleted": {
+        " If you don’t want to lose these posts, you should assign them to a different author": {
+            "": "<strong>{user}</strong> y sus <strong>{posts, plural, =1{entrada} other{# entradas}}</strong> será eliminado permanentemente Si no desea perder estas publicaciones, debe asignarlas a un autor diferente."
+        }
+    },
+    "Scheduled to be published and sent": "Programada para ser publicada y enviada",
+    "Failed to send post by email": "Error al enviar la entrada por correo electrónico",
+    "To be sent by emai": "Para ser enviado por correo electrónico",
+    "Sent by email": "Enviado por correo electrónico",
+    "Scheduled to be published {time}": "Programada para ser publicada {time}",
+    "and sent": "y enviada",
+    "View": "Ver",
+    "Post": "Entrada",
+    "Update status": "Actualizar estado",
+    "Scheduled to be published": "Programada para ser publicada"
 }

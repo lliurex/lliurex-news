@@ -477,7 +477,7 @@
 .error-content,
 .main-error {
     user-select: text;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .gh-flow-content .error input {
@@ -496,5 +496,5 @@
 .gh-flow-content .main-error {
     margin-top: 5px;
     color: var(--red);
-    font-size: 1.3rem;
+    font-size: 2.0rem;
 }

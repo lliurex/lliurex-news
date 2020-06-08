@@ -41,10 +41,8 @@
     "Please enter a valid email address!": "¡Por favor introduzca un correo electrónico válido!",
     "More posts": "Más entradas",
     "by": "de",
-    "more posts": "mas entradas",
-    "by this author": {
-        "": "de este autor."
-    },
+    "more posts": "más entradas",
+    "by this author.": "de este autor.",
     "More in": "Mas en",
     "A collection of": "Una colección de",
     "Page {{page}} of {{pages}}": "Página {{page}} de {{pages}}",

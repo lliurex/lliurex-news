@@ -5,6 +5,8 @@ import ConfigParser
 import shutil
 import time
 import lliurex.net
+import docker
+
 
 from jinja2 import Environment
 from jinja2.loaders import FileSystemLoader
@@ -448,6 +450,36 @@ class LliurexNews:
 		
 	#def enable_easy_site
 
+
+	def enable_docker(self):
+
+		try
+
+			client = docker.from_env()
+			news_containers = client.containers.list(all=True,filters={'name':'news-node-server'})
+			if len(news_containers) > 0:
+				for container in news_containers:
+					if container.status == 'running':
+						client.api.stop(container.name)
+					client.api.remove_container(container.name)
+
+			volume_list = {
+				'/var/run/mysqld' : {'bind':'/var/run/mysqld','mode':'rw'},
+				'/usr/share/lliurex/lliurex-news-server' : {'bind':'/usr/share/lliurex/lliurex-news-server','mode':'rw'},
+				'/var/www/news' : {'bind':'/var/www/news','mode':'rw'},
+				}
+			client.containers.run('lliurex/news-server',detach=True, ports={'2368':2368}, restart_policy={"Name": "allways", "MaximumRetryCount": 10}, name='news-node-server', volumes=volume_list)
+
+		except Exception as e:
+
+			msg = "Enabling docker service.Error: %s"%(str(e))
+			self._debug(msg)
+			return [False,""]
+
+		return [True,""]
+
+	#def enable_docker
+
 	def enable_easy_site(self):
 		
 		print("* Enabling easy site...")
@@ -551,7 +583,7 @@ class LliurexNews:
 			if not status:
 				return [False,"9"]	
 
-			status,ret=self.enable_systemd()
+			status,ret=self.enable_docker()
 			if not status:
 				return [False,"10"]
 
@@ -588,7 +620,7 @@ if __name__=="__main__":
 	lo.copy_new_files()
 	lo.process_config_file()
 	lo.enable_apache()
-	lo.enable_systemd()
+	lo.enable_docker()
 	lo.enable_easy_site()
 	lo.enable_cname()
 	lo.enable_apache_conf()

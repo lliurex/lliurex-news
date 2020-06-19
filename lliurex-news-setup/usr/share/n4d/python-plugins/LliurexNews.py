@@ -453,22 +453,21 @@ class LliurexNews:
 
 	def enable_docker(self):
 
-		try
-
+		try:
 			client = docker.from_env()
 			news_containers = client.containers.list(all=True,filters={'name':'news-node-server'})
 			if len(news_containers) > 0:
 				for container in news_containers:
-					if container.status == 'running':
+					if container.status in ['running','restarting']:
 						client.api.stop(container.name)
 					client.api.remove_container(container.name)
 
 			volume_list = {
 				'/var/run/mysqld' : {'bind':'/var/run/mysqld','mode':'rw'},
-				'/usr/share/lliurex/lliurex-news-server' : {'bind':'/usr/share/lliurex/lliurex-news-server','mode':'rw'},
+				'/usr/share/lliurex-news-server' : {'bind':'/usr/share/lliurex-news-server','mode':'rw'},
 				'/var/www/news' : {'bind':'/var/www/news','mode':'rw'},
 				}
-			client.containers.run('lliurex/news-server',detach=True, ports={'2368':2368}, restart_policy={"Name": "allways", "MaximumRetryCount": 10}, name='news-node-server', volumes=volume_list)
+			client.containers.run('lliurex/news-server',detach=True, ports={'2368':2368}, restart_policy={"Name": "always"}, name='news-node-server', volumes=volume_list)
 
 		except Exception as e:
 

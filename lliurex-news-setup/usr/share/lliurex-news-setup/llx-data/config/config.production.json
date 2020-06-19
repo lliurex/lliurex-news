@@ -7,7 +7,7 @@
   "database": {
     "client": "mysql",
     "connection": {
-      "sockerPath": "/var/run/mysqld/mysqld.sock",
+      "socketPath": "/var/run/mysqld/mysqld.sock",
       "user": "{{ DB_USER }}",
       "password": "{{ DB_PWD }}",
       "database": "{{ DB_NAME }}"
@@ -22,7 +22,7 @@
       "stdout"
     ]
   },
-  "process": "systemd",
+  "process": "local",
   "paths": {
     "contentPath": "/var/www/news/content"
   }

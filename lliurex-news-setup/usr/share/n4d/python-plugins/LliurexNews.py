@@ -270,7 +270,9 @@ class LliurexNews:
 				cmd="mkdir %s"%(LliurexNews.NEWS_BASE_DIR)
 				os.system(cmd)
 
-			
+			cmd="chown www-data:www-data %s"%(LliurexNews.NEWS_CONFIG_FILE)
+			os.system(cmd)
+
 				
 			cmd="cp %s %s"%(LliurexNews.CONFIG_DATA,LliurexNews.NEWS_CONFIG_FILE)
 			os.system(cmd)

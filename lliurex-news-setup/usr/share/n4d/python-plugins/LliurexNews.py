@@ -270,11 +270,15 @@ class LliurexNews:
 				cmd="mkdir %s"%(LliurexNews.NEWS_BASE_DIR)
 				os.system(cmd)
 
+			
 				
 			cmd="cp %s %s"%(LliurexNews.CONFIG_DATA,LliurexNews.NEWS_CONFIG_FILE)
 			os.system(cmd)
 
 			cmd="cp %s %s"%(LliurexNews.CONFIG_CLI_FILE,LliurexNews.NEWS_BASE_DIR)
+			os.system(cmd)
+
+			cmd="chown www-data:www-data %s"%(os.path.join(LliurexNews.NEWS_BASE_DIR,'.ghost-cli'))
 			os.system(cmd)
 			
 			cmd="cp -r %s %s"%(LliurexNews.CONTENT_BASE_DIR,LliurexNews.NEWS_BASE_DIR)
@@ -466,7 +470,7 @@ class LliurexNews:
 				'/var/run/mysqld' : {'bind':'/var/run/mysqld','mode':'rw'},
 				'/usr/share/lliurex-news-server' : {'bind':'/usr/share/lliurex-news-server','mode':'rw'},
 				'/var/www/news' : {'bind':'/var/www/news','mode':'rw'},
-				'/usr/share/lliurex-news-setup': : {'bind':'/usr/share/lliurex-news-setup','mode':'rw'},
+				'/usr/share/lliurex-news-setup': {'bind':'/usr/share/lliurex-news-setup','mode':'rw'},
 				}
 			client.containers.run('lliurex/news-server',detach=True, ports={'2368':2368}, restart_policy={"Name": "always"}, name='news-node-server', volumes=volume_list)
 

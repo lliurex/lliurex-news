@@ -43,7 +43,7 @@ class LliurexNews:
 	
 	def __init__(self):
 	
-		self.dbg=1
+		self.dbg=0
 		self.template=None
 		self.template_vars=["DB_USER","DB_PWD","DB_NAME","ADMIN_USER","ADMIN_PWD","ADMIN_EMAIL","DEFAULT_LOCALE"]
 		
@@ -356,9 +356,10 @@ class LliurexNews:
 		print("* Enabling apache site")
 
 		try:
+			'''
 			cmd="cp %s /tmp"%(LliurexNews.APACHE_FILE_SITES_CONFIGURATION)
 			os.system(cmd)
-
+			'''
 			cmd="cp %s %s"%(LliurexNews.APACHE_CONF_FILE, "/etc/apache2/sites-available/")
 			os.system(cmd)
 			if not os.path.exists(LliurexNews.APACHE_EXTERNAL_DIR):
@@ -368,7 +369,7 @@ class LliurexNews:
 			if os.path.exists(LliurexNews.APACHE_EXTERNAL_DIR):	
 				cmd="cp %s %s"%(LliurexNews.APACHE_EXTERNAL_CONF,LliurexNews.APACHE_EXTERNAL_DIR)
 				os.system(cmd)
-
+			'''	
 			try:
 				modify=True
 				path, dirs, files = next(os.walk(LliurexNews.APACHE_EXTERNAL_DIR))
@@ -384,7 +385,7 @@ class LliurexNews:
 									modify=False
 								else:
 									if ( "<Directory /var/www/admin-center>" in line ) & (modify):
-										line = "include /etc/apache2/lliurex-location/*.conf\n" + line
+										line = "includeOptional /etc/apache2/lliurex-location/*.conf\n" + line
 								out_file.write(line)
 				else:
 					if os.path.isfile(LliurexNews.APACHE_FILE_SITES_CONFIGURATION):
@@ -401,7 +402,7 @@ class LliurexNews:
 				cmd="cp /tmp/000-default.conf %s"%(LliurexNews.APACHE_FILE_SITES_CONFIGURATION)
 				os.system(cmd)
 				return [False,""]					
-				
+			'''	
 					
 		except Exception as e:
 			msg="Enabling apache site.Error: %s"%(str(e))
@@ -458,6 +459,8 @@ class LliurexNews:
 
 
 	def enable_docker(self):
+
+		print("* Enabling docker service ...")
 
 		try:
 			client = docker.from_env()

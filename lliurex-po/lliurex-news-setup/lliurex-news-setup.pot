@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-21 14:41+0100\n"
+"POT-Creation-Date: 2020-06-22 09:44+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,50 +17,121 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../install-files/usr/share/lliurex-nextcloud/rsrc/lliurex-nextcloud-setup.glade:7
-msgid "LliureX Nextcloud"
+#: ../lliurex-news-setup/usr/share/lliurex-news-setup/rsrc/lliurex-news-setup.ui:7
+msgid "News Server Configuration"
 msgstr ""
 
-#: ../install-files/usr/share/lliurex-nextcloud/rsrc/lliurex-nextcloud-setup.glade:61
+#: ../lliurex-news-setup/usr/share/lliurex-news-setup/rsrc/lliurex-news-setup.ui:110
 msgid "Database"
 msgstr ""
 
-#: ../install-files/usr/share/lliurex-nextcloud/rsrc/lliurex-nextcloud-setup.glade:100
+#: ../lliurex-news-setup/usr/share/lliurex-news-setup/rsrc/lliurex-news-setup.ui:149
 msgid "DB Name"
 msgstr ""
 
-#: ../install-files/usr/share/lliurex-nextcloud/rsrc/lliurex-nextcloud-setup.glade:124
+#: ../lliurex-news-setup/usr/share/lliurex-news-setup/rsrc/lliurex-news-setup.ui:173
 msgid "DB User"
 msgstr ""
 
-#: ../install-files/usr/share/lliurex-nextcloud/rsrc/lliurex-nextcloud-setup.glade:148
+#: ../lliurex-news-setup/usr/share/lliurex-news-setup/rsrc/lliurex-news-setup.ui:197
 msgid "DB Password"
 msgstr ""
 
-#: ../install-files/usr/share/lliurex-nextcloud/rsrc/lliurex-nextcloud-setup.glade:173
+#: ../lliurex-news-setup/usr/share/lliurex-news-setup/rsrc/lliurex-news-setup.ui:222
 msgid "Repeat DB password"
 msgstr ""
 
-#: ../install-files/usr/share/lliurex-nextcloud/rsrc/lliurex-nextcloud-setup.glade:226
-msgid "Nextcloud administrator"
+#: ../lliurex-news-setup/usr/share/lliurex-news-setup/rsrc/lliurex-news-setup.ui:272
+msgid "News administrator"
 msgstr ""
 
-#: ../install-files/usr/share/lliurex-nextcloud/rsrc/lliurex-nextcloud-setup.glade:264
+#: ../lliurex-news-setup/usr/share/lliurex-news-setup/rsrc/lliurex-news-setup.ui:310
 msgid "User"
 msgstr ""
 
-#: ../install-files/usr/share/lliurex-nextcloud/rsrc/lliurex-nextcloud-setup.glade:288
+#: ../lliurex-news-setup/usr/share/lliurex-news-setup/rsrc/lliurex-news-setup.ui:345
 msgid "Password"
 msgstr ""
 
-#: ../install-files/usr/share/lliurex-nextcloud/rsrc/lliurex-nextcloud-setup.glade:313
+#: ../lliurex-news-setup/usr/share/lliurex-news-setup/rsrc/lliurex-news-setup.ui:370
 msgid "Repeat password"
 msgstr ""
 
-#: ../install-files/usr/share/lliurex-nextcloud/rsrc/lliurex-nextcloud-setup.glade:454
-msgid "Initializing..."
+#: /tmp/lliurex-news.py:194
+msgid ""
+"The News server is already configured.\n"
+"If you continue the current content will be removed.\n"
+"Do you want to reconfigure the News server?"
 msgstr ""
 
-#: /tmp/lliurex-nextcloud.py:197
+#: /tmp/lliurex-news.py:220
+msgid "Initializing News. Wait a moment..."
+msgstr ""
+
+#: /tmp/lliurex-news.py:302
+msgid "Error loading or processing template"
+msgstr ""
+
+#: /tmp/lliurex-news.py:304
+msgid "Error initializing mysql service"
+msgstr ""
+
+#: /tmp/lliurex-news.py:306
+msgid "Error creating user to database"
+msgstr ""
+
+#: /tmp/lliurex-news.py:308
+msgid "Error creating database"
+msgstr ""
+
+#: /tmp/lliurex-news.py:310
+msgid "Error creating news user"
+msgstr ""
+
+#: /tmp/lliurex-news.py:312
+msgid "Error cleaning old files"
+msgstr ""
+
+#: /tmp/lliurex-news.py:314
+msgid "Error copyng news files"
+msgstr ""
+
+#: /tmp/lliurex-news.py:316
+msgid "Error processing config file"
+msgstr ""
+
+#: /tmp/lliurex-news.py:318
+msgid "Error enabling apache2 config"
+msgstr ""
+
+#: /tmp/lliurex-news.py:320
+msgid "Error enabling news-server docker"
+msgstr ""
+
+#: /tmp/lliurex-news.py:322
+msgid "Error enabling easy-site"
+msgstr ""
+
+#: /tmp/lliurex-news.py:324
+msgid "Error enabling news cname"
+msgstr ""
+
+#: /tmp/lliurex-news.py:326
+msgid "Error in News config process"
+msgstr ""
+
+#: /tmp/lliurex-news.py:328
+msgid "There are empty fields to be completed"
+msgstr ""
+
+#: /tmp/lliurex-news.py:330
+msgid "DB Passwords do not match"
+msgstr ""
+
+#: /tmp/lliurex-news.py:332
+msgid "Administrator passwords do not match"
+msgstr ""
+
+#: /tmp/lliurex-news.py:334
 msgid "Initialization successful"
 msgstr ""

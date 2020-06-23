@@ -7,7 +7,7 @@ case $ACTION in
 
 		preInstall)
 
-			echo "Downloading news-server docker..."
+			echo "Downloading news-node-server docker..."
 
 			docker pull lliurex/news-server
 
@@ -22,7 +22,7 @@ case $ACTION in
 
 		postInstall)
 
-			echo "Now the application will be launched to finish configuring the news server..."
+			echo "Now lliurex-news-setup will be launched to finish configuring the news server..."
 
 			exec /usr/sbin/lliurex-news-setup &
 

@@ -154,7 +154,7 @@ class News:
 		lang=os.environ["LANG"]
 
 		if 'ca' in lang:
-			self.default_locale="ca@valencia"
+			self.default_locale="ca-es-valencia"
 		elif 'es' in lang:
 				self.default_locale="es"
 		else:
@@ -237,13 +237,13 @@ class News:
 		else:
 			self.options_box.set_sensitive(True)
 			if self.ret_status:
-				os.system("zero-center set-configured lliurex-news-setup")
-				msg_text=self.get_msg("15")
+				os.system("zero-center set-configured zero-lliurex-news-setup")
+				msg_text=self.get_msg("16")
 				self.msg_label.set_text(msg_text)
 			else:
 				msg_text=self.get_msg(self.ret_msg)
 				self.msg_label.set_markup("<span foreground='red'>"+msg_text+"</span>")
-				os.system("zero-center set-failed lliurex-news-setup")		
+				os.system("zero-center set-failed zero-lliurex-news-setup")		
 
 		return self.executing
 		
@@ -283,13 +283,13 @@ class News:
 		
 		for item in self.template:
 			if self.template[item]=="" or self.template[item]==None:
-				return [False,"12"]
+				return [False,"13"]
 				
 		if self.template["DB_PWD"]!=self.template["DB_PWD2"]:
-			return [False,"13"]
+			return [False,"14"]
 			
 		if self.template["ADMIN_PWD"]!=self.template["ADMIN_PWD2"]:
-			return [False,"14"]
+			return [False,"15"]
 			
 		return [True,""]
 		
@@ -317,20 +317,20 @@ class News:
 		elif code=="9":
 			msg=_("Error enabling apache2 config")
 		elif code=="10":
-			msg=_("Error enabling systemd service")
+			msg=_("Error enabling news-server docker")
 		elif code=="11":
 			msg=_("Error enabling easy-site")
 		elif code=="12":
 			msg=_("Error enabling news cname")
 		elif code=="?":
 			msg=_("Error in News config process")
-		elif code=="12":
-			msg=_("There are empty fields to be completed")	
 		elif code=="13":
-			msg=_("DB Passwords do not match")	
+			msg=_("There are empty fields to be completed")	
 		elif code=="14":
-			msg=_("Administrator passwords do not match")
+			msg=_("DB Passwords do not match")	
 		elif code=="15":
+			msg=_("Administrator passwords do not match")
+		elif code=="16":
 			msg=_("Initialization successful")
 
 		return msg											
@@ -344,7 +344,7 @@ class News:
 		if "PKEXEC_UID" in os.environ:
 			run_pkexec=True
 		
-		if 'ca_ES' in self.default_locale:
+		if 'ca-es' in self.default_locale:
 			cmd='xdg-open https://wiki.edu.gva.es/lliurex/tiki-index.php?page=LliureX-News:-Gestiona-i-publica-les-not%C3%ADcies-del-centre'
 		else:
 			cmd='xdg-open https://wiki.edu.gva.es/lliurex/tiki-index.php?page=LliureX-News:-Gestiona-y-publica-las-noticias-del-centro'

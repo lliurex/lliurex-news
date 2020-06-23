@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-21 14:41+0100\n"
-"PO-Revision-Date: 2019-01-21 14:42+0100\n"
+"POT-Creation-Date: 2020-06-22 09:44+0200\n"
+"PO-Revision-Date: 2020-06-22 09:45+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ca@valencia\n"
@@ -17,52 +17,124 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.0.6\n"
 
-#: ../install-files/usr/share/lliurex-nextcloud/rsrc/lliurex-nextcloud-setup.glade:7
-#, fuzzy
-#| msgid "LliureX NextCloud"
-msgid "LliureX Nextcloud"
-msgstr "LliureX Nextcloud"
+#: ../lliurex-news-setup/usr/share/lliurex-news-setup/rsrc/lliurex-news-setup.ui:7
+msgid "News Server Configuration"
+msgstr "News Server Configuration"
 
-#: ../install-files/usr/share/lliurex-nextcloud/rsrc/lliurex-nextcloud-setup.glade:61
+#: ../lliurex-news-setup/usr/share/lliurex-news-setup/rsrc/lliurex-news-setup.ui:110
 msgid "Database"
 msgstr "Base de dades"
 
-#: ../install-files/usr/share/lliurex-nextcloud/rsrc/lliurex-nextcloud-setup.glade:100
+#: ../lliurex-news-setup/usr/share/lliurex-news-setup/rsrc/lliurex-news-setup.ui:149
 msgid "DB Name"
 msgstr "Nombre BDD"
 
-#: ../install-files/usr/share/lliurex-nextcloud/rsrc/lliurex-nextcloud-setup.glade:124
+#: ../lliurex-news-setup/usr/share/lliurex-news-setup/rsrc/lliurex-news-setup.ui:173
 msgid "DB User"
 msgstr "Usuari BDD"
 
-#: ../install-files/usr/share/lliurex-nextcloud/rsrc/lliurex-nextcloud-setup.glade:148
+#: ../lliurex-news-setup/usr/share/lliurex-news-setup/rsrc/lliurex-news-setup.ui:197
 msgid "DB Password"
 msgstr "Contrasenya BDD"
 
-#: ../install-files/usr/share/lliurex-nextcloud/rsrc/lliurex-nextcloud-setup.glade:173
+#: ../lliurex-news-setup/usr/share/lliurex-news-setup/rsrc/lliurex-news-setup.ui:222
 msgid "Repeat DB password"
 msgstr "Repetix la contrasenya de BDD"
 
-#: ../install-files/usr/share/lliurex-nextcloud/rsrc/lliurex-nextcloud-setup.glade:226
-msgid "Nextcloud administrator"
-msgstr "Administrador de Nextcloud"
+#: ../lliurex-news-setup/usr/share/lliurex-news-setup/rsrc/lliurex-news-setup.ui:272
+msgid "News administrator"
+msgstr "Administrador de News"
 
-#: ../install-files/usr/share/lliurex-nextcloud/rsrc/lliurex-nextcloud-setup.glade:264
+#: ../lliurex-news-setup/usr/share/lliurex-news-setup/rsrc/lliurex-news-setup.ui:310
 msgid "User"
 msgstr "Usuari"
 
-#: ../install-files/usr/share/lliurex-nextcloud/rsrc/lliurex-nextcloud-setup.glade:288
+#: ../lliurex-news-setup/usr/share/lliurex-news-setup/rsrc/lliurex-news-setup.ui:345
 msgid "Password"
 msgstr "Contrasenya"
 
-#: ../install-files/usr/share/lliurex-nextcloud/rsrc/lliurex-nextcloud-setup.glade:313
+#: ../lliurex-news-setup/usr/share/lliurex-news-setup/rsrc/lliurex-news-setup.ui:370
 msgid "Repeat password"
 msgstr "Repetix la contrasenya"
 
-#: ../install-files/usr/share/lliurex-nextcloud/rsrc/lliurex-nextcloud-setup.glade:454
-msgid "Initializing..."
-msgstr "Inicialitzant..."
+#: /tmp/lliurex-news.py:194
+msgid ""
+"The News server is already configured.\n"
+"If you continue the current content will be removed.\n"
+"Do you want to reconfigure the News server?"
+msgstr ""
+"El servidor News ja està configurat.\n"
+"Si contínua el contingut actual serà eliminat.\n"
+"Desitja tornar a configurar el servidor News?"
 
-#: /tmp/lliurex-nextcloud.py:197
+#: /tmp/lliurex-news.py:220
+msgid "Initializing News. Wait a moment..."
+msgstr "S'està inicialitzant News. Espere un moment..."
+
+#: /tmp/lliurex-news.py:302
+msgid "Error loading or processing template"
+msgstr "Error en carregar o processar la plantilla"
+
+#: /tmp/lliurex-news.py:304
+msgid "Error initializing mysql service"
+msgstr "Error en inicialitzar el servei de mysql"
+
+#: /tmp/lliurex-news.py:306
+msgid "Error creating user to database"
+msgstr "Error en crear l'usuari de base de dades"
+
+#: /tmp/lliurex-news.py:308
+msgid "Error creating database"
+msgstr "Error en crear la base de dades"
+
+#: /tmp/lliurex-news.py:310
+msgid "Error creating news user"
+msgstr ""
+
+#: /tmp/lliurex-news.py:312
+msgid "Error cleaning old files"
+msgstr "Error en esborrar els fitxers antics"
+
+#: /tmp/lliurex-news.py:314
+msgid "Error copyng news files"
+msgstr "Error en copiar els nous fitxers"
+
+#: /tmp/lliurex-news.py:316
+msgid "Error processing config file"
+msgstr "Error en processar el fitxer de configuració"
+
+#: /tmp/lliurex-news.py:318
+msgid "Error enabling apache2 config"
+msgstr "Error en activar la configuració de apache2"
+
+#: /tmp/lliurex-news.py:320
+msgid "Error enabling news-server docker"
+msgstr "Error en activar el docker news-server"
+
+#: /tmp/lliurex-news.py:322
+msgid "Error enabling easy-site"
+msgstr "Error en activar el easy-site"
+
+#: /tmp/lliurex-news.py:324
+msgid "Error enabling news cname"
+msgstr "Error en activar el cname de News"
+
+#: /tmp/lliurex-news.py:326
+msgid "Error in News config process"
+msgstr "Error en el procés de configuració de News"
+
+#: /tmp/lliurex-news.py:328
+msgid "There are empty fields to be completed"
+msgstr "Hi ha camps buits que cal completar"
+
+#: /tmp/lliurex-news.py:330
+msgid "DB Passwords do not match"
+msgstr "Les contrasenyes per a la base de dades no coincideixen"
+
+#: /tmp/lliurex-news.py:332
+msgid "Administrator passwords do not match"
+msgstr "Les contrasenyes per a l'Administrador no coincideixen"
+
+#: /tmp/lliurex-news.py:334
 msgid "Initialization successful"
 msgstr "Inicialització satisfactòria"

@@ -1,8 +1,10 @@
 Format: http://dep.debian.net/deps/dep5
-Upstream-Name: lliurex-nextcloud
+Upstream-Name: lliurex-news
+Source: https://github.com/lliurex/lliurex-news
 
 Files: *
-Copyright: 2019 Hector Garcia Huerta <hectorgh@gmail.com>
+Copyright: 2020 Raul Rodrigo Segura <raurodse@gmail.com>
+           2020 Juan Ramon Pelegrina <juapesai@hotmail.com>  
 License: GPL-3.0+
 
 License: GPL-3.0+
@@ -17,7 +19,7 @@ License: GPL-3.0+
  GNU General Public License for more details.
  .
  You should have received a copy of the GNU General Public License
- along with this program. If not, see <http://www.gnu.org/licenses/>.
+ along with this program. If not, see <https://www.gnu.org/licenses/>.
  .
  On Debian systems, the complete text of the GNU General
  Public License version 3 can be found in "/usr/share/common-licenses/GPL-3".

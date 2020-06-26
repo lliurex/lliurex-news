@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:export-ydpi="18"
+   inkscape:export-xdpi="18"
+   inkscape:export-filename="/home/lliurex/Desarrollo/lliurex-news/lliurex-news-installer/news-setup.png"
+   inkscape:version="1.0 (1.0+r73)"
+   sodipodi:docname="news-setup.svg"
+   height="256"
+   width="256"
+   xml:space="preserve"
+   viewBox="0 2 49 49"
+   y="0px"
+   x="0px"
+   id="Layer_1"
+   version="1.1"><metadata
+   id="metadata46"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+   id="defs44" /><sodipodi:namedview
+   inkscape:current-layer="Layer_1"
+   inkscape:window-maximized="1"
+   inkscape:window-y="30"
+   inkscape:window-x="0"
+   inkscape:cy="210.72606"
+   inkscape:cx="270.97889"
+   inkscape:zoom="0.98746357"
+   showgrid="false"
+   id="namedview42"
+   inkscape:window-height="903"
+   inkscape:window-width="1920"
+   inkscape:pageshadow="2"
+   inkscape:pageopacity="0"
+   guidetolerance="10"
+   gridtolerance="10"
+   objecttolerance="10"
+   borderopacity="1"
+   bordercolor="#666666"
+   pagecolor="#ffffff" />
+<style
+   id="style2"
+   type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+	.st1{fill:url(#SVGID_2_);}
+	.st2{fill:url(#SVGID_3_);}
+	.st3{fill:url(#SVGID_4_);}
+	.st4{fill:url(#SVGID_5_);}
+</style>
+
+<g
+   transform="matrix(0.47806404,0,0,0.47806408,4.3020328,5.7054081)"
+   id="g92"
+   style="opacity:0.7;fill:#141f27;fill-opacity:1"><rect
+     x="0.20900001"
+     y="69.016998"
+     width="33.643002"
+     height="17.014"
+     rx="4"
+     id="rect82"
+     style="fill:#141f27;fill-opacity:1" /><rect
+     x="50.672001"
+     y="69.016998"
+     width="33.622002"
+     height="17.014"
+     rx="4"
+     id="rect84"
+     style="fill:#141f27;fill-opacity:1" /><rect
+     x="0.184"
+     y="34.990002"
+     width="84.121002"
+     height="17.014"
+     rx="4"
+     id="rect86"
+     style="fill:#141f27;fill-opacity:1" /><rect
+     x="0.20900001"
+     y="0.96399999"
+     width="50.469002"
+     height="17.013"
+     rx="4"
+     id="rect88"
+     style="fill:#141f27;fill-opacity:1" /><rect
+     x="67.494003"
+     y="0.96399999"
+     width="16.820999"
+     height="17.013"
+     rx="4"
+     id="rect90"
+     style="fill:#141f27;fill-opacity:1" /></g></svg>

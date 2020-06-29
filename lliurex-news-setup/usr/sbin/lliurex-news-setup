@@ -39,6 +39,9 @@ class News:
 		builder.set_translation_domain("lliurex-news-setup")
 		builder.add_from_file(RSRC_PATH+"lliurex-news-setup.ui")
 		
+		max_height=Gdk.Display.get_default().get_monitor(0).get_geometry().height
+		width=Gdk.Display.get_default().get_monitor(0).get_geometry().width
+
 		self.stack_window=Gtk.Stack()
 		self.stack_window.set_transition_type(Gtk.StackTransitionType.SLIDE_LEFT)
 		self.stack_window.set_margin_top(0)
@@ -47,6 +50,13 @@ class News:
 		self.main_window=builder.get_object("main_window")
 		self.main_window.set_title("News Server Setup")
 		self.main_window.resize(400,815)
+		g=Gdk.Geometry()
+		g.min_width=400
+		g.max_width=400
+		g.min_height=200
+		g.max_height=max_height
+		self.main_window.set_geometry_hints(None,g,Gdk.WindowHints.MAX_SIZE)
+
 		self.main_box=builder.get_object("main_box")
 		self.banner_box=builder.get_object("banner_box")
 		self.options_box=builder.get_object("options_box")

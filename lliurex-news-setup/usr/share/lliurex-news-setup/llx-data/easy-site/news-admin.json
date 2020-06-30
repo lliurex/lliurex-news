@@ -1,7 +1,7 @@
 {
     "linkid":"news-admin",
     "link":"http://news-server/news/ghost",
-    "icon":"news-admin.png",
+    "icon":"news-admin.svg",
     "fonticon":"icon-cloud",
     "name": {
         "default":"news",

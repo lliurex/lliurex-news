@@ -28,7 +28,7 @@ class LliurexNews:
 	APACHE_CONF_FILE=BASE_DIR+"apache2/news-server.conf"
 	APACHE_EXTERNAL_CONF=BASE_DIR+"apache2/news.conf"
 	EASY_SITE=BASE_DIR+"/easy-site/news-admin.json"
-	EASY_SITE_ICON=BASE_DIR+"/easy-site/news-admin.png"
+	EASY_SITE_ICON=BASE_DIR+"/easy-site/news-admin.svg"
 	
 	NEWS_BASE_DIR="/var/www/news/"
 	NEWS_CONTENT_DIR=NEWS_BASE_DIR+"content/"

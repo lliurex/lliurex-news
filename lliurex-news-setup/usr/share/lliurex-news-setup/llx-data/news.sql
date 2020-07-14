@@ -74,8 +74,7 @@ CREATE TABLE `api_keys` (
 
 LOCK TABLES `api_keys` WRITE;
 /*!40000 ALTER TABLE `api_keys` DISABLE KEYS */;
-INSERT INTO `api_keys` VALUES ('5eba560ec0b8bb7cdd6c05c6','admin','29fd58e528c72b60ab5e8775a8b2d2246b480b4e6cfcd248363422663e10ad06','5eba560dc0b8bb7cdd6c0569','5eba560ec0b8bb7cdd6c05c5',NULL,NULL,'2020-05-12 07:53:50','1','2020-05-12 07:53:50','1'),('5eba560ec0b8bb7cdd6c05c8','admin','7f23180600115b0adf9d6722fc61f131b00d558378538f4b1fad84aa56abee43','5eba560dc0b8bb7cdd6c056a','5eba560ec0b8bb7cdd6c05c7',NULL,NULL,'2020-05-12 07:53:50','1','2020-05-12 07:53:50','1'),('5eba560ec0b8bb7cdd6c05ca','admin','e690b3e402ced7bb7f711846c4701f5fa8ef99e2be34b27a2f80f8ab9e950def','5eba560dc0b8bb7cdd6c056b','5eba560ec0b8bb7cdd6c05c9',NULL,NULL,'2020-05-12 07:53:50','1','2020-05-12 07:53:50','1');
-
+INSERT INTO `api_keys` VALUES ('5eba560ec0b8bb7cdd6c05c6','admin','29fd58e528c72b60ab5e8775a8b2d2246b480b4e6cfcd248363422663e10ad06','5eba560dc0b8bb7cdd6c0569','5eba560ec0b8bb7cdd6c05c5',NULL,NULL,'2020-05-12 07:53:50','1','2020-05-12 07:53:50','1'),('5eba560ec0b8bb7cdd6c05c8','admin','7f23180600115b0adf9d6722fc61f131b00d558378538f4b1fad84aa56abee43','5eba560dc0b8bb7cdd6c056a','5eba560ec0b8bb7cdd6c05c7',NULL,NULL,'2020-05-12 07:53:50','1','2020-05-12 07:53:50','1'),('5eba560ec0b8bb7cdd6c05ca','admin','e690b3e402ced7bb7f711846c4701f5fa8ef99e2be34b27a2f80f8ab9e950def','5eba560dc0b8bb7cdd6c056b','5eba560ec0b8bb7cdd6c05c9',NULL,NULL,'2020-05-12 07:53:50','1','2020-05-12 07:53:50','1'),('5efc35aabb78e700474191b1','content','f75a3e215e57aaf6c6a2d62120',NULL,'5efc35aabb78e700474191b0',NULL,NULL,'2020-07-01 07:05:15','1','2020-07-01 07:05:15','1'),('5efc35aabb78e700474191b2','admin','6c6e80d5fd7dee551b5c5402812b4034de8bf4b1dae73ad2b44c8855a372ef51','5eba560dc0b8bb7cdd6c0569','5efc35aabb78e700474191b0',NULL,NULL,'2020-07-01 07:05:15','1','2020-07-01 07:05:15','1');
 /*!40000 ALTER TABLE `api_keys` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -272,7 +271,7 @@ CREATE TABLE `integrations` (
 
 LOCK TABLES `integrations` WRITE;
 /*!40000 ALTER TABLE `integrations` DISABLE KEYS */;
-INSERT INTO `integrations` VALUES ('5eba560ec0b8bb7cdd6c05c5','builtin','Zapier','zapier',NULL,'Built-in Zapier integration','2020-05-12 07:53:50','1','2020-05-12 07:53:50','1'),('5eba560ec0b8bb7cdd6c05c7','internal','Ghost Backup','ghost-backup',NULL,'Internal DB Backup integration','2020-05-12 07:53:50','1','2020-05-12 07:53:50','1'),('5eba560ec0b8bb7cdd6c05c9','internal','Ghost Scheduler','ghost-scheduler',NULL,'Internal Scheduler integration','2020-05-12 07:53:50','1','2020-05-12 07:53:50','1');
+INSERT INTO `integrations` VALUES ('5eba560ec0b8bb7cdd6c05c5','builtin','Zapier','zapier',NULL,'Built-in Zapier integration','2020-05-12 07:53:50','1','2020-05-12 07:53:50','1'),('5eba560ec0b8bb7cdd6c05c7','internal','Ghost Backup','ghost-backup',NULL,'Internal DB Backup integration','2020-05-12 07:53:50','1','2020-05-12 07:53:50','1'),('5eba560ec0b8bb7cdd6c05c9','internal','Ghost Scheduler','ghost-scheduler',NULL,'Internal Scheduler integration','2020-05-12 07:53:50','1','2020-05-12 07:53:50','1'),('5efc35aabb78e700474191b0','custom','API','api',NULL,'Access to content via API','2020-07-01 07:05:14','1','2020-07-01 07:09:58','1');
 /*!40000 ALTER TABLE `integrations` ENABLE KEYS */;
 UNLOCK TABLES;
 

@@ -27,8 +27,8 @@ class LliurexNews:
 	CONFIG_THEMES_DIR=BASE_DIR+"themes/lliurex-theme"
 	APACHE_CONF_FILE=BASE_DIR+"apache2/news-server.conf"
 	APACHE_EXTERNAL_CONF=BASE_DIR+"apache2/news.conf"
-	EASY_SITE=BASE_DIR+"/easy-site/news-admin.json"
-	EASY_SITE_ICON=BASE_DIR+"/easy-site/news-admin.png"
+	EASY_SITE=BASE_DIR+"/easy-site/news.json"
+	EASY_SITE_ICON=BASE_DIR+"/easy-site/news.svg"
 	
 	NEWS_BASE_DIR="/var/www/news/"
 	NEWS_CONTENT_DIR=NEWS_BASE_DIR+"content/"
@@ -37,7 +37,7 @@ class LliurexNews:
 
 	APACHE_FILE_SITES_CONFIGURATION="/etc/apache2/sites-enabled/000-default.conf"
 	APACHE_EXTERNAL_DIR="/etc/apache2/lliurex-location"
-	EASY_SITES_DIR="/var/www/srv/links/"
+	EASY_SITES_DIR="/var/lib/lliurex-www/links/"
 	EASY_SITES_DIR_ICON="/var/www/srv/icons/"
 	
 	

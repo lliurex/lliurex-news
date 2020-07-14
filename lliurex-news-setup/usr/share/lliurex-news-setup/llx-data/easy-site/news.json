@@ -1,0 +1,18 @@
+{
+    "linkid":"news",
+    "link":"http://news-server/news",
+    "icon":"news.svg",
+    "name": {
+        "default":"news",
+        "valencia":"news",
+        "es":"news"
+    },
+    "description": {
+        "default":"Consult and manage the news of the center",
+        "valencia":"Consulta i gestiona les notícies del centre",
+        "es":"Consulta y gestiona las noticias del centro"
+    },
+    "order":270,
+    "editable":false,
+    "visibility":true
+}	

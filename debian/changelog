@@ -1,3 +1,10 @@
+lliurex-news (0.3) bionic; urgency=medium
+
+  * Added news API configuration in database schema
+  * Updated site files to new server page
+
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Tue, 14 Jul 2020 12:14:35 +0200
+
 lliurex-news (0.2) bionic; urgency=medium
 
   * Fixed valencian locale name

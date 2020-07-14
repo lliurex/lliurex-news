@@ -38,7 +38,7 @@ class LliurexNews:
 	APACHE_FILE_SITES_CONFIGURATION="/etc/apache2/sites-enabled/000-default.conf"
 	APACHE_EXTERNAL_DIR="/etc/apache2/lliurex-location"
 	EASY_SITES_DIR="/var/lib/lliurex-www/links/"
-	EASY_SITES_DIR_ICON="/var/www/srv/icons/"
+	EASY_SITES_DIR_ICON="/usr/share/lliurex-www/srv/icons/"
 	
 	
 	def __init__(self):

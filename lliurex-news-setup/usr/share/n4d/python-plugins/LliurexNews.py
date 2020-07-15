@@ -496,6 +496,8 @@ class LliurexNews:
 		try:
 			if os.path.exists(LliurexNews.EASY_SITES_DIR):
 				shutil.copy(LliurexNews.EASY_SITE,LliurexNews.EASY_SITES_DIR)
+				cmd="chown www-data:www-data %s"%(os.path.join(LliurexNews.EASY_SITES_DIR,"news.json"))
+				os.system(cmd)
 				
 			if os.path.exists(LliurexNews.EASY_SITES_DIR_ICON):
 				shutil.copy(LliurexNews.EASY_SITE_ICON,LliurexNews.EASY_SITES_DIR_ICON)	

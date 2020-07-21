@@ -1,3 +1,10 @@
+lliurex-news (0.3.2) bionic; urgency=medium
+
+  * Fixed link json file to home server page
+  * Fixed configurartion file to apache site 
+
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Tue, 21 Jul 2020 11:47:50 +0200
+
 lliurex-news (0.3.1) bionic; urgency=medium
 
   * Changed the permissions of the link json file to www-data

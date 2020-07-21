@@ -3,9 +3,9 @@
     "link":"http://news-server/news",
     "icon":"news.svg",
     "name": {
-        "default":"news",
-        "valencia":"news",
-        "es":"news"
+        "default":"News",
+        "valencia":"News",
+        "es":"News"
     },
     "description": {
         "default":"Consult and manage the news of the center",

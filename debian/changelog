@@ -1,3 +1,9 @@
+lliurex-news (0.4.2) bionic; urgency=medium
+
+  * Removed prerm script
+  
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Wed, 05 Aug 2020 13:57:07 +0200
+
 lliurex-news (0.4.1) bionic; urgency=medium
 
   * Added lliurex-news-setup prerm script  

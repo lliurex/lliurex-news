@@ -3,7 +3,7 @@
  
 	"type":"apt",
 	"pkg_list": [{"name":"lliurex-news-setup","custom_icon":"news-setup.png"},{"name":"lliurex-news-slideshow","custom_icon":"slideshow.png"}], 
-	"script": {"name":"/usr/share/zero-lliurex-news-installer/news-installer_script"},
+	"script": {"name":"/usr/share/zero-lliurex-news-installer/news-installer_script","remove":true},
 	"depends": "/usr/share/zero-lliurex-docker/docker.epi",
 	"custom_icon_path":"/usr/share/zero-lliurex-news-installer/",
 	"required_x":true,

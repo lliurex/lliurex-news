@@ -3,15 +3,56 @@
 
 ACTION="$1"
 
+
+IMAGE="lliurex/news-server"
+DNSMASQ_CONFDIR="/var/lib/dnsmasq/config"
+APACHE_CONFDIR="/etc/apache2/sites-available"
+APACHE_LOCATION="/etc/apache2/lliurex-location"
+EASY_SITES_DIR="/var/lib/lliurex-www/links"
+EASY_SITES_DIR_ICON="/usr/share/lliurex-www/srv/icons"
+NEWS_FOLDER="/var/www/news"
+
+shift
+
+PACKAGE_LIST=$@
+
+remove_image(){
+    
+    found="$(docker images --format "{{.Repository}}" -freference="$IMAGE")"
+    if [ "$found" == "$IMAGE" ]; then
+    	docker rmi -f $img >/dev/null 2>/dev/null
+        if [ $? -ne 0 ];then
+        	return 1
+        fi
+    fi
+    
+    return 0
+}
+
+remove_container(){
+
+    
+    found="$(docker ps -a -fancestor="$IMAGE" --format "{{.Names}}")"
+    if [ -n "$found" ]; then
+    	docker stop $found >/dev/null 2>/dev/null
+        docker rm -f $found >/dev/null 2>/dev/null
+    	if [ $? -ne 0 ];then
+        	return 1
+        fi
+    fi
+  
+    return 0
+}
+
 case $ACTION in
 
 		preInstall)
 
 			echo "Downloading news-node-server docker..."
 
-			docker pull lliurex/news-server
+			docker pull $IMAGE
 
-			check_download=$(docker images lliurex/news-server -q)
+			check_download=$(docker images "$IMAGE" -q)
 			
 			if [ -z "$check_download" ]; then
 				echo "Unable to download news-server docker"
@@ -28,7 +69,73 @@ case $ACTION in
 
 			echo "You can close EPI-GTK window"
 		
-		
-	;;
+			echo "**** Finished ****"
+		;;
+
+		remove)
+
+			echo "Stopping service..."
+			remove_container
+			remove_image
+
+			if [ -f "$DNSMASQ_CONFDIR/news-server" ];then
+				echo "Removing dns..."
+				rm -f $DNSMASQ_CONFDIR/news-server
+				systemctl restart dnsmasq || true
+			fi	
+
+			if [ -f "$APACHE_CONFDIR/news-server.conf" ];then
+           		 echo "Removing http server configuration..."
+           		 a2dissite news-server
+           		 
+            	 rm -f $APACHE_CONFDIR/news-server.conf
+
+            	 if [ -f "$APACHE_LOCATION/news.conf" ];then
+            	 	rm -f $APACHE_LOCATION/news.conf
+            	 fi	
+
+            	 systemctl restart apache2 || true
+        	fi
+
+        	if [ -f "$EASY_SITES_DIR/news.json" ];then
+        		echo "Removing easy-sites files..."
+        		rm -f $EASY_SITES_DIR/news.json
+        		
+        		if [ -f "$EASY_SITES_DIR_ICON/news.svg" ];then
+        			rm -f $EASY_SITES_DIR_ICON/news.svg
+        		fi
+        	fi
+
+        	echo "Removing database..."
+        	mysql -uroot -p$(mysql_root_passwd -g) -e "drop database IF EXISTS news" || true
+
+        	zero-center set-non-configured zero-lliurex-news-setup || true
+        	
+        	echo "Removing packages..."
+
+            for ix in $PACKAGE_LIST	
+
+			do
+                apt-get remove -y $ix
+				TEST=$( dpkg-query -s  $ix 2> /dev/null| grep Status | cut -d " " -f 4 )
+				if [ "$TEST" == 'installed' ];then
+					exit 1
+				fi
+			done	
+			
+			apt-get remove -y ghost ghost-admin
+
+       		echo "Removing folders..."
+
+			
+			if [ -d "$NEWS_FOLDER" ];then
+        		rm -rf $NEWS_FOLDER
+        	fi
+
+			echo "**** Finished ****"
+        	
+		;;
 
 esac
+
+exit 0

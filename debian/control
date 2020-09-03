@@ -8,7 +8,7 @@ Homepage: http://lliurex.net
 
 Package: lliurex-news-setup
 Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends}, n4d, python3,python-bcrypt, python-llxnet, python-docker, ghost, ghost-admin
+Depends: ${shlibs:Depends}, ${misc:Depends}, n4d, python3,python-bcrypt, python-llxnet, python-docker, ghost, ghost-admin, lliurex-sdbd
 Description: News server configuration
  Scripts and n4d plugins to configure news server
  

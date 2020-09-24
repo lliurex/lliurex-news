@@ -1,3 +1,9 @@
+lliurex-news (0.4.4) bionic; urgency=medium
+
+  * Fixed depend in control
+  
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Thu, 24 Sep 2020 11:02:41 +0200
+
 lliurex-news (0.4.3) bionic; urgency=medium
 
   * Fixed depends of lliurex-news-setup: added lliurex-sgbd in control

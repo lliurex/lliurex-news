@@ -319,8 +319,6 @@ class News:
 			msg=_("Error creating user to database")
 		elif code=="4":
 			msg=_("Error creating database")
-		elif code=="5":
-			msg=_("Error creating news user")
 		elif code=="6":
 			msg=_("Error cleaning old files")
 		elif code=="7":

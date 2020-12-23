@@ -164,12 +164,21 @@ class News:
 
 	def get_session_locale(self):
 
+		language=os.environ["LANGUAGE"]
 		lang=os.environ["LANG"]
 
-		if 'ca' in lang:
+		app_lang=""
+
+		if language=="":
+			app_lang=lang
+		else:
+			language=language.split(":")[0]
+			app_lang=language
+
+		if 'valencia' in app_lang:
 			self.default_locale="ca-es-valencia"
 		elif 'es' in lang:
-				self.default_locale="es"
+			self.default_locale="es"
 		else:
 			self.default_locale="en"
 
@@ -355,9 +364,11 @@ class News:
 		if "PKEXEC_UID" in os.environ:
 			run_pkexec=True
 		
-		if 'ca-es' in self.default_locale:
-			cmd='xdg-open https://wiki.edu.gva.es/lliurex/tiki-index.php?page=LliureX-News:-Gestiona-i-publica-les-not%C3%ADcies-del-centre'
+		if 'valencia' in self.default_locale:
+			exec_lang="LANG=ca_ES.UTF-8@valencia"
+			cmd=exec_lang+' xdg-open https://wiki.edu.gva.es/lliurex/tiki-index.php?page=LliureX-News:-Gestiona-i-publica-les-not%C3%ADcies-del-centre'
 		else:
+			exec_lang="LANG=es_ES.UTF-8"
 			cmd='xdg-open https://wiki.edu.gva.es/lliurex/tiki-index.php?page=LliureX-News:-Gestiona-y-publica-las-noticias-del-centro'
 
 		if not run_pkexec:

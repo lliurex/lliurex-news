@@ -1,11 +1,13 @@
 import os
 import bcrypt
 import tempfile
-import ConfigParser
+import configparser
 import shutil
 import time
 import lliurex.net
 import docker
+import n4d.server.core as n4dcore
+import n4d.responses
 
 
 from jinja2 import Environment
@@ -46,6 +48,7 @@ class LliurexNews:
 		self.dbg=0
 		self.template=None
 		self.template_vars=["DB_USER","DB_PWD","DB_NAME","ADMIN_USER","ADMIN_PWD","ADMIN_EMAIL","DEFAULT_LOCALE"]
+		self.core=n4dcore.Core.get_core()
 		
 	#def init
 
@@ -64,7 +67,7 @@ class LliurexNews:
 		
 		print("* Parsing template...")
 
-		config = ConfigParser.ConfigParser()
+		config = configparser.ConfigParser()
 		config.optionxform=str
 		config.read(template_path)
 		
@@ -109,13 +112,13 @@ class LliurexNews:
 
 			try:
 
-				self.template["EXTERNAL_IP"]=lliurex.net.get_ip(objects["VariablesManager"].get_variable("EXTERNAL_INTERFACE"))
+				self.template["EXTERNAL_IP"]=lliurex.net.get_ip(self.core.get_variable("EXTERNAL_INTERFACE").get('return',None))
 				
 			except:
-				import xmlrpclib as x
+				import xmlrpc.client as client
 				
-				c=x.ServerProxy("https://server:9779")
-				self.template["EXTERNAL_IP"]=lliurex.net.get_ip(c.get_variable("","VariablesManager","EXTERNAL_INTERFACE"))
+				c=client.ServerProxy("https://server:9779")
+				self.template["EXTERNAL_IP"]=lliurex.net.get_ip(c.get_variable("EXTERNAL_INTERFACE").get('return',None))
 
 			self.template["ADMIN_PWD"]=self.create_password_bhash(self.template["ADMIN_PWD"])
 
@@ -219,7 +222,7 @@ class LliurexNews:
 			sql_template_file=LliurexNews.SQL_TEMPLATE
 			tpl_env = Environment(loader=FileSystemLoader(template_dir))
 			sql_template = tpl_env.get_template(sql_template_file)
-			content = sql_template.render(self.template).encode('UTF-8')
+			content = sql_template.render(self.template)
 
 			tmp_file=tempfile.mktemp()
 			f=open(tmp_file,"w")
@@ -325,7 +328,7 @@ class LliurexNews:
 			
 			tpl_env = Environment(loader=FileSystemLoader(template_dir))
 			template = tpl_env.get_template(template_file)
-			content = template.render(self.template).encode('UTF-8')
+			content = template.render(self.template)
 			
 			f=open(template_dir+template_file,"w")
 			f.write(content)
@@ -529,10 +532,10 @@ class LliurexNews:
 		f=open("/etc/n4d/key","r")
 		magic_key=f.readline().strip("\n")
 		f.close()
-		import xmlrpclib as x
-		c=x.ServerProxy("https://server:9779")
+		import xmlrpc.client as client
+		c=client.ServerProxy("https://server:9779")
 		result = c.set_internal_dns_entry(magic_key,"Dnsmasq","news-server")
-		if result['status'] == True:
+		if result['status'] == 0:
 			os.system("systemctl restart dnsmasq.service")
 			return [True,""]
 		else:
@@ -608,12 +611,12 @@ class LliurexNews:
 				
 			self.enable_apache_conf()
 				
-			return [True,"SUCCESS"]
+			return n4d.responses.build_succesfull_call_response([True,"SUCCESS"])
 			
 		except Exception as e:
 			msg="Error in News setup process: %s"%(str(e))
 			self._debug(msg)
-			return [False," ?"]
+			return n4d.responses.build_succesfull_call_response([False," ?"])
 		
 	#def initlializ_owncloud
 	

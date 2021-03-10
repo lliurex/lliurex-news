@@ -1,0 +1,15 @@
+{
+	"SETUP":{
+		"type":"python",
+		"path":"LliurexNews.py",
+		"class":"LliurexNews"
+	},
+	"METHODS":{
+		"initialize_news":{
+			"allowed_groups":[
+				"sudo",
+				"admins"
+			]
+		}
+	}
+}

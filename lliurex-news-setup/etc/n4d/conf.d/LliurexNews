@@ -1,6 +1,0 @@
-[SETUP]
-type=python
-path=LliurexNews.py
-class=LliurexNews
-[METHODS]
-initialize_news=sudo,admins

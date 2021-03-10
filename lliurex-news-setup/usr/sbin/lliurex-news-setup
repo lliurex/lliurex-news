@@ -278,7 +278,9 @@ class News:
 		ip="server"
 		c=client.ServerProxy("https://%s:9779"%ip,context=context,allow_none=True)
 		n4d_key=self.get_n4d_key()
-		self.ret_status,self.ret_msg=c.initialize_news(n4d_key,"LliurexNews",self.template)
+		ret=c.initialize_news(n4d_key,"LliurexNews",self.template).get('return',None)
+		self.ret_status=ret['status']
+		self.ret_msg=ret['msg']
 		
 		
 		self.executing=False

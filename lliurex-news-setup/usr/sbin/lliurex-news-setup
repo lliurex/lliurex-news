@@ -158,7 +158,7 @@ class News:
 		self.remove_news_t=threading.Thread(target=self.remove_news)
 		self.remove_news_t.daemon=True
 
-		GObject.threads_init()
+		#GObject.threads_init()
 
 	#def init_threads
 
@@ -225,7 +225,7 @@ class News:
 			self.msg_label.set_markup("<span foreground='red'>"+msg_text+"</span>")
 			return
 		if os.path.exists("/var/www/news/.ghost-cli"):
-			dialog = Gtk.MessageDialog(None,0,Gtk.MessageType.WARNING,Gtk.ButtonsType.YES_NO, "News Server Configuration")
+			dialog = Gtk.MessageDialog(parent=None,flags=0,message_type=Gtk.MessageType.WARNING,buttons=Gtk.ButtonsType.YES_NO, text="News Server Configuration")
 			dialog.format_secondary_text(message)
 			response = dialog.run()
 			if response==Gtk.ResponseType.NO:
@@ -279,8 +279,8 @@ class News:
 		c=client.ServerProxy("https://%s:9779"%ip,context=context,allow_none=True)
 		n4d_key=self.get_n4d_key()
 		ret=c.initialize_news(n4d_key,"LliurexNews",self.template).get('return',None)
-		self.ret_status=ret['status']
-		self.ret_msg=ret['msg']
+		self.ret_status=ret[0]
+		self.ret_msg=ret[1]
 		
 		
 		self.executing=False
@@ -322,6 +322,7 @@ class News:
 
 	def get_msg(self,code):
 
+		msg=""
 		if code=="1":
 			msg=_("Error loading or processing template")
 		elif code=="2":

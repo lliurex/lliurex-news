@@ -8,6 +8,7 @@ import lliurex.net
 import docker
 import n4d.server.core as n4dcore
 import n4d.responses
+import ssl
 
 
 from jinja2 import Environment
@@ -116,11 +117,11 @@ class LliurexNews:
 				
 			except:
 				import xmlrpc.client as client
-				
-				c=client.ServerProxy("https://server:9779")
+				context=ssl._create_unverified_context()
+				c=client.ServerProxy("https://server:9779",context=context,allow_none=True)
 				self.template["EXTERNAL_IP"]=lliurex.net.get_ip(c.get_variable("EXTERNAL_INTERFACE").get('return',None))
 
-			self.template["ADMIN_PWD"]=self.create_password_bhash(self.template["ADMIN_PWD"])
+			self.template["ADMIN_PWD"]=self.create_password_bhash(self.template["ADMIN_PWD"].encode('utf-8')).decode()
 
 		except Exception as e:
 			msg="Loading Template.Error: %s"%str(e)
@@ -532,9 +533,12 @@ class LliurexNews:
 		f=open("/etc/n4d/key","r")
 		magic_key=f.readline().strip("\n")
 		f.close()
+		
 		import xmlrpc.client as client
-		c=client.ServerProxy("https://server:9779")
-		result = c.set_internal_dns_entry(magic_key,"Dnsmasq","news-server")
+		context=ssl._create_unverified_context()
+		c=client.ServerProxy("https://server:9779",context=context,allow_none=True)
+		result = c.set_internal_dns_entry(magic_key,"DnsmasqManager","news-server")
+
 		if result['status'] == 0:
 			os.system("systemctl restart dnsmasq.service")
 			return [True,""]
@@ -542,7 +546,7 @@ class LliurexNews:
 			msg="Enabling News cname.Error: %s"%(str(result['msg']))
 			self._debug(msg)
 			return [False,""]
-		
+	
 		
 	#def enable_cname
 	
@@ -611,12 +615,12 @@ class LliurexNews:
 				
 			self.enable_apache_conf()
 				
-			return n4d.responses.build_succesfull_call_response([True,"SUCCESS"])
+			return n4d.responses.build_successful_call_response([True,"SUCCESS"])
 			
 		except Exception as e:
 			msg="Error in News setup process: %s"%(str(e))
 			self._debug(msg)
-			return n4d.responses.build_succesfull_call_response([False," ?"])
+			return n4d.responses.build_successful_call_response([False," ?"])
 		
 	#def initlializ_owncloud
 	

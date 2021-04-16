@@ -571,47 +571,47 @@ class LliurexNews:
 
 			status,ret=self.load_template(template)
 			if not status:
-				return [False,"1"]
+				return n4d.responses.build_successful_call_response([False,"1"])
 
 			status,ret=self.mysql_service_init()
 			if not status:
-				return [False,"2"]
+				return n4d.responses.build_successful_call_response([False,"2"])
 
 			status,ret=self.create_db_user()
 			if not status:
-				return [False,"3"]
+				return n4d.responses.build_successful_call_response([False,"3"])
 
 			status,ret=self.create_db()
 			if not status:
-				return [False,"4"]
+				return n4d.responses.build_successful_call_response([False,"4"])
 
 			status,ret=self.clean_old_files()
 			if not status:
-				return [False,"6"]
+				return n4d.responses.build_successful_call_response([False,"6"])
 
 			status,ret=self.copy_new_files()
 			if not status:
-				return [False,"7"]
+				return n4d.responses.build_successful_call_response([False,"7"])
 
 			status,ret=self.process_config_file()
 			if not status:
-				return [False,"8"]
+				return n4d.responses.build_successful_call_response([False,"8"])
 
 			status,ret=self.enable_apache()
 			if not status:
-				return [False,"9"]	
+				return n4d.responses.build_successful_call_response([False,"9"]	)
 
 			status,ret=self.enable_docker()
 			if not status:
-				return [False,"10"]
+				return n4d.responses.build_successful_call_response([False,"10"])
 
 			status,ret=self.enable_easy_site()
 			if not status:
-				return [False,"11"]	
+				return n4d.responses.build_successful_call_response([False,"11"])
 			
 			status,ret=self.enable_cname()
 			if not status:
-				return [False,"12"]
+				return n4d.responses.build_successful_call_response([False,"12"])
 				
 			self.enable_apache_conf()
 				

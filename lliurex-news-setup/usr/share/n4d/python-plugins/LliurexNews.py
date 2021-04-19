@@ -476,6 +476,7 @@ class LliurexNews:
 					client.api.remove_container(container.name)
 
 			volume_list = {
+				'/usr/share/lliurex-news-setup/llx-data/resolv.conf':{'bind':'/etc/resolv.conf','mode':'ro'},
 				'/var/run/mysqld' : {'bind':'/var/run/mysqld','mode':'rw'},
 				'/usr/share/lliurex-news-server' : {'bind':'/usr/share/lliurex-news-server','mode':'rw'},
 				'/var/www/news' : {'bind':'/var/www/news','mode':'rw'},
